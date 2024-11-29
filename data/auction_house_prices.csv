@@ -27,18 +27,18 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 123,Monarch's Round Cabinet,,,,,
 124,Monarch's Stepped Bureau,,,,,
 125,Basic Storage Chest,,,,,
-126,Superior Storage Chest,,1d,1,468.9999,2024-11-28T05:00:20.6981894+00:00
+126,Superior Storage Chest,,1d,3,456.3333,2024-11-18T05:00:19.7547037+00:00
 127,Merchant's Simple Bureau,,,,,
 327,Dawnstone,,,,,
 621,Rotten Ginseng Root,,,,,
 649,Honor Boost No.5,,,,,
 685,Star Wings,,,,,
 688,Dragon Molar,,,,,
-773,Apple,,1d,1205,0.1535,2024-11-28T05:00:21.5135757+00:00
+773,Apple,,1d,986,0.2500,2024-11-18T05:00:20.6258546+00:00
 777,Shatigon's Blessing,,,,,
 778,32121 DO NOT TRANSLATE,,,,,
 781,32123 DO NOT TRANSLATE,,,,,
-784,Rice,,1d,109581,0.0195,2024-11-28T05:00:22.0074202+00:00
+784,Rice,,1d,132961,0.0124,2024-11-18T05:00:21.1638323+00:00
 793,32132 DO NOT TRANSLATE,,,,,
 794,Salmon,,,,,
 795,Sea Bass,,,,,
@@ -51,15 +51,15 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 825,32150 DO NOT TRANSLATE,,,,,
 826,32151 DO NOT TRANSLATE,,,,,
 1383,Toxic Powder,,,,,
-1386,Archeum Ore,,1d,537,3.8738,2024-11-28T05:00:23.5515676+00:00
+1386,Archeum Ore,,1d,784,3.9989,2024-11-18T05:00:22.8014777+00:00
 1488,Thin Spider Leg,,,,,
 2151,Boar Leather,,,,,
 2153,Carp,,,,,
 2154,Crayfish,,,,,
 2155,Eel,,,,,
-2178,Cornflower,,1d,966,0.5397,2024-11-28T05:00:24.2526976+00:00
+2178,Cornflower,,1d,206,0.4339,2024-11-18T05:00:23.5863742+00:00
 2191,Bat Claw,,,,,
-2201,Starshard Chip,,,,,
+2201,Starshard Chip,,1d,1009,1.2124,2024-11-18T05:00:23.8425648+00:00
 2250,Soybean Oil,,,,,
 2251,Olive Oil,,,,,
 2986,Apprentice's Earth Necklace,,,,,
@@ -78,7 +78,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3003,Apprentice's Flame Ring,,,,,
 3004,Apprentice's Wave Ring,,,,,
 3005,Artificer's Earth Ring,,,,,
-3332,Starshard Ingot,,1d,366,3.2639,2024-11-28T05:00:26.7499745+00:00
+3332,Starshard Ingot,,1d,382,4.4506,2024-11-18T05:00:26.1275637+00:00
 3351,Construction Machinery,,,,,
 3352,Instrument Machinery,,,,,
 3359,Rubber Bark,,,,,
@@ -114,7 +114,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3407,Empty Carrier,,,,,
 3408,Sugar,,,,,
 3409,Salt,,,,,
-3411,Copper Ore,,1d,18506,0.2640,2024-11-28T05:00:30.9588317+00:00
+3411,Copper Ore,,1d,4636,0.1298,2024-11-18T05:00:30.6534827+00:00
 3414,Spruce Hardwood,,,,,
 3416,Grand Beechnut,,,,,
 3417,Camphor Hardwood,,,,,
@@ -125,13 +125,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3428,Pine Hardwood,,,,,
 3430,Birch Hardwood,,,,,
 3431,Yew Hardwood,,,,,
-3433,Bamboo Stalk,,1d,538,0.1466,2024-11-28T05:00:32.2625757+00:00
+3433,Bamboo Stalk,,1d,2250,0.1746,2024-11-18T05:00:32.0443301+00:00
 3440,Snake Scale,,,,,
 3451,Basilisk Scale,,,,,
 3457,Crocodile Leather,,,,,
 3479,Jinn's Tongue,,,,,
 3481,Chipped Feather,,,,,
-3487,Raw Lumber,,1d,1,8.0000,2024-11-28T05:00:32.9727521+00:00
+3487,Raw Lumber,,,,,
 3488,Moist Sap,,,,,
 3489,Dry Leaves,,,,,
 3501,Gazelle Meat,,,,,
@@ -140,9 +140,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3504,Crow Meat,,,,,
 3505,Camel Meat,,,,,
 3506,Wolf Meat,,,,,
-3507,Chicken Meat,,1d,403,0.3763,2024-11-28T05:00:34.0192078+00:00
+3507,Chicken Meat,,1d,214,0.3018,2024-11-18T05:00:33.9613276+00:00
 3509,Hydra Meat,,,,,
-3515,Duck Meat,,1d,431,0.4625,2024-11-28T05:00:34.2621531+00:00
+3515,Duck Meat,,1d,771,0.6784,2024-11-18T05:00:34.2028263+00:00
 3517,Monkey Meat,,,,,
 3518,Ostrich Meat,,,,,
 3520,Leopard Meat,,,,,
@@ -155,37 +155,37 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3537,Spotted Eel,,,,,
 3538,Striped Eel,,,,,
 3539,Bluefin Tuna,,,,,
-3545,Oats,,1d,3135,0.4774,2024-11-28T05:00:35.7347469+00:00
-3546,Millet,,1d,2000,0.0249,2024-11-28T05:00:35.8608049+00:00
+3545,Oats,,1d,560,0.5400,2024-11-18T05:00:35.8292845+00:00
+3546,Millet,,1d,3000,0.0318,2024-11-18T05:00:35.9550849+00:00
 3551,Sorghum,,,,,
-3553,Quinoa,,1d,100,0.8997,2024-11-28T05:00:36.0959648+00:00
+3553,Quinoa,,1d,100,0.8500,2024-11-18T05:00:36.1786386+00:00
 3557,Fernbrake,,,,,
-3564,Lily,,1d,1081,0.4711,2024-11-28T05:00:36.3310678+00:00
+3564,Lily,,1d,739,0.4777,2024-11-18T05:00:36.4357147+00:00
 3581,Baobab Fruit,,,,,
 3582,Blackberry,,,,,
-3583,Blueberry,,1d,7,0.4191,2024-11-28T05:00:36.6861958+00:00
+3583,Blueberry,,,,,
 3587,Apricot,,,,,
-3588,Pomegranate,,1d,221,0.6416,2024-11-28T05:00:36.9338408+00:00
+3588,Pomegranate,,1d,90,0.8499,2024-11-18T05:00:37.0810248+00:00
 3592,Avocado,,,,,
 3600,Cranberry,,,,,
-3603,Egg,,1d,1286,0.0118,2024-11-28T05:00:37.2600859+00:00
-3622,Sunflower,,1d,265,0.4750,2024-11-28T05:00:37.3732694+00:00
+3603,Egg,,1d,5078,0.0107,2024-11-18T05:00:37.5322528+00:00
+3622,Sunflower,,,,,
 3625,Cinnamon,,,,,
-3627,Lavender,,1d,1795,0.1022,2024-11-28T05:00:37.6186957+00:00
-3628,Rosemary,,1d,233,0.3565,2024-11-28T05:00:37.732249+00:00
-3630,Vanilla,,1d,3202,0.0417,2024-11-28T05:00:37.8347167+00:00
+3627,Lavender,,1d,4000,0.0743,2024-11-18T05:00:37.8968887+00:00
+3628,Rosemary,,1d,1232,0.3397,2024-11-18T05:00:38.0141038+00:00
+3630,Vanilla,,,,,
 3658,Quillwort,,,,,
-3659,Cactus,,1d,3,0.0303,2024-11-28T05:00:38.0569833+00:00
-3667,Narcissus,,1d,16017,0.0708,2024-11-28T05:00:38.1699199+00:00
-3671,Lotus,,1d,1417,0.4733,2024-11-28T05:00:38.2802788+00:00
-3675,Bay Leaf,,,,,
-3680,Cultivated Ginseng,,1d,1000,0.4399,2024-11-28T05:00:38.5275343+00:00
-3684,Azalea,,1d,26792,0.0419,2024-11-28T05:00:38.656592+00:00
-3685,Clover,,1d,11571,0.0847,2024-11-28T05:00:38.7781882+00:00
-3694,Chestnut,,1d,22,1.7500,2024-11-28T05:00:38.8925079+00:00
-3711,Rose,,1d,10952,0.0624,2024-11-28T05:00:39.0082653+00:00
-3712,Hay Bale,,1d,7558,0.4764,2024-11-28T05:00:39.1430223+00:00
-3713,Iris,,1d,1264,0.0998,2024-11-28T05:00:39.2670286+00:00
+3659,Cactus,,1d,554,0.5000,2024-11-18T05:00:38.3819121+00:00
+3667,Narcissus,,1d,32538,0.0555,2024-11-18T05:00:38.5257214+00:00
+3671,Lotus,,1d,736,0.3569,2024-11-18T05:00:38.6557094+00:00
+3675,Bay Leaf,,1d,2064,0.2000,2024-11-18T05:00:38.7805239+00:00
+3680,Cultivated Ginseng,,1d,2400,0.4979,2024-11-18T05:00:38.9055336+00:00
+3684,Azalea,,1d,42372,0.0511,2024-11-18T05:00:39.0554286+00:00
+3685,Clover,,1d,7542,0.0665,2024-11-18T05:00:39.1821566+00:00
+3694,Chestnut,,1d,29,4.7999,2024-11-18T05:00:39.3061855+00:00
+3711,Rose,,1d,4554,0.0745,2024-11-18T05:00:39.4249203+00:00
+3712,Hay Bale,,1d,9543,0.4018,2024-11-18T05:00:39.5600128+00:00
+3713,Iris,,1d,3745,0.0828,2024-11-18T05:00:39.6807725+00:00
 3714,Fine Sand,,,,,
 3715,Kaolin,,,,,
 3716,Fine Mud,,,,,
@@ -207,7 +207,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 3960,Honorbold Experienced Lunafrost,,,,,
 4014,Brown Hardwood Bed,,,,,
 4020,Scenic Painting,,,,,
-4052,Hereafter Stone,,1d,3337,0.7410,2024-11-28T05:00:41.8028335+00:00
+4052,Hereafter Stone,,1d,6071,0.7665,2024-11-18T05:00:42.4307378+00:00
 4747,Quality Certificate,,,,,
 4856,Apple Sapling,,,,,
 4857,Oak Sapling,,,,,
@@ -220,7 +220,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 4864,Birch Sapling,,,,,
 4865,Grapevine Sapling,,,,,
 4866,Cottonwood Sapling,,,,,
-4867,Small Bamboo Trap,,,,,
+4867,Small Bamboo Trap,,1d,20,8.0000,2024-11-18T05:00:44.0543412+00:00
 4868,Earth's Bounty Barbecue Table,,,,,
 4869,Ocean's Bounty Seafood Table,,,,,
 4870,Abundant Health Beverage Table,,,,,
@@ -229,7 +229,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 4890,Discontinued Design,,,,,
 4891,Catapult Design,,,,,
 4892,Siege Weapon Design,,,,,
-4904,Cotton Seed,,,,,
+4904,Cotton Seed,,1d,1000,0.0333,2024-11-18T05:00:45.18103+00:00
 5318,Civilian Dagger,,,,,
 5409,Civilian Blade,,,,,
 5500,Civilian Dark Blade,,,,,
@@ -292,7 +292,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 7725,Illustrious Gale Ring,,,,,
 7726,Illustrious Life Ring,,,,,
 7727,Delphinad Earth Ring,,,,,
-7728,Delphinad Flame Ring,,1d,1,1600.0000,2024-11-28T05:00:51.5979154+00:00
+7728,Delphinad Flame Ring,,,,,
 7729,Illustrious Life Necklace,,,,,
 7730,Chilling Ice Queen's Choker,,,,,
 7731,Delphinad Earth Necklace,,,,,
@@ -300,7 +300,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 7744,Any-Post Owl,,,,,
 7745,Thin Tree Root,,,,,
 7746,Bird's Eye Telescope Design,,,,,
-7747,Pork,,1d,849,0.0703,2024-11-28T05:00:52.4989473+00:00
+7747,Pork,,,,,
 7749,Fox Leather,,,,,
 7750,Traveler's Tree Raw Lumber,,,,,
 7751,Fox Meat,,,,,
@@ -531,46 +531,46 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 7989,Griffin Claw,,,,,
 7990,Wet Griffin Beak,,,,,
 7991,Reed,,,,,
-7992,Potato,,1d,9900,0.0619,2024-11-28T05:01:18.2762782+00:00
-7994,Yam,,1d,1323,0.4024,2024-11-28T05:01:18.3947899+00:00
-7998,Carrot,,,,,
+7992,Potato,,1d,4096,0.0400,2024-11-18T05:01:21.7727961+00:00
+7994,Yam,,1d,1100,0.5649,2024-11-18T05:01:21.9113169+00:00
+7998,Carrot,,1d,5533,0.0692,2024-11-18T05:01:22.0294862+00:00
 7999,Toadstool,,,,,
-8000,Peanut,,1d,2736,0.4078,2024-11-28T05:01:18.7694779+00:00
-8001,Garlic,,1d,1593,0.1383,2024-11-28T05:01:18.9029095+00:00
+8000,Peanut,,1d,3126,0.4270,2024-11-18T05:01:22.28865+00:00
+8001,Garlic,,1d,308,0.3500,2024-11-18T05:01:22.4144135+00:00
 8003,Sand,,,,,
-8004,Wheat,,1d,920,0.4100,2024-11-28T05:01:19.1359846+00:00
-8005,Barley,,1d,59568,0.0234,2024-11-28T05:01:19.2694924+00:00
-8006,Strawberry,,1d,241,0.4400,2024-11-28T05:01:19.3923579+00:00
-8007,Pelt,,1d,20094,0.1014,2024-11-28T05:01:19.5075011+00:00
-8008,Raw Stone,,1d,73801,0.1187,2024-11-28T05:01:19.6350106+00:00
-8009,Poppy,,1d,1100,0.6800,2024-11-28T05:01:19.7498971+00:00
-8010,Onion,,1d,381,0.0690,2024-11-28T05:01:19.8637535+00:00
+8004,Wheat,,1d,3021,0.4443,2024-11-18T05:01:22.6663332+00:00
+8005,Barley,,1d,25936,0.0324,2024-11-18T05:01:22.8051108+00:00
+8006,Strawberry,,1d,1000,0.5099,2024-11-18T05:01:22.9301567+00:00
+8007,Pelt,,1d,27577,0.0939,2024-11-18T05:01:23.0607897+00:00
+8008,Raw Stone,,1d,54165,0.1321,2024-11-18T05:01:23.1905962+00:00
+8009,Poppy,,1d,214,0.6567,2024-11-18T05:01:23.3155056+00:00
+8010,Onion,,,,,
 8011,Polluted Water,,,,,
 8012,Cucumber,,,,,
-8013,Corn,,1d,27192,0.0656,2024-11-28T05:01:20.2076107+00:00
+8013,Corn,,1d,76757,0.0610,2024-11-18T05:01:23.7928673+00:00
 8014,Mud,,,,,
-8015,Bean,,1d,286,0.7266,2024-11-28T05:01:20.4859808+00:00
-8016,Tomato,,1d,1050,0.1325,2024-11-28T05:01:20.6002073+00:00
-8017,Log,,1d,133034,0.0197,2024-11-28T05:01:20.7319572+00:00
-8018,Pumpkin,,1d,387,0.2200,2024-11-28T05:01:20.8518274+00:00
-8019,Pepper,,1d,32,0.0677,2024-11-28T05:01:20.9657531+00:00
+8015,Bean,,1d,555,0.5925,2024-11-18T05:01:24.034094+00:00
+8016,Tomato,,,,,
+8017,Log,,1d,126506,0.0204,2024-11-18T05:01:24.3090724+00:00
+8018,Pumpkin,,1d,2441,0.1204,2024-11-18T05:01:24.4068359+00:00
+8019,Pepper,,1d,749,0.0385,2024-11-18T05:01:24.5365277+00:00
 8020,Archeum Dust,,,,,
 8021,Archeum Infusion,,,,,
-8022,Iron Ore,,1d,85287,0.1067,2024-11-28T05:01:21.3198197+00:00
-8023,Silver Ore,,1d,19074,0.1420,2024-11-28T05:01:21.4338996+00:00
+8022,Iron Ore,,1d,50092,0.1095,2024-11-18T05:01:24.9299931+00:00
+8023,Silver Ore,,1d,7364,0.0530,2024-11-18T05:01:25.0561225+00:00
 8024,Red Kaolin,,,,,
-8027,Gold Ore,,1d,669,1.3617,2024-11-28T05:01:21.6755628+00:00
-8028,Beechnut,,1d,179,0.9125,2024-11-28T05:01:21.7923142+00:00
+8027,Gold Ore,,1d,1412,1.4280,2024-11-18T05:01:25.3090099+00:00
+8028,Beechnut,,1d,30,0.9300,2024-11-18T05:01:25.4169922+00:00
 8029,Hard Marble,,,,,
 8030,Hard Limestone,,,,,
 8031,Hard Gneiss,,,,,
 8032,Hard Granite,,,,,
 8033,Marble,,,,,
-8034,Jujube,,1d,120,0.4298,2024-11-28T05:01:22.4906757+00:00
-8035,Acorn,,1d,62,0.4099,2024-11-28T05:01:22.5956292+00:00
-8036,Lemon,,1d,15532,0.1183,2024-11-28T05:01:22.6947237+00:00
+8034,Jujube,,1d,561,0.6079,2024-11-18T05:01:26.1514268+00:00
+8035,Acorn,,1d,5,0.0084,2024-11-18T05:01:26.2857947+00:00
+8036,Lemon,,1d,17408,0.1496,2024-11-18T05:01:26.4104901+00:00
 8037,Mahogany Fruit,,,,,
-8038,Fig,,1d,364,0.1200,2024-11-28T05:01:22.9200371+00:00
+8038,Fig,,,,,
 8039,Ash Fruit,,,,,
 8040,Cottonwood Fruit,,,,,
 8041,Delphinad Ingot,,,,,
@@ -580,23 +580,23 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8045,Hornbeam Bark,,,,,
 8046,Limestone,,,,,
 8047,Cow Leather,,,,,
-8048,Beef,,1d,50,0.5100,2024-11-28T05:01:24.0472247+00:00
+8048,Beef,,1d,154,0.2649,2024-11-18T05:01:27.8753861+00:00
 8049,Vinegar,,,,,
-8050,Coconut,,1d,134,1.9939,2024-11-28T05:01:24.2662959+00:00
+8050,Coconut,,1d,192,0.9113,2024-11-18T05:01:28.1102532+00:00
 8051,Sheepskin,,,,,
-8052,Mutton,,1d,1,0.0210,2024-11-28T05:01:24.4890632+00:00
-8053,Wool,,1d,35975,0.0331,2024-11-28T05:01:24.6075256+00:00
-8054,Olive,,1d,956,0.1746,2024-11-28T05:01:24.7138704+00:00
-8055,Milk,,1d,33499,0.0487,2024-11-28T05:01:24.8098851+00:00
+8052,Mutton,,,,,
+8053,Wool,,1d,34071,0.0320,2024-11-18T05:01:28.4948849+00:00
+8054,Olive,,1d,3685,0.1926,2024-11-18T05:01:28.6097875+00:00
+8055,Milk,,1d,47756,0.0487,2024-11-18T05:01:28.7372719+00:00
 8057,Aspen Bark,,,,,
 8058,Birch Bark,,,,,
 8059,Punctured Clamshell,,,,,
 8061,Clay,,,,,
 8062,Thuja Bark,,,,,
 8064,Gneiss,,,,,
-8065,Grape,,1d,5300,0.0799,2024-11-28T05:01:25.653448+00:00
+8065,Grape,,1d,3531,0.1162,2024-11-18T05:01:29.6109415+00:00
 8066,Granite,,,,,
-8067,Pure Copper Ore,,1d,55,6.6747,2024-11-28T05:01:25.8918319+00:00
+8067,Pure Copper Ore,,1d,13,0.9703,2024-11-18T05:01:29.8262947+00:00
 8068,Memory Spirit,,,,,
 8069,Memory Essence,,,,,
 8070,Venom Spirit,,,,,
@@ -605,17 +605,17 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8073,Sorrowful Essence,,,,,
 8074,Healing Spirit,,,,,
 8075,Healing Essence,,,,,
-8076,Diamond,,1d,156,1.9391,2024-11-28T05:01:26.9643186+00:00
-8077,Ruby,,1d,1,0.8200,2024-11-28T05:01:27.0556775+00:00
-8078,Sapphire,,,,,
-8079,Amethyst,,1d,28,0.7727,2024-11-28T05:01:27.296125+00:00
-8080,Anya Pebble,,1d,1738,3.2508,2024-11-28T05:01:27.4203185+00:00
-8081,Pure Iron Ore,,1d,323,0.7925,2024-11-28T05:01:27.5359521+00:00
-8082,Emerald,,1d,138,3.7908,2024-11-28T05:01:27.6492348+00:00
-8083,Pearl,,1d,1055,1.3342,2024-11-28T05:01:27.7920737+00:00
-8084,Topaz,,1d,198,0.4198,2024-11-28T05:01:27.9155574+00:00
-8085,Pure Silver Ore,,1d,20,1.9500,2024-11-28T05:01:28.0427274+00:00
-8086,Pure Gold Ore,,1d,1,40.0000,2024-11-28T05:01:28.1634545+00:00
+8076,Diamond,,1d,82,5.4286,2024-11-18T05:01:30.9561254+00:00
+8077,Ruby,,1d,559,0.8852,2024-11-18T05:01:31.0762588+00:00
+8078,Sapphire,,1d,862,0.6874,2024-11-18T05:01:31.2039603+00:00
+8079,Amethyst,,1d,144,0.6257,2024-11-18T05:01:31.3280699+00:00
+8080,Anya Pebble,,1d,3473,3.6253,2024-11-18T05:01:31.4549242+00:00
+8081,Pure Iron Ore,,1d,6,0.6550,2024-11-18T05:01:31.5695852+00:00
+8082,Emerald,,1d,87,5.7379,2024-11-18T05:01:31.6939377+00:00
+8083,Pearl,,1d,1190,1.1069,2024-11-18T05:01:31.8097877+00:00
+8084,Topaz,,1d,172,1.3667,2024-11-18T05:01:31.9308468+00:00
+8085,Pure Silver Ore,,1d,2,3.0000,2024-11-18T05:01:32.0652884+00:00
+8086,Pure Gold Ore,,1d,6,26.2500,2024-11-18T05:01:32.1912245+00:00
 8119,Guide Map Tool,,,,,
 8120,Guide Map,,,,,
 8121,Guide Gate Tool,,,,,
@@ -651,13 +651,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8206,Star Weapon Rack,,,,,
 8207,Simple Hardwood Table,,,,,
 8208,Curved Woodgrain Table,,,,,
-8209,Large Hardwood Counter,,,,,
+8209,Large Hardwood Counter,,1d,1,10.0000,2024-11-18T05:01:36.6707407+00:00
 8210,Hardwood Chair,,,,,
 8211,Simple Hardwood Chair,,,,,
 8212,Tri-Level Wood Bureau,,,,,
 8213,Scholar's Small Shelf,,,,,
 8214,Small Scale,,,,,
-8215,Hardwood Counter,,,,,
+8215,Hardwood Counter,,1d,1,0.2000,2024-11-18T05:01:37.433539+00:00
 8216,Hardwood Dining Table,,,,,
 8217,Merchant's Extraordinary Bureau,,,,,
 8218,Hardwood Glass Cabinet,,,,,
@@ -689,7 +689,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8253,Sturdy Tooth,,,,,
 8254,Torn Fabric,,,,,
 8255,Stitched Fabric,,,,,
-8256,Fabric,,1d,14764,0.1804,2024-11-28T05:01:36.779946+00:00
+8256,Fabric,,1d,22930,0.2286,2024-11-18T05:01:41.3860077+00:00
 8257,Frayed String,,,,,
 8258,Thick String,,,,,
 8259,Tough String,,,,,
@@ -748,23 +748,23 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8314,Dream Spirit,,,,,
 8315,Shadow Spirit,,,,,
 8316,Light Spirit,,,,,
-8318,Iron Ingot,,1d,31036,0.4491,2024-11-28T05:01:43.634452+00:00
-8319,Sturdy Ingot,,1d,92,18.3993,2024-11-28T05:01:43.7554219+00:00
-8320,Copper Ingot,,1d,3578,0.8578,2024-11-28T05:01:43.8742401+00:00
+8318,Iron Ingot,,1d,40155,0.4993,2024-11-18T05:01:48.4672646+00:00
+8319,Sturdy Ingot,,1d,113,18.2768,2024-11-18T05:01:48.6025448+00:00
+8320,Copper Ingot,,1d,3341,0.6680,2024-11-18T05:01:48.7390037+00:00
 8324,Ocean Blue Coral,,,,,
 8325,Sunset Pearl,,,,,
 8326,Blue Salt Knife,,,,,
 8327,Blue Salt Wedge,,,,,
 8328,Blue Salt Gloves,,,,,
 8329,Blue Salt Hammer,,,,,
-8330,Glossy Feather,,,,,
-8337,Lumber,,1d,54109,0.1729,2024-11-28T05:01:44.7766767+00:00
+8330,Glossy Feather,,1d,750,0.4398,2024-11-18T05:01:49.6063021+00:00
+8337,Lumber,,1d,71031,0.1919,2024-11-18T05:01:49.7489639+00:00
 8338,Plank,,,,,
 8339,Wood Pole,,,,,
 8340,Sawdust,,,,,
 8341,Wood Dowel,,,,,
 8342,Wood Veneer,,,,,
-8343,Stone Brick,,1d,19023,0.5663,2024-11-28T05:01:45.4685731+00:00
+8343,Stone Brick,,1d,41208,0.5198,2024-11-18T05:01:50.5149422+00:00
 8344,Stone Slab,,,,,
 8345,Stone Rod,,,,,
 8346,Stone Dust,,,,,
@@ -778,7 +778,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8354,Scale Plate,,,,,
 8355,Whole Scale,,,,,
 8356,Textured Scale,,,,,
-8357,Cotton,,1d,1342,0.0750,2024-11-28T05:01:47.111131+00:00
+8357,Cotton,,1d,2105,0.0419,2024-11-18T05:01:52.2715903+00:00
 8358,Wool,,,,,
 8359,Silk,,,,,
 8360,Pure Cotton,,,,,
@@ -843,11 +843,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8501,Fruit Punch,,,,,
 8502,Honey Mead,,,,,
 8503,Bubble Tea,,,,,
-8504,Tangy Soda,,1d,130,2.5556,2024-11-28T05:01:54.71626+00:00
+8504,Tangy Soda,,1d,20,2.0000,2024-11-18T05:02:00.079415+00:00
 8505,Savory Soup,,,,,
 8506,Whole Grain Soup,,,,,
-8507,Vegetable Soup,,,,,
-8508,Sweet Soup,,,,,
+8507,Vegetable Soup,,1d,275,0.5729,2024-11-18T05:02:00.4504569+00:00
+8508,Sweet Soup,,1d,450,0.8301,2024-11-18T05:02:00.5783098+00:00
 8515,Solar Glow,,,,,
 8516,Serene Lake,,,,,
 8518,Celestial Ray,,,,,
@@ -3397,7 +3397,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 11113,Special Noryette Chandelier Design,,,,,
 11114,Noryette Chandelier Design,,,,,
 11115,Experimental Glider Design,,,,,
-11116,Improved Glider Design,,,,,
+11116,Improved Glider Design,,1d,1,4.0000,2024-11-18T05:07:10.1531835+00:00
 11117,Enhanced Glider Design,,,,,
 11118,Ultimate Glider Design,,,,,
 11119,Thunderbolt Glider Design,,,,,
@@ -3471,7 +3471,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 13724,Lemon Sapling,,,,,
 13725,Fig Sapling,,,,,
 13726,Bay Sapling,,,,,
-13727,Palm Sapling,,,,,
+13727,Palm Sapling,,1d,26,1.5000,2024-11-18T05:07:19.3167144+00:00
 13728,Rubber Tree Sapling,,,,,
 13729,Jujube Sapling,,,,,
 13731,Thuja Sapling,,,,,
@@ -3480,14 +3480,14 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 13758,Torch,,,,,
 14207,Hellhook,,,,,
 14586,Spoiled Potato,,,,,
-14620,Banana,,,,,
-14621,Orange,,,,,
-14627,Cherry,,,,,
+14620,Banana,,1d,920,0.3987,2024-11-18T05:07:20.3883984+00:00
+14621,Orange,,1d,126,0.3000,2024-11-18T05:07:20.526915+00:00
+14627,Cherry,,1d,199,0.5524,2024-11-18T05:07:20.6698858+00:00
 14628,Scorpion Grass,,,,,
-14629,Mint,,,,,
-14630,Mushroom,,1d,4007,0.0508,2024-11-28T05:06:58.3388189+00:00
-14631,Thistle,,1d,1080,0.2480,2024-11-28T05:06:58.4620461+00:00
-14632,Wild Ginseng,,1d,1,56.0000,2024-11-28T05:06:58.5893107+00:00
+14629,Mint,,1d,1500,0.5565,2024-11-18T05:07:20.9339615+00:00
+14630,Mushroom,,1d,7498,0.0797,2024-11-18T05:07:21.0724862+00:00
+14631,Thistle,,1d,2619,0.0560,2024-11-18T05:07:21.2077753+00:00
+14632,Wild Ginseng,,1d,2,59.9900,2024-11-18T05:07:21.3401188+00:00
 14636,Divine Flower Crystal,,,,,
 14678,Hostile Battlefield Turret,,,,,
 14680,Red Team Jabberwock,,,,,
@@ -3599,7 +3599,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 14968,Herring,,,,,
 14969,Mussel,,,,,
 14970,Pig Oil,,,,,
-14971,Rye,,1d,563,0.4917,2024-11-28T05:07:11.6377928+00:00
+14971,Rye,,1d,100,0.5599,2024-11-18T05:07:35.0795156+00:00
 14975,Heartbeat Fruit,,,,,
 15180,Scribbled Letter,,,,,
 15205,Bitten Apple,,,,,
@@ -3845,14 +3845,14 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15617,Ember Catalyst,,,,,
 15618,Sunrise Catalyst,,,,,
 15620,Starfire Catalyst,,,,,
-15621,Glowing Prism,,1d,159,0.1329,2024-11-28T05:07:41.3581775+00:00
+15621,Glowing Prism,,1d,617,0.0989,2024-11-18T05:08:04.54747+00:00
 15624,Regal Anvil,,,,,
 15625,Regal Plate Armor Form,,,,,
 15626,Regal Leather Armor Form,,,,,
 15627,Regal Cloth Armor Form,,,,,
 15628,Regal Carpentry Workbench,,,,,
 15629,Regal Handicraft Desk,,,,,
-15632,Anya Ingot,,1d,471,14.7285,2024-11-28T05:07:42.1962788+00:00
+15632,Anya Ingot,,1d,462,15.6889,2024-11-18T05:08:05.2260226+00:00
 15636,Clockwork Cat Chest,,,,,
 15637,Fortuneteller's Crystal Ball,,,,,
 15638,Whirligear Machine,,,,,
@@ -3862,32 +3862,32 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15648,Millet Seed,,,,,
 15650,Quinoa Seed,,,,,
 15651,Wheat Seed,,,,,
-15652,Barley Seed,,1d,30,0.0049,2024-11-28T05:07:43.4326641+00:00
-15653,Corn Seed,,,,,
+15652,Barley Seed,,,,,
+15653,Corn Seed,,1d,4000,0.0460,2024-11-18T05:08:06.5099372+00:00
 15654,Bean Seed,,,,,
 15655,Rye Seed,,,,,
 15656,Peanut Seed,,,,,
 15657,Strawberry Seed,,,,,
-15659,Potato Eyes,,1d,1000,0.0366,2024-11-28T05:07:44.1532883+00:00
+15659,Potato Eyes,,,,,
 15660,Yam Seed,,,,,
-15661,Carrot Seed,,,,,
+15661,Carrot Seed,,1d,2000,0.0339,2024-11-18T05:08:07.3894412+00:00
 15662,Garlic Seed,,,,,
 15663,Onion Seed,,,,,
 15664,Cucumber Seed,,,,,
 15665,Tomato Seed,,,,,
 15666,Pumpkin Seed,,,,,
-15667,Lavender Seed,,,,,
+15667,Lavender Seed,,1d,3000,0.0377,2024-11-18T05:08:08.121423+00:00
 15668,Rosemary Seed,,,,,
 15669,Cornflower Seed,,,,,
 15670,Lily Seed,,,,,
 15671,Sunflower Seed,,,,,
 15672,Cactus Seed,,,,,
-15673,Narcissus Seed,,,,,
+15673,Narcissus Seed,,1d,4000,0.0247,2024-11-18T05:08:08.874864+00:00
 15674,Lotus Seed,,,,,
-15675,Azalea Seed,,1d,1000,0.0407,2024-11-28T05:07:46.0464111+00:00
-15676,Clover Seed,,,,,
+15675,Azalea Seed,,1d,6000,0.0273,2024-11-18T05:08:09.121777+00:00
+15676,Clover Seed,,1d,3000,0.0268,2024-11-18T05:08:09.258574+00:00
 15677,Rose Seed,,,,,
-15678,Iris Seed,,,,,
+15678,Iris Seed,,1d,2000,0.0399,2024-11-18T05:08:09.5097162+00:00
 15680,Poppy Seed,,,,,
 15682,Mint Seed,,,,,
 15686,Damaged Map,,,,,
@@ -3899,7 +3899,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15700,Portable Barbecue Kit,,,,,
 15701,Traveler's Old Cauldron,,,,,
 15702,Cleaning Rod,,,,,
-15709,Thunderstruck Tree,,1d,23,775.3786,2024-11-28T05:07:47.8644061+00:00
+15709,Thunderstruck Tree,,1d,27,762.3057,2024-11-18T05:08:10.9534865+00:00
 15710,Feed,,,,,
 15711,Golden Egg,,,,,
 15715,Gunpowder,,,,,
@@ -3913,7 +3913,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15727,Broken Bottle,,,,,
 15728,Sequoia Hardwood,,,,,
 15729,Thorn Palm Hardwood,,,,,
-15730,Natural Rubber,,1d,23,56.4614,2024-11-28T05:07:49.4752472+00:00
+15730,Natural Rubber,,1d,186,61.1865,2024-11-18T05:08:12.6842548+00:00
 15731,Larch Hardwood,,,,,
 15732,Grand Jujube,,,,,
 15733,Ebony Hardwood,,,,,
@@ -3948,12 +3948,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15762,Dried Pinecone,,,,,
 15763,Fat Larva,,,,,
 15764,Camphor Branch,,,,,
-15765,Bamboo Shoot,,,,,
+15765,Bamboo Shoot,,1d,10,58.8595,2024-11-18T05:08:17.0018141+00:00
 15766,Ebony Branch,,,,,
-15767,Ginkgo Leaf,,1d,301,0.4454,2024-11-28T05:07:53.9043406+00:00
+15767,Ginkgo Leaf,,1d,745,0.2399,2024-11-18T05:08:17.24416+00:00
 15768,Yew Leaf,,,,,
 15769,Cork Piece,,,,,
-15770,Moringa Fruit,,1d,49,0.7799,2024-11-28T05:07:54.2805398+00:00
+15770,Moringa Fruit,,1d,250,0.7333,2024-11-18T05:08:17.6071061+00:00
 15771,Yucca Leaf,,,,,
 15772,Maple Branch,,,,,
 15778,Headless Swordsman Pouch,,,,,
@@ -3976,13 +3976,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 15902,Tropical Fish Food,,,,,
 15905,Aquarium,,,,,
 15907,Lemondrop Fish,,,,,
-15908,Skysun Fish,,,,,
+15908,Skysun Fish,,1d,1,14.0000,2024-11-18T05:08:20.4119677+00:00
 15910,Purified Fruit,,,,,
 15911,Glider Barrage,,,,,
 15972,Short Wooden Fence,,,,,
 15973,Short Wood Double-Rail Fence,,,,,
 15974,Wood Double-Rail Fence,,,,,
-15983,Regrade Brazier,,1d,2183,0.7756,2024-11-28T05:07:57.7888404+00:00
+15983,Regrade Brazier,,1d,2103,0.6036,2024-11-18T05:08:21.177966+00:00
 15988,74936 DO NOT TRANSLATE,,,,,
 15996,Old Flag,,,,,
 16000,Organic Fertilizer,,,,,
@@ -4015,16 +4015,16 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 16206,Pink Bobblehead Statue,,,,,
 16207,Brown Bobblehead Statue,,,,,
 16208,Golden Bobblehead Statue,,,,,
-16209,Prisoner Bobblehead Statue,,,,,
-16210,Maid Bobblehead Statue,,,,,
+16209,Prisoner Bobblehead Statue,,1d,1,5.0000,2024-11-18T05:08:25.2719793+00:00
+16210,Maid Bobblehead Statue,,1d,1,5.0000,2024-11-18T05:08:25.3796601+00:00
 16211,Question Mark Bobblehead Statue,,,,,
 16212,Luxurious Bobblehead Statue,,,,,
 16215,Empty Bottle,,,,,
 16216,Solid Log,,,,,
 16218,77262 DO NOT TRANSLATE,,,,,
 16219,Spacious Storage Chest Design,,,,,
-16220,Livestock Supplement,,1d,391,2.6560,2024-11-28T05:08:02.5713869+00:00
-16221,Goat Meat,,1d,30,0.2500,2024-11-28T05:08:02.6797559+00:00
+16220,Livestock Supplement,,1d,447,3.1102,2024-11-18T05:08:26.2669381+00:00
+16221,Goat Meat,,,,,
 16223,Strawberry Jam,,,,,
 16224,Venison Roast,,,,,
 16225,Dairy Calf,,,,,
@@ -4043,31 +4043,31 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 16241,Traveler's Old Tent,,,,,
 16243,Honeyed Water,,,,,
 16264,Jinn's Tongue Seed,,,,,
-16268,Turmeric,,1d,2,0.4300,2024-11-28T05:08:04.5487784+00:00
+16268,Turmeric,,1d,208,0.2400,2024-11-18T05:08:28.7870287+00:00
 16269,Turmeric Seed,,,,,
 16270,Vanilla Seed,,,,,
 16271,Black Pepper Seed,,,,,
 16272,Saffron Seed,,,,,
-16273,Saffron,,1d,180,0.7830,2024-11-28T05:08:05.0574311+00:00
-16276,Chili Pepper,,1d,78,0.6400,2024-11-28T05:08:05.153017+00:00
+16273,Saffron,,1d,509,0.6900,2024-11-18T05:08:29.4468038+00:00
+16276,Chili Pepper,,1d,6,0.6798,2024-11-18T05:08:29.5860823+00:00
 16277,Chili Pepper Seed,,,,,
 16278,Sugarcane,,,,,
 16279,Aloe Seed,,,,,
 16282,Thistle Seed,,,,,
 16283,Clubhead Spore,,,,,
-16284,Clubhead Fungus,,1d,70,0.3999,2024-11-28T05:08:05.7281691+00:00
+16284,Clubhead Fungus,,1d,907,0.3162,2024-11-18T05:08:30.2976868+00:00
 16285,Wild Ginseng Seed,,,,,
-16290,Aloe,,1d,249,0.6666,2024-11-28T05:08:05.9100954+00:00
+16290,Aloe,,1d,279,0.4999,2024-11-18T05:08:30.5383976+00:00
 16294,Cultivated Ginseng Seed,,,,,
 16300,78895 DO NOT TRANSLATE,,,,,
 16321,Sturdy Stone,,,,,
-16323,Rising Star Stone,,,,,
-16324,Fine Lumber,,1d,258,14.4734,2024-11-28T05:08:06.5237102+00:00
-16325,Sunridge Ingot,,1d,12,412.5233,2024-11-28T05:08:06.6452886+00:00
-16326,Nuri Forest Lumber,,1d,10,397.1000,2024-11-28T05:08:06.7610891+00:00
-16327,Leather,,1d,13287,0.4412,2024-11-28T05:08:06.8896551+00:00
-16328,Fine Leather,,1d,63,14.0908,2024-11-28T05:08:07.0214274+00:00
-16330,Wind Spirit Leather,,1d,5,393.2000,2024-11-28T05:08:07.1513713+00:00
+16323,Rising Star Stone,,1d,1,400.0000,2024-11-18T05:08:31.0392492+00:00
+16324,Fine Lumber,,1d,560,12.5246,2024-11-18T05:08:31.165855+00:00
+16325,Sunridge Ingot,,1d,5,421.3154,2024-11-18T05:08:31.2957669+00:00
+16326,Nuri Forest Lumber,,,,,
+16327,Leather,,1d,9021,0.5580,2024-11-18T05:08:31.5547151+00:00
+16328,Fine Leather,,1d,92,13.5769,2024-11-18T05:08:31.6831871+00:00
+16330,Wind Spirit Leather,,1d,7,333.6667,2024-11-18T05:08:31.807588+00:00
 16331,Breeze Wing,,,,,
 16332,Ginkgo Sapling,,,,,
 16333,Yucca Sapling,,,,,
@@ -4081,20 +4081,20 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 16341,Cacao,,,,,
 16342,Grand Cacao,,,,,
 16343,Rags,,,,,
-16344,Beautifully Colored Fabric,,1d,6,15.8500,2024-11-28T05:08:08.8414683+00:00
-16346,Cloudspun Fabric,,1d,5,390.8000,2024-11-28T05:08:08.9623806+00:00
-16347,Sunlight Archeum Dust,,1d,5345,0.1148,2024-11-28T05:08:09.0809034+00:00
-16348,Moonlight Archeum Dust,,1d,5222,0.2883,2024-11-28T05:08:09.2042276+00:00
-16349,Starlight Archeum Dust,,1d,2622,1.2286,2024-11-28T05:08:09.3408143+00:00
-16350,Sunlight Archeum Shard,,1d,143,0.7786,2024-11-28T05:08:09.4613388+00:00
-16351,Moonlight Archeum Shard,,1d,340,1.5118,2024-11-28T05:08:09.5827283+00:00
-16352,Starlight Archeum Shard,,1d,4,3.0003,2024-11-28T05:08:09.7072639+00:00
-16353,Sunlight Archeum Crystal,,1d,610,5.7933,2024-11-28T05:08:09.8315937+00:00
-16354,Moonlight Archeum Crystal,,1d,620,8.4224,2024-11-28T05:08:09.9677619+00:00
-16355,Starlight Archeum Crystal,,1d,187,14.6062,2024-11-28T05:08:10.0930186+00:00
-16356,Sunlight Archeum Essence,,1d,122,26.4214,2024-11-28T05:08:10.2248618+00:00
-16357,Moonlight Archeum Essence,,1d,109,44.8101,2024-11-28T05:08:10.3478046+00:00
-16358,Starlight Archeum Essence,,1d,27,80.7307,2024-11-28T05:08:10.4679554+00:00
+16344,Beautifully Colored Fabric,,1d,20,21.3750,2024-11-18T05:08:33.5680903+00:00
+16346,Cloudspun Fabric,,1d,24,358.5219,2024-11-18T05:08:33.6881851+00:00
+16347,Sunlight Archeum Dust,,1d,4231,0.0967,2024-11-18T05:08:33.8097539+00:00
+16348,Moonlight Archeum Dust,,1d,7788,0.2527,2024-11-18T05:08:33.9520271+00:00
+16349,Starlight Archeum Dust,,1d,2666,1.3184,2024-11-18T05:08:34.0941535+00:00
+16350,Sunlight Archeum Shard,,1d,84,0.8223,2024-11-18T05:08:34.2133996+00:00
+16351,Moonlight Archeum Shard,,1d,76,1.0794,2024-11-18T05:08:34.3325745+00:00
+16352,Starlight Archeum Shard,,1d,186,2.9508,2024-11-18T05:08:34.4452824+00:00
+16353,Sunlight Archeum Crystal,,1d,844,4.0137,2024-11-18T05:08:34.5512969+00:00
+16354,Moonlight Archeum Crystal,,1d,511,7.3228,2024-11-18T05:08:34.7042672+00:00
+16355,Starlight Archeum Crystal,,1d,194,13.0954,2024-11-18T05:08:34.8419613+00:00
+16356,Sunlight Archeum Essence,,1d,211,21.5948,2024-11-18T05:08:34.9916379+00:00
+16357,Moonlight Archeum Essence,,1d,135,44.7368,2024-11-18T05:08:35.133435+00:00
+16358,Starlight Archeum Essence,,1d,80,50.8748,2024-11-18T05:08:35.254507+00:00
 16370,Diluted Stone Polish,,,,,
 16371,Diluted Wood Finish,,,,,
 16372,Diluted Leather Polish,,,,,
@@ -4111,10 +4111,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 16383,Concentrated Fabric Finish,,,,,
 16384,Concentrated Metal Flux,,,,,
 16419,Tuna Club,,,,,
-17261,Mushroom Spore,,1d,3000,0.0421,2024-11-28T05:08:12.5866151+00:00
+17261,Mushroom Spore,,1d,2000,0.0342,2024-11-18T05:08:37.3928101+00:00
 17473,Air Raid,,,,,
-17619,Hatching Egg,,1d,1,10.0001,2024-11-28T05:08:12.8050799+00:00
-17630,Spacious Storage Chest,,1d,1,1699.0000,2024-11-28T05:08:12.925717+00:00
+17619,Hatching Egg,,,,,
+17630,Spacious Storage Chest,,,,,
 17653,Chaser's Cloak,,,,,
 17654,Shadow Cloak,,,,,
 17655,Watcher's Cloak,,,,,
@@ -4123,8 +4123,8 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 17658,Burdened Man,,,,,
 17664,Hardtack,,,,,
 17665,Whole Grain Bread,,,,,
-17666,Vegetable Bread,,1d,200,0.3000,2024-11-28T05:08:14.0483525+00:00
-17667,Sweet Bread,,1d,50,0.8000,2024-11-28T05:08:14.1747656+00:00
+17666,Vegetable Bread,,1d,300,0.2700,2024-11-18T05:08:38.9078402+00:00
+17667,Sweet Bread,,1d,1130,0.6483,2024-11-18T05:08:39.0478452+00:00
 17668,Fruit Liquor,,,,,
 17669,Honey Liquor,,,,,
 17670,Bubble Tea Liquor,,,,,
@@ -4135,12 +4135,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 17705,Growling Yawl Design,,,,,
 17707,Harpoon Clipper Design,,,,,
 17711,Shining Vein Seed,,,,,
-17715,Pure Archeum Ore,,1d,3,60.0000,2024-11-28T05:08:15.5241142+00:00
+17715,Pure Archeum Ore,,1d,1,49.9500,2024-11-18T05:08:40.4013827+00:00
 17773,Transformation Scroll,,,,,
-17774,Silver Ingot,,1d,2819,0.3644,2024-11-28T05:08:15.7804165+00:00
-17775,Gold Ingot,,1d,1516,5.6958,2024-11-28T05:08:15.9174869+00:00
-17776,Archeum Ingot,,1d,831,14.9528,2024-11-28T05:08:16.0245387+00:00
-17797,Delphinad Wave Ring,,1d,2,1466.3850,2024-11-28T05:08:16.1425766+00:00
+17774,Silver Ingot,,1d,5373,0.4170,2024-11-18T05:08:40.6509501+00:00
+17775,Gold Ingot,,1d,1165,4.9960,2024-11-18T05:08:40.7747093+00:00
+17776,Archeum Ingot,,1d,465,15.4074,2024-11-18T05:08:40.9176418+00:00
+17797,Delphinad Wave Ring,,,,,
 17798,Delphinad Wave Necklace,,,,,
 17803,Sturdy Mast Lumber,,,,,
 17804,Auroria Stone,,,,,
@@ -4180,8 +4180,8 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 17858,Harani Girl Standup Portrait,,,,,
 17859,Firran Boy Standup Portrait,,,,,
 17860,Firran Girl Standup Portrait,,,,,
-17885,Delphinad Gale Ring,,1d,1,1444.4400,2024-11-28T05:08:20.9926222+00:00
-17886,Delphinad Life Ring,,1d,1,1433.3300,2024-11-28T05:08:21.1132431+00:00
+17885,Delphinad Gale Ring,,,,,
+17886,Delphinad Life Ring,,,,,
 17887,Delphinad Flame Necklace,,,,,
 17888,Delphinad Life Necklace,,,,,
 17897,Prisoner Hood,,,,,
@@ -4213,7 +4213,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 18430,Rugged Bloodiron Metal,,,,,
 18431,Haje's Tears,,,,,
 18441,Dead Archeum Tree Sapling,,,,,
-18442,Archeum Log,,1d,34,4.4617,2024-11-28T05:08:25.3429982+00:00
+18442,Archeum Log,,1d,103,6.0948,2024-11-18T05:08:50.1345875+00:00
 18459,Private Smelter Design,,,,,
 18462,Bone Arrow,,,,,
 18470,Private Loom Design,,,,,
@@ -4245,17 +4245,17 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 18661,Searing Oath,,,,,
 18662,Cold Anguish,,,,,
 18663,Sweet Sorrow,,,,,
-18664,Aquafarm Design,,,,,
+18664,Aquafarm Design,,1d,1,120.0000,2024-11-18T05:08:53.9907486+00:00
 18675,Faulty Glider Smokescreen,,,,,
 18686,Scroll: Turret,,,,,
 18747,Bloodfeast Orchidna,,,,,
 18748,Kyprosa's Timeless Memory,,,,,
-18749,Flaming Log,,1d,77,17.0290,2024-11-28T05:08:29.8193766+00:00
+18749,Flaming Log,,1d,138,12.5559,2024-11-18T05:08:54.5916778+00:00
 18750,Fiery Seed,,,,,
 18751,Graywisp Seed,,,,,
 18752,116501 DO NOT TRANSLATE,,,,,
-18753,Deluxe Sandwich,,1d,70,1.5000,2024-11-28T05:08:30.3857748+00:00
-18760,Simple Sandwich,,1d,80,0.9697,2024-11-28T05:08:30.4995672+00:00
+18753,Deluxe Sandwich,,1d,555,1.0727,2024-11-18T05:08:55.0842894+00:00
+18760,Simple Sandwich,,,,,
 18786,Green Kelp,,,,,
 18787,Brown Kelp,,,,,
 18795,Granbleu's Dive Helmet,,,,,
@@ -4267,12 +4267,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 18813,Illustrious Earth Earring,,,,,
 18814,Illustrious Gale Earring,,,,,
 18815,Illustrious Flame Earring,,,,,
-18816,Illustrious Wave Earring,,1d,1,150.0000,2024-11-28T05:08:31.9392523+00:00
+18816,Illustrious Wave Earring,,,,,
 18817,Illustrious Life Earring,,,,,
 18818,Delphinad Earth Earring,,,,,
 18819,Delphinad Gale Earring,,,,,
-18820,Delphinad Flame Earring,,1d,1,1750.0010,2024-11-28T05:08:32.4496173+00:00
-18821,Delphinad Wave Earring,,1d,1,1850.0000,2024-11-28T05:08:32.5678326+00:00
+18820,Delphinad Flame Earring,,,,,
+18821,Delphinad Wave Earring,,1d,2,2012.2200,2024-11-18T05:08:57.3353164+00:00
 18822,Delphinad Life Earring,,,,,
 18823,Red Coral Polyp,,,,,
 18824,Green Coral Polyp,,,,,
@@ -4284,24 +4284,24 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 18830,Pearl Oyster,,,,,
 18831,White Coral Polyp,,,,,
 18832,Blue Coral Polyp,,,,,
-18936,Red Coral,,1d,1815,0.5237,2024-11-28T05:08:33.9717902+00:00
-18937,Green Coral,,1d,347,0.7220,2024-11-28T05:08:34.095718+00:00
-18938,Antler Coral,,1d,1011,0.8220,2024-11-28T05:08:34.2174857+00:00
+18936,Red Coral,,1d,3863,0.6194,2024-11-18T05:08:58.7757638+00:00
+18937,Green Coral,,1d,441,0.5460,2024-11-18T05:08:58.9037414+00:00
+18938,Antler Coral,,1d,3202,1.0021,2024-11-18T05:08:59.0435642+00:00
 18939,Oyster,,,,,
-18940,White Coral,,1d,47,1.9000,2024-11-28T05:08:34.4361176+00:00
+18940,White Coral,,,,,
 18941,Blue Coral,,,,,
-18942,Orange Coral,,1d,247,0.8000,2024-11-28T05:08:34.6969743+00:00
+18942,Orange Coral,,1d,415,0.0020,2024-11-18T05:08:59.5433725+00:00
 18943,Yellow Coral,,,,,
-18954,Abalone,,1d,18,2.9133,2024-11-28T05:08:34.9311375+00:00
-18955,Penshell,,1d,10,4.8900,2024-11-28T05:08:35.0409006+00:00
+18954,Abalone,,1d,21,5.9875,2024-11-18T05:08:59.8072281+00:00
+18955,Penshell,,1d,8,9.0967,2024-11-18T05:08:59.9312796+00:00
 18970,Ancient Library Relic,,,,,
 19020,Seabreeze Essence,,,,,
 19033,118815 DO NOT TRANSLATE,,,,,
-19035,Recovery Pouch,,1d,300,0.4900,2024-11-28T05:08:35.5216815+00:00
-19041,Kraken's Might,,1d,160,5.4010,2024-11-28T05:08:35.6349471+00:00
-19042,Desert Fire,,1d,1189,0.8351,2024-11-28T05:08:35.7626001+00:00
-19043,Nui's Nova,,1d,301,6.1340,2024-11-28T05:08:35.8779066+00:00
-19045,Black Pearl,,1d,49,2.9167,2024-11-28T05:08:35.9925848+00:00
+19035,Recovery Pouch,,1d,241,0.6175,2024-11-18T05:09:00.4040021+00:00
+19041,Kraken's Might,,1d,330,6.9292,2024-11-18T05:09:00.535014+00:00
+19042,Desert Fire,,1d,1744,0.8876,2024-11-18T05:09:00.6477479+00:00
+19043,Nui's Nova,,1d,673,4.6540,2024-11-18T05:09:00.7822148+00:00
+19045,Black Pearl,,1d,30,5.8237,2024-11-18T05:09:00.8938606+00:00
 19046,Broken Gourd Bottle,,,,,
 19047,Cracked Rum Bottle,,,,,
 19048,Tattered Feather Pen,,,,,
@@ -4336,17 +4336,17 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 19326,Corrupted Kyrios Hood,,,,,
 19327,Corrupted Kyrios Shirt,,,,,
 19328,Corrupted Kyrios Sleeves,,,,,
-19329,Corrupted Kyrios Gloves,,1d,1,2888.8888,2024-11-28T05:08:40.1404179+00:00
+19329,Corrupted Kyrios Gloves,,,,,
 19330,Corrupted Kyrios Sash,,,,,
-19331,Corrupted Kyrios Pants,,1d,1,666.0000,2024-11-28T05:08:40.3912276+00:00
+19331,Corrupted Kyrios Pants,,,,,
 19332,Corrupted Kyrios Shoes,,,,,
-19333,Reckless Captain's Helm,,1d,1,99.0000,2024-11-28T05:08:40.6343629+00:00
-19334,Reckless Captain's Cuirass,,1d,1,20.0000,2024-11-28T05:08:40.7504232+00:00
-19335,Reckless Captain's Vambraces,,1d,1,25.0000,2024-11-28T05:08:40.867087+00:00
-19336,Reckless Captain's Gauntlets,,1d,1,18.9999,2024-11-28T05:08:40.9886284+00:00
-19337,Reckless Captain's Tassets,,1d,1,38.0000,2024-11-28T05:08:41.1169689+00:00
-19338,Reckless Captain's Greaves,,1d,1,60.0000,2024-11-28T05:08:41.2364843+00:00
-19339,Reckless Captain's Sabatons,,1d,4,5.7466,2024-11-28T05:08:41.371341+00:00
+19333,Reckless Captain's Helm,,1d,2,45.0001,2024-11-18T05:09:04.8060165+00:00
+19334,Reckless Captain's Cuirass,,1d,1,50.6960,2024-11-18T05:09:04.8948585+00:00
+19335,Reckless Captain's Vambraces,,1d,2,20.0000,2024-11-18T05:09:04.9987249+00:00
+19336,Reckless Captain's Gauntlets,,1d,2,32.0000,2024-11-18T05:09:05.1198805+00:00
+19337,Reckless Captain's Tassets,,1d,4,45.0000,2024-11-18T05:09:05.212561+00:00
+19338,Reckless Captain's Greaves,,1d,2,120.5000,2024-11-18T05:09:05.312589+00:00
+19339,Reckless Captain's Sabatons,,1d,2,14.5000,2024-11-18T05:09:05.4190562+00:00
 19344,Four Fingers Hood,,,,,
 19345,Blackbeard Watcher,,,,,
 19346,Blackbeard Betrayer,,,,,
@@ -4358,15 +4358,15 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 19352,Tough Gatekeeper's Tassets,,,,,
 19353,Tough Gatekeeper's Greaves,,,,,
 19354,Tough Gatekeeper's Sabatons,,,,,
-19401,Baktehan's Swimfins,,,,,
-19402,Small Leaf Pigment,,1d,5,73.9579,2024-11-28T05:08:42.9010829+00:00
-19403,Soft Stem Pigment,,,,,
+19401,Baktehan's Swimfins,,1d,1,150.0000,2024-11-18T05:09:06.815022+00:00
+19402,Small Leaf Pigment,,1d,3,53.8833,2024-11-18T05:09:06.9554657+00:00
+19403,Soft Stem Pigment,,1d,5,77.0000,2024-11-18T05:09:07.0865978+00:00
 19404,Scented Petal Pigment,,,,,
-19407,Viscous Glossy Oil,,1d,26,69.5615,2024-11-28T05:08:43.2752193+00:00
-19408,Emulsified Oil,,1d,2,95.0000,2024-11-28T05:08:43.4043652+00:00
-19409,Deeply Colored Oil,,,,,
-19410,Rough Polish,,1d,13,73.6860,2024-11-28T05:08:43.6481004+00:00
-19411,Non-Stick Polish,,,,,
+19407,Viscous Glossy Oil,,1d,25,67.7570,2024-11-18T05:09:07.355186+00:00
+19408,Emulsified Oil,,1d,12,97.4948,2024-11-18T05:09:07.4700471+00:00
+19409,Deeply Colored Oil,,1d,4,378.7475,2024-11-18T05:09:07.602598+00:00
+19410,Rough Polish,,1d,64,52.3106,2024-11-18T05:09:07.7273465+00:00
+19411,Non-Stick Polish,,1d,2,100.4999,2024-11-18T05:09:07.8189964+00:00
 19412,Rainbow Polish,,,,,
 19413,Light Handle,,,,,
 19414,Hard Handle,,,,,
@@ -4386,9 +4386,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 19428,Rough Instrument Frame,,,,,
 19429,Bamboo Fishing Pole Frame,,,,,
 19430,Steel Fishing Pole Frame,,,,,
-19448,Small Root Pigment,,1d,30,13.9799,2024-11-28T05:08:46.0727681+00:00
-19449,Small Seed Oil,,1d,40,10.4200,2024-11-28T05:08:46.1959057+00:00
-19450,Opaque Polish,,1d,91,15.0024,2024-11-28T05:08:46.2988698+00:00
+19448,Small Root Pigment,,,,,
+19449,Small Seed Oil,,1d,190,10.8881,2024-11-18T05:09:10.370008+00:00
+19450,Opaque Polish,,1d,131,10.7683,2024-11-18T05:09:10.4722067+00:00
 19451,Springy Steel Fishing Pole Frame,,,,,
 19452,Crude Sack,,,,,
 19453,Gilt Fishing Pole Frame,,,,,
@@ -4397,11 +4397,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 19456,Archeum Fishing Pole Frame,,,,,
 19463,122151 DO NOT TRANSLATE,,,,,
 19467,Tank Cannon,,,,,
-19468,Strong Wheel,,,,,
+19468,Strong Wheel,,1d,2,37.0000,2024-11-18T05:09:11.6216761+00:00
 19469,Solid Shaft,,,,,
 19470,High Power Engine,,,,,
 19471,Vehicle Controlling Device,,,,,
-19472,Farm Wagon Design,,1d,1,450.0000,2024-11-28T05:08:47.8530887+00:00
+19472,Farm Wagon Design,,1d,2,445.0005,2024-11-18T05:09:12.1017775+00:00
 19477,Equipment Crafting Toolbox,,,,,
 19507,123107 DO NOT TRANSLATE,,,,,
 19553,Oceana Swimtop,,,,,
@@ -4478,11 +4478,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 19941,Turkey Chick,,,,,
 19942,Goat Kid,,,,,
 19943,Water Buffalo Calf,,,,,
-19944,Goose Meat,,1d,9,0.1800,2024-11-28T05:08:57.0620485+00:00
-19945,Turkey Meat,,1d,31,0.4600,2024-11-28T05:08:57.1906593+00:00
-19946,Duck Down,,1d,3189,0.0618,2024-11-28T05:08:57.3189763+00:00
-19947,Goose Down,,1d,1222,0.0493,2024-11-28T05:08:57.4459183+00:00
-19948,Goat Wool,,1d,534,0.0738,2024-11-28T05:08:57.5632075+00:00
+19944,Goose Meat,,1d,109,0.3967,2024-11-18T05:09:21.5275686+00:00
+19945,Turkey Meat,,1d,352,0.6500,2024-11-18T05:09:21.6674395+00:00
+19946,Duck Down,,1d,3971,0.0529,2024-11-18T05:09:21.7931434+00:00
+19947,Goose Down,,1d,123,0.0200,2024-11-18T05:09:21.9368163+00:00
+19948,Goat Wool,,1d,2284,0.1293,2024-11-18T05:09:22.0721969+00:00
 19949,Soft Duck Down,,,,,
 19950,Light Goose Down,,,,,
 19951,Broken Goat Horn,,,,,
@@ -4596,7 +4596,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 20281,Artificer's Lightning Nodachi,,,,,
 20282,Artisan's Lightning Nodachi,,,,,
 20283,Illustrious Lightning Nodachi,,,,,
-20284,Magnificent Lightning Nodachi,,,,,
+20284,Magnificent Lightning Nodachi,,1d,1,799.0000,2024-11-18T05:09:36.2929115+00:00
 20285,Magnificent Flame Nodachi,,,,,
 20286,Magnificent Gale Nodachi,,,,,
 20287,Epherium Lightning Nodachi,,,,,
@@ -5000,7 +5000,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 20685,Conqueror's Ocean Sleeves,,,,,
 20686,Illustrious Ocean Sleeves,,,,,
 20687,Illustrious Lake Sleeves,,,,,
-20688,Illustrious Meadow Sleeves,,,,,
+20688,Illustrious Meadow Sleeves,,1d,1,5.0000,2024-11-18T05:10:24.8397463+00:00
 20689,Illustrious Stone Sleeves,,,,,
 20690,Magnificent Ocean Sleeves,,,,,
 20691,Magnificent Lake Sleeves,,,,,
@@ -5226,7 +5226,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 20911,Epherium Lightning Belt,,,,,
 20912,Epherium Flame Belt,,,,,
 20913,Epherium Squall Belt,,,,,
-20914,Epherium Gale Belt,,1d,1,600.0000,2024-11-28T05:10:25.1439655+00:00
+20914,Epherium Gale Belt,,,,,
 20915,Epherium Desert Belt,,,,,
 20916,Epherium Earth Belt,,,,,
 20917,Delphinad Typhoon Belt,,,,,
@@ -5427,19 +5427,19 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 21112,Delphinad Wave Tassets,,,,,
 21137,Aranzeb's Reverie,,,,,
 21161,Old Relic,,,,,
-21165,Thatched Farmhouse Design,,1d,12,292.6617,2024-11-28T05:10:48.3948319+00:00
+21165,Thatched Farmhouse Design,,1d,5,309.1960,2024-11-18T05:11:14.7916103+00:00
 21166,Tudor Slate Cottage Design,,,,,
 21167,Stone Slate Cottage Design,,,,,
-21168,Rustic Slate Cottage Design,,1d,1,174.9900,2024-11-28T05:10:48.7365876+00:00
-21169,Stone Spring Cottage Design,,,,,
+21168,Rustic Slate Cottage Design,,1d,2,152.4950,2024-11-18T05:11:15.1677528+00:00
+21169,Stone Spring Cottage Design,,1d,1,139.9900,2024-11-18T05:11:15.2843942+00:00
 21170,Tudor Spring Cottage Design,,,,,
 21171,Rustic Spring Cottage Design,,,,,
-21172,Rustic Rose Cottage Design,,1d,2,162.5000,2024-11-28T05:10:49.1758673+00:00
+21172,Rustic Rose Cottage Design,,1d,2,165.0000,2024-11-18T05:11:15.6620715+00:00
 21173,Tudor Rose Cottage Design,,,,,
-21174,Stone Rose Cottage Design,,1d,1,190.0000,2024-11-28T05:10:49.4040566+00:00
+21174,Stone Rose Cottage Design,,,,,
 21175,Krox's Frozen Heart,,,,,
 21176,Lerox's Frozen Heart,,,,,
-21191,Swept-Roof Cottage Design,,1d,1,180.0000,2024-11-28T05:10:49.7545549+00:00
+21191,Swept-Roof Cottage Design,,1d,2,132.5000,2024-11-18T05:11:16.2931527+00:00
 21192,Swept-Roof Manor Design,,,,,
 21193,Swept-Roof Chalet Design,,,,,
 21198,Cursed Blade,,,,,
@@ -5468,7 +5468,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 21534,Matchmaker's Shoes,,,,,
 21535,Matchmaker's Hood,,,,,
 21605,Haver Fragrance,,,,,
-21850,Vita Root,,,,,
+21850,Vita Root,,1d,50,0.6000,2024-11-18T05:11:19.6908464+00:00
 21851,Memory Cutter,,,,,
 21852,Shadow Scissors,,,,,
 21853,Wolf Fang,,,,,
@@ -5676,7 +5676,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22055,Death for Lovers,,,,,
 22056,Baleful Timekeeper,,,,,
 22057,Beautiful Prayer,,,,,
-22058,Demon-Touched Goddess,,,,,
+22058,Demon-Touched Goddess,,1d,1,35.0000,2024-11-18T05:11:45.0209084+00:00
 22059,Ironblood Throne's Destiny,,,,,
 22060,Destiny's Spear,,,,,
 22061,Vanished Star Tear,,,,,
@@ -5686,7 +5686,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22065,Twilight's Border,,,,,
 22066,Golden Firestrike,,,,,
 22067,Reunited in Death,,,,,
-22068,Hereafter Gatekeeper,,,,,
+22068,Hereafter Gatekeeper,,1d,1,0.4700,2024-11-18T05:11:46.195201+00:00
 22069,God's Foe,,,,,
 22070,Chaos-Born Man,,,,,
 22071,Key to Paradise,,,,,
@@ -5720,7 +5720,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22099,Demon War Barrier,,,,,
 22100,Twilight Sage: Verity,,,,,
 22101,Twilight Sage: Volition,,,,,
-22102,Destruction God's Descent,,,,,
+22102,Destruction God's Descent,,1d,1,0.1990,2024-11-18T05:11:50.1687467+00:00
 22103,Red Western Sky,,,,,
 22104,Second Rising Moon,,,,,
 22105,Phantasmal Wizard,,,,,
@@ -5729,7 +5729,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22108,Shining Moonlight Magic,,,,,
 22109,Starlit Skyfire,,,,,
 22110,The Creator's Law,,,,,
-22111,World Atlas Designer,,,,,
+22111,World Atlas Designer,,1d,1,9.4630,2024-11-18T05:11:51.2753622+00:00
 22112,World Atlas Engineer,,,,,
 22113,Daybreak's Prince,,,,,
 22114,Twilight's Maiden,,,,,
@@ -5738,7 +5738,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22117,Eternal Life Urn,,,,,
 22118,Stairway to Heaven,,,,,
 22119,Blustering Wizard,,,,,
-22120,Burnt Witch,,,,,
+22120,Burnt Witch,,1d,1,4.4630,2024-11-18T05:11:52.2832337+00:00
 22121,Wizard's Essence,,,,,
 22122,Fortitude's Luster,,,,,
 22123,Shadow Eraser,,,,,
@@ -5776,7 +5776,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22155,Gold Thorn Bird,,,,,
 22156,Red Demon of Stone Stairs,,,,,
 22157,Free Shot,,,,,
-22158,BloodCrimson Lightning,,,,,
+22158,BloodCrimson Lightning,,1d,2,250.0000,2024-11-18T05:11:56.8993255+00:00
 22159,Red Moon's Tune,,,,,
 22160,Charming Summer Scent,,,,,
 22161,Daily Cycle's Story,,,,,
@@ -5892,7 +5892,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22271,Forgotten Season Shirt,,,,,
 22272,Rokhala Mountains' Soul,,,,,
 22273,Nameless Ascetic's Shirt,,,,,
-22274,Fairy Queen's Mercy,,,,,
+22274,Fairy Queen's Mercy,,1d,1,5.0000,2024-11-18T05:12:09.6082889+00:00
 22275,Everdreaming Shirt,,,,,
 22276,Dark Watcher's Shirt,,,,,
 22277,Cumulus Cloud Shirt,,,,,
@@ -5954,7 +5954,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 22333,Cumulus Cloud Gloves,,,,,
 22334,Dawn Witch Gloves,,,,,
 22335,Dark Assembly's Gloves,,,,,
-22336,Knotted Hell Gloves,,,,,
+22336,Knotted Hell Gloves,,1d,1,0.1000,2024-11-18T05:12:16.8603325+00:00
 22337,Sea Witch Gloves,,,,,
 22338,Faded Crescent Gloves,,,,,
 22339,Sun's End Gloves,,,,,
@@ -6552,7 +6552,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 23640,Sovereign's Red Bed Design,,,,,
 23641,Shatigon's Sandglass: Handful,,,,,
 23642,Shatigon's Sandglass: Pinch,,,,,
-23653,Mysterious Garden Powder,,1d,1623,16.3570,2024-11-28T05:12:56.7453216+00:00
+23653,Mysterious Garden Powder,,1d,2685,17.1101,2024-11-18T05:13:27.4718399+00:00
 23663,Ultralight Wing Ribs,,,,,
 23664,Glider Steering Mechanism,,,,,
 23665,Glider Thruster,,,,,
@@ -6560,10 +6560,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 23667,Godshield Generator,,,,,
 23668,Moonlight Stealth Device,,,,,
 23669,Red Dragon Igniter,,,,,
-23670,Siege Ammo,,,,,
-23671,Steel Ammo,,1d,1021,0.0888,2024-11-28T05:12:57.7905638+00:00
+23670,Siege Ammo,,1d,200,1.2399,2024-11-18T05:13:28.3661149+00:00
+23671,Steel Ammo,,1d,5933,0.0804,2024-11-18T05:13:28.4781131+00:00
 23672,Fresh Meat,,,,,
-23698,Merchant Schooner Design,,1d,1,3200.0000,2024-11-28T05:12:58.0096211+00:00
+23698,Merchant Schooner Design,,,,,
 23705,Crest Bleach,,,,,
 23710,Nui's Smile,,,,,
 23711,Delphinad Flame,,,,,
@@ -6834,7 +6834,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24107,Moonswept Bay Necklace,,,,,
 24108,Nui's Glory Coast,,,,,
 24109,Golden Fable Ring,,,,,
-24121,Design Fragment: Growling Yawl,,,,,
+24121,Design Fragment: Growling Yawl,,1d,2,747.0000,2024-11-18T05:14:00.865399+00:00
 24122,Design Fragment: Singed Vehicle,,,,,
 24421,Merril's Message,,,,,
 24422,Johann's Message,,,,,
@@ -6907,7 +6907,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24517,Wrathful Prisoner's Meditation,,,,,
 24518,Forgotten Rhythm,,,,,
 24519,Unworthy Overlord's Seal,,,,,
-24581,Treasure Map with Coordinates,,1d,52,18.2142,2024-11-28T05:13:36.8725283+00:00
+24581,Treasure Map with Coordinates,,1d,32,6.8422,2024-11-18T05:14:08.5344173+00:00
 24611,Lucid Flaming Gale Lunadrop,,,,,
 24612,Lucid Flaming Earth Lunadrop,,,,,
 24613,Lucid Flaming Wave Lunadrop,,,,,
@@ -6948,15 +6948,15 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24648,Radiant Lively Gale Lunadrop,,,,,
 24649,Radiant Lively Earth Lunadrop,,,,,
 24650,Radiant Lively Wave Lunadrop,,,,,
-24651,Blazing Flaming Gale Lunadrop,,,,,
-24652,Blazing Flaming Earth Lunadrop,,,,,
+24651,Blazing Flaming Gale Lunadrop,,1d,1,25.0000,2024-11-18T05:14:13.3898801+00:00
+24652,Blazing Flaming Earth Lunadrop,,1d,1,25.0000,2024-11-18T05:14:13.5148331+00:00
 24653,Blazing Flaming Wave Lunadrop,,,,,
 24654,Blazing Flaming Life Lunadrop,,,,,
-24655,Beguiling Flaming Gale Lunadrop,,,,,
-24656,Beguiling Flaming Earth Lunadrop,,1d,2,90.0000,2024-11-28T05:13:42.2054915+00:00
+24655,Beguiling Flaming Gale Lunadrop,,1d,1,55.0000,2024-11-18T05:14:13.9064323+00:00
+24656,Beguiling Flaming Earth Lunadrop,,,,,
 24657,Beguiling Flaming Wave Lunadrop,,,,,
 24658,Beguiling Flaming Life Lunadrop,,,,,
-24659,Blazing Windy Fire Lunadrop,,1d,1,25.0000,2024-11-28T05:13:42.5740694+00:00
+24659,Blazing Windy Fire Lunadrop,,,,,
 24660,Blazing Windy Earth Lunadrop,,,,,
 24661,Blazing Windy Wave Lunadrop,,,,,
 24662,Blazing Windy Life Lunadrop,,,,,
@@ -6990,7 +6990,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24690,Beguiling Lively Wave Lunadrop,,,,,
 24691,Cracked Insightful Lunafrost,,,,,
 24692,Whole Insightful Lunafrost,,,,,
-24693,Flawless Insightful Lunafrost,,,,,
+24693,Flawless Insightful Lunafrost,,1d,1,201.8700,2024-11-18T05:14:18.3969825+00:00
 24694,Cracked Waterdrop Lunafrost,,,,,
 24695,Whole Waterdrop Lunafrost,,,,,
 24696,Flawless Waterdrop Lunafrost,,,,,
@@ -7011,10 +7011,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24711,Flawless Flash Lunafrost,,,,,
 24712,Cracked Assassin's Lunafrost,,,,,
 24713,Whole Assassin's Lunafrost,,,,,
-24714,Flawless Assassin's Lunafrost,,1d,2,162.9900,2024-11-28T05:13:48.834273+00:00
+24714,Flawless Assassin's Lunafrost,,1d,1,149.9700,2024-11-18T05:14:20.8983934+00:00
 24715,Cracked Wave Lunafrost,,,,,
 24716,Whole Wave Lunafrost,,,,,
-24717,Flawless Wave Lunafrost,,,,,
+24717,Flawless Wave Lunafrost,,1d,1,250.0000,2024-11-18T05:14:21.254367+00:00
 24718,Cracked Lynx Lunafrost,,,,,
 24719,Whole Lynx Lunafrost,,,,,
 24720,Cracked Chaos Lunafrost,,,,,
@@ -7147,12 +7147,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 24908,Carpenter's Pants,,,,,
 24909,Carpenter's Gloves,,,,,
 24910,Carpenter's Shoes,,,,,
-24911,Lunarite,,1d,1560,0.2195,2024-11-28T05:14:04.1646518+00:00
-24912,Fine Lunarite,,,,,
-24913,Superior Lunarite,,1d,5,6.9434,2024-11-28T05:14:04.3515061+00:00
-24914,Prime Lunarite,,1d,10,25.0000,2024-11-28T05:14:04.4457212+00:00
-24915,Heat of Eternal Summer,,1d,13,0.1995,2024-11-28T05:14:04.5364962+00:00
-24916,Eternal Winter Chill,,1d,33,1.3606,2024-11-28T05:14:04.6298671+00:00
+24911,Lunarite,,1d,2201,0.1683,2024-11-18T05:14:37.2785328+00:00
+24912,Fine Lunarite,,1d,129,2.1761,2024-11-18T05:14:37.4014044+00:00
+24913,Superior Lunarite,,1d,14,4.9333,2024-11-18T05:14:37.5115091+00:00
+24914,Prime Lunarite,,1d,18,27.8988,2024-11-18T05:14:37.627922+00:00
+24915,Heat of Eternal Summer,,1d,23,2.7154,2024-11-18T05:14:37.7461754+00:00
+24916,Eternal Winter Chill,,1d,33,2.5530,2024-11-18T05:14:37.8557974+00:00
 25116,Bugira's Coin,,,,,
 25118,Pure Ally's Wings,,,,,
 25119,Loving Ally's Wings,,,,,
@@ -7171,7 +7171,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 25238,Hardwood Partition,,,,,
 25239,Sovereign's Partition,,,,,
 25240,Merchant's Partition,,,,,
-25241,Scholar's Partition,,,,,
+25241,Scholar's Partition,,1d,1,0.2100,2024-11-18T05:14:40.1138819+00:00
 25293,Yeoman's Wood Chair,,,,,
 25303,Shabby Battle Pet Armor,,,,,
 25304,Light Battle Pet Armor,,,,,
@@ -7375,9 +7375,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 25695,Spiked Iron Fence,,,,,
 25696,Stone Post,,,,,
 25778,Spiked White Fence,,,,,
-25798,Sunlight Archeum Motes,,1d,1,1.0000,2024-11-28T05:14:29.9206454+00:00
+25798,Sunlight Archeum Motes,,,,,
 25799,Moonlight Archeum Motes,,,,,
-25800,Starlight Archeum Motes,,1d,3,0.5000,2024-11-28T05:14:30.1475327+00:00
+25800,Starlight Archeum Motes,,,,,
 25896,Unknown Book Excerpt,,,,,
 25960,Auroria Mineral Water Ticket,,,,,
 25971,Arcadian Sea Pillager,,,,,
@@ -7390,7 +7390,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 26377,Potato Eye Bundle,,,,,
 26378,Cucumber Seed Bundle,,,,,
 26379,White Romance Table,,,,,
-26380,Sweet Candy,,1d,67,24.7225,2024-11-28T05:14:31.6796133+00:00
+26380,Sweet Candy,,1d,85,15.7543,2024-11-18T05:15:05.3393737+00:00
 26397,Steamtank Mine,,,,,
 26424,Wooden Stake Barrier,,,,,
 26430,Traveler's Tree Sapling,,,,,
@@ -7428,7 +7428,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 26471,Thistle Seed Bundle,,,,,
 26521,Ruler's Shield,,,,,
 26547,Iyor's Travel Quire #1 Tool,,,,,
-26548,Eco-Friendly Fuel,,1d,1560,2.0045,2024-11-28T05:14:36.053727+00:00
+26548,Eco-Friendly Fuel,,1d,1775,2.5744,2024-11-18T05:15:09.7886114+00:00
 26552,Iyor's Travel Quire #2 Tool,,,,,
 26555,Iyor's Travel Quire #3 Tool,,,,,
 26558,Iyor's Travel Quire #4 Tool,,,,,
@@ -7446,14 +7446,14 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 26582,Rudal's Travel Quire #8 Tool,,,,,
 26632,Black Yata Calf,,,,,
 26633,Palomino Yata Calf,,,,,
-26634,Striped Yata Calf,,,,,
+26634,Striped Yata Calf,,1d,1,12.1210,2024-11-18T05:15:11.9993262+00:00
 26638,Cashmere Yata Calf,,,,,
 26639,Talking Frog,,,,,
 26647,Blood-Stained Revenge,,,,,
 26671,Blood-filled Glass,,,,,
 26673,Yata Meat,,,,,
-26674,Yata Fur,,1d,366,0.1249,2024-11-28T05:14:38.8288216+00:00
-26675,Axis Mundi Aegis,,,,,
+26674,Yata Fur,,1d,1539,0.1437,2024-11-18T05:15:12.7360255+00:00
+26675,Axis Mundi Aegis,,1d,1,7000.0000,2024-11-18T05:15:12.8348118+00:00
 26676,Downy Yata Fur,,,,,
 26677,Nuimari Necklace,,,,,
 26678,Heedmar Earring,,,,,
@@ -7461,10 +7461,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 26733,Whyspron Mount Saddle,,,,,
 26734,Whyspron Pet Helm,,,,,
 26735,Whyspron Pet Legguards,,,,,
-26744,Combined Feed,,1d,1800,0.3909,2024-11-28T05:14:39.8491541+00:00
-26768,Cashmere Thread,,1d,6,11.1111,2024-11-28T05:14:39.971155+00:00
-26769,Red Pigment,,,,,
-26770,Yellow Pigment,,,,,
+26744,Combined Feed,,1d,1613,0.4780,2024-11-18T05:15:13.7251118+00:00
+26768,Cashmere Thread,,1d,9,17.1498,2024-11-18T05:15:13.8262908+00:00
+26769,Red Pigment,,1d,1,12.5000,2024-11-18T05:15:13.9434066+00:00
+26770,Yellow Pigment,,1d,1,80.0000,2024-11-18T05:15:14.0680111+00:00
 26771,Blue Pigment,,,,,
 26782,Hot Roast Pig,,,,,
 26783,Steamed Lobster,,,,,
@@ -7478,62 +7478,62 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 26836,Mythic Taming Net,,,,,
 26837,Legendary Taming Net,,,,,
 26838,Epic Taming Net,,,,,
-26853,Book of Auroria,,1d,8,36.8960,2024-11-28T05:14:41.8805684+00:00
-26855,Perfect Fire Lunafrost,,1d,2,310.2685,2024-11-28T05:14:41.9974775+00:00
-26856,Perfect Gale Lunafrost,,1d,1,250.5450,2024-11-28T05:14:42.1161844+00:00
-26857,Perfect Earth Lunafrost,,,,,
-26858,Perfect Wave Lunafrost,,,,,
-26859,Perfect Life Lunafrost,,1d,1,365.9700,2024-11-28T05:14:42.4728294+00:00
+26853,Book of Auroria,,1d,1,40.3900,2024-11-18T05:15:15.8061365+00:00
+26855,Perfect Fire Lunafrost,,1d,1,395.9900,2024-11-18T05:15:15.9399057+00:00
+26856,Perfect Gale Lunafrost,,1d,1,389.9999,2024-11-18T05:15:16.0485207+00:00
+26857,Perfect Earth Lunafrost,,1d,1,389.9999,2024-11-18T05:15:16.1788598+00:00
+26858,Perfect Wave Lunafrost,,1d,1,389.9999,2024-11-18T05:15:16.4546121+00:00
+26859,Perfect Life Lunafrost,,,,,
 26861,Harmonic Arpeggio Lute,,,,,
 26863,Harmonic Arpeggio Flute,,,,,
-26880,Lord's Coin,,1d,39,231.4649,2024-11-28T05:14:42.8306119+00:00
+26880,Lord's Coin,,1d,75,227.0861,2024-11-18T05:15:16.9461561+00:00
 26921,Star Cake,,,,,
-26956,Rumbling Archeum Tree Sapling,,,,,
+26956,Rumbling Archeum Tree Sapling,,1d,1,125.0000,2024-11-18T05:15:17.2036557+00:00
 26968,Noble Blessings Feast Table,,,,,
 26969,Arcane Grace Feast Table,,,,,
 26970,Abundant Health Beverage Table,,,,,
 26971,Ample Mana Appetizer Table,,,,,
-26978,Auroria Mystic Hood,,,,,
+26978,Auroria Mystic Hood,,1d,1,0.3000,2024-11-18T05:15:17.8425822+00:00
 26979,Auroria Heartbound Hood,,,,,
 26980,Auroria Soulbane Hood,,,,,
 26981,Auroria Mystic Shirt,,,,,
 26982,Auroria Heartbound Shirt,,,,,
-26983,Auroria Soulbane Shirt,,1d,1,150.0000,2024-11-28T05:14:44.2777871+00:00
-26984,Auroria Mystic Sash,,1d,1,45.0000,2024-11-28T05:14:44.3945784+00:00
-26985,Auroria Heartbound Sash,,,,,
+26983,Auroria Soulbane Shirt,,1d,2,70.0000,2024-11-18T05:15:18.4799612+00:00
+26984,Auroria Mystic Sash,,1d,1,25.0000,2024-11-18T05:15:18.606155+00:00
+26985,Auroria Heartbound Sash,,1d,1,99.0000,2024-11-18T05:15:18.7229809+00:00
 26986,Auroria Soulbane Sash,,,,,
-26987,Auroria Mystic Sleeves,,1d,1,120.0000,2024-11-28T05:14:44.7263226+00:00
-26988,Auroria Heartbound Sleeves,,,,,
-26989,Auroria Soulbane Sleeves,,1d,1,40.0000,2024-11-28T05:14:44.9525045+00:00
+26987,Auroria Mystic Sleeves,,,,,
+26988,Auroria Heartbound Sleeves,,1d,2,93.0000,2024-11-18T05:15:19.0912873+00:00
+26989,Auroria Soulbane Sleeves,,,,,
 26990,Auroria Mystic Gloves,,,,,
 26991,Auroria Heartbound Gloves,,,,,
 26992,Auroria Soulbane Gloves,,,,,
 26993,Auroria Mystic Pants,,,,,
 26994,Auroria Heartbound Pants,,,,,
-26995,Auroria Soulbane Pants,,,,,
-26996,Auroria Mystic Shoes,,1d,1,45.0000,2024-11-28T05:14:45.7666287+00:00
+26995,Auroria Soulbane Pants,,1d,1,15.0000,2024-11-18T05:15:19.9502069+00:00
+26996,Auroria Mystic Shoes,,,,,
 26997,Auroria Heartbound Shoes,,,,,
 26998,Auroria Soulbane Shoes,,,,,
 26999,Auroria Promise Cap,,,,,
 27000,Auroria Wildborn Cap,,,,,
 27001,Auroria Beldame Cap,,,,,
-27002,Auroria Promise Jerkin,,,,,
-27003,Auroria Wildborn Jerkin,,,,,
-27004,Auroria Beldame Jerkin,,,,,
-27005,Auroria Promise Belt,,,,,
+27002,Auroria Promise Jerkin,,1d,1,35.0000,2024-11-18T05:15:20.8505828+00:00
+27003,Auroria Wildborn Jerkin,,1d,1,29.0000,2024-11-18T05:15:20.9746877+00:00
+27004,Auroria Beldame Jerkin,,1d,1,19.0000,2024-11-18T05:15:21.0950749+00:00
+27005,Auroria Promise Belt,,1d,3,4421.6667,2024-11-18T05:15:21.2306419+00:00
 27006,Auroria Wildborn Belt,,,,,
 27007,Auroria Beldame Belt,,,,,
 27008,Auroria Promise Guards,,,,,
-27009,Auroria Wildborn Guards,,,,,
+27009,Auroria Wildborn Guards,,1d,4,166.7829,2024-11-18T05:15:21.7464995+00:00
 27010,Auroria Beldame Guards,,,,,
-27011,Auroria Promise Fists,,,,,
+27011,Auroria Promise Fists,,1d,1,75.9999,2024-11-18T05:15:22.0131903+00:00
 27012,Auroria Wildborn Fists,,,,,
 27013,Auroria Beldame Fists,,,,,
 27014,Auroria Promise Breeches,,,,,
 27015,Auroria Wildborn Breeches,,,,,
 27016,Auroria Beldame Breeches,,,,,
 27017,Auroria Promise Boots,,,,,
-27018,Auroria Wildborn Boots,,1d,2,55.0000,2024-11-28T05:14:48.3713839+00:00
+27018,Auroria Wildborn Boots,,1d,1,55.0000,2024-11-18T05:15:22.9331264+00:00
 27019,Auroria Beldame Boots,,,,,
 27020,Auroria Swordbane Helm,,,,,
 27021,Auroria Hellbent Helm,,,,,
@@ -7541,13 +7541,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27023,Auroria Swordbane Cuirass,,,,,
 27024,Auroria Hellbent Cuirass,,,,,
 27025,Auroria Savage Cuirass,,,,,
-27026,Auroria Swordbane Tassets,,,,,
-27027,Auroria Hellbent Tassets,,1d,1,33.0000,2024-11-28T05:14:49.3683173+00:00
-27028,Auroria Savage Tassets,,,,,
-27029,Auroria Swordbane Vambraces,,,,,
+27026,Auroria Swordbane Tassets,,1d,1,10.0000,2024-11-18T05:15:23.9648883+00:00
+27027,Auroria Hellbent Tassets,,1d,1,45.0000,2024-11-18T05:15:24.1192569+00:00
+27028,Auroria Savage Tassets,,1d,1,100.0000,2024-11-18T05:15:24.2541763+00:00
+27029,Auroria Swordbane Vambraces,,1d,1,15.0000,2024-11-18T05:15:24.3897677+00:00
 27030,Auroria Hellbent Vambraces,,,,,
-27031,Auroria Savage Vambraces,,1d,1,45.0000,2024-11-28T05:14:49.8400332+00:00
-27032,Auroria Swordbane Gauntlets,,,,,
+27031,Auroria Savage Vambraces,,,,,
+27032,Auroria Swordbane Gauntlets,,1d,1,20.0000,2024-11-18T05:15:24.7550389+00:00
 27033,Auroria Hellbent Gauntlets,,,,,
 27034,Auroria Savage Gauntlets,,,,,
 27035,Auroria Swordbane Greaves,,,,,
@@ -7556,7 +7556,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27038,Auroria Swordbane Sabatons,,,,,
 27039,Auroria Hellbent Sabatons,,,,,
 27040,Auroria Savage Sabatons,,,,,
-27142,Bait Worm,,1d,144430,0.0500,2024-11-28T05:14:51.0660756+00:00
+27142,Bait Worm,,1d,103170,0.0551,2024-11-18T05:15:25.9222324+00:00
 27203,Captive Windlord,,,,,
 27204,Captive Flamelord,,,,,
 27205,Captive Farkrag the Wanderer,,,,,
@@ -7566,27 +7566,27 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27211,Captive Blackscale Corps Deceiver,,,,,
 27212,Captive Twinhead Viper,,,,,
 27213,Flirtatious Flower,,,,,
-27217,Shrimp,,1d,15,0.0166,2024-11-28T05:14:52.2491068+00:00
-27218,Anchovy,,,,,
-27219,Squid,,1d,13,0.0031,2024-11-28T05:14:52.4602357+00:00
+27217,Shrimp,,1d,500,0.0300,2024-11-18T05:15:27.1190418+00:00
+27218,Anchovy,,1d,429,0.0217,2024-11-18T05:15:27.255226+00:00
+27219,Squid,,1d,31,0.0675,2024-11-18T05:15:27.389843+00:00
 27220,Sandfish,,,,,
 27221,Roosterfish,,,,,
 27222,Flatfish,,,,,
 27223,Sardine,,,,,
-27224,Ricefish,,,,,
-27225,Minnow,,,,,
+27224,Ricefish,,1d,41,0.0050,2024-11-18T05:15:28.0389473+00:00
+27225,Minnow,,1d,59,0.0100,2024-11-18T05:15:28.1592041+00:00
 27226,Loach,,,,,
 27227,Carp,,,,,
 27228,Snipefish,,,,,
 27229,Char,,,,,
 27230,Smelt,,,,,
-27231,Pike,,,,,
+27231,Pike,,1d,100,0.0076,2024-11-18T05:15:28.8755507+00:00
 27232,Halibut,,,,,
-27233,Pufferfish,,1d,1,0.0085,2024-11-28T05:14:54.0591095+00:00
+27233,Pufferfish,,,,,
 27234,Mackerel,,,,,
 27235,Tilefish,,,,,
 27236,Octopus,,,,,
-27237,Catfish,,,,,
+27237,Catfish,,1d,5,0.0500,2024-11-18T05:15:29.6052544+00:00
 27238,Dragonet,,,,,
 27239,Trout,,,,,
 27240,Snakehead,,,,,
@@ -7595,13 +7595,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27243,Butterfish,,,,,
 27244,Archerfish,,,,,
 27245,Piranha,,,,,
-27246,Herring,,,,,
+27246,Herring,,1d,9,0.2298,2024-11-18T05:15:30.7496941+00:00
 27247,Snapper,,,,,
-27248,Stingray,,1d,20,2.0000,2024-11-28T05:14:55.8541038+00:00
-27249,Mullet,,,,,
+27248,Stingray,,,,,
+27249,Mullet,,1d,1,0.5000,2024-11-18T05:15:31.1182642+00:00
 27250,Pollack,,,,,
 27251,Sea Bass,,,,,
-27252,Solzrean Mackerel,,1d,1,0.0350,2024-11-28T05:14:56.3275325+00:00
+27252,Solzrean Mackerel,,,,,
 27253,Cod,,,,,
 27254,Salmon,,,,,
 27255,Barracuda,,,,,
@@ -7609,33 +7609,33 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27257,Rainbow Trout,,,,,
 27258,Skipjack Tuna,,,,,
 27259,Pigfish,,,,,
-27271,The Art of Language,,1d,12,32.9816,2024-11-28T05:14:57.3404522+00:00
-27278,Paper,,1d,2030,0.1075,2024-11-28T05:14:57.4579741+00:00
+27271,The Art of Language,,1d,19,32.6759,2024-11-18T05:15:32.5150074+00:00
+27278,Paper,,1d,2550,0.0824,2024-11-18T05:15:32.6363352+00:00
 27287,Silverwolf Plate Design,,,,,
-27293,Grimghast Helm,,1d,1,275.3333,2024-11-28T05:14:57.7013708+00:00
-27294,Grimghast Cuirass,,1d,1,333.3333,2024-11-28T05:14:57.8138599+00:00
-27295,Grimghast Vambraces,,1d,1,299.0000,2024-11-28T05:14:57.9078674+00:00
-27296,Grimghast Gauntlets,,1d,1,150.0000,2024-11-28T05:14:58.0251294+00:00
-27297,Grimghast Tassets,,1d,2,251.8333,2024-11-28T05:14:58.1359979+00:00
-27298,Grimghast Greaves,,1d,1,300.3333,2024-11-28T05:14:58.2500322+00:00
-27299,Grimghast Sabatons,,1d,3,226.7778,2024-11-28T05:14:58.3647038+00:00
+27293,Grimghast Helm,,1d,5,218.8695,2024-11-18T05:15:32.8941209+00:00
+27294,Grimghast Cuirass,,1d,1,189.9999,2024-11-18T05:15:33.0135404+00:00
+27295,Grimghast Vambraces,,1d,2,229.5000,2024-11-18T05:15:33.1345966+00:00
+27296,Grimghast Gauntlets,,1d,1,200.0000,2024-11-18T05:15:33.2513226+00:00
+27297,Grimghast Tassets,,,,,
+27298,Grimghast Greaves,,1d,2,157.9750,2024-11-18T05:15:33.4759658+00:00
+27299,Grimghast Sabatons,,,,,
 27300,Scroll: Trebuchet,,,,,
 27302,Scroll: Siege Tower,,,,,
 27313,Chum,,,,,
 27314,Chopped Squid,,,,,
-27315,Chopped Roosterfish,,1d,286,3.1601,2024-11-28T05:14:58.9393021+00:00
-27316,Chopped Sardines,,1d,26,3.9999,2024-11-28T05:14:59.0646099+00:00
-27317,Chopped Pike,,1d,44,6.1100,2024-11-28T05:14:59.1990968+00:00
-27318,Chopped Fish Bucket,,1d,17,4.5150,2024-11-28T05:14:59.329862+00:00
-27319,Yellow Lure,,,,,
-27321,Sharp Fishing Hook,,,,,
+27315,Chopped Roosterfish,,1d,99,3.9255,2024-11-18T05:15:34.224611+00:00
+27316,Chopped Sardines,,,,,
+27317,Chopped Pike,,1d,10,8.0000,2024-11-18T05:15:34.4790113+00:00
+27318,Chopped Fish Bucket,,1d,10,4.0000,2024-11-18T05:15:34.6144264+00:00
+27319,Yellow Lure,,1d,18,0.0500,2024-11-18T05:15:34.7311869+00:00
+27321,Sharp Fishing Hook,,1d,100,0.0370,2024-11-18T05:15:34.8557427+00:00
 27322,Crafted Fishing Hook,,,,,
-27323,Basic Fishing Line,,,,,
+27323,Basic Fishing Line,,1d,1,3.0303,2024-11-18T05:15:35.110573+00:00
 27324,Reinforced Fishing Line,,,,,
 27325,Wooden Reel,,,,,
 27326,Sturdy Steel Reel,,,,,
 27327,Gilt Reel,,,,,
-27328,Wrapped Bamboo Fishing Rod,,1d,8,14.2391,2024-11-28T05:15:00.3719271+00:00
+27328,Wrapped Bamboo Fishing Rod,,1d,8,17.7488,2024-11-18T05:15:35.779901+00:00
 27329,Waterlogged Sack,,,,,
 27349,223056 DO NOT TRANSLATE,,,,,
 27350,223058 DO NOT TRANSLATE,,,,,
@@ -7693,7 +7693,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27537,Double-Bladed Saw Design,,,,,
 27538,225045 DO NOT TRANSLATE,,,,,
 27539,225047 DO NOT TRANSLATE,,,,,
-27545,Handicraft Yarn,,1d,4159,0.1734,2024-11-28T05:15:06.2813399+00:00
+27545,Handicraft Yarn,,1d,3770,0.3204,2024-11-18T05:15:43.052756+00:00
 27546,Unstable Solution,,,,,
 27547,Green Lure,,,,,
 27548,Blue Lure,,,,,
@@ -7734,13 +7734,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 27672,Wrapped Springy Steel Fishing Rod,,,,,
 27673,Wrapped Gilt Fishing Rod,,,,,
 27674,Wrapped Archeum Fishing Rod,,,,,
-27687,Breezy Bungalow Design,,,,,
+27687,Breezy Bungalow Design,,1d,1,250.0000,2024-11-18T05:15:48.0354148+00:00
 27700,Fir Coat,,,,,
 27706,Roasted Yam,,,,,
 27733,New Tricks Potion,,,,,
 27735,Traveler's Campfire Creator,,,,,
 27736,Potent New Tricks Potion,,,,,
-27746,Fragrant Soup,,1d,240,0.8500,2024-11-28T05:15:11.5211205+00:00
+27746,Fragrant Soup,,,,,
 27793,Universal Shield,,,,,
 27812,"Alecto's Journal, Entry #1",,,,,
 27813,"Alecto's Journal, Entry #2",,,,,
@@ -7839,7 +7839,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28004,Gargantuan Blue Marlin Trophy,,,,,
 28005,Gargantuan Bluefin Trophy,,,,,
 28006,Gargantuan Sturgeon Trophy,,,,,
-28013,Fish-Find Longliner Design,,1d,1,2100.0000,2024-11-28T05:15:23.2561653+00:00
+28013,Fish-Find Longliner Design,,,,,
 28026,231415 DO NOT TRANSLATE,,,,,
 28028,Sailfish Trophy,,,,,
 28029,Sailfish Fry Trophy,,,,,
@@ -7859,11 +7859,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28048,Electric Eel Print,,,,,
 28049,Electric Eel Fry Print,,,,,
 28050,Blossom Blade,,,,,
-28051,Sheet Music,,1d,2,3.0000,2024-11-28T05:15:25.6040286+00:00
+28051,Sheet Music,,1d,3,2.0007,2024-11-18T05:16:02.9615423+00:00
 28053,231852 DO NOT TRANSLATE,,,,,
 28071,Drumline Percussion Pack,,,,,
 28079,Treaded Wellingtons,,,,,
-28085,Building Management Title,,1d,45,158.3079,2024-11-28T05:15:26.0901393+00:00
+28085,Building Management Title,,1d,74,171.2644,2024-11-18T05:16:03.3470896+00:00
 28090,232619 DO NOT TRANSLATE,,,,,
 28093,232625 DO NOT TRANSLATE,,,,,
 28096,232631 DO NOT TRANSLATE,,,,,
@@ -7871,7 +7871,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28134,Dim Stargrave Fragment,,,,,
 28135,Great Hulk Infusion,,,,,
 28148,Sacred Drum,,,,,
-28175,Dawn Lake Light Essence,,1d,1525,3.8006,2024-11-28T05:15:27.0993918+00:00
+28175,Dawn Lake Light Essence,,1d,2033,3.9322,2024-11-18T05:16:04.1554869+00:00
 28178,Bright Headlight,,,,,
 28179,Rubber Tire,,,,,
 28180,Hydraulic Shaft,,,,,
@@ -7883,7 +7883,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28186,Morning Star Trail,,,,,
 28208,Comet Speedster Design,,,,,
 28209,Apex Squall Design,,,,,
-28210,Timber Coupe Design,,,,,
+28210,Timber Coupe Design,,1d,1,10000.0000,2024-11-18T05:16:05.3268829+00:00
 28218,Alloy Combiner,,,,,
 28220,Meteor Shower,,,,,
 28237,Pink Pigment,,,,,
@@ -7935,18 +7935,18 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28291,Marian's Diary Quire #1 Tool,,,,,
 28293,Marian's Diary Quire #2 Tool,,,,,
 28295,Marian's Diary Quire #3 Tool,,,,,
-28296,Resplendent Weapon Regrade Scroll,,1d,2,948.5305,2024-11-28T05:15:34.5255355+00:00
-28297,Resplendent Armor Regrade Scroll,,1d,1,485.0000,2024-11-28T05:15:34.6428182+00:00
-28298,Weapon Regrade Scroll,,1d,818,38.7614,2024-11-28T05:15:34.7820757+00:00
-28299,Armor Regrade Scroll,,1d,560,20.9281,2024-11-28T05:15:34.9060605+00:00
-28300,Lucky Sunpoint,,1d,35,728.9536,2024-11-28T05:15:35.0354819+00:00
-28301,Sunpoint,,1d,928,30.0830,2024-11-28T05:15:35.1636406+00:00
-28302,Moonpoint,,1d,787,16.1321,2024-11-28T05:15:35.2746367+00:00
-28303,Sunpoint Fragment,,,,,
-28304,Moonpoint Fragment,,,,,
-28305,Blank Regrade Scroll,,1d,728,4.5937,2024-11-28T05:15:35.6507335+00:00
+28296,Resplendent Weapon Regrade Scroll,,1d,4,975.0000,2024-11-18T05:16:11.5307877+00:00
+28297,Resplendent Armor Regrade Scroll,,1d,15,457.0919,2024-11-18T05:16:11.6699933+00:00
+28298,Weapon Regrade Scroll,,1d,566,43.3787,2024-11-18T05:16:11.8178546+00:00
+28299,Armor Regrade Scroll,,1d,1385,22.9473,2024-11-18T05:16:11.9575381+00:00
+28300,Lucky Sunpoint,,1d,21,795.6673,2024-11-18T05:16:12.0769091+00:00
+28301,Sunpoint,,1d,286,34.4020,2024-11-18T05:16:12.2079276+00:00
+28302,Moonpoint,,1d,714,15.8298,2024-11-18T05:16:12.3426473+00:00
+28303,Sunpoint Fragment,,1d,4,2.5000,2024-11-18T05:16:12.4628495+00:00
+28304,Moonpoint Fragment,,1d,17,2.1367,2024-11-18T05:16:12.580963+00:00
+28305,Blank Regrade Scroll,,1d,1007,5.1393,2024-11-18T05:16:12.70642+00:00
 28307,Marian's Diary Quire #4 Tool,,,,,
-28308,Lucky Moonpoint,,1d,68,403.1860,2024-11-28T05:15:35.9064773+00:00
+28308,Lucky Moonpoint,,1d,47,421.1623,2024-11-18T05:16:12.9254223+00:00
 28309,Passionate Crest T-Shirt,,,,,
 28310,Hopeful Crest T-Shirt,,,,,
 28311,Tranquil Crest T-Shirt,,,,,
@@ -7959,7 +7959,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28319,Forsaken Pirate Earring,,,,,
 28320,Forsaken Pirate Ring,,,,,
 28323,Labyrinth's Weapon Chest,,,,,
-28324,Labyrinth's Leather Armor Chest,,,,,
+28324,Labyrinth's Leather Armor Chest,,1d,1,350.0000,2024-11-18T05:16:14.5235434+00:00
 28325,Labyrinth's Plate Armor Chest,,,,,
 28326,Labyrinth's Cloth Armor Chest,,,,,
 28328,Empty Timeglass Bottle,,,,,
@@ -7979,7 +7979,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28375,Reedwhisper Piccolo,,,,,
 28376,Catspaw Recorder,,,,,
 28377,Autumn Wind Horn,,,,,
-28386,Elite Merchant's Cushion,,,,,
+28386,Elite Merchant's Cushion,,1d,2,215.0000,2024-11-18T05:16:16.9993885+00:00
 28392,Authority Crest T-Shirt,,,,,
 28394,Passionate Crest Long-Sleeve Tee,,,,,
 28395,Hopeful Crest Long-Sleeve Tee,,,,,
@@ -7993,12 +7993,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28440,General Merchant's Cushion,,,,,
 28441,Warehouse Manager's Cushion,,,,,
 28474,Gingermint,,,,,
-28480,Acorn Beehive,,1d,1,24.9898,2024-11-28T05:15:41.3859908+00:00
-28481,Honey,,1d,477,0.6969,2024-11-28T05:15:41.5020494+00:00
+28480,Acorn Beehive,,1d,10,25.9993,2024-11-18T05:16:18.7156537+00:00
+28481,Honey,,1d,1027,0.6189,2024-11-18T05:16:18.8468575+00:00
 28482,Royal Jelly,,,,,
-28483,Nymphal Queen Bee,,1d,5,25.0000,2024-11-28T05:15:41.7339957+00:00
+28483,Nymphal Queen Bee,,1d,3,29.9999,2024-11-18T05:16:19.0946137+00:00
 28484,Queen Bee Taming Net,,,,,
-28485,Smoke Bead,,,,,
+28485,Smoke Bead,,1d,17,0.5000,2024-11-18T05:16:19.3634528+00:00
 28490,Regal Printing Press,,,,,
 28523,Grand Twin Griffin Frame Design,,,,,
 28524,Grand Labyrinth Frame Design,,,,,
@@ -8020,7 +8020,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28715,Valiant Sniper Lunafrost,,,,,
 28716,Demon Hunter's Eyepatch,,,,,
 28717,Dragon Slayer's Eyepatch,,,,,
-28723,Golden Teardrop Storage Chest,,1d,1,4948.0000,2024-11-28T05:15:44.524487+00:00
+28723,Golden Teardrop Storage Chest,,,,,
 28738,Golden Teardrop Storage Chest Design,,,,,
 28745,Minor Healing Potion,,,,,
 28746,Minor Mana Potion,,,,,
@@ -8049,7 +8049,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28904,Enraged Red Dragon Roar,,,,,
 28905,Berserk Red Dragon Roar,,,,,
 28907,Dragon Ward,,,,,
-28914,Timespace Scroll Scrap,,1d,45,65.8333,2024-11-28T05:15:47.8729978+00:00
+28914,Timespace Scroll Scrap,,1d,30,67.4166,2024-11-18T05:16:25.6060302+00:00
 28938,Honey Larder,,,,,
 28939,Cheese Larder,,,,,
 28940,Herb Larder,,,,,
@@ -8061,13 +8061,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 28973,Wyrmkin Carcanet,,,,,
 28974,Chipped Dragon Bone,,,,,
 28975,Eternal Embers,,,,,
-28976,Hardened Red Dragon Scale,,1d,14,53.9286,2024-11-28T05:15:49.2715692+00:00
+28976,Hardened Red Dragon Scale,,,,,
 28977,Red Dragon Heart,,,,,
-28978,Red Dragon Spinal Ridge,,,,,
-28979,Arcadian Seafoam,,1d,2,70.4443,2024-11-28T05:15:49.63029+00:00
+28978,Red Dragon Spinal Ridge,,1d,1,4950.0000,2024-11-18T05:16:27.3098109+00:00
+28979,Arcadian Seafoam,,1d,6,103.4949,2024-11-18T05:16:27.4297324+00:00
 28980,Dahuta's Favor,,,,,
-28981,Swirling Whirlpool,,1d,23,1.0000,2024-11-28T05:15:49.8134669+00:00
-28982,Deranged Spirit,,1d,2,34.5000,2024-11-28T05:15:49.9338961+00:00
+28981,Swirling Whirlpool,,1d,296,0.1236,2024-11-18T05:16:27.6702018+00:00
+28982,Deranged Spirit,,1d,5,41.9629,2024-11-18T05:16:27.7964056+00:00
 28983,Gemfast Circlet Prototype,,,,,
 28984,Seastorm Tricorne Prototype,,,,,
 28985,Sleuth's Steamgoggles Prototype,,,,,
@@ -8149,7 +8149,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29213,Ashy Eternal Embers,,,,,
 29214,Burning Chipped Dragon Bone,,,,,
 29215,Minotaur Totem,,,,,
-29216,Chilled Seafoam,,,,,
+29216,Chilled Seafoam,,1d,10,69.4692,2024-11-18T05:16:37.9449716+00:00
 29217,Yeti Tears,,,,,
 29218,Shaped Yeti Tears,,,,,
 29219,Charred Bone Pendant,,,,,
@@ -8173,7 +8173,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29276,Platinum Steamfish Submarine Design,,,,,
 29277,Buoyancy Controller,,,,,
 29280,Wax Nugget,,,,,
-29300,Dahuta's Bubble,,1d,100,7.6186,2024-11-28T05:16:02.006782+00:00
+29300,Dahuta's Bubble,,1d,103,9.9887,2024-11-18T05:16:40.7886562+00:00
 29302,Brick Wall,,,,,
 29303,Healer's Chalice,,,,,
 29304,Prairie Cheese,,,,,
@@ -8183,7 +8183,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29308,Rich Steamed Crayfish,,,,,
 29309,Rich Grain Soup,,,,,
 29310,Rich Seafood Soup,,,,,
-29311,Hearty Soup,,1d,550,1.0288,2024-11-28T05:16:02.9710057+00:00
+29311,Hearty Soup,,1d,2165,0.9469,2024-11-18T05:16:42.0198204+00:00
 29312,Cloudy Sky Dye,,,,,
 29383,Grape Dye,,,,,
 29413,Red Blossom Brick Flowerbed,,,,,
@@ -8193,7 +8193,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29507,Organic Milk,,,,,
 29517,Frosty Bear Claw,,,,,
 29584,252857 DO NOT TRANSLATE,,,,,
-29613,Bear Fur,,1d,1000,0.0500,2024-11-28T05:16:03.9278346+00:00
+29613,Bear Fur,,1d,100,0.1825,2024-11-18T05:16:43.2289676+00:00
 29615,Daru Gratitude Pouch,,,,,
 29618,Scarlet Petal Dye,,,,,
 29624,Polaris Cub,,,,,
@@ -8234,7 +8234,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29683,Lionheart Figurehead,,,,,
 29687,Bonekraal Figurehead,,,,,
 29689,Beast Figurehead,,,,,
-29692,Caernord Zephyr Triangular Rig,,1d,42,115.2380,2024-11-28T05:16:08.1228352+00:00
+29692,Caernord Zephyr Triangular Rig,,1d,32,168.9062,2024-11-18T05:16:48.090043+00:00
 29694,Color Reset Potion,,,,,
 29701,255242 DO NOT TRANSLATE,,,,,
 29703,Fusion Alembic Scroll,,,,,
@@ -8266,10 +8266,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 29876,Dazzling Ball Attire,,,,,
 29877,Purestar Ball Attire,,,,,
 29878,Classique Ball Attire,,,,,
-29882,Radiant Gale Lunagem: Mastery,,1d,30,24.9896,2024-11-28T05:16:11.6846366+00:00
-29883,Radiant Earth Lunagem: Flexibility,,1d,99,27.5514,2024-11-28T05:16:11.7986395+00:00
-29884,Radiant Earth Lunagem: Mastery,,1d,71,26.3656,2024-11-28T05:16:11.9158906+00:00
-29885,Radiant Gale Lunagem: Fidelity,,1d,20,18.0000,2024-11-28T05:16:12.0208037+00:00
+29882,Radiant Gale Lunagem: Mastery,,,,,
+29883,Radiant Earth Lunagem: Flexibility,,1d,361,23.6731,2024-11-18T05:16:52.1635094+00:00
+29884,Radiant Earth Lunagem: Mastery,,1d,168,21.1918,2024-11-18T05:16:52.2850256+00:00
+29885,Radiant Gale Lunagem: Fidelity,,1d,52,25.0000,2024-11-18T05:16:52.4106964+00:00
 29906,Naval Service Uniform,,,,,
 29943,Unsealed Token,,,,,
 29952,261285 DO NOT TRANSLATE,,,,,
@@ -8313,19 +8313,19 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 30040,Dried Batwing Headband,,,,,
 30044,Meina's Feathered Cap,,,,,
 30045,Meina's Jerkin,,,,,
-30046,Meina's Breeches,,,,,
-30047,Meina's Fists,,1d,1,750.0000,2024-11-28T05:16:17.0910799+00:00
+30046,Meina's Breeches,,1d,1,950.0000,2024-11-18T05:16:57.7960728+00:00
+30047,Meina's Fists,,,,,
 30048,Meina's Boots,,,,,
-30049,Meina's Guards,,1d,1,1250.0000,2024-11-28T05:16:17.3104479+00:00
+30049,Meina's Guards,,,,,
 30050,Meina's Belt,,,,,
 30051,Glenn's Admiral Hat,,,,,
 30052,Glenn's Admiral Jacket,,,,,
 30053,Glenn's Pants,,,,,
-30054,Glenn's Gloves,,1d,1,999.0000,2024-11-28T05:16:17.8399439+00:00
+30054,Glenn's Gloves,,,,,
 30055,Glenn's Boots,,,,,
 30056,Glenn's Sleeves,,,,,
 30057,Glenn's Sash,,,,,
-30060,Jola's Eternal Grudge,,,,,
+30060,Jola's Eternal Grudge,,1d,1,222.0000,2024-11-18T05:16:59.2585453+00:00
 30061,Green Elk Beanie,,,,,
 30062,Pink Elk Beanie,,,,,
 30063,Sidewise Green Elk Beanie,,,,,
@@ -8449,16 +8449,16 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 30628,Cornucopia Logs,,,,,
 30629,Cornucopia Produce,,,,,
 30740,Trinket Egg,,,,,
-30812,Wagon Upgrade Ticket,,,,,
+30812,Wagon Upgrade Ticket,,1d,4,790.0000,2024-11-18T05:17:13.4023161+00:00
 30813,Vehicle Upgrade Ticket,,,,,
-30898,Chopped Produce,,1d,33455,0.0670,2024-11-28T05:16:32.5594028+00:00
-30899,Orchard Puree,,1d,4000,0.0560,2024-11-28T05:16:32.6743402+00:00
-30900,Dried Flowers,,1d,70196,0.0584,2024-11-28T05:16:32.7991739+00:00
-30901,Ground Spices,,1d,3520,0.0123,2024-11-28T05:16:32.9133146+00:00
-30902,Ground Grain,,1d,53996,0.0457,2024-11-28T05:16:33.0111587+00:00
-30903,Medicinal Powder,,1d,11180,0.0560,2024-11-28T05:16:33.1397973+00:00
-30904,Glacier Crayfish,,1d,11,8.9900,2024-11-28T05:16:33.2521292+00:00
-30905,Trimmed Meat,,1d,69324,0.0578,2024-11-28T05:16:33.3785653+00:00
+30898,Chopped Produce,,1d,82510,0.0590,2024-11-18T05:17:13.6509768+00:00
+30899,Orchard Puree,,1d,4840,0.0734,2024-11-18T05:17:13.775666+00:00
+30900,Dried Flowers,,1d,105870,0.0572,2024-11-18T05:17:13.9117886+00:00
+30901,Ground Spices,,1d,6225,0.0319,2024-11-18T05:17:14.0282103+00:00
+30902,Ground Grain,,1d,99298,0.0306,2024-11-18T05:17:14.150453+00:00
+30903,Medicinal Powder,,1d,35844,0.0595,2024-11-18T05:17:14.2856255+00:00
+30904,Glacier Crayfish,,,,,
+30905,Trimmed Meat,,1d,207156,0.0465,2024-11-18T05:17:14.5545573+00:00
 30907,Clear Fire Lunagem: Strong Blow,,,,,
 30908,Clear Fire Lunagem: Sharpshot,,,,,
 30909,Clear Fire Lunagem: Apex,,,,,
@@ -8481,15 +8481,15 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 30926,Vivid Wave Lunagem: Defense,,,,,
 30927,Vivid Wave Lunagem: Magic Defense,,,,,
 30928,Vivid Gale Lunagem: Mastery,,,,,
-30929,Lucid Fire Lunagem: Strong Blow,,1d,4,812.3603,2024-11-28T05:16:35.952344+00:00
-30930,Lucid Fire Lunagem: Sharpshot,,1d,3,1160.0000,2024-11-28T05:16:36.0484234+00:00
+30929,Lucid Fire Lunagem: Strong Blow,,,,,
+30930,Lucid Fire Lunagem: Sharpshot,,,,,
 30931,Lucid Fire Lunagem: Apex,,,,,
 30932,Lucid Fire Lunagem: Salvation,,,,,
 30933,Lucid Fire Lunagem: Buffet,,,,,
 30934,Lucid Fire Lunagem: Marksman,,,,,
 30935,Lucid Fire Lunagem: Extreme,,,,,
 30936,Lucid Fire Lunagem: Aid,,,,,
-30937,Lucid Wave Lunagem: Defense,,1d,2,1375.0000,2024-11-28T05:16:36.8464994+00:00
+30937,Lucid Wave Lunagem: Defense,,1d,6,1240.6667,2024-11-18T05:17:18.3099077+00:00
 30938,Lucid Wave Lunagem: Magic Defense,,,,,
 30939,Lucid Gale Lunagem: Mastery,,,,,
 30940,Clear Gale Lunagem: Fury,,,,,
@@ -8524,7 +8524,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 30969,Vivid Gale Lunagem: Consolation,,,,,
 30970,Vivid Gale Lunagem: Wrath,,,,,
 30971,Vivid Gale Lunagem: Constance,,,,,
-30972,Vivid Gale Lunagem: Harbinger,,,,,
+30972,Vivid Gale Lunagem: Harbinger,,1d,3,99.0000,2024-11-18T05:17:22.5882555+00:00
 30973,Vivid Gale Lunagem: Benevolence,,,,,
 30974,Clear Earth Lunagem: Flexibility,,,,,
 30975,Vivid Gale Lunagem: Overpower,,,,,
@@ -8534,61 +8534,61 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 30979,Vivid Gale Lunagem: Pierce,,,,,
 30980,Vivid Earth Lunagem: Vitality,,,,,
 30981,Vivid Earth Lunagem: Effervescence,,,,,
-30982,Vivid Earth Lunagem: Finesse,,,,,
+30982,Vivid Earth Lunagem: Finesse,,1d,1,250.0000,2024-11-18T05:17:23.845924+00:00
 30983,Vivid Earth Lunagem: Esoteric,,,,,
 30984,Vivid Earth Lunagem: Celerity,,,,,
 30985,Vivid Earth Lunagem: Impenetrable,,,,,
 30986,Lucid Gale Lunagem: Fury,,,,,
 30987,Lucid Gale Lunagem: Serenity,,,,,
-30988,Lucid Gale Lunagem: Destruction,,,,,
-30989,Lucid Gale Lunagem: Mercy,,,,,
+30988,Lucid Gale Lunagem: Destruction,,1d,1,1099.9999,2024-11-18T05:17:24.5239962+00:00
+30989,Lucid Gale Lunagem: Mercy,,1d,6,999.0000,2024-11-18T05:17:24.6414044+00:00
 30990,Vivid Wave Lunagem: Flexibility,,,,,
 30991,Lucid Gale Lunagem: Aggro,,,,,
 30992,Lucid Gale Lunagem: Consolation,,,,,
 30993,Lucid Gale Lunagem: Wrath,,,,,
 30994,Lucid Gale Lunagem: Constance,,,,,
-30995,Lucid Gale Lunagem: Harbinger,,,,,
+30995,Lucid Gale Lunagem: Harbinger,,1d,7,1071.0000,2024-11-18T05:17:25.4563277+00:00
 30996,Lucid Gale Lunagem: Benevolence,,,,,
-30997,Lucid Gale Lunagem: Flexibility,,1d,24,2.6000,2024-11-28T05:16:43.6074443+00:00
+30997,Lucid Gale Lunagem: Flexibility,,1d,10,2.0000,2024-11-18T05:17:25.7062098+00:00
 30998,Lucid Gale Lunagem: Overpower,,,,,
 30999,Lucid Gale Lunagem: Solace,,,,,
-31000,Lucid Gale Lunagem: Tempest,,,,,
+31000,Lucid Gale Lunagem: Tempest,,1d,2,1100.0000,2024-11-18T05:17:26.0733023+00:00
 31001,Lucid Gale Lunagem: Torrent,,,,,
-31002,Lucid Gale Lunagem: Pierce,,,,,
+31002,Lucid Gale Lunagem: Pierce,,1d,4,1400.0000,2024-11-18T05:17:26.3050465+00:00
 31003,Lucid Earth Lunagem: Vitality,,,,,
 31004,Lucid Earth Lunagem: Effervescence,,,,,
 31005,Lucid Earth Lunagem: Finesse,,,,,
 31006,Lucid Earth Lunagem: Esoteric,,,,,
 31007,Lucid Earth Lunagem: Celerity,,,,,
-31008,Lucid Earth Lunagem: Impenetrable,,,,,
-31009,Fire Lunarite,,1d,334,1.1110,2024-11-28T05:16:44.9846045+00:00
-31010,Fine Fire Lunarite,,1d,37,55.3750,2024-11-28T05:16:45.1117195+00:00
-31011,Superior Fire Lunarite,,1d,52,12.5133,2024-11-28T05:16:45.2270605+00:00
-31012,Wave Lunarite,,1d,1719,2.3601,2024-11-28T05:16:45.3551153+00:00
-31013,Fine Wave Lunarite,,1d,55,73.4366,2024-11-28T05:16:45.4742796+00:00
-31014,Superior Wave Lunarite,,1d,176,16.8508,2024-11-28T05:16:45.5897834+00:00
-31015,Gale Lunarite: Pierce,,,,,
+31008,Lucid Earth Lunagem: Impenetrable,,1d,1,1500.0000,2024-11-18T05:17:27.0132454+00:00
+31009,Fire Lunarite,,1d,1004,2.2804,2024-11-18T05:17:27.1403161+00:00
+31010,Fine Fire Lunarite,,1d,152,74.1855,2024-11-18T05:17:27.2697231+00:00
+31011,Superior Fire Lunarite,,1d,97,14.8834,2024-11-18T05:17:27.3956914+00:00
+31012,Wave Lunarite,,1d,757,2.5379,2024-11-18T05:17:27.5206253+00:00
+31013,Fine Wave Lunarite,,1d,88,80.5421,2024-11-18T05:17:27.6413963+00:00
+31014,Superior Wave Lunarite,,1d,12,17.8000,2024-11-18T05:17:27.7637401+00:00
+31015,Gale Lunarite: Pierce,,1d,5,18.2000,2024-11-18T05:17:27.857341+00:00
 31016,Gale Lunarite: Wrath,,,,,
 31017,Gale Lunarite: Serenity,,,,,
 31018,Gale Lunarite: Constance,,,,,
-31019,Gale Lunarite: Torrent,,1d,2,7.4999,2024-11-28T05:16:46.1556495+00:00
+31019,Gale Lunarite: Torrent,,,,,
 31020,Gale Lunarite: Fidelity,,,,,
 31021,Gale Lunarite: Fury,,,,,
 31022,Gale Lunarite: Consolation,,,,,
 31023,Gale Lunarite: Solace,,,,,
-31024,Gale Lunarite: Overpower,,1d,2,0.0310,2024-11-28T05:16:46.7323931+00:00
+31024,Gale Lunarite: Overpower,,,,,
 31025,Gale Lunarite: Aggro,,,,,
 31026,Gale Lunarite: Mercy,,,,,
 31027,Gale Lunarite: Benevolence,,,,,
-31028,Gale Lunarite: Tempest,,,,,
+31028,Gale Lunarite: Tempest,,1d,3,10.0000,2024-11-18T05:17:29.3881714+00:00
 31029,Gale Lunarite: Destruction,,,,,
 31030,Gale Lunarite: Harbinger,,,,,
 31031,Gale Lunarite: Mastery,,,,,
-31032,Superior Gale Lunarite: Pierce,,,,,
+31032,Superior Gale Lunarite: Pierce,,1d,4,118.5600,2024-11-18T05:17:29.8858804+00:00
 31033,Superior Gale Lunarite: Wrath,,,,,
 31034,Superior Gale Lunarite: Serenity,,,,,
 31035,Superior Gale Lunarite: Constance,,,,,
-31036,Superior Gale Lunarite: Torrent,,1d,2,449.9950,2024-11-28T05:16:48.1243526+00:00
+31036,Superior Gale Lunarite: Torrent,,1d,2,349.0000,2024-11-18T05:17:30.3845587+00:00
 31037,Superior Gale Lunarite: Fidelity,,,,,
 31038,Superior Gale Lunarite: Fury,,,,,
 31039,Superior Gale Lunarite: Consolation,,,,,
@@ -8601,11 +8601,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31046,Superior Gale Lunarite: Destruction,,,,,
 31047,Superior Gale Lunarite: Harbinger,,,,,
 31048,Superior Gale Lunarite: Mastery,,,,,
-31049,Fine Gale Lunarite: Pierce,,,,,
+31049,Fine Gale Lunarite: Pierce,,1d,3,80.0000,2024-11-18T05:17:32.0414337+00:00
 31050,Fine Gale Lunarite: Wrath,,,,,
 31051,Fine Gale Lunarite: Serenity,,,,,
 31052,Fine Gale Lunarite: Constance,,,,,
-31053,Fine Gale Lunarite: Torrent,,1d,7,20.0000,2024-11-28T05:16:49.9731591+00:00
+31053,Fine Gale Lunarite: Torrent,,,,,
 31054,Fine Gale Lunarite: Fidelity,,,,,
 31055,Fine Gale Lunarite: Fury,,,,,
 31056,Fine Gale Lunarite: Consolation,,,,,
@@ -8621,20 +8621,20 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31066,Earth Lunarite: Esoteric,,,,,
 31067,Earth Lunarite: Finesse,,,,,
 31068,Earth Lunarite: Effervescence,,,,,
-31069,Earth Lunarite: Celerity,,,,,
+31069,Earth Lunarite: Celerity,,1d,2,0.0305,2024-11-18T05:17:34.4217252+00:00
 31070,Earth Lunarite: Impenetrable,,,,,
 31071,Earth Lunarite: Vitality,,,,,
 31072,Superior Earth Lunarite: Esoteric,,,,,
-31073,Superior Earth Lunarite: Finesse,,,,,
+31073,Superior Earth Lunarite: Finesse,,1d,1,75.0000,2024-11-18T05:17:34.9138081+00:00
 31074,Superior Earth Lunarite: Effervescence,,,,,
 31075,Superior Earth Lunarite: Celerity,,,,,
-31076,Superior Earth Lunarite: Impenetrable,,,,,
+31076,Superior Earth Lunarite: Impenetrable,,1d,4,18.5000,2024-11-18T05:17:35.2750392+00:00
 31077,Superior Earth Lunarite: Vitality,,,,,
 31078,Fine Earth Lunarite: Esoteric,,,,,
 31079,Fine Earth Lunarite: Finesse,,,,,
 31080,Fine Earth Lunarite: Effervescence,,,,,
 31081,Fine Earth Lunarite: Celerity,,,,,
-31082,Fine Earth Lunarite: Impenetrable,,,,,
+31082,Fine Earth Lunarite: Impenetrable,,1d,7,4.7778,2024-11-18T05:17:35.9918552+00:00
 31083,Fine Earth Lunarite: Vitality,,,,,
 31085,Starpoint Fragment,,,,,
 31119,Veroe Dagger,,,,,
@@ -8838,7 +8838,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31338,Ayanad Flame Katana,,,,,
 31339,Ayanad Gale Katana,,,,,
 31340,Ayanad Life Katana,,,,,
-31341,Ayanad Lightning Nodachi,,,,,
+31341,Ayanad Lightning Nodachi,,1d,1,40000.0000,2024-11-18T05:18:01.2099878+00:00
 31342,Ayanad Flame Nodachi,,,,,
 31343,Ayanad Gale Nodachi,,,,,
 31344,Ayanad Sky Nodachi,,,,,
@@ -8880,7 +8880,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31380,Ayanad Gale Shortspear,,,,,
 31381,Ayanad Earth Shortspear,,,,,
 31382,Ayanad Wave Shortspear,,,,,
-31383,Ayanad Squall Longspear,,,,,
+31383,Ayanad Squall Longspear,,1d,1,19000.0134,2024-11-18T05:18:05.2089427+00:00
 31384,Ayanad Gale Longspear,,,,,
 31385,Ayanad Earth Longspear,,,,,
 31386,Ayanad Winter Longspear,,,,,
@@ -8902,7 +8902,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31402,Ayanad Wave Staff,,,,,
 31403,Ayanad Life Staff,,,,,
 31404,Ayanad Volcano Bow,,,,,
-31405,Ayanad Lightning Bow,,1d,1,59999.0000,2024-11-28T05:17:22.69721+00:00
+31405,Ayanad Lightning Bow,,,,,
 31406,Ayanad Tidal Bow,,,,,
 31407,Ayanad Sunset Bow,,,,,
 31408,Ayanad Flame Bow,,,,,
@@ -9076,7 +9076,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31576,Ayanad Life Shoes,,,,,
 31577,Ayanad Life Sleeves,,,,,
 31578,Ayanad Life Sash,,,,,
-31579,Sparkling Shell Dust,,1d,1450,0.0968,2024-11-28T05:17:42.4791388+00:00
+31579,Sparkling Shell Dust,,1d,1020,0.1700,2024-11-18T05:18:28.911595+00:00
 31595,Craftsman's Earth Necklace,,,,,
 31596,Craftsman's Flame Necklace,,,,,
 31597,Craftsman's Life Necklace,,,,,
@@ -9112,7 +9112,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31627,Magnificent Wave Earring,,,,,
 31628,Magnificent Life Earring,,,,,
 31629,Magnificent Earth Ring,,,,,
-31630,Magnificent Flame Ring,,1d,1,650.0000,2024-11-28T05:17:46.5438593+00:00
+31630,Magnificent Flame Ring,,,,,
 31631,Magnificent Wave Ring,,,,,
 31632,Magnificent Gale Ring,,,,,
 31633,Magnificent Life Ring,,,,,
@@ -9120,7 +9120,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31635,Epherium Flame Necklace,,,,,
 31636,Epherium Life Necklace,,,,,
 31637,Epherium Gale Necklace,,,,,
-31638,Epherium Wave Necklace,,1d,1,175.0030,2024-11-28T05:17:47.4582198+00:00
+31638,Epherium Wave Necklace,,,,,
 31639,Epherium Earth Earring,,,,,
 31640,Epherium Flame Earring,,,,,
 31641,Epherium Gale Earring,,,,,
@@ -9139,7 +9139,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31654,Ayanad Earth Earring,,,,,
 31655,Ayanad Flame Earring,,,,,
 31656,Ayanad Gale Earring,,,,,
-31657,Ayanad Wave Earring,,1d,1,6488.3300,2024-11-28T05:17:49.558873+00:00
+31657,Ayanad Wave Earring,,,,,
 31658,Ayanad Life Earring,,,,,
 31659,Ayanad Earth Ring,,,,,
 31660,Ayanad Flame Ring,,,,,
@@ -9175,24 +9175,24 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31716,Sylvas Nocturne Shoes,,,,,
 31717,Ayanad Scroll: 1st Floor Lobby,,,,,
 31718,Ayanad Scroll: 2nd Floor Lobby,,,,,
-31719,Ayanad Scroll: 3rd Floor Lobby,,1d,9,29.9489,2024-11-28T05:17:53.5845191+00:00
+31719,Ayanad Scroll: 3rd Floor Lobby,,1d,3,32.9925,2024-11-18T05:18:40.7549036+00:00
 31721,Ayanad Scroll Pack: 1st Floor,,,,,
 31722,Ayanad Scroll Pack: 2nd Floor,,,,,
 31723,Ayanad Scroll Pack: 3rd Floor,,,,,
 31725,Snuggly Plushie,,,,,
 31770,Mage's Vapor,,,,,
 31771,Misty Memory,,,,,
-31772,Morning Dew,,,,,
+31772,Morning Dew,,1d,2000,0.0500,2024-11-18T05:18:41.6362021+00:00
 31773,Meadow Stream,,,,,
 31774,Time's River,,,,,
-31775,Mossy Pool,,1d,1237,1.0275,2024-11-28T05:17:54.6793494+00:00
+31775,Mossy Pool,,1d,3486,0.8851,2024-11-18T05:18:41.9973929+00:00
 31776,Spellbook: Brick Wall,,,,,
 31777,Spellbook: Unstoppable Force,,,,,
 31778,Golden Library Index,,,,,
-31780,Fortuna Die,,1d,366,0.9727,2024-11-28T05:17:55.1056861+00:00
-31781,Valau Rune,,1d,292,0.8537,2024-11-28T05:17:55.2215935+00:00
-31782,Zena Rune,,1d,292,0.8120,2024-11-28T05:17:55.3466527+00:00
-31783,Basta Rune,,1d,95,1.0000,2024-11-28T05:17:55.4599167+00:00
+31780,Fortuna Die,,1d,407,0.7409,2024-11-18T05:18:42.485618+00:00
+31781,Valau Rune,,1d,150,0.8429,2024-11-18T05:18:42.6067766+00:00
+31782,Zena Rune,,1d,200,0.6947,2024-11-18T05:18:42.7309147+00:00
+31783,Basta Rune,,1d,15,0.8574,2024-11-18T05:18:42.8241774+00:00
 31785,Beguiling Lunadrop Chest,,,,,
 31789,Ayanad Dagger Design,,,,,
 31790,Ayanad Sword Design,,,,,
@@ -9215,7 +9215,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31807,Ayanad Ring Design,,,,,
 31808,Ayanad Earring Design,,,,,
 31809,Prismatic Pearl,,,,,
-31810,Prismatic Diamond,,1d,6,14.0000,2024-11-28T05:17:58.1746625+00:00
+31810,Prismatic Diamond,,1d,42,14.9200,2024-11-18T05:18:45.4983512+00:00
 31813,Petrified Gemshrub Seed,,,,,
 31814,Coral Cactus Seed,,,,,
 31815,Tundra Fern Seed,,,,,
@@ -9228,13 +9228,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31822,Violet Fiddlehead Stem,,,,,
 31823,Dried Thorngrass,,,,,
 31824,Dewy Goldwort,,,,,
-31891,Tax Certificate,,1d,28999,0.9388,2024-11-28T05:17:59.7681856+00:00
+31891,Tax Certificate,,1d,40895,0.9517,2024-11-18T05:18:47.1646745+00:00
 31893,Golden Token,,,,,
 31924,Fellowship Plaza Design,,,,,
-31927,Resplendent Accessory Regrade Scroll,,1d,2,475.4950,2024-11-28T05:18:00.0840041+00:00
-31928,Accessory Regrade Scroll,,1d,116,19.0817,2024-11-28T05:18:00.1974985+00:00
-31929,Starpoint,,1d,117,12.8533,2024-11-28T05:18:00.3081193+00:00
-31930,Lucky Starpoint,,1d,8,202.7500,2024-11-28T05:18:00.4346092+00:00
+31927,Resplendent Accessory Regrade Scroll,,1d,1,230.0630,2024-11-18T05:18:47.5701582+00:00
+31928,Accessory Regrade Scroll,,1d,112,22.5264,2024-11-18T05:18:47.7189315+00:00
+31929,Starpoint,,1d,255,12.7726,2024-11-18T05:18:47.8371135+00:00
+31930,Lucky Starpoint,,1d,5,287.4000,2024-11-18T05:18:47.9373877+00:00
 31932,Skydark Dagger,,,,,
 31933,Great Fortress Shield,,,,,
 31934,Infinite Memory Bow,,,,,
@@ -9266,7 +9266,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 31960,Recollections Sleeves,,,,,
 31961,Recollections Sash,,,,,
 31962,Shadowsong Lute,,,,,
-31974,Yellow Regrade Charm,,1d,41,201.5294,2024-11-28T05:18:03.6246456+00:00
+31974,Yellow Regrade Charm,,1d,41,236.1082,2024-11-18T05:18:51.77574+00:00
 31975,Superior Yellow Regrade Charm,,,,,
 31976,Red Regrade Charm,,,,,
 31977,Superior Red Regrade Charm,,,,,
@@ -9282,15 +9282,15 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 32032,Harbinger's Earring,,,,,
 32033,Druid's Earring,,,,,
 32034,Dreadnaught's Earring,,,,,
-32038,Earthmana Leaf,,1d,2849,1.4718,2024-11-28T05:18:05.0912489+00:00
-32039,Fresh Fertilizer,,1d,5377,0.1520,2024-11-28T05:18:05.1897312+00:00
-32095,Multi-Purpose Aging Larder,,1d,22,7.9126,2024-11-28T05:18:05.2708183+00:00
-32103,Charcoal Stabilizer,,1d,30566,1.7696,2024-11-28T05:18:05.4053041+00:00
+32038,Earthmana Leaf,,1d,800,1.9992,2024-11-18T05:18:53.7608204+00:00
+32039,Fresh Fertilizer,,1d,12438,0.1193,2024-11-18T05:18:53.8953483+00:00
+32095,Multi-Purpose Aging Larder,,1d,60,14.4850,2024-11-18T05:18:54.0103492+00:00
+32103,Charcoal Stabilizer,,1d,29099,1.7369,2024-11-18T05:18:54.1559867+00:00
 32104,Rock Salt Stabilizer,,,,,
 32105,Crystal Stabilizer,,,,,
-32106,Dragon Essence Stabilizer,,1d,293,31.3194,2024-11-28T05:18:05.766232+00:00
+32106,Dragon Essence Stabilizer,,1d,213,39.9524,2024-11-18T05:18:54.5074875+00:00
 32120,285109 DO NOT TRANSLATE,,,,,
-32212,Draught of Forgiveness,,1d,5,43.3327,2024-11-28T05:18:05.99538+00:00
+32212,Draught of Forgiveness,,1d,5,30.9999,2024-11-18T05:18:54.7521291+00:00
 32222,Salvaged Illustrious Dagger,,,,,
 32223,Salvaged Magnificent Dagger,,,,,
 32224,Salvaged Epherium Dagger,,,,,
@@ -9521,12 +9521,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 32572,Organic Duck Meat,,,,,
 32573,Organic Goose Meat,,,,,
 32574,Lucid Gale Lunagem: Breakthrough,,,,,
-32575,Gale Lunarite: Breakthrough,,1d,1,0.0310,2024-11-28T05:18:32.3630401+00:00
+32575,Gale Lunarite: Breakthrough,,,,,
 32576,Superior Gale Lunarite: Breakthrough,,,,,
-32578,Fine Gale Lunarite: Breakthrough,,1d,2,70.0000,2024-11-28T05:18:32.5969382+00:00
+32578,Fine Gale Lunarite: Breakthrough,,,,,
 32582,Clear Earth Lunagem: Mastery,,,,,
 32583,Vivid Earth Lunagem: Mastery,,,,,
-32584,Lucid Earth Lunagem: Mastery,,1d,11,1.0000,2024-11-28T05:18:32.93725+00:00
+32584,Lucid Earth Lunagem: Mastery,,,,,
 32911,Darkstring Ring,,,,,
 32912,Darkstring Necklace,,,,,
 32913,Darkstring Earring,,,,,
@@ -9544,14 +9544,14 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 32930,Maple Woodlot,,,,,
 32931,Bamboo Woodlot,,,,,
 32932,Pine Woodlot,,,,,
-32933,Small Bamboo Duck Cage,,,,,
-32934,Small Bamboo Goose Cage,,,,,
-32935,Sheep Pen,,1d,24,24.9994,2024-11-28T05:18:35.2133826+00:00
-32936,Goat Pen,,,,,
-32937,Dairy Pen,,1d,13,34.8482,2024-11-28T05:18:35.458078+00:00
-32938,Cashmere Yata Pen,,,,,
+32933,Small Bamboo Duck Cage,,1d,10,4.0000,2024-11-18T05:19:25.0614564+00:00
+32934,Small Bamboo Goose Cage,,1d,10,4.0000,2024-11-18T05:19:25.1546384+00:00
+32935,Sheep Pen,,1d,4,25.0000,2024-11-18T05:19:25.2768684+00:00
+32936,Goat Pen,,1d,2,24.9996,2024-11-18T05:19:25.405733+00:00
+32937,Dairy Pen,,1d,21,34.7162,2024-11-18T05:19:25.5257407+00:00
+32938,Cashmere Yata Pen,,1d,1,85.0000,2024-11-18T05:19:25.6505121+00:00
 32939,Blizzard Bear Pen,,,,,
-32946,Super Weapon Temper,,1d,4,399.9998,2024-11-28T05:18:35.8165175+00:00
+32946,Super Weapon Temper,,1d,3,419.6633,2024-11-18T05:19:25.8971258+00:00
 33009,Regal Printing Press Design,,,,,
 33010,Regal Cooking Tools Design,,,,,
 33011,Regal Alchemy Table Design,,,,,
@@ -9566,7 +9566,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 33140,Grand Orange,,,,,
 33141,Grand Baobab Fruit,,,,,
 33240,Home Lighting Design,,,,,
-33260,Super Armor Temper,,,,,
+33260,Super Armor Temper,,1d,5,246.2000,2024-11-18T05:19:27.7409774+00:00
 33383,Nui's Favor,,,,,
 33956,Drum Set,,,,,
 33965,XP Restoration Scroll,,,,,
@@ -9611,10 +9611,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34234,Captain's Portrait: Top Right,,,,,
 34235,Captain's Portrait: Bottom Left,,,,,
 34236,Captain's Portrait: Bottom Right,,,,,
-34242,Tyrenos's Index,,1d,17,9.5425,2024-11-28T05:18:42.7861348+00:00
+34242,Tyrenos's Index,,1d,50,6.9098,2024-11-18T05:19:33.2705212+00:00
 34243,Thief's Resolution,,,,,
 34244,Destroyer's Hammer,,,,,
-34245,Necromancer's Clairvoyance,,,,,
+34245,Necromancer's Clairvoyance,,1d,1,150.0100,2024-11-18T05:19:33.6520446+00:00
 34296,Experia Pumpkin Patch,,,,,
 34303,Blue Ocean Undergarments,,,,,
 34304,Red Butterfly Undergarments,,,,,
@@ -9626,7 +9626,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34313,Combat Scroll: Lightning,,,,,
 34315,Melisara's Hidden Chest,,,,,
 34316,Superior Tempering Burnish,,,,,
-34323,Blue Regrade Charm,,1d,15,61.7999,2024-11-28T05:18:44.5948611+00:00
+34323,Blue Regrade Charm,,1d,18,71.1110,2024-11-18T05:19:35.1403928+00:00
 34355,Professional Tonic,,,,,
 34376,Chrome Steamfish Submarine Design,,,,,
 34401,Jumbo Home Sweet Home Stuffing,,,,,
@@ -9642,7 +9642,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34411,Jumbo Kobold Shaman Plushie Fluff,,,,,
 34412,Jumbo Kobold Shaman Plushie Fuzz,,,,,
 34414,Dreamy Table,,,,,
-34563,Green Regrade Charm,,1d,16,50.1868,2024-11-28T05:18:46.5304473+00:00
+34563,Green Regrade Charm,,1d,16,59.9999,2024-11-18T05:19:37.035317+00:00
 34584,307535 DO NOT TRANSLATE,,,,,
 34585,307537 DO NOT TRANSLATE,,,,,
 34586,307539 DO NOT TRANSLATE,,,,,
@@ -9660,22 +9660,22 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34598,307563 DO NOT TRANSLATE,,,,,
 34599,307565 DO NOT TRANSLATE,,,,,
 34600,307567 DO NOT TRANSLATE,,,,,
-34602,Obsidian Dagger,,,,,
-34603,Obsidian Sword,,,,,
+34602,Obsidian Dagger,,1d,1,150.5500,2024-11-18T05:19:39.1964276+00:00
+34603,Obsidian Sword,,1d,1,130.0000,2024-11-18T05:19:39.3203022+00:00
 34604,Obsidian Greatsword,,,,,
-34605,Obsidian Katana,,,,,
-34606,Obsidian Nodachi,,1d,1,37000.0000,2024-11-28T05:18:49.0157732+00:00
+34605,Obsidian Katana,,1d,1,8499.0000,2024-11-18T05:19:39.5578316+00:00
+34606,Obsidian Nodachi,,,,,
 34607,Obsidian Axe,,,,,
 34608,Obsidian Greataxe,,,,,
 34609,Obsidian Club,,,,,
 34610,Obsidian Greatclub,,,,,
 34611,Obsidian Shortspear,,,,,
 34612,Obsidian Longspear,,,,,
-34613,Obsidian Scepter,,1d,1,50.0000,2024-11-28T05:18:49.8637381+00:00
+34613,Obsidian Scepter,,,,,
 34614,Obsidian Staff,,,,,
-34615,Obsidian Bow,,,,,
+34615,Obsidian Bow,,1d,2,1100.0000,2024-11-18T05:19:40.793554+00:00
 34616,Obsidian Lute,,,,,
-34617,Obsidian Flute,,,,,
+34617,Obsidian Flute,,1d,1,301.0000,2024-11-18T05:19:41.0398712+00:00
 34618,Obsidian Shield,,,,,
 34619,Ominous Obsidian Dagger,,,,,
 34620,Ominous Obsidian Sword,,,,,
@@ -9694,7 +9694,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34633,Ominous Obsidian Lute,,,,,
 34634,Ominous Obsidian Flute,,,,,
 34635,Ominous Obsidian Shield,,,,,
-34636,Cursed Obsidian Dagger,,1d,1,399.0000,2024-11-28T05:18:52.450739+00:00
+34636,Cursed Obsidian Dagger,,,,,
 34637,Cursed Obsidian Sword,,,,,
 34638,Cursed Obsidian Greatsword,,,,,
 34639,Cursed Obsidian Katana,,,,,
@@ -9705,7 +9705,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34644,Cursed Obsidian Greatclub,,,,,
 34645,Cursed Obsidian Shortspear,,,,,
 34646,Cursed Obsidian Longspear,,,,,
-34647,Cursed Obsidian Scepter,,1d,1,1200.0000,2024-11-28T05:18:53.774068+00:00
+34647,Cursed Obsidian Scepter,,,,,
 34648,Cursed Obsidian Staff,,,,,
 34649,Cursed Obsidian Bow,,,,,
 34650,Cursed Obsidian Lute,,,,,
@@ -9780,51 +9780,51 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34719,307805 DO NOT TRANSLATE,,,,,
 34720,307807 DO NOT TRANSLATE,,,,,
 34722,Liberty Drums,,,,,
-34724,Malevolent Obsidian,,1d,4348,1.1501,2024-11-28T05:19:02.1474211+00:00
-34725,Haunted Obsidian,,1d,97,2.9512,2024-11-28T05:19:02.2389748+00:00
-34726,Tainted Jewel,,1d,28,15.6111,2024-11-28T05:19:02.3330888+00:00
-34727,Ritual Aquamarine,,1d,15,3.7387,2024-11-28T05:19:02.4344812+00:00
-34728,Sulfur Crystal,,1d,478,2.0168,2024-11-28T05:19:02.5310781+00:00
-34729,Mercury Solution,,1d,195,13.2346,2024-11-28T05:19:02.6263807+00:00
-34730,Brine Flakes,,1d,205,7.3330,2024-11-28T05:19:02.7231024+00:00
-34731,Dense Lead,,1d,202,4.5469,2024-11-28T05:19:02.8054067+00:00
-34732,Renaia's Research Journal,,1d,26,58.8410,2024-11-28T05:19:02.9029771+00:00
-34733,Herzan's Research,,1d,24,28.3333,2024-11-28T05:19:02.9982943+00:00
-34734,Inakos's Grimoire,,1d,34,4.2252,2024-11-28T05:19:03.078893+00:00
-34735,Ruthart's Doodles,,1d,7,50.6146,2024-11-28T05:19:03.1696713+00:00
-34736,Weathered Beryl,,1d,3,90.0000,2024-11-28T05:19:03.253758+00:00
-34737,Philosopher's Stone Fragment,,1d,6,121.6667,2024-11-28T05:19:03.3510329+00:00
-34738,Pygmy Skull,,,,,
-34739,Ouroboros Statue,,1d,15,33.1796,2024-11-28T05:19:03.5286056+00:00
-34740,Kaylin's Quill,,1d,5,144.8000,2024-11-28T05:19:03.6186862+00:00
-34741,Stena's Crystal Orb,,1d,1,99.0000,2024-11-28T05:19:03.7085044+00:00
-34742,Ecktom's Prayer Beads,,,,,
-34743,Runert's Carving Knife,,,,,
-34744,Jergant's Music Box,,1d,1,924.0000,2024-11-28T05:19:04.0046469+00:00
-34745,Tinnereph's Monocle,,1d,1,99.0000,2024-11-28T05:19:04.106628+00:00
-34746,Wynn's Bronze Cross,,1d,4,132.0000,2024-11-28T05:19:04.2039085+00:00
-34747,Halnaak's Golden Scale,,1d,1,188.2221,2024-11-28T05:19:04.2973488+00:00
-34748,Alexander's Platinum Case,,,,,
+34724,Malevolent Obsidian,,1d,2985,0.1160,2024-11-18T05:19:53.9854572+00:00
+34725,Haunted Obsidian,,1d,290,2.3333,2024-11-18T05:19:54.1231933+00:00
+34726,Tainted Jewel,,1d,30,16.2684,2024-11-18T05:19:54.2486389+00:00
+34727,Ritual Aquamarine,,1d,10,3.6874,2024-11-18T05:19:54.3743101+00:00
+34728,Sulfur Crystal,,1d,220,2.6444,2024-11-18T05:19:54.4869533+00:00
+34729,Mercury Solution,,1d,479,9.8208,2024-11-18T05:19:54.6132659+00:00
+34730,Brine Flakes,,1d,290,3.7382,2024-11-18T05:19:54.7494751+00:00
+34731,Dense Lead,,1d,161,10.5479,2024-11-18T05:19:54.8736723+00:00
+34732,Renaia's Research Journal,,1d,40,54.7172,2024-11-18T05:19:55.0046912+00:00
+34733,Herzan's Research,,1d,28,12.9388,2024-11-18T05:19:55.1330844+00:00
+34734,Inakos's Grimoire,,1d,11,5.9910,2024-11-18T05:19:55.2590679+00:00
+34735,Ruthart's Doodles,,1d,27,37.2499,2024-11-18T05:19:55.3563479+00:00
+34736,Weathered Beryl,,1d,8,63.7841,2024-11-18T05:19:55.4863385+00:00
+34737,Philosopher's Stone Fragment,,1d,8,133.1003,2024-11-18T05:19:55.6128118+00:00
+34738,Pygmy Skull,,1d,1,29.0000,2024-11-18T05:19:55.7383389+00:00
+34739,Ouroboros Statue,,1d,7,28.1250,2024-11-18T05:19:55.8541729+00:00
+34740,Kaylin's Quill,,1d,5,97.6600,2024-11-18T05:19:55.9888941+00:00
+34741,Stena's Crystal Orb,,1d,6,80.6907,2024-11-18T05:19:56.1031735+00:00
+34742,Ecktom's Prayer Beads,,1d,1,18.9985,2024-11-18T05:19:56.2361389+00:00
+34743,Runert's Carving Knife,,1d,2,67.4898,2024-11-18T05:19:56.3558477+00:00
+34744,Jergant's Music Box,,1d,4,999.4975,2024-11-18T05:19:56.4777933+00:00
+34745,Tinnereph's Monocle,,1d,3,259.9987,2024-11-18T05:19:56.607585+00:00
+34746,Wynn's Bronze Cross,,1d,6,213.3967,2024-11-18T05:19:56.7320253+00:00
+34747,Halnaak's Golden Scale,,1d,3,207.9897,2024-11-18T05:19:56.8586882+00:00
+34748,Alexander's Platinum Case,,1d,3,249.6667,2024-11-18T05:19:56.9823546+00:00
 34749,307883 DO NOT TRANSLATE,,,,,
-34751,Hanure's Horn,,1d,1,81.1111,2024-11-28T05:19:04.5654171+00:00
-34752,Vyrava's Inferno,,,,,
-34753,Jola's Scale,,,,,
-34754,Iron Armor Fragment,,1d,3,14.0000,2024-11-28T05:19:04.8491789+00:00
-34755,Nightmare Essence,,,,,
-34756,Garden Records,,,,,
+34751,Hanure's Horn,,1d,1,99.0000,2024-11-18T05:19:57.2257331+00:00
+34752,Vyrava's Inferno,,1d,1,12000.0000,2024-11-18T05:19:57.3517035+00:00
+34753,Jola's Scale,,1d,1,119.9999,2024-11-18T05:19:57.4726233+00:00
+34754,Iron Armor Fragment,,,,,
+34755,Nightmare Essence,,1d,4,13.2000,2024-11-18T05:19:57.7216444+00:00
+34756,Garden Records,,1d,2,462.4899,2024-11-18T05:19:57.8441941+00:00
 34757,Experienced Adventurer's Compass,,,,,
-34758,Nazar's Crown,,1d,1,3500.0000,2024-11-28T05:19:05.2101569+00:00
+34758,Nazar's Crown,,,,,
 34759,Kraken Ink Sac,,,,,
 34760,Anthalon's Crimson Hallow,,,,,
 34761,Bitter Teardrop,,,,,
-34762,Fierce Vow's Blood,,,,,
+34762,Fierce Vow's Blood,,1d,1,1969.0000,2024-11-18T05:19:58.5358606+00:00
 34765,Discontinued Land Expansion Certificate,,,,,
 34773,Nonstandard Wooden Beam Bundle,,,,,
 34774,Nonstandard Construction Tool Bundle,,,,,
 34775,Nonstandard Finishing Touches Bundle,,,,,
 34776,Nonstandard Construction Brick Bundle,,,,,
 34778,Fishing Pond,,,,,
-34779,Mining Drill,,1d,4,301.0000,2024-11-28T05:19:06.3879733+00:00
+34779,Mining Drill,,1d,2,299.5000,2024-11-18T05:19:59.4126129+00:00
 34792,Clear Goldfish,,,,,
 34793,Vivid Goldfish,,,,,
 34794,Glorious Goldfish,,,,,
@@ -9866,7 +9866,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34912,Wrapped Basic Materials Bundle,,,,,
 34913,Wrapped 13-Pigment Bundle,,,,,
 34914,Wrapped Customizable Furniture Bundle,,,,,
-34919,Improved Skyreach Woodlot,,1d,20,18.9996,2024-11-28T05:19:11.2194684+00:00
+34919,Improved Skyreach Woodlot,,1d,62,18.1800,2024-11-18T05:20:03.925504+00:00
 34920,Improved Savory Fruiting Woodlot,,,,,
 34921,Improved Fragrant Fruiting Woodlot,,,,,
 34923,Improved Medicinal Seed Bundle,,,,,
@@ -9900,7 +9900,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34954,Dazzling Dawnsdrop Boots,,,,,
 34955,Dazzling Dawnsdrop Guards,,,,,
 34956,Dazzling Dawnsdrop Belt,,,,,
-34957,Radiant Dawnsdrop Cap,,,,,
+34957,Radiant Dawnsdrop Cap,,1d,1,666.6666,2024-11-18T05:20:07.6385896+00:00
 34958,Radiant Dawnsdrop Jerkin,,,,,
 34959,Radiant Dawnsdrop Breeches,,,,,
 34960,Radiant Dawnsdrop Fists,,,,,
@@ -9917,7 +9917,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 34972,Cheery Heart Spectacles,,,,,
 34975,Cheery Fluffy Pawtholders,,,,,
 34982,Pet Leash,,,,,
-34983,Enchanted Blueprint,,1d,64,79.9675,2024-11-28T05:19:17.0635014+00:00
+34983,Enchanted Blueprint,,1d,46,52.7890,2024-11-18T05:20:09.7102419+00:00
 34984,Mysterious Heart Spectacles,,,,,
 34987,Mysterious Fluffy Pawtholders,,,,,
 34988,Minty Heart Spectacles,,,,,
@@ -9936,8 +9936,8 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35009,Gender Swap Certificate Scrap 3,,,,,
 35010,Elixir of Greed,,,,,
 35011,Elixir of Insatiable Greed,,,,,
-35028,Tidal Bungalow Design,,,,,
-35036,Ship Component Regrade Scroll,,1d,723,11.9906,2024-11-28T05:19:19.2851617+00:00
+35028,Tidal Bungalow Design,,1d,1,1650.0000,2024-11-18T05:20:11.9444337+00:00
+35036,Ship Component Regrade Scroll,,1d,883,13.1484,2024-11-18T05:20:12.0509104+00:00
 35051,Any-Post Owl,,,,,
 35052,Erenor Map,,,,,
 35053,Andelph's Glory,,,,,
@@ -9946,7 +9946,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35062,Unidentified Mini-Wings,,,,,
 35063,Unidentified Clockwork Key,,,,,
 35064,Unidentified Fluffy Pawtholders,,,,,
-35065,Majestic Tree,,1d,2,294.5000,2024-11-28T05:19:20.3472901+00:00
+35065,Majestic Tree,,1d,3,200.0000,2024-11-18T05:20:13.1419481+00:00
 35072,Shining Sturgeon Trophy,,,,,
 35073,Shining Bluefin Trophy,,,,,
 35074,Shining Sailfish Trophy,,,,,
@@ -10026,21 +10026,21 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35230,Super Weapon Temper Grit,,,,,
 35249,320969 DO NOT TRANSLATE,,,,,
 35259,Sea Drake Figurehead,,,,,
-35260,Tsunami Figurehead,,1d,1,100.0000,2024-11-28T05:19:29.3378856+00:00
+35260,Tsunami Figurehead,,,,,
 35263,Growling Zephyr Square Foresail,,,,,
 35264,Growling Zephyr Square Mainsail,,,,,
 35267,Zephyr Trade Pack Storage,,,,,
 35298,Red-Quilted Pumpkin Coach Bed,,,,,
 35299,Prepay Tax Certificate,,,,,
-35301,Radiant Archeum Tree Sapling,,1d,258,0.5385,2024-11-28T05:19:30.0304472+00:00
-35303,Sharpwind Mining Drill,,1d,18,21.9974,2024-11-28T05:19:30.1539719+00:00
+35301,Radiant Archeum Tree Sapling,,1d,468,0.5001,2024-11-18T05:20:23.8813388+00:00
+35303,Sharpwind Mining Drill,,1d,16,34.3725,2024-11-18T05:20:24.0103821+00:00
 35304,322608 DO NOT TRANSLATE,,,,,
-35315,Illustrious Vocational Hood,,1d,2,47.5001,2024-11-28T05:19:30.3847936+00:00
-35316,Illustrious Vocational Shirt,,1d,1,50.0000,2024-11-28T05:19:30.4985762+00:00
+35315,Illustrious Vocational Hood,,,,,
+35316,Illustrious Vocational Shirt,,,,,
 35317,Illustrious Vocational Pants,,,,,
 35318,Illustrious Vocational Gloves,,,,,
-35319,Illustrious Vocational Shoes,,1d,1,50.0000,2024-11-28T05:19:30.8494753+00:00
-35320,Illustrious Vocational Sleeves,,1d,1,50.0000,2024-11-28T05:19:30.9748508+00:00
+35319,Illustrious Vocational Shoes,,,,,
+35320,Illustrious Vocational Sleeves,,,,,
 35321,Illustrious Vocational Sash,,,,,
 35322,Magnificent Vocational Hood,,,,,
 35323,Magnificent Vocational Shirt,,,,,
@@ -10108,7 +10108,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35385,Zephyr Explosives Workbench,,,,,
 35394,Violet-Quilted Pumpkin Coach Bed,,,,,
 35395,Green-Quilted Pumpkin Coach Bed,,,,,
-35396,Wicker Bed,,,,,
+35396,Wicker Bed,,1d,3,149.3397,2024-11-18T05:20:33.1101511+00:00
 35397,Epherium Lightning Ring,,,,,
 35398,Epherium Meadow Ring,,,,,
 35399,Delphinad Lightning Ring,,,,,
@@ -10117,13 +10117,13 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35402,Ayanad Meadow Ring,,,,,
 35403,Epherium Lightning Earring,,,,,
 35404,Epherium Meadow Earring,,,,,
-35405,Delphinad Lightning Earring,,1d,3,1666.9967,2024-11-28T05:19:39.7306707+00:00
+35405,Delphinad Lightning Earring,,,,,
 35406,Delphinad Meadow Earring,,,,,
 35407,Ayanad Lightning Earring,,,,,
 35408,Ayanad Meadow Earring,,,,,
 35409,Epherium Lightning Necklace,,,,,
 35410,Epherium Meadow Necklace,,,,,
-35411,Delphinad Lightning Necklace,,1d,1,2000.0000,2024-11-28T05:19:40.3861347+00:00
+35411,Delphinad Lightning Necklace,,,,,
 35412,Delphinad Meadow Necklace,,,,,
 35413,Ayanad Lightning Necklace,,,,,
 35414,Ayanad Meadow Necklace,,,,,
@@ -10222,16 +10222,16 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35567,Spellsinger's Focus,,,,,
 35568,Bandit King,,,,,
 35569,Voidspell,,,,,
-35581,Obsidian Hood,,1d,2,3490.4999,2024-11-28T05:19:51.4697748+00:00
-35582,Obsidian Shirt,,1d,5,2896.0588,2024-11-28T05:19:51.5844561+00:00
-35583,Obsidian Pants,,1d,2,3654.0005,2024-11-28T05:19:51.7068705+00:00
-35584,Obsidian Gloves,,1d,2,3090.4950,2024-11-28T05:19:51.7981693+00:00
-35585,Obsidian Shoes,,1d,2,3090.4950,2024-11-28T05:19:51.8840857+00:00
-35586,Obsidian Cap,,1d,4,144.9900,2024-11-28T05:19:51.9937601+00:00
-35587,Obsidian Jerkin,,,,,
-35588,Obsidian Breeches,,,,,
-35589,Obsidian Fists,,1d,1,6000.0000,2024-11-28T05:19:52.3239895+00:00
-35590,Obsidian Boots,,,,,
+35581,Obsidian Hood,,1d,3,2386.6666,2024-11-18T05:20:47.0201913+00:00
+35582,Obsidian Shirt,,1d,3,2353.3337,2024-11-18T05:20:47.1441042+00:00
+35583,Obsidian Pants,,1d,1,229.9998,2024-11-18T05:20:47.26817+00:00
+35584,Obsidian Gloves,,1d,2,190.5000,2024-11-18T05:20:47.4020779+00:00
+35585,Obsidian Shoes,,1d,1,6400.3436,2024-11-18T05:20:47.5339602+00:00
+35586,Obsidian Cap,,1d,3,196.6665,2024-11-18T05:20:47.6590084+00:00
+35587,Obsidian Jerkin,,1d,2,233.0000,2024-11-18T05:20:47.7800541+00:00
+35588,Obsidian Breeches,,1d,3,232.3233,2024-11-18T05:20:47.8950961+00:00
+35589,Obsidian Fists,,1d,7,3950.4285,2024-11-18T05:20:48.0148287+00:00
+35590,Obsidian Boots,,1d,4,168.9999,2024-11-18T05:20:48.134143+00:00
 35591,Obsidian Helm,,,,,
 35592,Obsidian Cuirass,,,,,
 35593,Obsidian Greaves,,,,,
@@ -10362,7 +10362,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35718,Wrapped Crimson Lightning Helm Chest,,,,,
 35719,Wrapped Crimson Lightning Saddle Chest,,,,,
 35720,Wrapped Crimson Lightning Legguards Chest,,,,,
-35721,Rainbow Sprinkler,,,,,
+35721,Rainbow Sprinkler,,1d,200,0.1111,2024-11-18T05:21:03.59528+00:00
 35722,Crest Trade Pack Storage,,,,,
 35723,Glider Companion: Sloth,,,,,
 35733,Crime Cleaner,,,,,
@@ -10426,16 +10426,16 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35814,Unidentified Billowy Cloak,,,,,
 35819,Dimensional Storage Chest Design,,,,,
 35884,Cogwheel Motor,,,,,
-35885,Possessed Topaz,,1d,2909,1.5643,2024-11-28T05:20:13.3114602+00:00
-35887,Bone Chip,,1d,332,1.0919,2024-11-28T05:20:13.4265447+00:00
-35888,Forbidden Spellgem,,1d,12,2.2291,2024-11-28T05:20:13.5477517+00:00
-35889,Shadow Orb,,1d,48,5.4278,2024-11-28T05:20:13.6658959+00:00
+35885,Possessed Topaz,,1d,3599,1.0190,2024-11-18T05:21:10.7366677+00:00
+35887,Bone Chip,,1d,210,2.9022,2024-11-18T05:21:10.8673376+00:00
+35888,Forbidden Spellgem,,1d,68,4.2209,2024-11-18T05:21:10.9913272+00:00
+35889,Shadow Orb,,1d,148,4.8857,2024-11-18T05:21:11.1848142+00:00
 35891,Sunflower Furniture,,,,,
 35892,Pumpkin Furniture,,,,,
 35893,Pine Furniture,,,,,
 35894,Duck Furniture,,,,,
 35895,Leviathan Eye,,,,,
-35898,Shatigon's Sand,,1d,550,0.9395,2024-11-28T05:20:14.3369244+00:00
+35898,Shatigon's Sand,,1d,1548,0.9854,2024-11-18T05:21:11.9260305+00:00
 35902,Abyssal Crystal Lamp,,,,,
 35906,Swimfin Rubber,,,,,
 35907,Swimfin Glue,,,,,
@@ -10456,64 +10456,64 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35928,Seastorm Underwater Breathing Device Design,,,,,
 35929,Typhoon Underwater Breathing Device Design,,,,,
 35930,Seabreeze Mast Design,,,,,
-35931,Mistral Mast Design,,,,,
+35931,Mistral Mast Design,,1d,1,5.7500,2024-11-18T05:21:14.4757355+00:00
 35932,Seastorm Mast Design,,,,,
 35933,Typhoon Mast Design,,,,,
-35934,Captain's Cannon Design,,1d,1,6.1885,2024-11-28T05:20:17.0505822+00:00
+35934,Captain's Cannon Design,,1d,3,5.7500,2024-11-18T05:21:14.8453443+00:00
 35935,Needle Harpoon Design,,,,,
-35936,Mounted Shield Design,,1d,2,11.5500,2024-11-28T05:20:17.2872377+00:00
+35936,Mounted Shield Design,,1d,3,6.2500,2024-11-18T05:21:15.1096863+00:00
 35937,Mud Slinger Design,,,,,
-35938,Shrapnel Cannon Design,,1d,5,8.6667,2024-11-28T05:20:17.5203912+00:00
-35939,Naval Cannon Design,,1d,3,9.0000,2024-11-28T05:20:17.6409029+00:00
-35940,Large-Caliber Cannon Design,,1d,8,11.3961,2024-11-28T05:20:17.7660881+00:00
-35941,High-Angle Siege Cannon Design,,1d,1,7.0000,2024-11-28T05:20:17.9808604+00:00
-35942,High-Speed Siege Cannon Design,,,,,
-35943,Chain-Shot Cannon Design,,,,,
+35938,Shrapnel Cannon Design,,1d,6,4.2917,2024-11-18T05:21:15.3582511+00:00
+35939,Naval Cannon Design,,1d,2,12.9999,2024-11-18T05:21:15.4776678+00:00
+35940,Large-Caliber Cannon Design,,1d,4,22.5000,2024-11-18T05:21:15.5987881+00:00
+35941,High-Angle Siege Cannon Design,,1d,4,5.5000,2024-11-18T05:21:15.7350682+00:00
+35942,High-Speed Siege Cannon Design,,1d,16,4.8333,2024-11-18T05:21:15.8240753+00:00
+35943,Chain-Shot Cannon Design,,1d,9,6.1250,2024-11-18T05:21:15.9393597+00:00
 35944,Water Cannon Design,,,,,
 35945,Mud Slinger Design,,,,,
 35946,Dragon Figurehead Design,,,,,
 35947,Goddess Dahuta Figurehead Design,,,,,
-35948,Beast Figurehead Design,,1d,1,6.1885,2024-11-28T05:20:18.8601122+00:00
-35949,Charred Bonekraal Figurehead Design,,1d,2,3.1905,2024-11-28T05:20:18.9707981+00:00
-35950,Raging Lionheart Figurehead Design,,1d,1,8.0000,2024-11-28T05:20:19.0942774+00:00
-35951,Ivory Nui Figurehead Design,,,,,
+35948,Beast Figurehead Design,,1d,12,7.7833,2024-11-18T05:21:16.5471532+00:00
+35949,Charred Bonekraal Figurehead Design,,1d,6,5.4999,2024-11-18T05:21:16.6707499+00:00
+35950,Raging Lionheart Figurehead Design,,1d,8,6.9900,2024-11-18T05:21:16.7947821+00:00
+35951,Ivory Nui Figurehead Design,,1d,5,6.3875,2024-11-18T05:21:16.9141886+00:00
 35952,Sea Drake Figurehead Design,,,,,
-35953,Tsunami Figurehead Design,,,,,
-35954,Seabreeze Plank Design,,,,,
+35953,Tsunami Figurehead Design,,1d,4,6.0000,2024-11-18T05:21:17.1631168+00:00
+35954,Seabreeze Plank Design,,1d,2,287.5000,2024-11-18T05:21:17.2919729+00:00
 35955,Zephyr Explosives Workbench Design,,,,,
-35956,Caernord Sea Serpent Propellant Design,,1d,1,12.3000,2024-11-28T05:20:19.8095318+00:00
+35956,Caernord Sea Serpent Propellant Design,,1d,1,8.9998,2024-11-18T05:21:17.5308756+00:00
 35957,Crest Trade Pack Storage Design,,,,,
-35958,Seabreeze Trade Pack Storage Design,,,,,
-35959,Mistral Trade Pack Storage Design,,,,,
-35960,Seastorm Trade Pack Storage Design,,,,,
+35958,Seabreeze Trade Pack Storage Design,,1d,6,393.3333,2024-11-18T05:21:17.7918947+00:00
+35959,Mistral Trade Pack Storage Design,,1d,7,111.6666,2024-11-18T05:21:17.9100226+00:00
+35960,Seastorm Trade Pack Storage Design,,1d,1,175.0000,2024-11-18T05:21:18.042018+00:00
 35961,Typhoon Trade Pack Storage Design,,,,,
-35962,Eznan Seabreeze Rudder Design,,1d,1,400.0000,2024-11-28T05:20:20.5236065+00:00
+35962,Eznan Seabreeze Rudder Design,,,,,
 35963,Eznan Mistral Rudder Design,,,,,
-35964,Eznan Seastorm Rudder Design,,1d,1,11.2200,2024-11-28T05:20:20.7626762+00:00
+35964,Eznan Seastorm Rudder Design,,,,,
 35965,Eznan Typhoon Rudder Design,,,,,
 35966,Lutesong Seabreeze Rudder Design,,,,,
-35967,Lutesong Mistral Rudder Design,,,,,
+35967,Lutesong Mistral Rudder Design,,1d,3,7.9999,2024-11-18T05:21:18.9078367+00:00
 35968,Lutesong Seastorm Rudder Design,,,,,
 35969,Lutesong Typhoon Rudder Design,,,,,
 35970,Austeran Seabreeze Rudder Design,,,,,
-35971,Austeran Mistral Rudder Design,,1d,1,52.0000,2024-11-28T05:20:21.6047977+00:00
-35972,Austeran Seastorm Rudder Design,,,,,
-35973,Austeran Typhoon Rudder Design,,,,,
+35971,Austeran Mistral Rudder Design,,1d,2,8.0000,2024-11-18T05:21:19.4189979+00:00
+35972,Austeran Seastorm Rudder Design,,1d,1,9.0000,2024-11-18T05:21:19.5486784+00:00
+35973,Austeran Typhoon Rudder Design,,1d,1,150.0000,2024-11-18T05:21:19.6764581+00:00
 35974,Caernord Seabreeze Rudder Design,,,,,
-35975,Caernord Mistral Rudder Design,,1d,1,11.0000,2024-11-28T05:20:22.0773779+00:00
-35976,Caernord Seastorm Rudder Design,,,,,
+35975,Caernord Mistral Rudder Design,,,,,
+35976,Caernord Seastorm Rudder Design,,1d,2,9.0000,2024-11-18T05:21:20.0425473+00:00
 35977,Caernord Typhoon Rudder Design,,,,,
-35978,Seabreeze Telescope Design,,,,,
-35979,Mistral Telescope Design,,,,,
-35980,Seastorm Telescope Design,,,,,
+35978,Seabreeze Telescope Design,,1d,1,1000.1009,2024-11-18T05:21:20.2937483+00:00
+35979,Mistral Telescope Design,,1d,1,15.0000,2024-11-18T05:21:20.4145152+00:00
+35980,Seastorm Telescope Design,,1d,2,39.0000,2024-11-18T05:21:20.5536575+00:00
 35981,Typhoon Telescope Design,,,,,
-35982,Seabreeze Compass Design,,,,,
+35982,Seabreeze Compass Design,,1d,1,698.0000,2024-11-18T05:21:20.8046618+00:00
 35983,Mistral Compass Design,,,,,
 35984,Seastorm Compass Design,,,,,
-35985,Typhoon Compass Design,,,,,
+35985,Typhoon Compass Design,,1d,2,200.5000,2024-11-18T05:21:21.1642402+00:00
 35986,Seabreeze Fish Finder Design,,,,,
-35987,Mistral Fish Finder Design,,,,,
-35988,Seastorm Fish Finder Design,,,,,
+35987,Mistral Fish Finder Design,,1d,2,10.5000,2024-11-18T05:21:21.4176558+00:00
+35988,Seastorm Fish Finder Design,,1d,2,6.0000,2024-11-18T05:21:21.5334757+00:00
 35989,Typhoon Fish Finder Design,,,,,
 35990,Zephyr Sea Monster Sonar Design,,,,,
 35991,Seabreeze Sea Monster Sonar Design,,,,,
@@ -10525,9 +10525,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 35997,Seastorm Mist Censer Design,,,,,
 35998,Typhoon Mist Censer Design,,,,,
 35999,Seabreeze Shroudlight Design,,,,,
-36000,Mistral Shroudlight Design,,1d,1,170.1885,2024-11-28T05:20:24.9912126+00:00
+36000,Mistral Shroudlight Design,,,,,
 36001,Seastorm Shroudlight Design,,,,,
-36002,Typhoon Shroudlight Design,,,,,
+36002,Typhoon Shroudlight Design,,1d,1,57.0000,2024-11-18T05:21:23.3168382+00:00
 36022,Mounted Shield,,,,,
 36028,3-Day Any-Post Owl,,,,,
 36136,Longboard Display Stand,,,,,
@@ -10587,11 +10587,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 36214,Commerce Proficiency Boost Scroll,,,,,
 36215,Artistry Proficiency Boost Scroll,,,,,
 36219,Mendelsson's Painting: First Piece,,,,,
-36220,Mendelsson's Painting: Second Piece,,,,,
+36220,Mendelsson's Painting: Second Piece,,1d,1,5.0100,2024-11-18T05:21:30.6022778+00:00
 36221,Mendelsson's Painting: Third Piece,,,,,
-36222,Vivalt's Painting: First Piece,,,,,
+36222,Vivalt's Painting: First Piece,,1d,1,5.0100,2024-11-18T05:21:30.8479178+00:00
 36223,Vivalt's Painting: Second Piece,,,,,
-36224,Vivalt's Painting: Third Piece,,,,,
+36224,Vivalt's Painting: Third Piece,,1d,1,5.0100,2024-11-18T05:21:31.0865186+00:00
 36225,Blue Salt Festival Sand Castle Painting,,,,,
 36226,Blue Salt Festival Beach Painting,,,,,
 36227,Blue Salt Festival Painting,,,,,
@@ -10615,7 +10615,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 36304,Harvest Moon Red Almonds,,,,,
 36305,Harvest Moon Chestnut,,,,,
 36306,Harvest Moon Chicken,,,,,
-36318,Language Proficiency Spellbook,,1d,4,61.3750,2024-11-28T05:20:35.6623321+00:00
+36318,Language Proficiency Spellbook,,1d,2,50.0035,2024-11-18T05:21:33.9932853+00:00
 36319,Miraculous Hostility Lunafrost,,,,,
 36320,Miraculous Tracker Lunafrost,,,,,
 36321,Miraculous Transcendant Lunafrost,,,,,
@@ -10750,7 +10750,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 36881,Mysterious Hothouse Spice Pot,,,,,
 36882,Mysterious Hothouse Herb Pot,,,,,
 37017,Autumn Lore Memory Shelf,,,,,
-37142,Harvester's Farmhouse Design,,,,,
+37142,Harvester's Farmhouse Design,,1d,1,2000.0000,2024-11-18T05:21:50.5189935+00:00
 37143,Rancher's Farmhouse Design,,,,,
 37144,Miner's Farmhouse Design,,,,,
 37149,Armorer's Manor Design,,,,,
@@ -11140,7 +11140,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 37875,Epherium Ocean Galoshes,,,,,
 37876,Epherium Stone Galoshes,,,,,
 37877,Epherium Mountain Galoshes,,,,,
-37893,Wooden Beam Bundle,,,,,
+37893,Wooden Beam Bundle,,1d,4,17.9999,2024-11-18T05:22:36.6237857+00:00
 37894,Construction Tool Bundle,,,,,
 37895,Finishing Touches Bundle,,,,,
 37896,Construction Brick Bundle,,,,,
@@ -11367,7 +11367,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 38424,Bard Music Box,,,,,
 38429,Morpheus's Treasure Chest,,,,,
 38439,Glider Customization: Inky Feathered Dragon,,,,,
-38440,Enoan Galleon Blueprint Fragment,,1d,24,38.4118,2024-11-28T05:22:03.1775061+00:00
+38440,Enoan Galleon Blueprint Fragment,,1d,15,31.6811,2024-11-18T05:23:03.7828342+00:00
 38441,Crest Stairs,,,,,
 38442,Crest Ramp,,,,,
 38444,Adhesive Crest Dome,,,,,
@@ -11410,7 +11410,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 38565,Hatched Door Partition,,,,,
 38566,Arched Door Partition,,,,,
 38568,Mornstone,,,,,
-38612,Sirensong Fishing Boat Propellant,,,,,
+38612,Sirensong Fishing Boat Propellant,,1d,1,210.0000,2024-11-18T05:23:08.512743+00:00
 38613,Sirensong Zephyr Rudder,,,,,
 38625,Gilda Star Bag,,,,,
 38649,Combat Scroll: Focus,,,,,
@@ -11421,21 +11421,21 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 38685,Wrapped Vocation Supply Box,,,,,
 38705,Chronoleash,,,,,
 38707,Grinding Guardian Scroll,,,,,
-38708,Superior Grinding Guardian Scroll,,1d,103,11.9052,2024-11-28T05:22:08.8009615+00:00
+38708,Superior Grinding Guardian Scroll,,1d,136,15.6557,2024-11-18T05:23:09.8409941+00:00
 38714,April Birthstone: Unicorn Constellation,,,,,
 38739,May Birthstone: Blind Eye Constellation,,,,,
 38752,Purple Regrade Charm,,,,,
 38753,Yellow Regrade Charm,,,,,
 38754,Orange Regrade Charm,,,,,
-38755,Red Regrade Charm,,1d,74,597.1025,2024-11-28T05:22:09.5861308+00:00
+38755,Red Regrade Charm,,1d,50,663.7191,2024-11-18T05:23:10.5564305+00:00
 38756,Superior Red Regrade Charm,,,,,
 38757,White Regrade Charm,,,,,
 38758,Superior White Regrade Charm,,,,,
 38759,Orange Downgrade Safeguard,,,,,
 38760,Ocher Destruction Safeguard,,,,,
-38762,Dreadnaught's Ring,,,,,
+38762,Dreadnaught's Ring,,1d,2,9.5000,2024-11-18T05:23:11.3282012+00:00
 38763,Dreadnaught's Necklace,,,,,
-38764,Dreadnaught's Earring,,,,,
+38764,Dreadnaught's Earring,,1d,4,18.2500,2024-11-18T05:23:11.5777579+00:00
 38765,Shroudmaster Ring,,,,,
 38766,Shroudmaster Necklace,,,,,
 38767,Shroudmaster Earring,,,,,
@@ -11443,23 +11443,23 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 38791,Topiary Flowerpot,,,,,
 38792,Topiary Flowerbed,,,,,
 38797,Design: Tower Defense Steamtank,,,,,
-38803,Andelph Fishing Boat Propellant,,1d,1,2200.0000,2024-11-28T05:22:11.4548679+00:00
+38803,Andelph Fishing Boat Propellant,,1d,1,222.1396,2024-11-18T05:23:12.5707118+00:00
 38824,Andelph Zephyr Rudder,,,,,
 38831,Cherry Blossom Lute,,,,,
 38832,Sacred Echo,,,,,
 38833,Flamesinger,,,,,
 38834,Springscent Coronet,,,,,
-38835,One-Hander Metal Mana Wisp,,1d,92,129.2121,2024-11-28T05:22:12.1139987+00:00
-38836,Two-Hander Metal Mana Wisp,,1d,90,139.9255,2024-11-28T05:22:12.2338576+00:00
-38837,Wooden Mana Wisp,,1d,55,129.8581,2024-11-28T05:22:12.3622571+00:00
+38835,One-Hander Metal Mana Wisp,,1d,116,165.9222,2024-11-18T05:23:13.2948238+00:00
+38836,Two-Hander Metal Mana Wisp,,1d,52,136.4485,2024-11-18T05:23:13.4273326+00:00
+38837,Wooden Mana Wisp,,1d,74,116.2352,2024-11-18T05:23:13.5427733+00:00
 38838,Two-Hander Wood Mana Wisp,,,,,
-38839,Musical Mana Wisp,,1d,15,162.8820,2024-11-28T05:22:12.6070175+00:00
-38840,Large Jewelry Mana Wisp,,,,,
-38841,Small Jewelry Mana Wisp,,1d,18,32.9980,2024-11-28T05:22:12.8148088+00:00
+38839,Musical Mana Wisp,,1d,30,153.0908,2024-11-18T05:23:13.7880879+00:00
+38840,Large Jewelry Mana Wisp,,1d,5,39.8595,2024-11-18T05:23:13.9147808+00:00
+38841,Small Jewelry Mana Wisp,,1d,35,22.6443,2024-11-18T05:23:14.0391403+00:00
 38842,Ring Mana Wisp,,,,,
-38843,Cloth Mana Wisp,,1d,397,29.1650,2024-11-28T05:22:13.0312854+00:00
-38844,Leather Mana Wisp,,1d,353,31.1642,2024-11-28T05:22:13.1602529+00:00
-38845,Plate Mana Wisp,,1d,6,37.9000,2024-11-28T05:22:13.2729087+00:00
+38843,Cloth Mana Wisp,,1d,541,30.3387,2024-11-18T05:23:14.285271+00:00
+38844,Leather Mana Wisp,,1d,1225,28.3597,2024-11-18T05:23:14.406209+00:00
+38845,Plate Mana Wisp,,1d,179,41.0895,2024-11-18T05:23:14.5249483+00:00
 38914,Steel Lightning Crate,,,,,
 38926,Wrapped Lord Cottontail Crate,,,,,
 38927,Wrapped Sir Hoppington Crate,,,,,
@@ -11527,7 +11527,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 38993,20-Slot Pirate Plushie Trove,,,,,
 38994,30-Slot Pirate Plushie Trove,,,,,
 38995,40-Slot Pirate Plushie Trove,,,,,
-38996,50-Slot Pirate Plushie Trove,,,,,
+38996,50-Slot Pirate Plushie Trove,,1d,1,1700.0000,2024-11-18T05:23:22.9277681+00:00
 38997,100-Slot Pirate Plushie Trove,,,,,
 39005,"Brown ""Whole Yata Joy"" Painting",,,,,
 39006,"Pink ""Whole Yata Joy"" Painting",,,,,
@@ -11549,7 +11549,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39036,391664 DO NOT TRANSLATE,,,,,
 39040,Design: Sirensong Seabreeze Rudder,,,,,
 39041,Design: Sirensong Seabreeze Rudder,,,,,
-39042,Design: Sirensong Mistral Rudder,,1d,2,4.1880,2024-11-28T05:22:23.668956+00:00
+39042,Design: Sirensong Mistral Rudder,,,,,
 39043,Design: Sirensong Seastorm Rudder,,,,,
 39044,Design: Sirensong Typhoon Rudder,,,,,
 39045,Design: Andelph Seabreeze Rudder,,,,,
@@ -11565,9 +11565,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39065,Vivid Gale Lunascale: Consolation,,,,,
 39066,Vivid Gale Lunascale: Overpower,,,,,
 39067,Vivid Gale Lunascale: Solace,,,,,
-39068,Vivid Gale Lunascale: Tempest,,1d,1,399.9999,2024-11-28T05:22:25.5579289+00:00
+39068,Vivid Gale Lunascale: Tempest,,,,,
 39069,Vivid Gale Lunascale: Torrent,,,,,
-39070,Vivid Gale Lunascale: Pierce,,,,,
+39070,Vivid Gale Lunascale: Pierce,,1d,3,499.9999,2024-11-18T05:23:27.8341863+00:00
 39071,Vivid Gale Lunascale: Breakthrough,,,,,
 39074,Ivory Wavewyrm Costume,,,,,
 39075,Coral Wavewyrm Costume,,,,,
@@ -11582,33 +11582,33 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39128,Lost Garden Faded Sword,,,,,
 39129,Lost Garden Faded Nodachi,,,,,
 39130,Lost Garden Faded Greatsword,,,,,
-39131,Lost Garden Faded Axe,,,,,
+39131,Lost Garden Faded Axe,,1d,1,35.0000,2024-11-18T05:23:29.6448649+00:00
 39132,Lost Garden Faded Dagger,,,,,
-39133,Lost Garden Faded Katana,,1d,1,19.0000,2024-11-28T05:22:27.8157541+00:00
+39133,Lost Garden Faded Katana,,,,,
 39134,Lost Garden Faded Greataxe,,,,,
 39135,Lost Garden Faded Club,,,,,
 39136,Lost Garden Faded Greatclub,,,,,
 39137,Lost Garden Faded Scepter,,,,,
-39138,Lost Garden Faded Staff,,,,,
+39138,Lost Garden Faded Staff,,1d,1,35.0000,2024-11-18T05:23:30.5136424+00:00
 39139,Lost Garden Faded Shortspear,,,,,
 39140,Lost Garden Faded Longspear,,,,,
-39141,Lost Garden Faded Bow,,1d,1,24.5500,2024-11-28T05:22:28.754683+00:00
+39141,Lost Garden Faded Bow,,1d,3,28.3333,2024-11-18T05:23:30.8842337+00:00
 39142,Lost Garden Faded Shield,,,,,
-39143,Lost Garden Faded Flute,,1d,1,9.9999,2024-11-28T05:22:29.0053948+00:00
+39143,Lost Garden Faded Flute,,,,,
 39181,Auroria Lorn Battlerage Cap,,,,,
 39182,Auroria Lorn Battlerage Jerkin,,,,,
-39183,Auroria Lorn Battlerage Belt,,1d,1,25.0000,2024-11-28T05:22:29.3533394+00:00
+39183,Auroria Lorn Battlerage Belt,,,,,
 39184,Auroria Lorn Battlerage Guards,,,,,
 39185,Auroria Lorn Battlerage Gloves,,,,,
 39186,Auroria Lorn Battlerage Breeches,,,,,
 39187,Auroria Lorn Battlerage Boots,,,,,
 39195,Auroria Cruel Witchcraft Hood,,,,,
 39196,Auroria Cruel Witchcraft Shirt,,,,,
-39197,Auroria Cruel Witchcraft Sash,,,,,
+39197,Auroria Cruel Witchcraft Sash,,1d,2,27.5000,2024-11-18T05:23:32.403136+00:00
 39198,Auroria Cruel Witchcraft Sleeves,,,,,
 39199,Auroria Cruel Witchcraft Gloves,,,,,
 39200,Auroria Cruel Witchcraft Pants,,,,,
-39201,Auroria Cruel Witchcraft Shoes,,,,,
+39201,Auroria Cruel Witchcraft Shoes,,1d,1,30.0000,2024-11-18T05:23:32.8943801+00:00
 39209,Auroria Eternal Defense Cap,,,,,
 39210,Auroria Eternal Defense Jerkin,,,,,
 39211,Auroria Eternal Defense Belt,,,,,
@@ -11618,37 +11618,37 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39215,Auroria Eternal Defense Boots,,,,,
 39223,Auroria Precise Auramancy Hood,,,,,
 39224,Auroria Precise Auramancy Shirt,,,,,
-39225,Auroria Precise Auramancy Sash,,,,,
+39225,Auroria Precise Auramancy Sash,,1d,1,70.0000,2024-11-18T05:23:34.1629634+00:00
 39226,Auroria Precise Auramancy Sleeves,,,,,
 39227,Auroria Precise Auramancy Gloves,,,,,
-39228,Auroria Precise Auramancy Pants,,,,,
+39228,Auroria Precise Auramancy Pants,,1d,1,105.0000,2024-11-18T05:23:34.519086+00:00
 39229,Auroria Precise Auramancy Shoes,,,,,
-39237,Auroria Haunted Occultism Helm,,,,,
+39237,Auroria Haunted Occultism Helm,,1d,1,30.0000,2024-11-18T05:23:34.7683338+00:00
 39238,Auroria Haunted Occultism Cuirass,,,,,
 39239,Auroria Haunted Occultism Tassets,,,,,
 39240,Auroria Haunted Occultism Vambraces,,,,,
 39241,Auroria Haunted Occultism Gauntlets,,,,,
-39242,Auroria Haunted Occultism Greaves,,1d,1,15.0000,2024-11-28T05:22:33.0576492+00:00
+39242,Auroria Haunted Occultism Greaves,,,,,
 39243,Auroria Haunted Occultism Sabatons,,,,,
 39251,Auroria Wildborn Archery Cap,,,,,
 39252,Auroria Wildborn Archery Jerkin,,,,,
-39253,Auroria Wildborn Archery Belt,,1d,1,25.0000,2024-11-28T05:22:33.5497175+00:00
-39254,Auroria Wildborn Archery Guards,,,,,
+39253,Auroria Wildborn Archery Belt,,,,,
+39254,Auroria Wildborn Archery Guards,,1d,1,99.0000,2024-11-18T05:23:36.0002511+00:00
 39255,Auroria Wildborn Archery Fists,,,,,
 39256,Auroria Wildborn Archery Breeches,,,,,
 39257,Auroria Wildborn Archery Boots,,,,,
 39265,Auroria Noble Sorcery Helm,,,,,
 39266,Auroria Noble Sorcery Cuirass,,,,,
-39267,Auroria Noble Sorcery Tassets,,1d,1,6.0445,2024-11-28T05:22:34.3528465+00:00
+39267,Auroria Noble Sorcery Tassets,,,,,
 39268,Auroria Noble Sorcery Vambraces,,,,,
 39269,Auroria Noble Sorcery Gauntlets,,,,,
 39270,Auroria Noble Sorcery Greaves,,,,,
-39271,Auroria Noble Sorcery Sabatons,,1d,1,10.2551,2024-11-28T05:22:34.8073455+00:00
+39271,Auroria Noble Sorcery Sabatons,,,,,
 39279,Auroria Devious Shadowplay Cap,,,,,
 39280,Auroria Devious Shadowplay Jerkin,,,,,
-39281,Auroria Devious Shadowplay Belt,,,,,
+39281,Auroria Devious Shadowplay Belt,,1d,2,99.5000,2024-11-18T05:23:37.5693721+00:00
 39282,Auroria Devious Shadowplay Guards,,,,,
-39283,Auroria Devious Shadowplay Fists,,1d,1,39.0000,2024-11-28T05:22:35.3820669+00:00
+39283,Auroria Devious Shadowplay Fists,,,,,
 39284,Auroria Devious Shadowplay Breeches,,,,,
 39285,Auroria Devious Shadowplay Boots,,,,,
 39286,Auroria Songcraft Hood,,,,,
@@ -11660,20 +11660,20 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39292,Auroria Songcraft Shoes,,,,,
 39293,Auroria Wistful Songcraft Hood,,,,,
 39294,Auroria Wistful Songcraft Shirt,,,,,
-39295,Auroria Wistful Songcraft Sash,,1d,1,39.0000,2024-11-28T05:22:36.7529089+00:00
+39295,Auroria Wistful Songcraft Sash,,,,,
 39296,Auroria Wistful Songcraft Sleeves,,,,,
 39297,Auroria Wistful Songcraft Gloves,,,,,
 39298,Auroria Wistful Songcraft Pants,,,,,
 39299,Auroria Wistful Songcraft Shoes,,,,,
-39307,Auroria Dulcet Vitalism Cap,,1d,1,25.0000,2024-11-28T05:22:37.3044046+00:00
+39307,Auroria Dulcet Vitalism Cap,,1d,7,314.2857,2024-11-18T05:23:39.7937771+00:00
 39308,Auroria Dulcet Vitalism Shirt,,,,,
-39309,Auroria Dulcet Vitalism Sash,,1d,1,165.0000,2024-11-28T05:22:37.561263+00:00
-39310,Auroria Dulcet Vitalism Sleeves,,1d,1,49.0000,2024-11-28T05:22:37.6792202+00:00
+39309,Auroria Dulcet Vitalism Sash,,1d,4,68.7500,2024-11-18T05:23:40.0470952+00:00
+39310,Auroria Dulcet Vitalism Sleeves,,,,,
 39311,Auroria Dulcet Vitalism Gloves,,,,,
 39312,Auroria Dulcet Vitalism Pants,,,,,
 39313,Auroria Dulcet Vitalism Shoes,,,,,
 39318,Super Weapon Temper,,,,,
-39319,Weapon Temper,,1d,1,29.0090,2024-11-28T05:22:38.2533766+00:00
+39319,Weapon Temper,,,,,
 39320,Greater Weapon Temper,,,,,
 39321,Greater Armor Temper,,,,,
 39338,Bubblegum Swimwear,,,,,
@@ -11704,7 +11704,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000020,Vocation Expertise Tonic,,,,,
 8000023,Wrapped Scroll: Comet Speedster,,,,,
 8000024,Wrapped Scroll: Timber Coupe,,,,,
-8000026,Gilda Dust,,1d,245,2.1749,2024-11-28T05:22:41.7804976+00:00
+8000026,Gilda Dust,,1d,1096,1.9344,2024-11-18T05:23:44.5169099+00:00
 8000035,Basic Bleach,,,,,
 8000046,Limited Edition: Skybound Housewarming Gift,,,,,
 8000047,Limited Edition: Clawbound Housewarming Gift,,,,,
@@ -11715,8 +11715,8 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000052,Superior Worker's Compensation: 500 LP,,,,,
 8000056,Cart Wheel,,,,,
 8000053,Cart Shaft,,,,,
-8000055,Thunderstruck Log,,1d,7,232.4950,2024-11-28T05:22:43.0638187+00:00
-8000054,Cart Engine,,,,,
+8000055,Thunderstruck Log,,1d,5,234.4339,2024-11-18T05:23:45.8492684+00:00
+8000054,Cart Engine,,1d,1,50.0000,2024-11-18T05:23:45.9694484+00:00
 8000057,Farm Cart Design,,,,,
 8000058,398942 DO NOT TRANSLATE,,,,,
 8000059,Gilt Blackwood Coffin,,,,,
@@ -11812,7 +11812,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000339,Combat Boost: Haste Grimoire,,,,,
 8000340,Promise Grimoire,,,,,
 8000341,Zeal Grimoire,,,,,
-8000342,Fierce Grimoire,,,,,
+8000342,Fierce Grimoire,,1d,22,8.8300,2024-11-18T05:23:57.6072188+00:00
 8000343,Combat Boost: Ward Grimoire,,,,,
 8000455,"""Got Elk?"" Giftpack",,,,,
 8000456,Massive Snowlion Plushie Bundle,,,,,
@@ -11824,7 +11824,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000498,Discontinued Remodeling Permit,,,,,
 8000567,Armor Temper,,,,,
 8000568,Prime Armor Temper,,,,,
-8000569,Prime Weapon Temper,,1d,1,1015.0000,2024-11-28T05:22:55.7126606+00:00
+8000569,Prime Weapon Temper,,,,,
 8000570,Permanent Personal Post Owl,,,,,
 8000571,Sapphire Solarium Design,,,,,
 8000573,Rose Quartz Solarium Design,,,,,
@@ -11940,20 +11940,20 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39560,Wrapped Skillsaver Pendant,,,,,
 39581,Wrapped Skywhisper Glider,,,,,
 39582,Wrapped Skywhisper Glider,,,,,
-39591,Artisan's Epherium Porcelain,,,,,
+39591,Artisan's Epherium Porcelain,,1d,1,49.9900,2024-11-18T05:24:12.044117+00:00
 39592,Noble's Epherium Porcelain,,,,,
-39593,Lavish Epherium Porcelain,,,,,
+39593,Lavish Epherium Porcelain,,1d,1,49.9900,2024-11-18T05:24:12.2962253+00:00
 39594,Epherium Gourd Bottle,,,,,
-39595,Comital Epherium Porcelain,,,,,
+39595,Comital Epherium Porcelain,,1d,1,45.0000,2024-11-18T05:24:12.535004+00:00
 39596,Terena Noble's Censer,,,,,
 39597,Terena Noble's Urn,,,,,
-39598,Epherium Merchant's Tombstone,,,,,
+39598,Epherium Merchant's Tombstone,,1d,1,45.0000,2024-11-18T05:24:12.9285992+00:00
 39599,Epherium Scholar's Tombstone,,,,,
-39600,Terena Noble's Fence Pillar,,,,,
+39600,Terena Noble's Fence Pillar,,1d,1,45.0000,2024-11-18T05:24:13.1752363+00:00
 39606,Epherium Lotus Fence Pillar,,,,,
-39607,Dwarven Bridge Rail,,1d,1,5.1010,2024-11-28T05:23:09.3891299+00:00
-39608,Lakespring Shaman's Mask,,,,,
-39609,Lakespring High Priest's Mask,,,,,
+39607,Dwarven Bridge Rail,,,,,
+39608,Lakespring Shaman's Mask,,1d,1,45.0000,2024-11-18T05:24:13.5277461+00:00
+39609,Lakespring High Priest's Mask,,1d,1,45.0000,2024-11-18T05:24:13.6503363+00:00
 39611,Delphinad Jester Mask,,,,,
 39614,Delphinad Royal Mask,,,,,
 39615,Delphinad Merchant Mask,,,,,
@@ -11963,7 +11963,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39622,Merchant's Epherium Porcelain,,,,,
 39657,Berserker Necklace,,,,,
 39658,Berserker Ring,,,,,
-39659,Berserker Earrings,,,,,
+39659,Berserker Earrings,,1d,2,50.0000,2024-11-18T05:24:14.9143291+00:00
 39660,Assassin Necklace,,,,,
 39661,Assassin Ring,,,,,
 39662,Assassin Earrings,,,,,
@@ -11972,30 +11972,30 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39665,Sorcerer Earrings,,,,,
 39666,Soothsayer Necklace,,,,,
 39667,Soothsayer Ring,,,,,
-39668,Soothsayer Earrings,,,,,
-39677,Epherium Floral Jar,,,,,
-39678,Epherium Crux Bowl,,,,,
-39679,Epherium Crux Plate,,,,,
-39680,Epherium Pyramid Plate,,1d,1,10.0010,2024-11-28T05:23:12.3627708+00:00
-39681,Epherium Floral Bowl,,,,,
+39668,Soothsayer Earrings,,1d,3,41.6667,2024-11-18T05:24:15.9841552+00:00
+39677,Epherium Floral Jar,,1d,1,49.9900,2024-11-18T05:24:16.1017615+00:00
+39678,Epherium Crux Bowl,,1d,1,49.9900,2024-11-18T05:24:16.2304895+00:00
+39679,Epherium Crux Plate,,1d,1,45.0000,2024-11-18T05:24:16.3547931+00:00
+39680,Epherium Pyramid Plate,,,,,
+39681,Epherium Floral Bowl,,1d,1,49.9900,2024-11-18T05:24:16.6190458+00:00
 39682,Epherium Merchant's Teacup,,,,,
 39683,Epherium Scholar's Teacup,,,,,
 39691,Oak Treehouse Design,,,,,
 39692,Cherry Treehouse Design,,,,,
 39693,Aspen Treehouse Design,,,,,
 39697,Advanced Fellowship Plaza Design,,,,,
-39764,Haranyan Private Smelter Design,,,,,
+39764,Haranyan Private Smelter Design,,1d,1,35.0000,2024-11-18T05:24:17.4695766+00:00
 39765,Haranyan Private Loom Design,,,,,
-39766,Haranyan Private Masonry Table Design,,,,,
-39767,Haranyan Private Sawmill Design,,,,,
+39766,Haranyan Private Masonry Table Design,,1d,1,35.0000,2024-11-18T05:24:17.6947415+00:00
+39767,Haranyan Private Sawmill Design,,1d,1,35.0000,2024-11-18T05:24:17.8112988+00:00
 39768,Haranyan Private Leatherwork Table Design,,,,,
 39775,Spring Swept-Roof Mansion Design,,,,,
-39801,Jujube Juice,,1d,190,4.0022,2024-11-28T05:23:13.9816907+00:00
-39802,Jujube Sparkling Wine,,1d,100,4.0005,2024-11-28T05:23:14.0708424+00:00
+39801,Jujube Juice,,1d,320,4.0027,2024-11-18T05:24:18.1534294+00:00
+39802,Jujube Sparkling Wine,,1d,240,4.0021,2024-11-18T05:24:18.2808055+00:00
 39803,Mistsong Grinding Guardian Scroll,,,,,
 39813,Carving Kit,,,,,
-39814,Lucky Sunpoint Shard,,1d,2,230.0000,2024-11-28T05:23:14.4093598+00:00
-39815,Lucky Moonpoint Shard,,1d,4,146.2500,2024-11-28T05:23:14.5215162+00:00
+39814,Lucky Sunpoint Shard,,1d,1,270.0000,2024-11-18T05:24:18.6493461+00:00
+39815,Lucky Moonpoint Shard,,1d,2,140.0000,2024-11-18T05:24:18.7735641+00:00
 39816,Lucky Starpoint Shard,,,,,
 39819,Battle Station Pillar,,,,,
 39820,Clear Earth Lunagem: Intercept,,,,,
@@ -12009,7 +12009,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39828,Superior Gale Lunarite: Clash,,,,,
 39829,Earth Lunarite: Intercept,,,,,
 39830,Fine Earth Lunarite: Intercept,,,,,
-39831,Superior Earth Lunarite: Intercept,,1d,2,1.5305,2024-11-28T05:23:16.2047696+00:00
+39831,Superior Earth Lunarite: Intercept,,,,,
 39865,Animated Crest Canvas,,,,,
 39866,Animated Crest Frame,,,,,
 39867,Spinning Crest Canvas,,,,,
@@ -12031,7 +12031,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 39978,Any-Post Parrot,,,,,
 39997,October Birthstone: Leopard Constellation,,,,,
 39998,Inquisitor's Robes: Combat,,,,,
-39999,Cryptic Lucky Scroll,,,,,
+39999,Cryptic Lucky Scroll,,1d,1,550.0000,2024-11-18T05:24:23.1068213+00:00
 40004,Parrot Mailbox,,,,,
 40005,Autumn Wildflower Rug,,,,,
 40006,Chrysanthemum Bud Rug,,,,,
@@ -12080,9 +12080,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000639,Pumpkin Spiked Fence,,,,,
 8000640,Narrow Pumpkin Spiked Fence,,,,,
 8000678,Vehicle Upgrade Device,,,,,
-40091,Ayanad Weaponsmithing Scroll,,1d,3,3499.0000,2024-11-28T05:23:24.5248932+00:00
-40092,Ayanad Armorsmithing Scroll,,1d,5,1749.8000,2024-11-28T05:23:24.6371965+00:00
-40093,Ayanad Accessory Scroll,,1d,2,200.0000,2024-11-28T05:23:24.7487308+00:00
+40091,Ayanad Weaponsmithing Scroll,,1d,3,2833.3333,2024-11-18T05:24:28.9052975+00:00
+40092,Ayanad Armorsmithing Scroll,,1d,4,1386.7500,2024-11-18T05:24:29.0081833+00:00
+40093,Ayanad Accessory Scroll,,,,,
 8000688,Peppermint A,,,,,
 8000689,Peppermint B,,,,,
 8000690,Peppermint C,,,,,
@@ -12139,7 +12139,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000758,Clear Refined Lunagem: Extreme,,,,,
 8000759,Clear Refined Lunagem: Aid,,,,,
 8000760,Vivid Refined Lunagem: Defense,,,,,
-8000761,Vivid Refined Lunagem: Magic Defense,,,,,
+8000761,Vivid Refined Lunagem: Magic Defense,,1d,1,200.0000,2024-11-18T05:24:36.0515706+00:00
 8000762,Vivid Refined Lunagem: Strong Blow,,,,,
 8000763,Vivid Refined Lunagem: Sharpshot,,,,,
 8000764,Vivid Refined Lunagem: Apex,,,,,
@@ -12166,7 +12166,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8000800,Hard Difficulty Aria Chest,,,,,
 8000801,Easy Difficulty Dochul Chest,,,,,
 8000802,Normal Difficulty Dochul Chest,,,,,
-8000803,Hard Difficulty Dochul Chest,,1d,3,650.0000,2024-11-28T05:23:34.5840626+00:00
+8000803,Hard Difficulty Dochul Chest,,,,,
 8000804,Easy Difficulty Sojung Chest,,,,,
 8000805,Normal Difficulty Sojung Chest,,,,,
 8000806,Hard Difficulty Sojung Chest,,,,,
@@ -12174,14 +12174,14 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 40139,Sealed Vivid Lunagem,,,,,
 40140,Sealed Lucid Lunagem,,,,,
 8000923,Anywhere Warehouse,,,,,
-8000929,Clear Synthium Stone,,1d,48,39.3001,2024-11-28T05:23:35.5291619+00:00
-8000930,Vivid Synthium Stone,,1d,2,124.0000,2024-11-28T05:23:35.6566487+00:00
-8000931,Lucid Synthium Stone,,1d,1,425.0000,2024-11-28T05:23:35.7793822+00:00
-8000932,Radiant Synthium Stone,,,,,
+8000929,Clear Synthium Stone,,1d,54,51.9587,2024-11-18T05:24:40.3016675+00:00
+8000930,Vivid Synthium Stone,,,,,
+8000931,Lucid Synthium Stone,,1d,1,180.0000,2024-11-18T05:24:40.5392455+00:00
+8000932,Radiant Synthium Stone,,1d,3,256.1985,2024-11-18T05:24:40.6663076+00:00
 8000938,Brilliant Mornstone,,,,,
 8000952,Lucid Synthium Shard,,,,,
 8000951,Vivid Synthium Shard,,,,,
-8000950,Clear Synthium Shard,,1d,500,4.5388,2024-11-28T05:23:36.375579+00:00
+8000950,Clear Synthium Shard,,1d,1555,5.1843,2024-11-18T05:24:41.1475818+00:00
 8000953,Radiant Synthium Shard,,,,,
 8000962,Extraction Alembic,,,,,
 8000963,Auction Mannequin,,,,,
@@ -12244,7 +12244,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 40508,Autumn Lore Instrument,,,,,
 40509,Decorative Autumn Lore Instrument,,,,,
 40521,Auroria Mineral Water Pump,,,,,
-40522,Auroria Twilight Sapling,,1d,1,220.0000,2024-11-28T05:23:43.6803019+00:00
+40522,Auroria Twilight Sapling,,,,,
 40525,Brimstone Orb,,,,,
 40538,Storage Silo Design,,,,,
 40691,October Birthstone: Bow Constellation,,,,,
@@ -12303,11 +12303,11 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 40900,Taris Figurine,,,,,
 40916,Empty Canvas,,,,,
 40917,Empty Easel,,,,,
-40923,Chibi Rabbit,,,,,
-40924,Chibi Pumpkin,,,,,
-40925,Daru Newt,,,,,
+40923,Chibi Rabbit,,1d,2,50.0000,2024-11-18T05:24:55.9611813+00:00
+40924,Chibi Pumpkin,,1d,1,50.0000,2024-11-18T05:24:56.0965399+00:00
+40925,Daru Newt,,1d,2,50.0000,2024-11-18T05:24:56.2231774+00:00
 40926,Chibi Elephant,,,,,
-40927,Chubby Bunny,,,,,
+40927,Chubby Bunny,,1d,2,50.0000,2024-11-18T05:24:56.4632241+00:00
 40938,Vivid Gale Lunascale: Clash,,,,,
 40939,Vivid Earth Lunascale: Intercept,,,,,
 40957,Edge of the Abyss,,,,,
@@ -12373,10 +12373,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 41106,3rd Anniversary Purple Balloon,,,,,
 41107,3rd Anniversary Balloon Bundle,,,,,
 8000965,Wrapped Stormwing Pegasus,,,,,
-8000966,Misagon's Crystal,,1d,70,34.3056,2024-11-28T05:23:58.9377219+00:00
-8001000,Bound Serendipity Stone,,1d,12,750.8326,2024-11-28T05:23:59.0328089+00:00
+8000966,Misagon's Crystal,,1d,222,42.4470,2024-11-18T05:25:04.0085308+00:00
+8001000,Bound Serendipity Stone,,1d,24,836.8277,2024-11-18T05:25:04.1052584+00:00
 8001009,Wrapped Narayana Squire,,,,,
-8001008,Farm Freighter Upgrade Ticket,,,,,
+8001008,Farm Freighter Upgrade Ticket,,1d,6,1029.6685,2024-11-18T05:25:04.2852361+00:00
 8001012,Monkey Madness Archeum Supply Crate,,,,,
 8001014,First-Aid Crate,,,,,
 8001015,Wrapped Doctor Healgood Costume,,,,,
@@ -12404,12 +12404,12 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001060,Wrapped Bloodmaw Eveningwear,,,,,
 8001061,Wrapped Golden Dawn,,,,,
 8001062,Wrapped Geared Gaslamp Garb,,,,,
-8001081,Ayanad Scroll Scrap,,1d,2,18.0000,2024-11-28T05:24:02.4722122+00:00
+8001081,Ayanad Scroll Scrap,,1d,10,25.6565,2024-11-18T05:25:07.2862848+00:00
 8001083,Wrapped Shadow Daru Uniform,,,,,
 8001085,Wrapped Otherworld Storage Chest,,,,,
 8001086,Special Pirate Plushie Trove,,,,,
 8001087,Wrapped Lavaspark,,,,,
-8001094,Building Management Permit,,1d,2,95.0000,2024-11-28T05:24:02.9268935+00:00
+8001094,Building Management Permit,,,,,
 8001185,Wrapped Gweonid Vine Giant,,,,,
 8001189,Refined Iron Ingot,,,,,
 8001201,Wrapped Enhanced Flamefeather Glider,,,,,
@@ -12490,7 +12490,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 41452,Extra-Sweet Pineapple,,,,,
 41453,Amaranth,,,,,
 41454,Dewy Amaranth,,,,,
-41455,Hibiscus,,,,,
+41455,Hibiscus,,1d,1500,0.7500,2024-11-18T05:25:17.8783934+00:00
 41456,Aromatic Hibiscus,,,,,
 41457,Watermelon,,,,,
 41458,Seedless Watermelon,,,,,
@@ -12523,10 +12523,10 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42027,Aurora Storage Chest,,,,,
 42030,Combat Scroll: Penetration,,,,,
 42031,Combat Scroll: Breakthrough,,,,,
-42043,Sweet Starlight,,1d,80,1.7195,2024-11-28T05:24:15.5405486+00:00
-42044,Faint Memory,,,,,
-42045,Alluvion Love,,1d,40,6.9575,2024-11-28T05:24:15.7800471+00:00
-42046,Stormraw Wave,,1d,20,8.0000,2024-11-28T05:24:15.8915807+00:00
+42043,Sweet Starlight,,1d,170,1.8574,2024-11-18T05:25:22.0060132+00:00
+42044,Faint Memory,,1d,40,1.5025,2024-11-18T05:25:22.1319325+00:00
+42045,Alluvion Love,,1d,20,7.4500,2024-11-18T05:25:22.2483275+00:00
+42046,Stormraw Wave,,1d,20,7.9800,2024-11-18T05:25:22.3753849+00:00
 42047,Gilda Rune,,,,,
 42048,Rita Rune,,,,,
 42049,Divine Die,,,,,
@@ -12542,7 +12542,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42066,Decorative Flamesinger,,,,,
 42067,Decorative Windcreek Lute,,,,,
 42068,Decorative Silver Oasis Lute,,,,,
-42078,Metallic Auroran Crate,,1d,68,46.8880,2024-11-28T05:24:17.7337103+00:00
+42078,Metallic Auroran Crate,,1d,133,55.3566,2024-11-18T05:25:24.3820323+00:00
 42084,Celestial Weapon Anchoring Emblem,,,,,
 42085,Celestial Armor Anchoring Emblem,,,,,
 42086,Celestial Accessory Anchoring Emblem,,,,,
@@ -12569,19 +12569,19 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42107,69584 DO NOT TRANSLATE,,,,,
 42108,Rainbow Charm Pouch,,,,,
 42157,69772 DO NOT TRANSLATE,,,,,
-42162,Spellbook: Unstoppable Will,,1d,210,5.0234,2024-11-28T05:24:20.8571504+00:00
+42162,Spellbook: Unstoppable Will,,1d,217,5.0900,2024-11-18T05:25:27.7015248+00:00
 42164,Fortress of Honor,,,,,
 42165,Snow's Promise,,,,,
-42166,Kingdom's Shadow,,1d,287,5.0604,2024-11-28T05:24:21.2144599+00:00
-42168,Dawn of Glory,,1d,5,7.2400,2024-11-28T05:24:21.3311578+00:00
+42166,Kingdom's Shadow,,1d,285,5.2950,2024-11-18T05:25:28.0361108+00:00
+42168,Dawn of Glory,,1d,61,9.3722,2024-11-18T05:25:28.159366+00:00
 42170,Assorted Tenderloin,,,,,
 42171,Assorted Sirloin,,,,,
-42177,Assorted Ribs,,1d,145,5.3388,2024-11-28T05:24:21.6383683+00:00
+42177,Assorted Ribs,,1d,168,5.5223,2024-11-18T05:25:28.5150592+00:00
 42236,Assorted Meatballs,,,,,
 42247,Red Wine Vinegar,,,,,
 42250,Judge's Longing,,,,,
 42258,McGaru's Multi-tool,,,,,
-42260,Worm Compost,,,,,
+42260,Worm Compost,,1d,704,0.7450,2024-11-18T05:25:29.1328976+00:00
 42293,Strength Drain Talisman,,,,,
 42294,Agility Drain Talisman,,,,,
 42295,Stamina Drain Talisman,,,,,
@@ -12597,20 +12597,20 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42309,Labor Reward: 1000,,,,,
 42310,Labor Reward: 2000,,,,,
 42311,Labor Reward: 3000,,,,,
-42314,Axle Grease,,1d,10,5.5000,2024-11-28T05:24:24.1279901+00:00
+42314,Axle Grease,,1d,49,4.2183,2024-11-18T05:25:31.1186415+00:00
 42320,30-Day Scarlet Wand Earring,,,,,
 42325,Random Migration Talisman,,,,,
 42326,Draining Talisman Pack,,,,,
 42327,70459 DO NOT TRANSLATE,,,,,
-42333,Lost Metallic Crate,,1d,83,23.1201,2024-11-28T05:24:24.7026929+00:00
-42335,Copper Key,,1d,31,9.5500,2024-11-28T05:24:24.7934118+00:00
-42336,Silver Key,,1d,60,12.4494,2024-11-28T05:24:24.9115018+00:00
-42342,Scented Leaf,,1d,324,3.5281,2024-11-28T05:24:25.0439134+00:00
-42343,Royal Seed,,1d,703,7.7775,2024-11-28T05:24:25.1668205+00:00
-42344,Heavy Hardwood,,1d,543,1.6289,2024-11-28T05:24:25.2798865+00:00
+42333,Lost Metallic Crate,,1d,263,21.7837,2024-11-18T05:25:31.7468035+00:00
+42335,Copper Key,,1d,5,6.6939,2024-11-18T05:25:31.8762546+00:00
+42336,Silver Key,,1d,96,14.4612,2024-11-18T05:25:32.010998+00:00
+42342,Scented Leaf,,1d,186,2.6304,2024-11-18T05:25:32.1407296+00:00
+42343,Royal Seed,,1d,804,7.4387,2024-11-18T05:25:32.2717186+00:00
+42344,Heavy Hardwood,,1d,619,2.0970,2024-11-18T05:25:32.3954294+00:00
 42354,Wrapped Advanced Vocation Supply Box,,,,,
 42372,Wrapped Aquestria,,,,,
-42394,Brinebound Rock,,1d,517,4.1148,2024-11-28T05:24:25.6390393+00:00
+42394,Brinebound Rock,,1d,693,3.6143,2024-11-18T05:25:32.7512376+00:00
 42423,Wrapped Wheeled Mortar,,,,,
 42424,Wrapped Fire Ironclad,,,,,
 42425,Wrapped Ironclad,,,,,
@@ -12660,7 +12660,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42575,Titan's Will,,,,,
 42576,Titan's Chain,,,,,
 42577,Titan's Wings,,,,,
-42582,Ground Fish Chum,,,,,
+42582,Ground Fish Chum,,1d,1250,0.0500,2024-11-18T05:25:38.8287795+00:00
 42585,Clear Unidentified Ore,,,,,
 42586,Vivid Unidentified Ore,,,,,
 42587,Lucid Unidentified Ore,,,,,
@@ -12695,7 +12695,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 42634,Titan's Healing Potion,,,,,
 42635,Titan's Mana Potion,,,,,
 42644,Wrapped Soulmule,,,,,
-42645,Big Belly Fish,,,,,
+42645,Big Belly Fish,,1d,1420,0.9790,2024-11-18T05:25:43.1053773+00:00
 42646,Cloaked Drain Talisman,,,,,
 42647,Cloaked Migration Talisman,,,,,
 42654,Bed Designs,,,,,
@@ -12711,9 +12711,9 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001371,Cloaked Luminous Stamina Migration Talisman,,,,,
 8001372,Cloaked Luminous Intelligence Migration Talisman,,,,,
 8001373,Cloaked Luminous Spirit Migration Talisman,,,,,
-8001399,Celestial Weapon Anchoring Shard,,1d,18,35.9999,2024-11-28T05:24:37.3789039+00:00
+8001399,Celestial Weapon Anchoring Shard,,,,,
 8001400,Celestial Armor Anchoring Shard,,,,,
-8001401,Celestial Accessory Anchoring Shard,,,,,
+8001401,Celestial Accessory Anchoring Shard,,1d,26,14.1833,2024-11-18T05:25:45.306964+00:00
 8001402,Divine Weapon Anchoring Shard,,,,,
 8001403,Divine Armor Anchoring Shard,,,,,
 8001404,Divine Accessory Anchoring Shard,,,,,
@@ -12745,7 +12745,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001642,Wrapped Vanhi,,,,,
 8001644,Wrapped Hellwing Pegasus,,,,,
 8001665,Heather Dye,,,,,
-8001674,Large Labor Potion,,1d,10,336.1111,2024-11-28T05:24:41.3515847+00:00
+8001674,Large Labor Potion,,1d,1,355.0000,2024-11-18T05:25:49.2499433+00:00
 8001687,Wrapped White Reindeer,,,,,
 8001688,Wrapped Black Reindeer,,,,,
 8001689,Wrapped Zebra,,,,,
@@ -12780,7 +12780,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001776,Strawberry Pudding Chair,,,,,
 8001777,Orange Pudding Chair,,,,,
 8001778,Neapolitan Ice Cream Table,,,,,
-8001779,Desserted Cottage Design,,1d,1,5000.0000,2024-11-28T05:24:45.4735913+00:00
+8001779,Desserted Cottage Design,,,,,
 8001781,Wrapped Full Kit: Desserted Cottage,,,,,
 8001784,Wrapped Carrot Dash,,,,,
 8001791,Wrapped Golden Manticore,,,,,
@@ -12796,7 +12796,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001852,Ranged Golden Undergarments,,,,,
 8001853,Magic Golden Undergarments,,,,,
 8001854,Healing Golden Undergarments,,,,,
-8001855,Melee Black Cat Undergarments,,,,,
+8001855,Melee Black Cat Undergarments,,1d,1,450.0000,2024-11-18T05:25:55.6484411+00:00
 8001856,Ranged Black Cat Undergarments,,,,,
 8001857,Magic Black Cat Undergarments,,,,,
 8001858,Healing Black Cat Undergarments,,,,,
@@ -12825,8 +12825,8 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 8001960,Wrapped Moby Drake,,,,,
 9000010,Any-Post Owl (30d),,,,,
 9000011,Anywhere Warehouse (30d),,,,,
-9000027,Glittering Charcoal Milk,,1d,11,39.9700,2024-11-28T05:24:50.677397+00:00
-9000028,Mysterious Glittering Charcoal Milk,,1d,33,98.3748,2024-11-28T05:24:50.7979206+00:00
+9000027,Glittering Charcoal Milk,,1d,2,52.5000,2024-11-18T05:25:59.1254126+00:00
+9000028,Mysterious Glittering Charcoal Milk,,1d,40,99.9907,2024-11-18T05:25:59.2488083+00:00
 9000029,Universal Glider Design,,,,,
 9000030,Rollback Accelerator,,,,,
 9000031,Feathered Core,,,,,
@@ -12891,7 +12891,7 @@ item_id,item_name,grade,period,volume,average,lastCacheTime
 9000149,Armored Frame,,,,,
 9000150,Cannon Mount,,,,,
 9000151,Puffer Engine,,,,,
-9000163,Schematic Scrap,,1d,38,8.5375,2024-11-28T05:24:58.3626223+00:00
+9000163,Schematic Scrap,,1d,561,8.2983,2024-11-18T05:26:06.0664045+00:00
 9000169,Dye,,,,,
 9000170,Dye,,,,,
 9000171,Dye,,,,,
