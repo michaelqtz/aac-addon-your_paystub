@@ -401,6 +401,9 @@ local function fillSessionTableData(itemScrollList, pageIndex)
         startingIndex = ((pageIndex - 1) * pageSize) + 1 
     end
     endingIndex = startingIndex + pageSize
+    itemScrollList:DeleteAllDatas()
+
+    if pastSessions == nil then return end
     
     local count = 1
     for _, sessionObject in pairs(pastSessions["sessions"]) do 
@@ -451,7 +454,12 @@ local function OnLoad()
 
     -- Load past sessions
     pastSessions = api.File:Read(pastSessionsFilename)
-    maxPage = math.ceil(#pastSessions.sessions / pageSize)
+    if pastSessions ~= nil then 
+        maxPage = math.ceil(#pastSessions.sessions / pageSize)
+    else
+        maxPage = 1
+    end 
+    
 
     for packId, pack in pairs(packs_helper.packsInfo) do
         local packZoneId = 0
