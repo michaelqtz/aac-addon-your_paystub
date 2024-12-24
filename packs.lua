@@ -28,6 +28,7 @@ local AH_PRICES
 local packs_helper
 
 local yourPaystubWindow 
+local commerceWindow
 
 local currentBackSlotItem
 local lastKnownZone
@@ -43,6 +44,9 @@ local pastSessionsFilename
 local sessionTimeoutCounter = 0
 local SESSION_TIMEOUT_MS = 60000 * 3  --> 1 minute is 60000
 local SESSION_TIMEOUT_MS = 1000 * 15  --> TEST OVERRIDE
+
+local displayRefreshCounter = 0
+local DISPLAY_REFRESH_MS = 60000
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
 
@@ -94,6 +98,47 @@ local function updateLastKnownChannel(channelId, channelName)
     -- api.Log:Info("  you have switched zones: " .. tostring(currentZone) .. " from zone: " .. tostring(lastKnownZone))
 end 
 
+local function fillSessionTableData(itemScrollList, pageIndex)
+    local startingIndex = 1
+    if pageIndex > 1 then 
+        startingIndex = ((pageIndex - 1) * pageSize) + 1 
+    end
+    endingIndex = startingIndex + pageSize
+    itemScrollList:DeleteAllDatas()
+
+    if pastSessions == nil then return end
+    
+    local count = 1
+    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+        if count >= startingIndex and count < endingIndex then 
+            local itemData = {
+                -- localTimestamp = "1733471130",
+                -- packId = "42023",
+                -- refundTotal = 482872,
+                -- packCount = 1,
+                -- coinTypeId = 0,
+                -- Sessions data fields
+                localTimestamp = sessionObject.localTimestamp,
+                packId = sessionObject.packId,
+                refundTotal = sessionObject.refundTotal,
+                profitTotal = sessionObject.profitTotal,
+                costTotal = sessionObject.costTotal,
+                packCount = sessionObject.packCount, 
+                coinTypeId = sessionObject.coinTypeId,
+                turnInZone = sessionObject.turnInZone,
+                
+                index = count,
+
+                -- Required fields
+                isViewData = true, 
+                isAbstention = false
+            }
+            itemScrollList:InsertData(count, 1, itemData)
+        end
+        count = count + 1
+    end 
+end
+
 local function saveCurrentSessionToFile()
     if pastSessions == nil then 
         pastSessions = {}
@@ -122,6 +167,21 @@ local function saveCurrentSessionToFile()
     -- Insert it into the top position (to sort by most recent)
     table.insert(pastSessions["sessions"], 1, currentSession)
     api.File:Write(pastSessionsFilename, pastSessions)
+
+    -- Refresh payment list
+    local sessionScrollList = commerceWindow.sessionScrollList
+    if pastSessions ~= nil then
+        if pastSessions.sessions ~= nil then
+            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+        else
+            maxPage = 1
+        end   
+    else
+        maxPage = 1
+    end 
+    sessionScrollList.pageControl.maxPage = maxPage
+    fillSessionTableData(sessionScrollList, 1)
+    sessionScrollList.pageControl:SetCurrentPage(1, true)
 end 
 
 local function startPackTurnInSession(packId, coinTypeId)
@@ -233,7 +293,7 @@ local function OnUpdate(dt)
     if sessionTimeoutCounter + dt > SESSION_TIMEOUT_MS then
         -- Save, and clear session
         if currentSession ~= nil then 
-            api.Log:Err("Ending current pack session...")
+            api.Log:Info("[Your Paystub] Ending current pack session...")
             saveCurrentSessionToFile()
             currentSession = nil
             
@@ -241,6 +301,15 @@ local function OnUpdate(dt)
         sessionTimeoutCounter = 0
     end 
     sessionTimeoutCounter = sessionTimeoutCounter + dt
+
+    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
+        displayRefreshCounter = 0
+        local sessionScrollList = commerceWindow.sessionScrollList
+        sessionScrollList.pageControl.maxPage = maxPage
+        fillSessionTableData(sessionScrollList, 1)
+        sessionScrollList.pageControl:SetCurrentPage(1, true)
+    end 
+    displayRefreshCounter = displayRefreshCounter + dt
 end 
 
 --- Session Scroll List Functions
@@ -394,47 +463,6 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     end 
     clickOverlay:SetHandler("OnClick", clickOverlay.OnClick)
 end
-
-local function fillSessionTableData(itemScrollList, pageIndex)
-    local startingIndex = 1
-    if pageIndex > 1 then 
-        startingIndex = ((pageIndex - 1) * pageSize) + 1 
-    end
-    endingIndex = startingIndex + pageSize
-    itemScrollList:DeleteAllDatas()
-
-    if pastSessions == nil then return end
-    
-    local count = 1
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
-        if count >= startingIndex and count < endingIndex then 
-            local itemData = {
-                -- localTimestamp = "1733471130",
-                -- packId = "42023",
-                -- refundTotal = 482872,
-                -- packCount = 1,
-                -- coinTypeId = 0,
-                -- Sessions data fields
-                localTimestamp = sessionObject.localTimestamp,
-                packId = sessionObject.packId,
-                refundTotal = sessionObject.refundTotal,
-                profitTotal = sessionObject.profitTotal,
-                costTotal = sessionObject.costTotal,
-                packCount = sessionObject.packCount, 
-                coinTypeId = sessionObject.coinTypeId,
-                turnInZone = sessionObject.turnInZone,
-                
-                index = count,
-
-                -- Required fields
-                isViewData = true, 
-                isAbstention = false
-            }
-            itemScrollList:InsertData(count, 1, itemData)
-        end
-        count = count + 1
-    end 
-end
 ---
 
 local function OnLoad()
@@ -450,13 +478,20 @@ local function OnLoad()
     currentSession = nil
     lastSeenPrice = nil
     lastSeenCoinType = nil
-    pastSessionsFilename = "your_paystub/pack_sessions/sessions.lua"
+    pastSessionsFilename = "your_paystub_pack_sessions.lua"
 
     -- Load past sessions
     pastSessions = api.File:Read(pastSessionsFilename)
-    if pastSessions ~= nil then 
-        maxPage = math.ceil(#pastSessions.sessions / pageSize)
+    if pastSessions ~= nil then
+        if pastSessions.sessions ~= nil then
+            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+        else
+            maxPage = 1
+        end   
     else
+        pastSessions = {}
+        pastSessions["sessions"] = {}
+        api.File:Write(pastSessionsFilename, pastSessions)
         maxPage = 1
     end 
     
