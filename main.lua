@@ -2,7 +2,7 @@
 local your_paystub_addon = {
 	name = "Your Paystub",
 	author = "Michaelqt",
-	version = "0.1",
+	version = "1.1.3",
 	desc = "Keep track of how much you get paid!"
 }
 
@@ -408,6 +408,8 @@ local function OnUnload()
     packsAddon = nil
     paystubDisplayWindow:Show(false)
     paystubDisplayWindow = nil
+    paystubBtn:Show(false)
+    paystubBtn = nil
 end
 
 your_paystub_addon.OnLoad = OnLoad
