@@ -48,6 +48,9 @@ local SESSION_TIMEOUT_MS = 1000 * 15  --> TEST OVERRIDE
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
 
+local packSlotCheckCounter = 0
+local PACK_SLOT_CHECK_MS = 100
+
 local PACK_TIMER_8HRS_IN_SECS = 28800
 
 local pageSize = 10 --> number of sessions on page
@@ -227,7 +230,6 @@ local function recordPackPayment(itemLinkText, itemCount, removeState, itemTaskT
     if removedItemId == currentBackSlotItem and itemTaskType == ITEM_TASK_ID_PACK_DROPPED then 
         currentBackSlotItem = nil
     end 
-    -- api.Log:Info(tostring(currentBackSlotItem) .. " tasktype: " .. tostring(itemTaskType) .. " removestate: " .. tostring(removeState) .. " " .. tostring(tradeOtherName)) 
 end
   
 local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOtherName)
@@ -242,9 +244,6 @@ local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOt
         end
     end 
     --- Ends untouchable legacy code, PLEASE DO NOT TOUCH.
-
-    -- api.Log:Info("Pack picked up: " .. tostring(currentBackSlotItem) .. ", task id: " .. tostring(itemTaskType))
-    -- api.Log:Info(tostring(currentBackSlotItem) .. " tasktype: " .. tostring(itemTaskType) .. " trade name: " .. tostring(tradeOtherName))
 end 
 
 local function soldASpecialty(text)
@@ -257,7 +256,7 @@ local function soldASpecialty(text)
         else
             local timeRightNow = api.Time:GetLocalTime()
             local timeDelta = tonumber(timeRightNow) - tonumber(currentSession["localTimestamp"])
-            -- api.Log:Info(tostring(timeDelta))
+
             -- if there is a session, see if it's been less than 5 minutes. if it has been, write to current session
             -- NOTE: start a new session if the turned in pack doesnt match the packId or its cointype ID
             if lastSeenCoinType == currentSession["coinTypeId"] and currentBackSlotItem == currentSession["packId"] then
@@ -310,6 +309,14 @@ local function OnUpdate(dt)
         sessionScrollList.pageControl:SetCurrentPage(1, true)
     end 
     displayRefreshCounter = displayRefreshCounter + dt
+
+    if packSlotCheckCounter + dt > PACK_SLOT_CHECK_MS then 
+        packSlotCheckCounter = 0
+        local backpackInfo = api.Equipment:GetEquippedItemTooltipInfo(EQUIP_SLOT.BACKPACK)
+        currentBackSlotItem = backpackInfo.itemType
+
+    end
+    packSlotCheckCounter = packSlotCheckCounter + dt 
 end 
 
 --- Session Scroll List Functions
