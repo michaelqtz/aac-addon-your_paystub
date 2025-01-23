@@ -284,6 +284,7 @@ end
 
 local function traderDialogOpened(refund, itemType, itemGrade, coinType)
     -- api.Log:Info(tostring(itemType) .. " turns in for " .. tostring(refund) .. " of coinType: " .. tostring(coinType))
+    currentBackSlotItem = itemType
     lastSeenPrice = refund
     lastSeenCoinType = coinType
 end
@@ -313,8 +314,12 @@ local function OnUpdate(dt)
     if packSlotCheckCounter + dt > PACK_SLOT_CHECK_MS then 
         packSlotCheckCounter = 0
         local backpackInfo = api.Equipment:GetEquippedItemTooltipInfo(EQUIP_SLOT.BACKPACK)
-        currentBackSlotItem = backpackInfo.itemType
-
+        if packs_helper:IsASpecialtyPackById(tonumber(backpackInfo.itemType)) then 
+            currentBackSlotItem = backpackInfo.itemType
+        else
+            currentBackSlotItem = nil
+        end 
+        api.Log:Info(currentBackSlotItem) 
     end
     packSlotCheckCounter = packSlotCheckCounter + dt 
 end 
@@ -325,7 +330,10 @@ local function SessionSetFunc(subItem, data, setValue)
         -- Data Assignments
         local sessionIndex = data.index
         local packObject = packs_helper:GetSpecialtyPackNameById(tonumber(data.packId))
-        local packName = packObject.name or nil
+        local packName = "Unknown Pack (id: " .. tostring(data.packId) .. ")" 
+        if packObject ~= nil then 
+            if packObject.name ~= nil then packName = packObject.name end
+        end
         local turnInZone = data.turnInZone
         local packCount = tostring(data.packCount)
         local coinTypeId = tonumber(data.coinTypeId)
