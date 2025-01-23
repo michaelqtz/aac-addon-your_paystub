@@ -319,7 +319,7 @@ local function OnUpdate(dt)
         else
             currentBackSlotItem = nil
         end 
-        api.Log:Info(currentBackSlotItem) 
+        -- api.Log:Info(currentBackSlotItem) 
     end
     packSlotCheckCounter = packSlotCheckCounter + dt 
 end 
