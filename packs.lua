@@ -43,7 +43,7 @@ local pastSessionsFilename
 
 local sessionTimeoutCounter = 0
 local SESSION_TIMEOUT_MS = 60000 * 3  --> 1 minute is 60000
-local SESSION_TIMEOUT_MS = 1000 * 15  --> TEST OVERRIDE
+local SESSION_TIMEOUT_MS = 1000 * 35  --> TEST OVERRIDE
 
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
@@ -279,6 +279,12 @@ end
 local function getSpecialtyInfo(specialtyRatioTable)
     for key, value in pairs(specialtyRatioTable) do 
         -- api.Log:Info(value.itemInfo.name .. " at " .. value.ratio .. "%")
+    end 
+end 
+
+local function sellSpecialtyContentInfo(list)
+    for key, value in pairs(list) do 
+        api.Log:Info(key .. " " .. value)
     end 
 end 
 
@@ -571,10 +577,10 @@ local function OnLoad()
         if event == "CHAT_JOINED_CHANNEL" then 
             updateLastKnownChannel(unpack(arg))
         end 
-        -- if event == "ADDED_ITEM" then 
-        --     -- api.Log:Info("heya")
-        --     trackLoot(unpack(arg))
-        -- end 
+        if event == "SELL_SPECIALTY_CONTENT_INFO" then 
+            api.Log:Info("heya")
+            sellSpecialtyContentInfo(unpack(arg))
+        end 
         if event == "UPDATE_SPECIALTY_RATIO" then 
             traderDialogOpened(unpack(arg))
         end 
