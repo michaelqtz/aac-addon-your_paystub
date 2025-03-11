@@ -297,6 +297,20 @@ local function CreateLootTrackerWindow(wndParent)
     return wnd
 end 
 
+local function CreateUnderConstructionWindow(wndParent)
+    local wnd = wndParent:CreateChildWidget("emptywidget", "commerceWindow", 0, true)
+    wnd:SetExtent(600, 600)
+    wnd:AddAnchor("TOP", wndParent, 0, 0)
+    local title = wnd:CreateChildWidget("label", "title", 0, true)
+    title:SetAutoResize(true)
+    title:SetHeight(FONT_SIZE.XLARGE)
+    title.style:SetAlign(ALIGN.CENTER)
+    title.style:SetFontSize(FONT_SIZE.XLARGE)
+    ApplyTextColor(title, FONT_COLOR.TITLE)
+    title:SetText("Coming Soon - Under Construction")
+    title:AddAnchor("TOP", wnd, 0, 300)
+end 
+
 local function OnLoad()
     packsAddon = require("your_paystub/packs")
     
@@ -316,7 +330,7 @@ local function OnLoad()
             end,
             title = "Loot Tracker",
             subWindowConstructor = function(parent)
-                CreateLootTrackerWindow(parent)
+                CreateUnderConstructionWindow(parent)
             end
         },
         {
@@ -325,7 +339,7 @@ local function OnLoad()
             end,
             title = "Recipe Profit",
             subWindowConstructor = function(parent)
-                return "heya"
+                CreateUnderConstructionWindow(parent)
             end
         },
         {
@@ -334,7 +348,7 @@ local function OnLoad()
             end,
             title = "Plant Timers",
             subWindowConstructor = function(parent)
-                return "hi"
+                CreateUnderConstructionWindow(parent)
             end
         },
         {
@@ -343,7 +357,7 @@ local function OnLoad()
             end,
             title = "Accounting",
             subWindowConstructor = function(parent)
-                return "hi"
+                CreateUnderConstructionWindow(parent)
             end
         }
     }
