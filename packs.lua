@@ -53,7 +53,7 @@ local PACK_SLOT_CHECK_MS = 100
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
 
-local pageSize = 10 --> number of sessions on page
+local pageSize = 20 --> number of sessions on page
 local maxPage
 
 -- helpers 
@@ -100,6 +100,58 @@ local function updateLastKnownChannel(channelId, channelName)
     currentZone = channelName
     -- api.Log:Info("  you have switched zones: " .. tostring(currentZone) .. " from zone: " .. tostring(lastKnownZone))
 end 
+-- Statistics functions
+local function getTotalGoldMadeFromPacks()
+    local totalGold = 0
+    if pastSessions == nil then return totalGold end
+    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+        if sessionObject.profitTotal ~= "Unknown" then 
+            totalGold = totalGold + sessionObject.profitTotal
+        end 
+    end 
+    return totalGold
+end 
+local function getTotalPacksTurnedIn()
+    local totalPacks = 0
+    if pastSessions == nil then return totalPacks end
+    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+        totalPacks = totalPacks + sessionObject.packCount
+    end 
+    return totalPacks
+end
+local function getFavouritePackType()
+    local packCounts = {}
+    if pastSessions == nil then return nil end
+    for _, sessionObject in pairs(pastSessions["sessions"]) do
+        local packId = sessionObject.packId
+        if packCounts[packId] == nil then
+            packCounts[packId] = 0
+        end
+        packCounts[packId] = packCounts[packId] + sessionObject.packCount
+    end
+
+    local favouritePackId = nil
+    local maxCount = 0
+    for packId, count in pairs(packCounts) do
+        if count > maxCount then
+            maxCount = count
+            favouritePackId = packId
+        end
+    end
+
+    return favouritePackId
+end
+local function getPendingPackGoldTotal()
+    local pendingGold = 0
+    if pastSessions == nil then return pendingGold end
+    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+        local timeDiffTilNow = PACK_TIMER_8HRS_IN_SECS - differenceBetweenTimestamps(api.Time:GetLocalTime(), sessionObject.localTimestamp)
+        if timeDiffTilNow > 0 then
+            pendingGold = pendingGold + sessionObject.profitTotal
+        end 
+    end 
+    return pendingGold
+end
 
 local function fillSessionTableData(itemScrollList, pageIndex)
     local startingIndex = 1
@@ -349,6 +401,7 @@ local function SessionSetFunc(subItem, data, setValue)
         if coinTypeId ~= nil then 
             coinTypeName = api.Item:GetItemInfoByType(coinTypeId).name
         end
+        local date = api.Time:TimeToDate(data.localTimestamp)
         local timeDiffTilNow = PACK_TIMER_8HRS_IN_SECS - differenceBetweenTimestamps(api.Time:GetLocalTime(), data.localTimestamp)
         local timeDiffStr = "Payment In: " .. displayTimeString(tonumber(timeDiffTilNow))
         -- Display Strings
@@ -368,7 +421,10 @@ local function SessionSetFunc(subItem, data, setValue)
         else 
             rightTextStr = rightTextStr .. " \n " .. "Cost: " .. tostring(costTotal)
         end 
-        
+        -- api.Log:Info(subItem.subItemIcon)
+        local packInfo = api.Item:GetItemInfoByType(tonumber(data.packId))
+        -- api.Log:Info(packInfo.path)
+        F_SLOT.SetIconBackGround(subItem.subItemIcon, packInfo.path)
         
         local titleStr = "Unknown Zone Specialty Turn-in"
         if turnInZone ~= nil then 
@@ -391,7 +447,7 @@ local function SessionSetFunc(subItem, data, setValue)
         else
             -- Has been paid, set background to green.
             subItem.bg:SetColor(ConvertColor(11),ConvertColor(156),ConvertColor(35),0.3)
-            subItem.sessionIsPaidLabel:SetText("Paid out")
+            subItem.sessionIsPaidLabel:SetText("Paid on " .. string.format("%02d/%02d/%04d", date.month, date.day, date.year))
         end 
         -- F_SLOT.SetIconBackGround(subItem.subItemIcon, data.dds)
     end
@@ -450,6 +506,7 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     F_SLOT.ApplySlotSkin(subItemIcon, subItemIcon.back, SLOT_STYLE.BUFF)
     F_SLOT.SetIconBackGround(subItemIcon, "game/ui/icon/icon_item_1338.dds")
     subItemIcon:AddAnchor("TOPLEFT", sessionTitle, 0, 10)
+    subItem.subItemIcon = subItemIcon
 
     -- Top-right Session "Is paid?" Label
     local sessionIsPaidLabel = subItem:CreateChildWidget("label", "sessionIsPaidLabel", 0, true)
@@ -543,7 +600,11 @@ local function OnLoad()
         
     end 
     
-
+    -- Load and write statistics to paystub window
+    local totalGold = getTotalGoldMadeFromPacks()
+    local totalPacks = getTotalPacksTurnedIn()
+    local favouritePackId = getFavouritePackType()
+    local pendingGold = getPendingPackGoldTotal()
     -- local exampleSession = api.File:Read("your_paystub/pack_sessions/1733267924.lua")
     -- api.Log:Info(exampleSession)
     -- local currentTime = api.Time:GetLocalTime()
@@ -613,6 +674,33 @@ local function OnLoad()
         fillSessionTableData(sessionScrollList, pageIndex)
     end 
 
+    local pendingGoldStr = commerceWindow:CreateChildWidget("label", "pendingGoldStr", 0, true)
+    pendingGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
+    pendingGoldStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(pendingGoldStr, FONT_COLOR.DEFAULT)
+    pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
+    pendingGoldStr:AddAnchor("BOTTOMLEFT", commerceWindow, 15, 50)
+
+    local totalGoldStr = commerceWindow:CreateChildWidget("label", "totalGoldStr", 0, true)
+    totalGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
+    totalGoldStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(totalGoldStr, FONT_COLOR.DEFAULT)
+    totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
+    totalGoldStr:AddAnchor("BOTTOMLEFT", pendingGoldStr, 0, 30)
+
+    local totalPacksStr = commerceWindow:CreateChildWidget("label", "totalPacksStr", 0, true)
+    totalPacksStr.style:SetFontSize(FONT_SIZE.LARGE)
+    totalPacksStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(totalPacksStr, FONT_COLOR.DEFAULT)
+    totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
+    totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
+
+    local favouritePackStr = commerceWindow:CreateChildWidget("label", "favouritePackStr", 0, true)
+    favouritePackStr.style:SetFontSize(FONT_SIZE.LARGE)
+    favouritePackStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(favouritePackStr, FONT_COLOR.DEFAULT)
+    favouritePackStr:SetText("Favourite Pack: " .. packs_helper:GetSpecialtyPackNameById(tonumber(favouritePackId)).name)
+    favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
     -- local sellableZones = api.Store:GetSellableZoneGroups(99)
     -- for key, value in pairs(sellableZones) do
     --     api.Log:Info("Zone: " .. key .. ", Value: " .. value.name)
