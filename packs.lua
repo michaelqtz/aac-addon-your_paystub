@@ -695,11 +695,12 @@ local function OnLoad()
     totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
     totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
 
+    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId)).name 
     local favouritePackStr = commerceWindow:CreateChildWidget("label", "favouritePackStr", 0, true)
     favouritePackStr.style:SetFontSize(FONT_SIZE.LARGE)
     favouritePackStr.style:SetAlign(ALIGN.LEFT)
     ApplyTextColor(favouritePackStr, FONT_COLOR.DEFAULT)
-    favouritePackStr:SetText("Favourite Pack: " .. packs_helper:GetSpecialtyPackNameById(tonumber(favouritePackId)).name)
+    favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
     favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
     -- local sellableZones = api.Store:GetSellableZoneGroups(99)
     -- for key, value in pairs(sellableZones) do
