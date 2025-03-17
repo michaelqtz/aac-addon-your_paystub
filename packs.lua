@@ -695,7 +695,12 @@ local function OnLoad()
     totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
     totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
 
-    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId)).name 
+    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
+    if favouritePackName ~= nil then 
+        favouritePackName = favouritePackName.name
+    else 
+        favouritePackName = "No favourite yet."
+    end
     local favouritePackStr = commerceWindow:CreateChildWidget("label", "favouritePackStr", 0, true)
     favouritePackStr.style:SetFontSize(FONT_SIZE.LARGE)
     favouritePackStr.style:SetAlign(ALIGN.LEFT)
