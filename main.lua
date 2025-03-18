@@ -2,12 +2,12 @@
 local your_paystub_addon = {
 	name = "Your Paystub",
 	author = "Michaelqt",
-	version = "1.2.0",
+	version = "1.3.0",
 	desc = "Keep track of how much you get paid!"
 }
 
 local packsAddon = require("your_paystub/packs")
-local lootAddon = nil
+local lootAddon = require("your_paystub/loot")
 
 paystubDisplayWindow = nil
 local paystubBtn
@@ -160,7 +160,23 @@ local function CreateCommerceWindow(wndParent)
 end 
 
 local function CreateLootTrackerWindow(wndParent)
-    -- local wnd = wndParent:CreateChildWidget("emptywidget", "lootWindow", 0, true)
+    -- Loot Parent Window
+    local wnd = wndParent:CreateChildWidget("emptywidget", "lootWindow", 0, true)
+    wnd:SetExtent(600, 600)
+    wnd:AddAnchor("TOP", wndParent, 0, 0)
+    local title = wnd:CreateChildWidget("label", "title", 0, true)
+    title:SetAutoResize(true)
+    title:SetHeight(FONT_SIZE.XLARGE)
+    title.style:SetAlign(ALIGN.CENTER)
+    title.style:SetFontSize(FONT_SIZE.XLARGE)
+    ApplyTextColor(title, FONT_COLOR.TITLE)
+    title:SetText("Loot Tracker")
+    title:AddAnchor("TOP", wnd, 0, 10)
+    -- Session-holding Scroll List
+    local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
+    sessionScrollList:Show(true)
+    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 4)
+    sessionScrollList:AddAnchor("BOTTOMRIGHT", wnd, -4, -4)
     -- wnd:AddAnchor("TOP", wndParent, 0, 0)
     -- local title = wnd:CreateChildWidget("label", "title", 0, true)
     -- title:SetAutoResize(true)
@@ -313,6 +329,7 @@ end
 
 local function OnLoad()
     packsAddon = require("your_paystub/packs")
+    lootAddon = require("your_paystub/loot")
     
     local tabInfo = {
         {
@@ -330,7 +347,7 @@ local function OnLoad()
             end,
             title = "Loot Tracker",
             subWindowConstructor = function(parent)
-                CreateUnderConstructionWindow(parent)
+                CreateLootTrackerWindow(parent)
             end
         },
         {
@@ -391,6 +408,7 @@ local function OnLoad()
     -- api.Interface:SetTooltipOnPos("Hello World", paystubDisplayWindow, 0, 0)
 
     packsAddon:OnLoad()
+    lootAddon:OnLoad()
     -- for key, value in pairs(getmetatable(paystubDisplayWindow.tab)) do 
     --     api.Log:Info(key .. " " .. tostring(value))
     -- end 
@@ -420,6 +438,8 @@ end
 local function OnUnload()
     packsAddon:OnUnload()
     packsAddon = nil
+    lootAddon:OnUnload()
+    lootAddon = nil
     paystubDisplayWindow:Show(false)
     paystubDisplayWindow = nil
     paystubBtn:Show(false)
