@@ -6,6 +6,9 @@ Ever wonder when that merchant you just did is coming in the mail? Have loans to
 ![image](https://github.com/user-attachments/assets/d6665291-2664-439f-be46-69f3317fc959)
 
 There is a button added to your inventory, please click that to get access to the Your Paystub Window
+
+### Disabling Loot Tracker Overlay
+- Open the paystub window from your inventory, navigate to Loot Tracker, and click "Toggle Overlay".
 ## Features
 - Track pending payments and the time left until paid
 - Records the type of pack turn in, and the amount of item, and when it will be paid
