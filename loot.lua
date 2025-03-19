@@ -349,16 +349,16 @@ local function fillInAHPricesForCrates()
             AH_PRICES[crateId].average = cratePrice
         elseif crateId == 42076 then
             -- Princes 
-            local cratePrice = (brazierPrice * 2) + (treePrice * 2) + (mgpPrice * 0.2)
+            local cratePrice = (brazierPrice * 1) + (treePrice * 1) + (mgpPrice * 0.2)
             AH_PRICES[crateId] = {}
             AH_PRICES[crateId].average = cratePrice
         elseif crateId == 42077 then
             -- Queens 
-            local cratePrice = (brazierPrice * 4.5) + (treePrice * 4.5) + (mgpPrice * 0.25)
+            local cratePrice = (brazierPrice * 2.25) + (treePrice * 2.25) + (mgpPrice * 0.25)
             AH_PRICES[crateId] = {}
         elseif crateId == 43177 then
             -- Ancestrals
-            local cratePrice = (brazierPrice * 10) + (treePrice * 10) + (mgpPrice * 0.8)
+            local cratePrice = (brazierPrice * 5) + (treePrice * 5) + (mgpPrice * 0.8)
             AH_PRICES[crateId] = {}
             AH_PRICES[crateId].average = cratePrice
         end 
@@ -442,7 +442,7 @@ local function SessionSetFunc(subItem, data, setValue)
             for itemId, itemCount in pairs(items) do
                 local cleanedItemId = getCleanedItemId(itemId)
                 local itemInfo = api.Item:GetItemInfoByType(tonumber(cleanedItemId))
-                if itemInfo and string.find(string.lower(itemInfo.name), "crate") and itemCount > highestCrateItemCount then
+                if itemInfo and (string.find(string.lower(itemInfo.name), "crate") or string.find(string.lower(itemInfo.name), "research bundle")) and itemCount > highestCrateItemCount then
                     highestCrateItemId = itemId
                     highestCrateItemCount = itemCount
                 end
@@ -512,11 +512,23 @@ local function SessionSetFunc(subItem, data, setValue)
         end
 
         local titleStr = "Unknown Zone Loot Session"
-        if lootZone ~= nil then 
-            titleStr = lootZone .. " Loot Session"
+        
+        
+        if kills > laborSpent then 
+            -- Larceny session, depicted by more kills than labor spent
+            if lootZone ~= nil then 
+                titleStr = lootZone .. " Loot Session"
+            end 
+            subItem.bg:SetColor(ConvertColor(210),ConvertColor(94),ConvertColor(84),0.4)
+        else
+            -- Harvesting session
+            if lootZone ~= nil then 
+                titleStr = lootZone .. " Harvesting Session"
+            end 
+
+            subItem.bg:SetColor(ConvertColor(11),ConvertColor(156),ConvertColor(35),0.3)
         end 
         titleStr = titleStr .. " (".. durationStr .. ") "
-        
         subItem.id = id
         subItem.textboxLeft:SetText(leftTextStr)
         subItem.textboxRight:SetText(rightTextStr)
@@ -539,7 +551,7 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     local sessionTitle = subItem:CreateChildWidget("label", "sessionTitle", 0, true)
     sessionTitle.style:SetFontSize(FONT_SIZE.LARGE)
     ApplyTextColor(sessionTitle, FONT_COLOR.DEFAULT)
-    sessionTitle:SetText("Unknown Turn-in")
+    sessionTitle:SetText("Unknown Loot Session")
     sessionTitle:AddAnchor("TOPLEFT", subItem, 10, 10)
     sessionTitle:SetAutoResize(true)
     sessionTitle.style:SetAlign(ALIGN.LEFT)
