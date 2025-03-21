@@ -776,6 +776,7 @@ local function OnLoad()
         local currentX, currentY = lootTrackerOverlay:GetOffset()
         settings.lootOverlayX = currentX
         settings.lootOverlayY = currentY
+        api.SaveSettings()
     end
     moveWnd:SetHandler("OnDragStop", moveWnd.OnDragStop)
     moveWnd:EnableDrag(true)
@@ -793,6 +794,7 @@ local function OnLoad()
             lootTrackerOverlay:Show(true)
             settings.lootOverlayVisible = true
         end
+        api.SaveSettings()
     end
     toggleOverlayBtn:SetHandler("OnClick", toggleOverlayBtn.OnClick)
 
