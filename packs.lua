@@ -347,6 +347,24 @@ local function traderDialogOpened(refund, itemType, itemGrade, coinType)
     lastSeenCoinType = coinType
 end
 
+local function refreshStatisticsLabels()
+    local totalGold = getTotalGoldMadeFromPacks()
+    local totalPacks = getTotalPacksTurnedIn()
+    local favouritePackId = getFavouritePackType()
+    local pendingGold = getPendingPackGoldTotal()
+
+    commerceWindow.pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
+    commerceWindow.totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
+    commerceWindow.totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
+    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
+    if favouritePackName ~= nil then 
+        favouritePackName = favouritePackName.name
+    else 
+        favouritePackName = "No favourite yet."
+    end
+    commerceWindow.favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
+end 
+
 local function OnUpdate(dt) 
     if sessionTimeoutCounter + dt > SESSION_TIMEOUT_MS then
         -- Save, and clear session
@@ -366,6 +384,8 @@ local function OnUpdate(dt)
         sessionScrollList.pageControl.maxPage = maxPage
         fillSessionTableData(sessionScrollList, 1)
         sessionScrollList.pageControl:SetCurrentPage(1, true)
+        -- Refresh stats
+        refreshStatisticsLabels()
     end 
     displayRefreshCounter = displayRefreshCounter + dt
 
@@ -454,35 +474,6 @@ local function SessionSetFunc(subItem, data, setValue)
 end
 
 local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
-
-    -- local session1PackAmt = wnd:CreateChildWidget("label", "title", 0, true)
-    -- session1PackAmt.style:SetFontSize(FONT_SIZE.LARGE)
-    -- ApplyTextColor(session1PackAmt, FONT_COLOR.DEFAULT)
-    -- session1PackAmt:SetText("Karkasse Aged Cheese x13 (1831.09g)")
-    -- session1PackAmt:AddAnchor("TOPLEFT", session1, 50, 40)
-    -- session1PackAmt:SetAutoResize(true)
-    -- session1PackAmt.style:SetAlign(ALIGN.LEFT)
-    -- local session1PackLabor = wnd:CreateChildWidget("label", "title", 0, true)
-    -- session1PackLabor.style:SetFontSize(FONT_SIZE.LARGE)
-    -- ApplyTextColor(session1PackLabor, FONT_COLOR.DEFAULT)
-    -- session1PackLabor:SetText("Labor: 2028")
-    -- session1PackLabor:AddAnchor("TOPRIGHT", session1, 0, 20)
-    -- session1PackLabor:SetAutoResize(true)
-    -- session1PackLabor.style:SetAlign(ALIGN.RIGHT)
-    -- local session1PackPay = wnd:CreateChildWidget("label", "title", 0, true)
-    -- session1PackPay.style:SetFontSize(FONT_SIZE.LARGE)
-    -- ApplyTextColor(session1PackPay, FONT_COLOR.DEFAULT)
-    -- session1PackPay:SetText("Total: 1831.09g")
-    -- session1PackPay:AddAnchor("TOPRIGHT", session1, 0, 40)
-    -- session1PackPay:SetAutoResize(true)
-    -- session1PackPay.style:SetAlign(ALIGN.RIGHT)
-    -- local session1PackProfit = wnd:CreateChildWidget("label", "title", 0, true)
-    -- session1PackProfit.style:SetFontSize(FONT_SIZE.LARGE)
-    -- ApplyTextColor(session1PackProfit, FONT_COLOR.DEFAULT)
-    -- session1PackProfit:SetText("Profit: 1509.79g")
-    -- session1PackProfit:AddAnchor("TOPRIGHT", session1, 0, 60)
-    -- session1PackProfit:SetAutoResize(true)
-    -- session1PackProfit.style:SetAlign(ALIGN.RIGHT)
     subItem:SetExtent(580, 70)
     -- Background colouring
     local bg = subItem:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
@@ -605,18 +596,6 @@ local function OnLoad()
     local totalPacks = getTotalPacksTurnedIn()
     local favouritePackId = getFavouritePackType()
     local pendingGold = getPendingPackGoldTotal()
-    -- local exampleSession = api.File:Read("your_paystub/pack_sessions/1733267924.lua")
-    -- api.Log:Info(exampleSession)
-    -- local currentTime = api.Time:GetLocalTime()
-    -- local currentTimePrefix = string.sub(currentTime, 1, 2)
-    -- local currentTimeSuffix = string.sub(currentTime, (#currentTime - 2) * -1)
-
-    -- local exampleTimePrefix = string.sub(exampleSession.localTimestamp, 1, 2) 
-    -- local exampleTimeSuffix = string.sub(exampleSession.localTimestamp, (#exampleSession.localTimestamp - 2) * -1)
-
-    -- api.Log:Info("Times: prefix/suffix " .. currentTimePrefix .. currentTimeSuffix .. " vs. " .. exampleTimePrefix .. exampleTimeSuffix)
-    -- local timeDiff = tonumber(currentTimeSuffix) - tonumber(exampleTimeSuffix)
-    -- api.Log:Info(tostring(timeDiff))
 
     local productionZones = api.Store:GetProductionZoneGroups()
     function yourPaystubWindow:OnEvent(event, ...)
@@ -673,6 +652,7 @@ local function OnLoad()
         sessionScrollList:ResetScroll(0)
         fillSessionTableData(sessionScrollList, pageIndex)
     end 
+    commerceWindow.sessionScrollList = sessionScrollList
 
     local pendingGoldStr = commerceWindow:CreateChildWidget("label", "pendingGoldStr", 0, true)
     pendingGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
@@ -680,6 +660,7 @@ local function OnLoad()
     ApplyTextColor(pendingGoldStr, FONT_COLOR.DEFAULT)
     pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
     pendingGoldStr:AddAnchor("BOTTOMLEFT", commerceWindow, 15, 50)
+    commerceWindow.pendingGoldStr = pendingGoldStr
 
     local totalGoldStr = commerceWindow:CreateChildWidget("label", "totalGoldStr", 0, true)
     totalGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
@@ -687,6 +668,7 @@ local function OnLoad()
     ApplyTextColor(totalGoldStr, FONT_COLOR.DEFAULT)
     totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
     totalGoldStr:AddAnchor("BOTTOMLEFT", pendingGoldStr, 0, 30)
+    commerceWindow.totalGoldStr = totalGoldStr
 
     local totalPacksStr = commerceWindow:CreateChildWidget("label", "totalPacksStr", 0, true)
     totalPacksStr.style:SetFontSize(FONT_SIZE.LARGE)
@@ -694,6 +676,7 @@ local function OnLoad()
     ApplyTextColor(totalPacksStr, FONT_COLOR.DEFAULT)
     totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
     totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
+    commerceWindow.totalPacksStr = totalPacksStr
 
     local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
     if favouritePackName ~= nil then 
@@ -707,18 +690,6 @@ local function OnLoad()
     ApplyTextColor(favouritePackStr, FONT_COLOR.DEFAULT)
     favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
     favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
-    -- local sellableZones = api.Store:GetSellableZoneGroups(99)
-    -- for key, value in pairs(sellableZones) do
-    --     api.Log:Info("Zone: " .. key .. ", Value: " .. value.name)
-    -- end
-    
-    
-
-    -- local currentDate = api.Time:TimeToDate(api.Time.GetLocalTime())
-
-    -- api.Log:Info(api.Time:GetGameTime())
-
-    
     
     -- api.Map:ToggleMapWithPortal(323, 16461, 11630, 100)
     -- api.Log:Info(tostring(currentDate.year) .. "-" .. tostring(currentDate.month) .. "-" .. tostring(currentDate.day))
