@@ -388,7 +388,7 @@ local function drawLootSessionDetails(sessionIndex)
     local titleStr = zone .. " (" .. string.format("%02d/%02d/%04d", date.month, date.day, date.year) .. ")"
 
     local lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
-    lootSessionDetailsWindow:SetExtent(430, 400)
+    lootSessionDetailsWindow:SetExtent(430, 450)
     lootSessionDetailsWindow:AddAnchor("CENTER", "UIParent", 0, 0)
     lootSessionDetailsWindow:Show(true)
     --- Session Summary Statistics
@@ -431,7 +431,7 @@ local function drawLootSessionDetails(sessionIndex)
     ApplyTextColor(lootSessionPerLaborLabel, FONT_COLOR.DEFAULT)
     lootSessionPerLaborLabel:AddAnchor("TOPLEFT", lootSessionPerKillLabel, 0, 0)
     lootSessionPerLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', profitTotal * 100 / laborSpent) .. "s")
-
+    -- Flip flop between labor and kills being displayed based on labor spent being higher than kills
     if laborSpent > kills then 
         lootSessionKillsLabel:Show(false)
         lootSessionPerKillLabel:Show(false)
@@ -444,14 +444,49 @@ local function drawLootSessionDetails(sessionIndex)
         lootSessionPerKillLabel:Show(true)
     end
 
-    
+    local lootSessionDeleteLabel = lootSessionDetailsWindow:CreateChildWidget("textbox", "lootSessionDeleteLabel", 0, true)
+    lootSessionDeleteLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    lootSessionDeleteLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionDeleteLabel, FONT_COLOR.RED)
+    lootSessionDeleteLabel:AddAnchor("BOTTOMLEFT", lootSessionDetailsWindow, 10, -10)
+    lootSessionDeleteLabel:SetText("Deleting a session will remove it permanently. \n This action cannot be undone.")
+    lootSessionDeleteLabel:SetExtent(350, 24)
+    local lootSessionDeleteBtn = lootSessionDetailsWindow:CreateChildWidget("button", "lootSessionDeleteBtn", 0, true)
+    lootSessionDeleteBtn:SetText("Delete Session")
+	lootSessionDeleteBtn:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -20, -10)
+	ApplyButtonSkin(lootSessionDeleteBtn, BUTTON_BASIC.DEFAULT)
+    function lootSessionDeleteBtn:OnClick()
+        -- Remove the session from the past sessions
+        table.remove(pastSessions["sessions"], sessionIndex)
+        -- Iterate through old sessions and change their item arrays to use [itemId] format
+        for _, pastSession in ipairs(pastSessions.sessions) do 
+            local oldItems = pastSession.items
+            local newItems = {}
+            for oldItemId, itemCount in pairs(oldItems) do 
+                if string.sub(oldItemId, 1, 1) == "[" and string.sub(oldItemId, -1) == "]" then
+                    newItems[oldItemId] = itemCount
+                else
+                    newItems["[" .. oldItemId .. "]"] = itemCount
+                end
+            end 
+            pastSession.items = newItems
+        end
+        -- Finally, write it.
+        api.File:Write(pastSessionsFilename, pastSessions)
+        
+        lootSessionDetailsWindow:Show(false)
+        local sessionScrollList = lootWindow.sessionScrollList
+        sessionScrollList.pageControl.maxPage = math.ceil(#pastSessions.sessions / pageSize)
+        fillSessionTableData(sessionScrollList, 1)
+        sessionScrollList.pageControl:SetCurrentPage(1, true)
+    end
+    lootSessionDeleteBtn:SetHandler("OnClick", lootSessionDeleteBtn.OnClick)
 
-    
 
     --- Session Details Items List
     local lootSessionItemsList = W_CTRL.CreateScrollListBox("lootSessionItemsList", lootSessionDetailsWindow, "TYPE2")
     lootSessionItemsList:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 100)
-    lootSessionItemsList:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -10, -10)
+    lootSessionItemsList:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -10, -60)
     lootSessionItemsList:SetExtent(400, 300)
     -- Sort the list of items by it's value
     local sortedItemsByAHPrice = {}
