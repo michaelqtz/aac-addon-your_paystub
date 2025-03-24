@@ -363,6 +363,117 @@ local function fillInAHPricesForCrates()
             AH_PRICES[crateId].average = cratePrice
         end 
     end
+end 
+
+--- Loot Session Details Window Drawing
+local function drawLootSessionDetails(sessionIndex)
+    -- api.Log:Info("Drawing loot session details for session index: " .. sessionIndex)
+    local session = pastSessions["sessions"][sessionIndex]
+    if session == nil then return end 
+    local zone = session.zone
+    if zone == nil then zone = "Unknown" end
+    local items = session.items
+    local profitTotal = session.profitTotal
+    local laborSpent = session.laborSpent
+    local costTotal = session.costTotal
+    local kills = session.kills
+    local localTimestamp = session.localTimestamp
+    local endTimestamp = session.endTimestamp
+    local duration = differenceBetweenTimestamps(endTimestamp, localTimestamp)
+    local durationStr = displayTimeString(duration)
+    local date = api.Time:TimeToDate(localTimestamp)
+    local profitPerHour = profitTotal / (duration / 3600)
+    local killsPerHour = kills / (duration / 3600)
+    local laborPerHour = laborSpent / (duration / 3600)
+    local titleStr = zone .. " (" .. string.format("%02d/%02d/%04d", date.month, date.day, date.year) .. ")"
+
+    local lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
+    lootSessionDetailsWindow:SetExtent(430, 400)
+    lootSessionDetailsWindow:AddAnchor("CENTER", "UIParent", 0, 0)
+    lootSessionDetailsWindow:Show(true)
+    --- Session Summary Statistics
+    local lootSessionProfitLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionProfitLabel", 0, true)
+    lootSessionProfitLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionProfitLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionProfitLabel, FONT_COLOR.DEFAULT)
+    lootSessionProfitLabel:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 50)
+    lootSessionProfitLabel:SetText("Profit: " .. string.format('%.0f', profitTotal) .. "g" .. " (" .. string.format('%.0f', profitPerHour) .. "g/hr)")
+    local lootSessionDurationLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionDurationLabel", 0, true)
+    lootSessionDurationLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionDurationLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionDurationLabel, FONT_COLOR.DEFAULT)
+    lootSessionDurationLabel:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 250, 50)
+    lootSessionDurationLabel:SetText("Duration: " .. durationStr)
+
+    local lootSessionKillsLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionKillsLabel", 0, true)
+    lootSessionKillsLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionKillsLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionKillsLabel, FONT_COLOR.DEFAULT)
+    lootSessionKillsLabel:AddAnchor("TOPLEFT", lootSessionProfitLabel, 0, 24)
+    lootSessionKillsLabel:SetText("Kills: " .. tostring(kills) .. " (" .. string.format('%.0f', killsPerHour) .. "/hr)")
+
+    local lootSessionLaborLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionLaborLabel", 0, true)
+    lootSessionLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionLaborLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionLaborLabel, FONT_COLOR.DEFAULT)
+    lootSessionLaborLabel:AddAnchor("TOPLEFT", lootSessionKillsLabel, 0, 0)
+    lootSessionLaborLabel:SetText("Labor: " .. tostring(laborSpent) .. " (" .. string.format('%.0f', laborPerHour) .. "/hr)")
+
+    local lootSessionPerKillLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionPerKillLabel", 0, true)
+    lootSessionPerKillLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionPerKillLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionPerKillLabel, FONT_COLOR.DEFAULT)
+    lootSessionPerKillLabel:AddAnchor("TOPLEFT", lootSessionDurationLabel, 0, 24)
+    lootSessionPerKillLabel:SetText("Profit per Kill: " .. string.format('%.2f', profitTotal / kills) .. "g")
+    local lootSessionPerLaborLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionPerLaborLabel", 0, true)
+    lootSessionPerLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    lootSessionPerLaborLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(lootSessionPerLaborLabel, FONT_COLOR.DEFAULT)
+    lootSessionPerLaborLabel:AddAnchor("TOPLEFT", lootSessionPerKillLabel, 0, 0)
+    lootSessionPerLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', profitTotal * 100 / laborSpent) .. "s")
+
+    if laborSpent > kills then 
+        lootSessionKillsLabel:Show(false)
+        lootSessionPerKillLabel:Show(false)
+        lootSessionPerLaborLabel:Show(true)
+        lootSessionLaborLabel:Show(true)
+    else
+        lootSessionLaborLabel:Show(false)
+        lootSessionPerLaborLabel:Show(false)
+        lootSessionKillsLabel:Show(true)
+        lootSessionPerKillLabel:Show(true)
+    end
+
+    
+
+    
+
+    --- Session Details Items List
+    local lootSessionItemsList = W_CTRL.CreateScrollListBox("lootSessionItemsList", lootSessionDetailsWindow, "TYPE2")
+    lootSessionItemsList:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 100)
+    lootSessionItemsList:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -10, -10)
+    lootSessionItemsList:SetExtent(400, 300)
+    -- Sort the list of items by it's value
+    local sortedItemsByAHPrice = {}
+    for itemId, itemCount in pairs(items) do
+        local itemPrice = AH_PRICES[tonumber(itemId)]
+        local totalValue = 0
+        if itemPrice ~= nil then
+            totalValue = itemCount * (itemPrice.average or 0)
+        end
+        table.insert(sortedItemsByAHPrice, {itemId = itemId, itemCount = itemCount, totalValue = totalValue})
+    end
+    table.sort(sortedItemsByAHPrice, function(a, b)
+        return a.totalValue > b.totalValue
+    end)
+    -- Fill the item list with the new sorted list, most valuable at the top
+    count = 1
+    for _, item in ipairs(sortedItemsByAHPrice) do 
+        local itemInfo = api.Item:GetItemInfoByType(tonumber(item.itemId))
+        local displayStr = itemInfo.name .. " x" .. item.itemCount .. " (" .. string.format('%.0f', item.totalValue) .. "g)"
+        lootSessionItemsList:AppendItem(displayStr, count)
+        count = count + 1
+    end 
 
 
 end 
@@ -534,6 +645,10 @@ local function SessionSetFunc(subItem, data, setValue)
         subItem.textboxRight:SetText(rightTextStr)
         subItem.sessionTitle:SetText(titleStr)
         subItem.sessionDateLabel:SetText(string.format("%02d/%02d/%04d", date.month, date.day, date.year))
+        function subItem.clickOverlay:OnClick()
+            drawLootSessionDetails(sessionIndex)
+        end
+        subItem.clickOverlay:SetHandler("OnClick", subItem.clickOverlay.OnClick)
     end
 end
 
@@ -590,12 +705,14 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     local clickOverlay = subItem:CreateChildWidget("button", "clickOverlay", 0, true)
     clickOverlay:AddAnchor("TOPLEFT", subItem, 0, 0)
     clickOverlay:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
-    function clickOverlay:OnClick()
-        api.Log:Info("Ding!")
-    end 
-    clickOverlay:SetHandler("OnClick", clickOverlay.OnClick)
+    -- function clickOverlay:OnClick()
+    --     api.Log:Info("Ding!")
+    -- end 
+    -- clickOverlay:SetHandler("OnClick", clickOverlay.OnClick)
+    subItem.clickOverlay = clickOverlay
 end
----
+
+
 
 local function OnLoad()
     -- Initializing addon-wide variables
