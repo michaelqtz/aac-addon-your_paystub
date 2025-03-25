@@ -476,6 +476,7 @@ local function drawLootSessionDetails(sessionIndex)
         
         lootSessionDetailsWindow:Show(false)
         local sessionScrollList = lootWindow.sessionScrollList
+        sessionScrollList:DeleteAllDatas()
         sessionScrollList.pageControl.maxPage = math.ceil(#pastSessions.sessions / pageSize)
         fillSessionTableData(sessionScrollList, 1)
         sessionScrollList.pageControl:SetCurrentPage(1, true)
@@ -504,7 +505,7 @@ local function drawLootSessionDetails(sessionIndex)
     -- Fill the item list with the new sorted list, most valuable at the top
     count = 1
     for _, item in ipairs(sortedItemsByAHPrice) do 
-        local itemInfo = api.Item:GetItemInfoByType(tonumber(item.itemId))
+        local itemInfo = api.Item:GetItemInfoByType(tonumber(getCleanedItemId(item.itemId)))
         local displayStr = itemInfo.name .. " x" .. item.itemCount .. " (" .. string.format('%.0f', item.totalValue) .. "g)"
         lootSessionItemsList:AppendItem(displayStr, count)
         count = count + 1
