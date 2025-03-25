@@ -492,7 +492,8 @@ local function drawLootSessionDetails(sessionIndex)
     -- Sort the list of items by it's value
     local sortedItemsByAHPrice = {}
     for itemId, itemCount in pairs(items) do
-        local itemPrice = AH_PRICES[tonumber(itemId)]
+        local cleanedItemId = getCleanedItemId(itemId)
+        local itemPrice = AH_PRICES[tonumber(cleanedItemId)]
         local totalValue = 0
         if itemPrice ~= nil then
             totalValue = itemCount * (itemPrice.average or 0)
