@@ -521,8 +521,8 @@ local function OnUpdate(dt)
     local settings = api.GetSettings("your_paystub")
     -- Initialize the loot window position
     if initializeLootWindowPos ~= true then 
-        lootTrackerOverlay:RemoveAllAnchors()
-        lootTrackerOverlay:AddAnchor("TOPLEFT", "UIParent", settings.lootOverlayX, settings.lootOverlayY)
+        lootWindow.lootTrackerOverlay:RemoveAllAnchors()
+        lootWindow.lootTrackerOverlay:AddAnchor("TOPLEFT", "UIParent", settings.lootOverlayX, settings.lootOverlayY)
         initializeLootWindowPos = true
     end 
     
