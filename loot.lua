@@ -50,6 +50,8 @@ local sessionPaused
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
 
+local initializeLootWindowPos = false
+
 local pageSize = 20 --> number of sessions on page
 local maxPage
 
@@ -515,7 +517,15 @@ local function drawLootSessionDetails(sessionIndex)
 
 end 
 
-local function OnUpdate(dt) 
+local function OnUpdate(dt)
+    local settings = api.GetSettings("your_paystub")
+    -- Initialize the loot window position
+    if initializeLootWindowPos ~= true then 
+        lootTrackerOverlay:RemoveAllAnchors()
+        lootTrackerOverlay:AddAnchor("TOPLEFT", "UIParent", settings.lootOverlayX, settings.lootOverlayY)
+        initializeLootWindowPos = true
+    end 
+    
     if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
         -- endLootTrackerSession()
 
