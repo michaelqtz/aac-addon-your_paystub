@@ -392,7 +392,9 @@ local function OnUpdate(dt)
     if packSlotCheckCounter + dt > PACK_SLOT_CHECK_MS then 
         packSlotCheckCounter = 0
         local backpackInfo = api.Equipment:GetEquippedItemTooltipInfo(EQUIP_SLOT.BACKPACK)
-        if packs_helper:IsASpecialtyPackById(tonumber(backpackInfo.itemType)) then 
+        if backpackInfo == nil then 
+            currentBackSlotItem = nil
+        elseif packs_helper:IsASpecialtyPackById(tonumber(backpackInfo.itemType)) then 
             currentBackSlotItem = backpackInfo.itemType
         else
             currentBackSlotItem = nil
