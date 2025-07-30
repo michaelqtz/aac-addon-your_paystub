@@ -701,7 +701,7 @@ local function OnLoad()
 end
 
 local function OnUnload()
-    yourPaystubWindow:ReleaseHandler("OnEvent")
+    api.Interface:Free(yourPaystubWindow)
     api.On("UPDATE", function() return end)
     yourPaystubWindow = nil
 end

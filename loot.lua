@@ -358,6 +358,7 @@ local function fillInAHPricesForCrates()
             -- Queens 
             local cratePrice = (brazierPrice * 2.25) + (treePrice * 2.25) + (mgpPrice * 0.25)
             AH_PRICES[crateId] = {}
+            AH_PRICES[crateId].average = cratePrice
         elseif crateId == 43177 then
             -- Ancestrals
             local cratePrice = (brazierPrice * 5) + (treePrice * 5) + (mgpPrice * 0.8)
@@ -970,7 +971,7 @@ end
 
 local function OnUnload()
     local settings = api.GetSettings("your_paystub")
-    yourPaystubWindow:ReleaseHandler("OnEvent")
+    api.Interface:Free(yourPaystubWindow)
     api.On("UPDATE", function() return end)
     yourPaystubWindow = nil
     lootWindow.lootTrackerOverlay:Show(false)
