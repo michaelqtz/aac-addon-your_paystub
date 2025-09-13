@@ -368,6 +368,84 @@ local function fillInAHPricesForCrates()
     end
 end 
 
+local function fillInRegradeBrazierPrices()
+    local REGRADE_BRAZIER_LOOT_IDS = {}
+    REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"] = 31085
+    REGRADE_BRAZIER_LOOT_IDS["Starpoint"] = 31929
+    REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"] = 28304
+    REGRADE_BRAZIER_LOOT_IDS["Moonpoint"] = 28302
+    REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"] = 28303
+    REGRADE_BRAZIER_LOOT_IDS["Sunpoint"] = 28301
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"] = 39816
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint"] = 31930
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"] = 39815
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint"] = 28308
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"] = 39814
+    REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"] = 28300
+
+    -- Basic Regrade Point Fragments
+    local sunFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]]
+    local sunpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint"]]
+    local moonFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]]
+    local moonpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint"]]
+    local starFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]]
+    local starpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint"]]
+
+    if sunFragmentPrice ~= nil then sunFragmentPrice = sunFragmentPrice.average end
+    if sunpointPrice ~= nil then sunpointPrice = sunpointPrice.average end
+    if moonFragmentPrice ~= nil then moonFragmentPrice = moonFragmentPrice.average end
+    if moonpointPrice ~= nil then moonpointPrice = moonpointPrice.average end
+    if starFragmentPrice ~= nil then starFragmentPrice = starFragmentPrice.average end
+    if starpointPrice ~= nil then starpointPrice = starpointPrice.average end
+    if sunpointPrice ~= nil then 
+        sunFragmentPrice = sunpointPrice / 10
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]].average = sunFragmentPrice
+    end
+    if moonpointPrice ~= nil then 
+        moonFragmentPrice = moonpointPrice / 10
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]].average = moonFragmentPrice
+    end
+    if starpointPrice ~= nil then 
+        starFragmentPrice = starpointPrice / 10
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]].average = starFragmentPrice
+    end
+    -- Lucky Regrade Point Shards
+    local luckySunShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]]
+    local luckySunpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"]]
+    local luckyMoonShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]]
+    local luckyMoonpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint"]]
+    local luckyStarShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]]
+    local luckyStarpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint"]]
+    if luckySunShardPrice ~= nil then luckySunShardPrice = luckySunShardPrice.average end
+    if luckySunpointPrice ~= nil then luckySunpointPrice = luckySunpointPrice.average end
+    if luckyMoonShardPrice ~= nil then luckyMoonShardPrice = luckyMoonShardPrice.average end
+    if luckyMoonpointPrice ~= nil then luckyMoonpointPrice = luckyMoonpointPrice.average end
+    if luckyStarShardPrice ~= nil then luckyStarShardPrice = luckyStarShardPrice.average end
+    if luckyStarpointPrice ~= nil then luckyStarpointPrice = luckyStarpointPrice.average end
+    if luckySunpointPrice ~= nil then 
+        luckySunShardPrice = luckySunpointPrice / 3
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]].average = luckySunShardPrice
+    end
+    if luckyMoonpointPrice ~= nil then 
+        luckyMoonShardPrice = luckyMoonpointPrice / 3
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]].average = luckyMoonShardPrice
+    end
+    if luckyStarpointPrice ~= nil then 
+        luckyStarShardPrice = luckyStarpointPrice / 3
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]] = {}
+        AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]].average = luckyStarShardPrice
+    end
+end 
+
+local function fillInArcheumTreePrices()
+
+end
+
 --- Loot Session Details Window Drawing
 local function drawLootSessionDetails(sessionIndex)
     -- api.Log:Info("Drawing loot session details for session index: " .. sessionIndex)
@@ -773,6 +851,10 @@ local function OnLoad()
 
     -- Fill in AH prices for noble's, jester's, prince's, queen's and ancestral crates
     fillInAHPricesForCrates()
+    -- Fill in regrade brazier loot prices
+    fillInRegradeBrazierPrices()
+    -- Fill in archeum tree loot prices
+    fillInArcheumTreePrices()
     
     -- Load previous sessions, or make empty file.
     pastSessions = api.File:Read(pastSessionsFilename)
@@ -964,7 +1046,7 @@ local function OnLoad()
     toggleOverlayBtn:SetHandler("OnClick", toggleOverlayBtn.OnClick)
 
     -- startLootTrackerSession()
-    api.Log:Info("[Your Paystub] Successfully loaded. Find the paystub window button in your inventory.")
+    
     api.On("UPDATE", OnUpdate)
     api.SaveSettings()
 end

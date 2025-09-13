@@ -8,6 +8,7 @@ local your_paystub_addon = {
 
 local packsAddon = require("your_paystub/packs")
 local lootAddon = require("your_paystub/loot")
+local accountingADdon = require("your_paystub/accounting")
 
 paystubDisplayWindow = nil
 local paystubBtn
@@ -313,6 +314,25 @@ local function CreateLootTrackerWindow(wndParent)
     return wnd
 end 
 
+local function CreateAccountingWindow(wndParent)
+    local wnd = wndParent:CreateChildWidget("emptywidget", "accountingWindow", 0, true)
+    wnd:SetExtent(600, 600)
+    wnd:AddAnchor("TOP", wndParent, 0, 0)
+    local title = wnd:CreateChildWidget("label", "title", 0, true)
+    title:SetAutoResize(true)
+    title:SetHeight(FONT_SIZE.XLARGE)
+    title.style:SetAlign(ALIGN.CENTER)
+    title.style:SetFontSize(FONT_SIZE.XLARGE)
+    ApplyTextColor(title, FONT_COLOR.TITLE)
+    title:SetText("Accounting")
+    title:AddAnchor("TOP", wnd, 0, 300)
+    -- Session-holding Scroll List
+    local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
+    sessionScrollList:Show(true)
+    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 4)
+    sessionScrollList:AddAnchor("BOTTOMRIGHT", wnd, -4, -4)
+end
+
 local function CreateUnderConstructionWindow(wndParent)
     local wnd = wndParent:CreateChildWidget("emptywidget", "commerceWindow", 0, true)
     wnd:SetExtent(600, 600)
@@ -330,6 +350,7 @@ end
 local function OnLoad()
     packsAddon = require("your_paystub/packs")
     lootAddon = require("your_paystub/loot")
+    accountingAddon = require("your_paystub/accounting")
     
     local tabInfo = {
         {
@@ -374,7 +395,7 @@ local function OnLoad()
             end,
             title = "Accounting",
             subWindowConstructor = function(parent)
-                CreateUnderConstructionWindow(parent)
+                CreateAccountingWindow(parent)
             end
         }
     }
@@ -409,6 +430,7 @@ local function OnLoad()
 
     packsAddon:OnLoad()
     lootAddon:OnLoad()
+    accountingAddon:OnLoad()
     -- for key, value in pairs(getmetatable(paystubDisplayWindow.tab)) do 
     --     api.Log:Info(key .. " " .. tostring(value))
     -- end 
@@ -433,6 +455,7 @@ local function OnLoad()
     -- end 
     -- api.Map:ToggleMapWithPortal(323, 18841.77778 + 2480.0, 23335.1111, 43)
 
+    api.Log:Info("[Your Paystub] Successfully loaded. Find the paystub window button in your inventory.")
 end
 
 local function OnUnload()
@@ -440,10 +463,14 @@ local function OnUnload()
     packsAddon = nil
     lootAddon:OnUnload()
     lootAddon = nil
+    accountingAddon:OnUnload()
+    accountingAddon = nil
     paystubDisplayWindow:Show(false)
     paystubDisplayWindow = nil
+    api.Interface:Free(paystubDisplayWindow)
     paystubBtn:Show(false)
     paystubBtn = nil
+    api.Interface:Free(paystubBtn)
 end
 
 your_paystub_addon.OnLoad = OnLoad
