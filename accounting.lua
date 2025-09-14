@@ -33,6 +33,8 @@ local accountingWindow
 
 local currentSession
 
+local latestMoneyChangeStr = "0"
+local latestMoneyChange = 0
 
 local sessionSaveTimer = 0
 local SESSION_SAVE_TIME = 60000
@@ -91,6 +93,19 @@ local function updateLastKnownChannel(channelId, channelName)
     currentZone = channelName
 end 
 
+local function addMoneyStrToSessionField(moneyStr, fieldName)
+    if currentSession == nil then return end 
+    if moneyStr == nil or moneyStr == "" then return end 
+    if fieldName == nil or fieldName == "" then return end 
+
+    local currentValue = currentSession[fieldName]
+    if currentValue == nil or currentValue == "" then 
+        currentValue = "0"
+    end 
+    local newValue = X2Util:StrNumericAdd(currentValue, moneyStr)
+    currentSession[fieldName] = newValue
+end 
+
 local function getCleanedItemId(itemId)
     -- Remove the first and last characters of the Item ID string
     if string.sub(itemId, 1, 1) == "[" and string.sub(itemId, -1) == "]" then
@@ -100,8 +115,32 @@ local function getCleanedItemId(itemId)
 end 
 
 local function recordPlayerMoneyEvent(change, changeStr, itemTaskType, tradeOtherName)
-    -- TODO: implement this
+    latestMoneyChangeStr = changeStr
+    latestMoneyChange = change
+    if change > 0 then 
+        addMoneyStrToSessionField(changeStr, "goldEarned")
+    elseif change < 0 then
+        addMoneyStrToSessionField(changeStr, "goldSpent") 
+    end 
+    -- api.Log:Info("PLAYER_MONEY")
 end 
+
+local function recordMailboxMoneyTakenEvent()
+    if latestMoneyChange > 0 then 
+        addMoneyStrToSessionField(latestMoneyChangeStr, "goldMailEarned")
+    end
+    -- api.Log:Info("MAIL_INBOX_MONEY_TAKEN")
+end 
+local function recordAuctionBiddenEvent(itemName, moneyStr)
+    -- api.Log:Info("AUCTION_BIDDEN")
+end
+local function recordAuctionBoughtEvent(itemName, moneyStr)
+    -- api.Log:Info("AUCTION_BOUGHT_BY_SOMEONE")
+end
+local function recordAddedItemEvent(itemLinkText, itemCount, itemTaskType, tradeOtherName)
+    -- api.Log:Info("ADDED_ITEM")
+    -- api.Log:Info("Item Link Text: " .. tostring(itemLinkText))
+end
 
 local function laborPointsChanged(diff, laborPoints)
     -- If labor is spent, start the labor used timer for accurate kill tracking
@@ -120,7 +159,9 @@ local function itemIdFromItemLinkText(itemLinkText)
     itemIdStr = split(itemIdStr, ",")
     itemIdStr = itemIdStr[1]
     return itemIdStr
-end 
+end
+
+
 
 local function fillSessionTableData(itemScrollList, pageIndex)
     local startingIndex = 1
@@ -217,6 +258,18 @@ local function startAccountingSession()
     sessionToStart["dateKey"] = dateKey
     sessionToStart["goldStart"] = getCurrentPlayerMoney() --> TODO: api.Bag:GetCurrency()
     sessionToStart["goldStartBank"] = nil --> TODO: api.Bag:GetCurrency()
+    sessionToStart["goldSpent"] = "0"
+    sessionToStart["goldEarned"] = "0"
+    sessionToStart["goldAHEarned"] = "0"
+    sessionToStart["goldAHSpent"] = "0" 
+    sessionToStart["goldTradeEarned"] = "0"
+    sessionToStart["goldTradeSpent"] = "0"
+    sessionToStart["goldMailEarned"] = "0"
+    sessionToStart["goldMailSpent"] = "0"
+    sessionToStart["goldFishEarned"] = "0"
+    sessionToStart["goldFishSpent"] = "0"
+    sessionToStart["goldOtherEarned"] = "0"
+    sessionToStart["goldOtherSpent"] = "0"
     -- api.Log:Info(api.Bank:GetCurrency())
     -- Before overwriting the old session, if it isn't null, then let's save it.
     endAccountingSession()
@@ -285,7 +338,7 @@ local function OnUpdate(dt)
         sessionSaveTimer = sessionSaveTimer + dt
         if sessionSaveTimer >= SESSION_SAVE_TIME then 
             sessionSaveTimer = 0
-            saveCurrentSessionToFile()
+            startAccountingSession()
         end 
     end
 end 
@@ -318,8 +371,18 @@ local function OnLoad()
             recordPlayerMoneyEvent(unpack(arg))
         end
         if event == "MAIL_INBOX_MONEY_TAKEN" then 
-            -- recordPlayerMoneyEvent(unpack(arg))
+            recordMailboxMoneyTakenEvent(unpack(arg))
         end
+        if event == "AUCTION_BIDDEN" then 
+            recordAuctionBiddenEvent(unpack(arg))
+        end
+        if event == "AUCTION_BOUGHT_BY_SOMEONE" then 
+            recordAuctionBoughtEvent(unpack(arg))
+        end
+        if event == "ADDED_ITEM" then 
+            recordAddedItemEvent(unpack(arg))
+        end 
+
         if event == "CHAT_JOINED_CHANNEL" then 
             updateLastKnownChannel(unpack(arg))
         end 
@@ -327,6 +390,10 @@ local function OnLoad()
     yourPaystubWindow:SetHandler("OnEvent", yourPaystubWindow.OnEvent)
     yourPaystubWindow:RegisterEvent("PLAYER_MONEY")
     yourPaystubWindow:RegisterEvent("MAIL_INBOX_MONEY_TAKEN")
+    -- yourPaystubWindow:RegisterEvent("AUCTION_BIDDEN")
+    -- yourPaystubWindow:RegisterEvent("AUCTION_BOUGHT_BY_SOMEONE")
+    yourPaystubWindow:RegisterEvent("ADDED_ITEM")
+
     yourPaystubWindow:RegisterEvent("CHAT_JOINED_CHANNEL")
 
     -- paystubDisplayWindow:Show(false)
