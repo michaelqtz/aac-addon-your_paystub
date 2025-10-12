@@ -2,7 +2,7 @@
 local your_paystub_addon = {
 	name = "Your Paystub",
 	author = "Michaelqt",
-	version = "1.5.0",
+	version = "1.5.1",
 	desc = "Keep track of how much you get paid!"
 }
 
@@ -325,7 +325,7 @@ local function CreateAccountingWindow(wndParent)
     title.style:SetFontSize(FONT_SIZE.XLARGE)
     ApplyTextColor(title, FONT_COLOR.TITLE)
     title:SetText("Accounting")
-    title:AddAnchor("TOP", wnd, 0, 300)
+    title:AddAnchor("TOP", wnd, 0, 10)
     -- Session-holding Scroll List
     local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
     sessionScrollList:Show(true)

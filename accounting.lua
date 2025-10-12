@@ -142,6 +142,20 @@ local function recordAddedItemEvent(itemLinkText, itemCount, itemTaskType, trade
     -- api.Log:Info("Item Link Text: " .. tostring(itemLinkText))
 end
 
+local function formatStringAsGold(moneyStr)
+    local endStr = tostring(moneyStr)
+    -- format the string in data.profit as last two digies are copper, next two are silver, rest is gold
+    local copper = string.sub(endStr, -2)
+    local silver = string.sub(endStr, -4, -3)
+    local gold = string.sub(endStr, 1, -5)
+    if gold == "" then gold = "0" end
+    if silver == "" then silver = "0" end
+    if copper == "" then copper = "0" end
+    endStr = gold .. "g " .. silver .. "s " .. copper .. "c"        
+    return endStr
+end
+
+
 local function laborPointsChanged(diff, laborPoints)
     -- If labor is spent, start the labor used timer for accurate kill tracking
     if diff < 0 then 
@@ -160,7 +174,24 @@ local function itemIdFromItemLinkText(itemLinkText)
     itemIdStr = itemIdStr[1]
     return itemIdStr
 end
+local function getKeysSortedByValue(tbl, sortFunction)
+    local keys = {}
+    for key in pairs(tbl) do
+      table.insert(keys, key)
+    end
+    table.sort(keys, function(a, b)
+      return sortFunction(tbl[a], tbl[b])
+    end)
+    return keys
+end
 
+local function getSessionCount(sessions)
+    local sessionCount = 0
+    for _ in pairs(sessions) do
+        sessionCount = sessionCount + 1
+    end
+    return sessionCount
+end
 
 
 local function fillSessionTableData(itemScrollList, pageIndex)
@@ -172,9 +203,19 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
+
+    local sortedDateKeys = getKeysSortedByValue(pastSessions["sessions"], function(a, b) return tonumber(a.endTimestamp) > tonumber(b.endTimestamp) end)
+    -- api.Log:Info(sortedDateKeys)
+    local sortedSessions = {}
+    for key, value in pairs(sortedDateKeys) do 
+        -- api.Log:Info("Key: " .. tostring(key) .. " Value: " .. tostring(value))
+        table.insert(sortedSessions, pastSessions["sessions"][value])
+    end
     
+    
+
     local count = 1
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+    for _, sessionObject in ipairs(sortedSessions) do 
         if count >= startingIndex and count < endingIndex then 
             local itemData = {
                 -- Sessions data fields
@@ -206,12 +247,24 @@ local function fillSessionTableData(itemScrollList, pageIndex)
             itemScrollList:InsertData(count, 1, itemData)
         end
         count = count + 1
-    end 
+    end
+    
+    if #sortedSessions > 0 then
+        local oldestSession = sortedSessions[math.min(#sortedSessions, 30)]
+        local newestSession = sortedSessions[1]
+        local profit = X2Util:StrNumericSub(newestSession.goldEnd, oldestSession.goldEnd)
+        local totalProfitStr = formatStringAsGold(profit)
+        accountingWindow.past30daysStr:SetText("Past 30 Days Profit/Loss: " .. totalProfitStr)
+    else
+        accountingWindow.past30daysStr:SetText("Past 30 Days Profit/Loss: 0g 0s 0c")
+    end
+
 end
 
 local function getCurrentPlayerMoney()
     return tostring(X2Util:GetMyMoneyString())
 end 
+
 
 local function saveCurrentSessionToFile()
     if pastSessions == nil then 
@@ -220,13 +273,16 @@ local function saveCurrentSessionToFile()
     end 
 
     pastSessions["sessions"][currentSession.dateKey] = currentSession
+
+    
     -- api.Log:Info(pastSessions)
     api.File:Write(pastSessionsFilename, pastSessions)
     -- Refresh accounting session list
     local sessionScrollList = accountingWindow.sessionScrollList
     if pastSessions ~= nil then
         if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+            local sessionCount = getSessionCount(pastSessions["sessions"])
+            maxPage = math.ceil(sessionCount / pageSize)    
         else
             maxPage = 1
         end   
@@ -282,6 +338,7 @@ local function startAccountingSession()
     currentSession = sessionToStart
 end 
 
+
 --- Session Scroll List Functions
 local function SessionSetFunc(subItem, data, setValue)
     if setValue then
@@ -290,15 +347,18 @@ local function SessionSetFunc(subItem, data, setValue)
         local titleStr = dateStr .. ": "
         data.profit = X2Util:StrNumericSub(data.goldEnd, data.goldStart)
         -- format the string in data.profit as last two digies are copper, next two are silver, rest is gold
-        local profitStr = tostring(data.profit)
-        local copper = string.sub(profitStr, -2)
-        local silver = string.sub(profitStr, -4, -3)
-        local gold = string.sub(profitStr, 1, -5)
-        if gold == "" then gold = "0" end
-        if silver == "" then silver = "0" end
-        if copper == "" then copper = "0" end
-        data.profit = gold .. "g " .. silver .. "s " .. copper .. "c"
-        titleStr = titleStr .. " Profit: " .. data.profit
+        local profitStr = formatStringAsGold(data.profit)
+        local endStr = formatStringAsGold(data.goldEnd)   
+
+        titleStr = titleStr .. " " .. endStr .. " (Profit: " .. profitStr .. ")"
+
+        if string.find(data.profit, "-") then
+            subItem.bg:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 0.4) -- Red
+        else
+            subItem.bg:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 0.4) -- Green
+        end
+
+
         subItem.sessionTitle:SetText(titleStr)
     end
 end
@@ -353,9 +413,13 @@ local function OnLoad()
 
     -- Load previous sessions, or make empty file.
     pastSessions = api.File:Read(pastSessionsFilename)
+    
+
+
     if pastSessions ~= nil then
         if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+            local sessionCount = getSessionCount(pastSessions["sessions"])
+            maxPage = math.ceil(sessionCount / pageSize)    
         else
             maxPage = 1
         end   
@@ -398,12 +462,14 @@ local function OnLoad()
 
     -- paystubDisplayWindow:Show(false)
     accountingWindow = paystubDisplayWindow.tab.window[5].accountingWindow
+
+    
     local sessionScrollList = accountingWindow.sessionScrollList
     sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
     sessionScrollList:InsertRows(16, false)
     sessionScrollList.listCtrl:DisuseSorting()
     sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
+    
     sessionScrollList.pageControl:SetCurrentPage(1, true)
     function sessionScrollList:OnPageChangedProc(pageIndex)
         sessionScrollList:DeleteAllDatas()
@@ -411,6 +477,17 @@ local function OnLoad()
         fillSessionTableData(sessionScrollList, pageIndex)
     end 
 
+    -- Add past 30 days profit/loss
+    local past30daysStr = accountingWindow:CreateChildWidget("label", "past30daysStr", 0, true)
+    past30daysStr.style:SetFontSize(FONT_SIZE.LARGE)
+    past30daysStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(past30daysStr, FONT_COLOR.DEFAULT)
+    past30daysStr:SetText("Past 30 Days Profit/Loss: ")
+    past30daysStr:AddAnchor("BOTTOMLEFT", accountingWindow, 15, 50)
+    past30daysStr:SetAutoResize(true)
+    accountingWindow.past30daysStr = past30daysStr
+
+    fillSessionTableData(sessionScrollList, 1)
     startAccountingSession()
 
     api.On("UPDATE", OnUpdate)
