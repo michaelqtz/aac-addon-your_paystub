@@ -356,6 +356,7 @@ local function refreshStatisticsLabels()
     commerceWindow.pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
     commerceWindow.totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
     commerceWindow.totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
+    if favouritePackId == nil then favouritePackId = 0 end
     local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
     if favouritePackName ~= nil then 
         favouritePackName = favouritePackName.name
@@ -444,9 +445,11 @@ local function SessionSetFunc(subItem, data, setValue)
             rightTextStr = rightTextStr .. " \n " .. "Cost: " .. tostring(costTotal)
         end 
         -- api.Log:Info(subItem.subItemIcon)
-        local packInfo = api.Item:GetItemInfoByType(tonumber(data.packId))
+        if data.packId ~= nil then 
+            local packInfo = api.Item:GetItemInfoByType(tonumber(data.packId))
+            F_SLOT.SetIconBackGround(subItem.subItemIcon, packInfo.path)
+        end 
         -- api.Log:Info(packInfo.path)
-        F_SLOT.SetIconBackGround(subItem.subItemIcon, packInfo.path)
         
         local titleStr = "Unknown Zone Specialty Turn-in"
         if turnInZone ~= nil then 
@@ -680,6 +683,7 @@ local function OnLoad()
     totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
     commerceWindow.totalPacksStr = totalPacksStr
 
+    if favouritePackId == nil then favouritePackId = 0 end
     local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
     if favouritePackName ~= nil then 
         favouritePackName = favouritePackName.name

@@ -185,6 +185,14 @@ local function getKeysSortedByValue(tbl, sortFunction)
     return keys
 end
 
+local function cleanBadSessions(sessions)
+    for key, session in pairs(sessions) do 
+        if session["endTimestamp"] == nil or session["goldEnd"] == nil then 
+            sessions[key] = nil
+        end 
+    end
+end
+
 local function getSessionCount(sessions)
     local sessionCount = 0
     for _ in pairs(sessions) do
@@ -203,6 +211,7 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
+    cleanBadSessions(pastSessions["sessions"])
 
     local sortedDateKeys = getKeysSortedByValue(pastSessions["sessions"], function(a, b) return tonumber(a.endTimestamp) > tonumber(b.endTimestamp) end)
     -- api.Log:Info(sortedDateKeys)
