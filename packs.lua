@@ -43,7 +43,7 @@ local pastSessionsFilename
 
 local sessionTimeoutCounter = 0
 local SESSION_TIMEOUT_MS = 60000 * 3  --> 1 minute is 60000
-local SESSION_TIMEOUT_MS = 1000 * 35  --> TEST OVERRIDE
+local SESSION_TIMEOUT_MS = 1000 * 45  --> TEST OVERRIDE
 
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
@@ -250,10 +250,11 @@ local function startPackTurnInSession(packId, coinTypeId)
     sessionToStart["profitTotal"] = "Unknown"
     sessionToStart["costTotal"] = "Unknown"
     -- TODO: Add date
-
+    -- api.Log:Info("[Your Paystub] Starting new pack turn-in session for packId: " .. tostring(packId) .. " with coinTypeId: " .. tostring(coinTypeId))
     -- Before overwriting the old session, if it isn't null, then let's save it.
     if currentSession ~= nil then 
         saveCurrentSessionToFile()
+        -- api.Log:Info("[Your Paystub] Saved previous pack session before starting new one.")
     end 
 
     currentSession = sessionToStart
@@ -261,6 +262,7 @@ end
 
 local function addPackToSession(refund, coinTypeId, packId) 
     if coinTypeId == currentSession["coinTypeId"] and packId == currentSession["packId"] then 
+        -- api.Log:Info("[Your Paystub] Adding pack to current session for packId: " .. tostring(packId) .. " with coinTypeId: " .. tostring(coinTypeId))
         currentSession["packCount"] = currentSession["packCount"] + 1
         currentSession["refundTotal"] = currentSession["refundTotal"] + refund
         -- Also, reset the timestamp to latest turn in
@@ -277,29 +279,9 @@ local function itemIdFromItemLinkText(itemLinkText)
     return itemIdStr
 end 
 
-local function recordPackPayment(itemLinkText, itemCount, removeState, itemTaskType, tradeOtherName)
-    local removedItemId = itemIdFromItemLinkText(itemLinkText)
-    if removedItemId == currentBackSlotItem and itemTaskType == ITEM_TASK_ID_PACK_DROPPED then 
-        currentBackSlotItem = nil
-    end 
-end
-  
-local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOtherName)
-    local itemId = itemIdFromItemLinkText(itemLinkText)
-
-    --- Legacy code, please do not touch.
-    if packs_helper:IsASpecialtyPackById(tonumber(itemId)) == true then
-        currentBackSlotItem = itemId
-        if currentBackSlotItem ~= nil and packs_helper:GetSpecialtyPackNameById(tonumber(currentBackSlotItem)) ~= nil then 
-            packOriginId = packs_helper:GetSpecialtyPackZoneIdById(tonumber(itemId))
-            api.Store:GetSpecialtyRatioBetween(packOriginId, 8)
-        end
-    end 
-    --- Ends untouchable legacy code, PLEASE DO NOT TOUCH.
-end 
-
 local function soldASpecialty(text)
     -- We just sold a pack!
+    -- api.Log:Info("[Your Paystub] Detected specialty pack turn-in for packId: " .. tostring(currentBackSlotItem) .. " with refund: " .. tostring(lastSeenPrice) .. " and coinTypeId: " .. tostring(lastSeenCoinType))
     if currentBackSlotItem ~= nil then 
         -- if there is no session, start one
         if currentSession == nil then 
@@ -324,6 +306,34 @@ local function soldASpecialty(text)
     currentBackSlotItem = nil
 end 
 
+local function recordPackPayment(itemLinkText, itemCount, removeState, itemTaskType, tradeOtherName)
+    local removedItemId = itemIdFromItemLinkText(itemLinkText)
+    -- api.Log:Info("[Your Paystub] Detected removed item with ID: " .. tostring(removedItemId) .. " and task type: " .. tostring(itemTaskType))
+    if removedItemId == currentBackSlotItem and itemTaskType == ITEM_TASK_ID_PACK_DROPPED then  
+        currentBackSlotItem = nil
+    end 
+
+    if tonumber(removedItemId) == tonumber(currentBackSlotItem) and itemTaskType == ITEM_TASK_ID_PACK_TURNED_IN then 
+        soldASpecialty("")
+    end 
+end
+  
+local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOtherName)
+    local itemId = itemIdFromItemLinkText(itemLinkText)
+
+    --- Legacy code, please do not touch.
+    if packs_helper:IsASpecialtyPackById(tonumber(itemId)) == true then
+        currentBackSlotItem = itemId
+        if currentBackSlotItem ~= nil and packs_helper:GetSpecialtyPackNameById(tonumber(currentBackSlotItem)) ~= nil then 
+            packOriginId = packs_helper:GetSpecialtyPackZoneIdById(tonumber(itemId))
+            api.Store:GetSpecialtyRatioBetween(packOriginId, 8)
+        end
+    end 
+    --- Ends untouchable legacy code, PLEASE DO NOT TOUCH.
+end 
+
+
+
 local function soldAtResourceTrader(text)
     -- api.Log:Info("sold: " .. text)
 end
@@ -336,7 +346,7 @@ end
 
 local function sellSpecialtyContentInfo(list)
     for key, value in pairs(list) do 
-        api.Log:Info(key .. " " .. value)
+        -- api.Log:Info(key .. " " .. value)
     end 
 end 
 
@@ -369,6 +379,7 @@ end
 local function OnUpdate(dt) 
     if sessionTimeoutCounter + dt > SESSION_TIMEOUT_MS then
         -- Save, and clear session
+        -- api.Log:Info("[Your Paystub] Pack session timed out due to inactivity.")
         if currentSession ~= nil then 
             api.Log:Info("[Your Paystub] Ending current pack session...")
             saveCurrentSessionToFile()
