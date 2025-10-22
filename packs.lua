@@ -332,10 +332,12 @@ local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOt
     --- Ends untouchable legacy code, PLEASE DO NOT TOUCH.
 end 
 
-
-
-local function soldAtResourceTrader(text)
-    -- api.Log:Info("sold: " .. text)
+local function soldAtResourceTrader(itemLinkText, stackCount)
+    -- api.Log:Info("sold: " .. itemLinkText .. " x" .. tostring(stackCount))
+    local removedItemId = itemIdFromItemLinkText(itemLinkText)
+    if tonumber(removedItemId) == tonumber(currentBackSlotItem) and tostring(stackCount) == "1" then 
+        soldASpecialty("")
+    end 
 end
 
 local function getSpecialtyInfo(specialtyRatioTable)
@@ -634,7 +636,6 @@ local function OnLoad()
             updateLastKnownChannel(unpack(arg))
         end 
         if event == "SELL_SPECIALTY_CONTENT_INFO" then 
-            api.Log:Info("heya")
             sellSpecialtyContentInfo(unpack(arg))
         end 
         if event == "UPDATE_SPECIALTY_RATIO" then 
