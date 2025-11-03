@@ -624,7 +624,7 @@ local function OnLoad()
             recordPackPickedUp(unpack(arg))
         end 
         if event == "SELL_SPECIALTY" then 
-            soldASpecialty(unpack(arg))
+            -- soldASpecialty(unpack(arg))
         end
         if event == "STORE_SELL" then
             soldAtResourceTrader(unpack(arg))
