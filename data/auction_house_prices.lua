@@ -4,176 +4,180 @@ return {
     average =  nil, 
   }, 
   [125] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 150.9999, 
   }, 
   [126] = { 
+    volume = 1, 
+    average = 399.9996, 
+  }, 
+  [773] = { 
+    volume = 8191, 
+    average = 0.189003125, 
+  }, 
+  [784] = { 
+    volume = 151222, 
+    average = 0.020698742138364788, 
+  }, 
+  [1386] = { 
+    volume = 1048, 
+    average = 2.9044054545454556, 
+  }, 
+  [2154] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [773] = { 
-    volume = 7515, 
-    average = 0.15162812500000006, 
-  }, 
-  [784] = { 
-    volume = 159900, 
-    average = 0.0203648484848485, 
-  }, 
-  [1386] = { 
-    volume = 1899, 
-    average = 2.7771446808510634, 
-  }, 
-  [2154] = { 
-    volume = 10, 
-    average = 2.5, 
-  }, 
   [2178] = { 
-    volume = 2029, 
-    average = 0.34158333333333335, 
+    volume = 3266, 
+    average = 0.34456428571428566, 
   }, 
   [2201] = { 
-    volume = 212, 
-    average = 0.74195, 
+    volume = 272, 
+    average = 1.28884, 
   }, 
   [3332] = { 
-    volume = 711, 
-    average = 4.311295555555556, 
+    volume = 604, 
+    average = 3.8876153846153865, 
   }, 
   [3411] = { 
-    volume = 9685, 
-    average = 1.0669566265060237, 
+    volume = 5801, 
+    average = 1.0842878048780487, 
   }, 
   [3433] = { 
-    volume = 5976, 
-    average = 0.04446428571428573, 
+    volume = 1202, 
+    average = 0.49105999999999994, 
   }, 
   [3479] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [3487] = { 
-    volume = 4, 
-    average = 30.7103, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [3507] = { 
-    volume = 1193, 
-    average = 0.2341, 
+    volume = 11, 
+    average = 0.39990000000000003, 
   }, 
   [3515] = { 
-    volume = 41, 
-    average = 0.2765666666666667, 
+    volume = 56, 
+    average = 0.45, 
   }, 
   [3545] = { 
-    volume = 6606, 
-    average = 0.3665956521739131, 
+    volume = 6237, 
+    average = 0.2691181818181818, 
   }, 
   [3546] = { 
-    volume = 231, 
-    average = 0.048400000000000006, 
+    volume = 188, 
+    average = 0.0365, 
   }, 
   [3553] = { 
-    volume = 1150, 
-    average = 0.29695, 
+    volume = 1090, 
+    average = 0.2704, 
   }, 
   [3564] = { 
-    volume = 4833, 
-    average = 0.3727000000000001, 
+    volume = 5728, 
+    average = 0.3701666666666667, 
   }, 
   [3581] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [3583] = { 
-    volume = 376, 
-    average = 0.10784, 
+    volume = 493, 
+    average = 0.1536375, 
   }, 
   [3587] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [3588] = { 
-    volume = 167, 
-    average = 0.72768, 
+    volume = 359, 
+    average = 0.5654250000000001, 
   }, 
   [3592] = { 
-    volume = 394, 
-    average = 0.11822000000000002, 
+    volume = 715, 
+    average = 0.1012125, 
   }, 
   [3603] = { 
-    volume = 1158, 
-    average = 0.05198333333333333, 
+    volume = 671, 
+    average = 0.04986, 
   }, 
   [3622] = { 
-    volume = 61, 
-    average = 0.012647540983606556, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [3627] = { 
-    volume = 11664, 
-    average = 0.06223157894736843, 
+    volume = 10532, 
+    average = 0.052335000000000007, 
   }, 
   [3628] = { 
-    volume = 658, 
-    average = 0.28049999999999997, 
+    volume = 3527, 
+    average = 0.189525, 
   }, 
   [3630] = { 
-    volume = 268, 
-    average = 0.08826666666666666, 
+    volume = 2371, 
+    average = 0.06408461538461539, 
   }, 
   [3659] = { 
-    volume = 1286, 
-    average = 0.34487500000000004, 
+    volume = 3149, 
+    average = 0.31115000000000004, 
   }, 
   [3667] = { 
-    volume = 35883, 
-    average = 0.07190666666666669, 
+    volume = 34226, 
+    average = 0.06641875000000003, 
   }, 
   [3671] = { 
-    volume = 7668, 
-    average = 0.3670550000000002, 
+    volume = 6783, 
+    average = 0.3073039999999999, 
   }, 
   [3675] = { 
-    volume = 2173, 
-    average = 0.07512159999999998, 
+    volume = 1118, 
+    average = 0.12381666666666667, 
   }, 
   [3680] = { 
-    volume = 726, 
-    average = 0.5499857142857143, 
+    volume = 1304, 
+    average = 0.5966666666666667, 
   }, 
   [3684] = { 
-    volume = 126335, 
-    average = 0.04479481481481477, 
+    volume = 79570, 
+    average = 0.0434301204819277, 
   }, 
   [3685] = { 
-    volume = 28386, 
-    average = 0.07269696969696969, 
+    volume = 23046, 
+    average = 0.06894074074074073, 
   }, 
   [3694] = { 
-    volume = 106, 
-    average = 0.9578666666666668, 
+    volume = 20, 
+    average = 1.0297, 
   }, 
   [3711] = { 
-    volume = 33838, 
-    average = 0.07757777777777777, 
+    volume = 25439, 
+    average = 0.0712, 
   }, 
   [3712] = { 
-    volume = 40616, 
-    average = 0.43059693877551014, 
+    volume = 26538, 
+    average = 0.43018088818398115, 
   }, 
   [3713] = { 
-    volume = 2921, 
-    average = 0.0609, 
+    volume = 2217, 
+    average = 0.05706, 
   }, 
   [4014] = { 
     volume = 1, 
     average = 35, 
   }, 
   [4052] = { 
-    volume = 22781, 
-    average = 0.3778368932038834, 
+    volume = 29450, 
+    average = 0.3512137864077669, 
   }, 
   [4867] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [5318] = { 
+    volume = 1, 
+    average = 5, 
   }, 
   [7722] = { 
     volume =  nil, 
@@ -188,8 +192,8 @@ return {
     average =  nil, 
   }, 
   [7725] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 200, 
   }, 
   [7727] = { 
     volume =  nil, 
@@ -200,196 +204,200 @@ return {
     average =  nil, 
   }, 
   [7747] = { 
-    volume = 3667, 
-    average = 0.021571428571428575, 
+    volume = 3392, 
+    average = 0.04428, 
   }, 
   [7992] = { 
-    volume = 11941, 
-    average = 0.046993749999999994, 
+    volume = 19113, 
+    average = 0.04527142857142858, 
   }, 
   [7994] = { 
-    volume = 293, 
-    average = 0.3564, 
+    volume = 365, 
+    average = 0.33992500000000003, 
   }, 
   [7998] = { 
-    volume = 1130, 
-    average = 0.11886666666666666, 
+    volume = 577, 
+    average = 0.1015, 
   }, 
   [8000] = { 
-    volume = 7933, 
-    average = 0.32369, 
+    volume = 5370, 
+    average = 0.33167368421052634, 
   }, 
   [8001] = { 
-    volume = 7389, 
-    average = 0.08776315789473683, 
+    volume = 1272, 
+    average = 0.1167857142857143, 
   }, 
   [8004] = { 
-    volume = 4444, 
-    average = 0.3098733333333333, 
+    volume = 4483, 
+    average = 0.3430166666666667, 
   }, 
   [8005] = { 
-    volume = 27124, 
-    average = 0.05287073170731707, 
+    volume = 25668, 
+    average = 0.06779333333333334, 
   }, 
   [8006] = { 
-    volume = 677, 
-    average = 0.32248, 
+    volume = 1043, 
+    average = 0.5098799999999999, 
   }, 
   [8007] = { 
-    volume = 45868, 
-    average = 0.14165662650602404, 
+    volume = 35853, 
+    average = 0.1189470588235294, 
   }, 
   [8008] = { 
-    volume = 106430, 
-    average = 0.016634459459459443, 
+    volume = 132850, 
+    average = 0.01838705882352942, 
   }, 
   [8009] = { 
-    volume = 369, 
-    average = 0.5165833333333334, 
+    volume = 200, 
+    average = 0.49, 
   }, 
   [8010] = { 
-    volume = 550, 
-    average = 0.04975, 
+    volume = 4, 
+    average = 0.1299, 
   }, 
   [8012] = { 
-    volume = 14984, 
-    average = 0.05029333333333334, 
+    volume = 34000, 
+    average = 0.04665294117647058, 
   }, 
   [8013] = { 
-    volume = 120090, 
-    average = 0.06510902255639096, 
+    volume = 75182, 
+    average = 0.06991176470588237, 
   }, 
   [8015] = { 
-    volume = 417, 
-    average = 0.529675, 
+    volume = 1370, 
+    average = 0.4776363636363636, 
   }, 
   [8016] = { 
-    volume = 1740, 
-    average = 0.10332857142857142, 
+    volume = 320, 
+    average = 0.15996666666666667, 
   }, 
   [8017] = { 
-    volume = 224136, 
-    average = 0.019102469135802463, 
+    volume = 134127, 
+    average = 0.019523648648648667, 
   }, 
   [8018] = { 
-    volume = 3007, 
-    average = 0.15330000000000002, 
+    volume = 1363, 
+    average = 0.32812857142857144, 
   }, 
   [8019] = { 
-    volume = 284, 
-    average = 0.07986666666666666, 
+    volume = 1209, 
+    average = 0.06425, 
   }, 
   [8022] = { 
-    volume = 116502, 
-    average = 0.1628919540229885, 
+    volume = 128818, 
+    average = 0.16073548387096773, 
   }, 
   [8023] = { 
-    volume = 9324, 
-    average = 0.8621085365853655, 
+    volume = 7432, 
+    average = 0.8869564102564106, 
   }, 
   [8027] = { 
-    volume = 7158, 
-    average = 0.8219454545454543, 
+    volume = 820, 
+    average = 0.8058812499999999, 
   }, 
   [8028] = { 
-    volume = 399, 
-    average = 0.4806916666666667, 
+    volume = 209, 
+    average = 0.7470916666666666, 
   }, 
   [8034] = { 
-    volume = 1167, 
-    average = 0.5261142857142858, 
+    volume = 710, 
+    average = 0.3517, 
   }, 
   [8035] = { 
-    volume = 59, 
-    average = 0.10653333333333333, 
+    volume = 30, 
+    average = 0.14323333333333332, 
   }, 
   [8036] = { 
-    volume = 24387, 
-    average = 0.17611206896551723, 
+    volume = 29848, 
+    average = 0.16155303030303036, 
   }, 
   [8038] = { 
-    volume = 325, 
-    average = 0.19587, 
+    volume = 57, 
+    average = 0.0986, 
   }, 
   [8040] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8048] = { 
-    volume = 597, 
-    average = 0.08663333333333334, 
+    volume = 1100, 
+    average = 0.09863333333333334, 
   }, 
   [8050] = { 
-    volume = 11, 
-    average = 0.25, 
+    volume = 94, 
+    average = 0.4333, 
   }, 
   [8052] = { 
-    volume = 420, 
-    average = 0.389175, 
+    volume = 1161, 
+    average = 0.37893333333333334, 
   }, 
   [8053] = { 
-    volume = 35490, 
-    average = 0.08445909090909093, 
+    volume = 36195, 
+    average = 0.08355599999999998, 
   }, 
   [8054] = { 
-    volume = 1565, 
-    average = 0.3094111111111111, 
+    volume = 1480, 
+    average = 0.26607333333333333, 
   }, 
   [8055] = { 
-    volume = 66830, 
-    average = 0.12327124999999997, 
+    volume = 67217, 
+    average = 0.12190804597701148, 
   }, 
   [8065] = { 
-    volume = 6550, 
-    average = 0.12695000000000004, 
+    volume = 9021, 
+    average = 0.10328333333333327, 
   }, 
   [8067] = { 
-    volume = 7, 
-    average = 11.11085, 
+    volume = 60, 
+    average = 7.140094444444445, 
   }, 
   [8076] = { 
-    volume = 63, 
-    average = 6.058999999999999, 
+    volume = 351, 
+    average = 3.1598714285714284, 
   }, 
   [8077] = { 
-    volume = 489, 
-    average = 0.14796363636363638, 
+    volume = 294, 
+    average = 0.24052727272727273, 
   }, 
   [8078] = { 
-    volume = 82, 
-    average = 2.22165, 
+    volume = 231, 
+    average = 0.5170714285714285, 
   }, 
   [8079] = { 
-    volume = 54, 
-    average = 0.15109999999999998, 
+    volume = 115, 
+    average = 0.8961857142857143, 
   }, 
   [8080] = { 
-    volume = 5750, 
-    average = 3.8723865384615386, 
+    volume = 4512, 
+    average = 3.9584765624999982, 
   }, 
   [8081] = { 
-    volume = 262, 
-    average = 1.1694045454545456, 
+    volume = 452, 
+    average = 1.0793782608695652, 
   }, 
   [8082] = { 
-    volume = 184, 
-    average = 5.917854545454546, 
+    volume = 204, 
+    average = 6.002573684210527, 
   }, 
   [8083] = { 
-    volume = 1938, 
-    average = 1.6771851851851851, 
+    volume = 1520, 
+    average = 1.4150359999999995, 
   }, 
   [8084] = { 
-    volume = 127, 
-    average = 2.4101799999999995, 
+    volume = 200, 
+    average = 1.2808499999999998, 
   }, 
   [8085] = { 
-    volume = 7, 
-    average = 9.90632, 
+    volume = 89, 
+    average = 5.485099999999999, 
   }, 
   [8086] = { 
-    volume = 11, 
-    average = 14.3715, 
+    volume = 19, 
+    average = 6.564057142857143, 
+  }, 
+  [8188] = { 
+    volume = 1, 
+    average = 89.98, 
   }, 
   [8191] = { 
     volume =  nil, 
@@ -412,20 +420,20 @@ return {
     average =  nil, 
   }, 
   [8256] = { 
-    volume = 32609, 
-    average = 0.3974151032914897, 
+    volume = 29108, 
+    average = 0.34226106870228956, 
   }, 
   [8318] = { 
-    volume = 86909, 
-    average = 0.5738220588235299, 
+    volume = 75771, 
+    average = 1.5941537343386865, 
   }, 
   [8319] = { 
-    volume = 851, 
-    average = 20.42065185185183, 
+    volume = 629, 
+    average = 20.012606349206344, 
   }, 
   [8320] = { 
-    volume = 3397, 
-    average = 3.58550849056604, 
+    volume = 1275, 
+    average = 3.6468021276595732, 
   }, 
   [8324] = { 
     volume =  nil, 
@@ -440,44 +448,44 @@ return {
     average =  nil, 
   }, 
   [8330] = { 
-    volume = 1757, 
-    average = 0.7692947368421051, 
+    volume = 901, 
+    average = 1.1291250000000002, 
   }, 
   [8337] = { 
-    volume = 78579, 
-    average = 0.17395085714285713, 
+    volume = 100509, 
+    average = 0.17111421052631579, 
   }, 
   [8343] = { 
-    volume = 49020, 
-    average = 0.13881460674157306, 
+    volume = 33839, 
+    average = 0.1818411764705883, 
   }, 
   [8357] = { 
-    volume = 10411, 
-    average = 0.04171538461538461, 
+    volume = 2310, 
+    average = 0.04485714285714286, 
   }, 
   [8503] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8504] = { 
-    volume = 330, 
-    average = 3.249153846153846, 
+    volume = 435, 
+    average = 3.245642857142856, 
   }, 
   [8505] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8506] = { 
-    volume = 590, 
-    average = 0.5256888888888889, 
+    volume = 380, 
+    average = 0.48218750000000005, 
   }, 
   [8507] = { 
-    volume = 214, 
-    average = 0.991925, 
+    volume = 925, 
+    average = 0.97393, 
   }, 
   [8508] = { 
-    volume = 792, 
-    average = 0.3279818181818181, 
+    volume = 250, 
+    average = 1.174775, 
   }, 
   [8515] = { 
     volume =  nil, 
@@ -492,20 +500,20 @@ return {
     average =  nil, 
   }, 
   [8527] = { 
-    volume = 188, 
-    average = 1.4573157894736841, 
-  }, 
-  [8661] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [8661] = { 
+    volume = 4, 
+    average = 31, 
   }, 
   [11115] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [11116] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 15.63, 
   }, 
   [11117] = { 
     volume =  nil, 
@@ -524,40 +532,40 @@ return {
     average =  nil, 
   }, 
   [13728] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 50, 
+    average = 3.79, 
   }, 
   [14620] = { 
-    volume = 864, 
-    average = 0.10794800995024877, 
+    volume = 1516, 
+    average = 0.12040909090909091, 
   }, 
   [14621] = { 
-    volume = 410, 
-    average = 0.25759999999999994, 
+    volume = 34, 
+    average = 0.30274999999999996, 
   }, 
   [14627] = { 
-    volume = 114, 
-    average = 0.72495, 
+    volume = 84, 
+    average = 0.5993333333333334, 
   }, 
   [14629] = { 
-    volume = 2019, 
-    average = 0.32141428571428576, 
+    volume = 2919, 
+    average = 0.28950000000000004, 
   }, 
   [14630] = { 
-    volume = 6233, 
-    average = 0.09039285714285715, 
+    volume = 43279, 
+    average = 0.06346153846153846, 
   }, 
   [14631] = { 
-    volume = 3000, 
-    average = 0.08953333333333334, 
+    volume = 1565, 
+    average = 0.09926666666666667, 
   }, 
   [14632] = { 
-    volume = 5, 
-    average = 81.00032, 
+    volume = 9, 
+    average = 98.94244285714285, 
   }, 
   [14699] = { 
-    volume = 2, 
-    average = 57.55905, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [14700] = { 
     volume =  nil, 
@@ -568,16 +576,16 @@ return {
     average =  nil, 
   }, 
   [14723] = { 
-    volume = 1, 
-    average = 60, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [14724] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [14732] = { 
-    volume = 2, 
-    average = 33, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [14733] = { 
     volume =  nil, 
@@ -600,8 +608,8 @@ return {
     average =  nil, 
   }, 
   [14898] = { 
-    volume = 5, 
-    average = 4, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [14901] = { 
     volume =  nil, 
@@ -624,8 +632,8 @@ return {
     average =  nil, 
   }, 
   [14971] = { 
-    volume = 507, 
-    average = 0.324675, 
+    volume = 730, 
+    average = 0.28184000000000003, 
   }, 
   [15563] = { 
     volume =  nil, 
@@ -636,20 +644,20 @@ return {
     average =  nil, 
   }, 
   [15581] = { 
-    volume = 30, 
-    average = 0.2969, 
+    volume = 90, 
+    average = 0.2972333333333333, 
   }, 
   [15583] = { 
+    volume = 100, 
+    average = 0.08, 
+  }, 
+  [15584] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [15584] = { 
-    volume = 200, 
-    average = 0.1, 
-  }, 
   [15621] = { 
-    volume = 940, 
-    average = 0.11755789473684211, 
+    volume = 729, 
+    average = 0.07494444444444444, 
   }, 
   [15624] = { 
     volume =  nil, 
@@ -672,32 +680,32 @@ return {
     average =  nil, 
   }, 
   [15632] = { 
-    volume = 1705, 
-    average = 14.937640540540551, 
+    volume = 1876, 
+    average = 14.438837500000002, 
   }, 
   [15636] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [15637] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 200, 
   }, 
   [15638] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [15640] = { 
-    volume = 1, 
-    average = 5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [15651] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [15652] = { 
-    volume = 50, 
-    average = 0.00154, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [15653] = { 
     volume =  nil, 
@@ -723,15 +731,7 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [15661] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [15664] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [15665] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -740,8 +740,8 @@ return {
     average =  nil, 
   }, 
   [15667] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 4, 
+    average = 0.002, 
   }, 
   [15669] = { 
     volume =  nil, 
@@ -752,16 +752,16 @@ return {
     average =  nil, 
   }, 
   [15673] = { 
-    volume = 2800, 
-    average = 0.030833333333333334, 
+    volume = 4100, 
+    average = 0.03062, 
   }, 
   [15674] = { 
-    volume = 244, 
-    average = 0.25, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [15675] = { 
-    volume = 3000, 
-    average = 0.019899999999999998, 
+    volume = 8000, 
+    average = 0.0265135, 
   }, 
   [15676] = { 
     volume =  nil, 
@@ -784,28 +784,28 @@ return {
     average =  nil, 
   }, 
   [15709] = { 
-    volume = 31, 
-    average = 1049.7916833333334, 
+    volume = 16, 
+    average = 1031.87609375, 
   }, 
   [15715] = { 
-    volume = 32, 
-    average = 0.00995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [15730] = { 
-    volume = 175, 
-    average = 65.3624612244898, 
+    volume = 77, 
+    average = 67.33992173913042, 
   }, 
   [15765] = { 
-    volume = 10, 
-    average = 74.99980000000001, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [15767] = { 
-    volume = 420, 
-    average = 0.4058, 
+    volume = 491, 
+    average = 0.4043952380952381, 
   }, 
   [15770] = { 
-    volume = 544, 
-    average = 0.73865, 
+    volume = 1677, 
+    average = 0.721073913043478, 
   }, 
   [15901] = { 
     volume =  nil, 
@@ -836,12 +836,12 @@ return {
     average =  nil, 
   }, 
   [15983] = { 
-    volume = 4856, 
-    average = 0.7166893203883496, 
+    volume = 4435, 
+    average = 0.630238888888889, 
   }, 
   [16000] = { 
-    volume = 170, 
-    average = 0.49983333333333335, 
+    volume = 16, 
+    average = 0.44, 
   }, 
   [16198] = { 
     volume =  nil, 
@@ -876,100 +876,100 @@ return {
     average =  nil, 
   }, 
   [16220] = { 
-    volume = 645, 
-    average = 2.903654545454546, 
+    volume = 366, 
+    average = 3.5630684210526318, 
   }, 
   [16221] = { 
-    volume = 20, 
-    average = 0.2411, 
+    volume = 59, 
+    average = 0.1998, 
   }, 
   [16225] = { 
-    volume = 20, 
-    average = 6.55, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [16229] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16268] = { 
-    volume = 548, 
-    average = 0.6393333333333333, 
+    volume = 1546, 
+    average = 0.35857500000000003, 
   }, 
   [16270] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16271] = { 
-    volume = 1, 
-    average = 0.0385, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [16272] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16273] = { 
-    volume = 1290, 
-    average = 0.5905555555555555, 
+    volume = 608, 
+    average = 0.38675, 
   }, 
   [16276] = { 
-    volume = 108, 
-    average = 0.5727, 
+    volume = 2006, 
+    average = 0.22138, 
   }, 
   [16279] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16283] = { 
-    volume = 40, 
-    average = 6.099966666666667, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [16284] = { 
-    volume = 190, 
-    average = 0.25098181818181814, 
+    volume = 188, 
+    average = 0.3397666666666667, 
   }, 
   [16285] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16290] = { 
-    volume = 452, 
-    average = 0.3496666666666666, 
+    volume = 1216, 
+    average = 0.33917272727272735, 
   }, 
   [16294] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16321] = { 
-    volume = 10, 
-    average = 12, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [16323] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [16324] = { 
-    volume = 92, 
-    average = 11.945929999999999, 
+    volume = 225, 
+    average = 11.829013333333334, 
   }, 
   [16325] = { 
-    volume = 23, 
-    average = 359.8224565217391, 
+    volume = 18, 
+    average = 347.6000000000001, 
   }, 
   [16326] = { 
-    volume = 39, 
-    average = 238.99962941176466, 
+    volume = 13, 
+    average = 235.00901538461537, 
   }, 
   [16327] = { 
-    volume = 25208, 
-    average = 0.7276864077669903, 
+    volume = 17491, 
+    average = 0.5076925531914893, 
   }, 
   [16328] = { 
-    volume = 235, 
-    average = 19.31203750000001, 
+    volume = 348, 
+    average = 16.203699999999998, 
   }, 
   [16330] = { 
-    volume = 31, 
-    average = 320.9987111111111, 
+    volume = 23, 
+    average = 304.99786875, 
   }, 
   [16333] = { 
     volume =  nil, 
@@ -979,69 +979,65 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [16340] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [16344] = { 
-    volume = 334, 
-    average = 17.103658780487798, 
+    volume = 119, 
+    average = 17.6525, 
   }, 
   [16346] = { 
-    volume = 38, 
-    average = 324.9989185185185, 
+    volume = 39, 
+    average = 304.3049948717948, 
   }, 
   [16347] = { 
-    volume = 6517, 
-    average = 0.0857615384615385, 
+    volume = 5842, 
+    average = 0.09647083333333334, 
   }, 
   [16348] = { 
-    volume = 6637, 
-    average = 0.3454925233644861, 
+    volume = 3403, 
+    average = 0.4443759999999999, 
   }, 
   [16349] = { 
-    volume = 6957, 
-    average = 1.6781884892086323, 
+    volume = 7386, 
+    average = 1.750770316301704, 
   }, 
   [16350] = { 
-    volume = 435, 
-    average = 0.5257, 
+    volume = 935, 
+    average = 0.6534775, 
   }, 
   [16351] = { 
-    volume = 401, 
-    average = 2.2276961538461535, 
+    volume = 163, 
+    average = 2.4585809523809523, 
   }, 
   [16352] = { 
-    volume = 510, 
-    average = 5.191839393939395, 
+    volume = 225, 
+    average = 5.976831818181819, 
   }, 
   [16353] = { 
-    volume = 2229, 
-    average = 3.4990418367346936, 
+    volume = 1372, 
+    average = 3.4528157894736844, 
   }, 
   [16354] = { 
-    volume = 2457, 
-    average = 10.467751204819281, 
+    volume = 1261, 
+    average = 10.304289928057564, 
   }, 
   [16355] = { 
-    volume = 410, 
-    average = 21.182962068965512, 
+    volume = 145, 
+    average = 21.335872000000005, 
   }, 
   [16356] = { 
-    volume = 377, 
-    average = 21.64694500000001, 
+    volume = 396, 
+    average = 22.488373684210533, 
   }, 
   [16357] = { 
-    volume = 381, 
-    average = 59.211006896551744, 
+    volume = 246, 
+    average = 59.854170886075956, 
   }, 
   [16358] = { 
-    volume = 112, 
-    average = 105.24115762711861, 
+    volume = 48, 
+    average = 112.01866799999998, 
   }, 
   [16419] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 2, 
+    average = 14.514949999999999, 
   }, 
   [17261] = { 
     volume =  nil, 
@@ -1056,88 +1052,88 @@ return {
     average =  nil, 
   }, 
   [17664] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 9, 
+    average = 0.0012222222222222222, 
   }, 
   [17665] = { 
-    volume = 50, 
-    average = 0.2, 
+    volume = 5, 
+    average = 0.1399, 
   }, 
   [17666] = { 
-    volume = 869, 
-    average = 0.4617428571428571, 
+    volume = 930, 
+    average = 0.39709999999999995, 
   }, 
   [17667] = { 
-    volume = 829, 
-    average = 0.07999090909090908, 
+    volume = 300, 
+    average = 0.69994, 
   }, 
   [17668] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [17671] = { 
-    volume = 80, 
-    average = 1.9998999999999998, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17693] = { 
-    volume = 1, 
-    average = 7.0299, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17695] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [17707] = { 
+    volume = 1, 
+    average = 250, 
+  }, 
+  [17711] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [17711] = { 
-    volume = 4, 
-    average = 11.004975, 
-  }, 
   [17715] = { 
-    volume = 5, 
-    average = 20.99505, 
+    volume = 16, 
+    average = 24.813266666666664, 
   }, 
   [17774] = { 
-    volume = 3293, 
-    average = 3.460424242424242, 
+    volume = 1607, 
+    average = 3.21741219512195, 
   }, 
   [17775] = { 
-    volume = 1175, 
-    average = 3.8481967213114734, 
+    volume = 1301, 
+    average = 3.458606818181819, 
   }, 
   [17776] = { 
-    volume = 518, 
-    average = 10.309732692307692, 
+    volume = 882, 
+    average = 10.21776290322581, 
   }, 
   [17797] = { 
-    volume = 1, 
-    average = 3400, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17798] = { 
     volume = 1, 
-    average = 2500.991, 
+    average = 2700, 
   }, 
   [17885] = { 
-    volume = 1, 
-    average = 1700, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17886] = { 
-    volume = 3, 
-    average = 1526.6663, 
+    volume = 1, 
+    average = 1699.9999, 
   }, 
   [17897] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [17898] = { 
-    volume = 1, 
-    average = 2.1138, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17899] = { 
-    volume = 1, 
-    average = 4.1194, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [17963] = { 
     volume =  nil, 
@@ -1152,20 +1148,20 @@ return {
     average =  nil, 
   }, 
   [18163] = { 
+    volume = 1, 
+    average = 15.9998, 
+  }, 
+  [18442] = { 
+    volume = 157, 
+    average = 15.791035714285716, 
+  }, 
+  [18459] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [18442] = { 
-    volume = 113, 
-    average = 14.40346470588235, 
-  }, 
-  [18459] = { 
-    volume = 1, 
-    average = 300, 
-  }, 
   [18471] = { 
-    volume = 1, 
-    average = 300, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [18472] = { 
     volume =  nil, 
@@ -1189,11 +1185,11 @@ return {
   }, 
   [18661] = { 
     volume = 1, 
-    average = 749.2521, 
+    average = 700, 
   }, 
   [18662] = { 
-    volume = 2, 
-    average = 599.5297, 
+    volume = 1, 
+    average = 700, 
   }, 
   [18663] = { 
     volume =  nil, 
@@ -1204,16 +1200,16 @@ return {
     average =  nil, 
   }, 
   [18749] = { 
-    volume = 206, 
-    average = 17.581656603773595, 
+    volume = 243, 
+    average = 17.367063793103448, 
   }, 
   [18753] = { 
-    volume = 883, 
-    average = 1.1689437500000002, 
+    volume = 1115, 
+    average = 1.0407700000000002, 
   }, 
   [18760] = { 
-    volume = 200, 
-    average = 0.89995, 
+    volume = 150, 
+    average = 0.8998, 
   }, 
   [18795] = { 
     volume =  nil, 
@@ -1228,20 +1224,20 @@ return {
     average =  nil, 
   }, 
   [18815] = { 
-    volume = 1, 
-    average = 75, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [18819] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [18820] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 1149.9999, 
   }, 
   [18821] = { 
-    volume = 3, 
-    average = 1956.6665999999998, 
+    volume = 1, 
+    average = 3444.4444, 
   }, 
   [18829] = { 
     volume =  nil, 
@@ -1252,124 +1248,124 @@ return {
     average =  nil, 
   }, 
   [18936] = { 
-    volume = 12485, 
-    average = 0.16493714285714292, 
+    volume = 7251, 
+    average = 0.1366315789473684, 
   }, 
   [18937] = { 
-    volume = 3849, 
-    average = 0.16933571428571428, 
+    volume = 3172, 
+    average = 0.3331, 
   }, 
   [18938] = { 
-    volume = 4889, 
-    average = 0.7519639999999999, 
+    volume = 3261, 
+    average = 0.6186392857142857, 
   }, 
   [18940] = { 
-    volume = 346, 
-    average = 1.14945, 
+    volume = 25, 
+    average = 1.0991, 
   }, 
   [18941] = { 
-    volume = 376, 
-    average = 1.1547, 
+    volume = 58, 
+    average = 1.1091, 
   }, 
   [18942] = { 
-    volume = 554, 
-    average = 0.6660999999999999, 
+    volume = 1132, 
+    average = 0.5498125, 
   }, 
   [18943] = { 
-    volume = 160, 
-    average = 1.1232333333333333, 
+    volume = 129, 
+    average = 1.14995, 
   }, 
   [18954] = { 
-    volume = 85, 
-    average = 1.670818181818182, 
+    volume = 5, 
+    average = 0.39995, 
   }, 
   [18955] = { 
-    volume = 18, 
-    average = 1.0157999999999998, 
+    volume = 25, 
+    average = 1.5648857142857142, 
   }, 
   [19020] = { 
-    volume = 5, 
-    average = 23.669800000000002, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [19035] = { 
-    volume = 300, 
-    average = 0.12996666666666667, 
+    volume = 238, 
+    average = 0.551925, 
   }, 
   [19041] = { 
-    volume = 788, 
-    average = 4.700057575757574, 
+    volume = 625, 
+    average = 4.680197142857144, 
   }, 
   [19042] = { 
-    volume = 2311, 
-    average = 1.1058921875000003, 
+    volume = 1466, 
+    average = 0.8249057142857144, 
   }, 
   [19043] = { 
-    volume = 820, 
-    average = 4.4466725, 
+    volume = 1400, 
+    average = 4.953137777777778, 
   }, 
   [19045] = { 
-    volume = 175, 
-    average = 5.38823, 
+    volume = 143, 
+    average = 3.7032571428571424, 
   }, 
   [19326] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [19327] = { 
-    volume = 1, 
-    average = 439.9899, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [19328] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [19329] = { 
-    volume = 1, 
-    average = 2888, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [19330] = { 
-    volume = 1, 
-    average = 2000, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [19331] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 2, 
+    average = 350, 
   }, 
   [19332] = { 
-    volume = 1, 
-    average = 2949, 
-  }, 
-  [19333] = { 
-    volume = 2, 
-    average = 14.552900000000001, 
-  }, 
-  [19334] = { 
-    volume = 1, 
-    average = 19.9885, 
-  }, 
-  [19335] = { 
-    volume = 3, 
-    average = 49.99796666666666, 
-  }, 
-  [19336] = { 
-    volume = 2, 
-    average = 24.499850000000002, 
-  }, 
-  [19337] = { 
-    volume = 3, 
-    average = 16.666333333333334, 
-  }, 
-  [19338] = { 
-    volume = 2, 
-    average = 15.22205, 
-  }, 
-  [19339] = { 
-    volume = 2, 
-    average = 37.9998, 
-  }, 
-  [19348] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [19333] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19334] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19335] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19336] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19337] = { 
+    volume = 1, 
+    average = 15.9991, 
+  }, 
+  [19338] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19339] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [19348] = { 
+    volume = 1, 
+    average = 700.991, 
   }, 
   [19349] = { 
     volume =  nil, 
@@ -1396,100 +1392,100 @@ return {
     average =  nil, 
   }, 
   [19401] = { 
-    volume = 3, 
-    average = 283.6664333333333, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [19402] = { 
-    volume = 12, 
-    average = 54.99465, 
+    volume = 8, 
+    average = 58.989875, 
   }, 
   [19403] = { 
-    volume = 2, 
-    average = 137.48925, 
+    volume = 7, 
+    average = 148.9708857142857, 
   }, 
   [19404] = { 
-    volume = 2, 
-    average = 324.9993, 
+    volume = 3, 
+    average = 310.99916666666667, 
   }, 
   [19407] = { 
-    volume = 46, 
-    average = 49.30317826086957, 
+    volume = 68, 
+    average = 46.407921212121224, 
   }, 
   [19408] = { 
     volume = 2, 
-    average = 102.48615, 
+    average = 97.991, 
   }, 
   [19409] = { 
-    volume = 3, 
-    average = 383.3299666666667, 
+    volume = 2, 
+    average = 310.98345, 
   }, 
   [19410] = { 
-    volume = 165, 
-    average = 49.89219622641509, 
+    volume = 89, 
+    average = 49.18534716981131, 
   }, 
   [19411] = { 
     volume = 3, 
-    average = 80.9994, 
+    average = 159.99963333333332, 
   }, 
   [19412] = { 
-    volume = 3, 
-    average = 377.8886, 
+    volume = 1, 
+    average = 270.9991, 
   }, 
   [19448] = { 
-    volume = 129, 
-    average = 10.465948, 
+    volume = 31, 
+    average = 9.99722, 
   }, 
   [19449] = { 
-    volume = 290, 
-    average = 9.242286956521735, 
+    volume = 466, 
+    average = 8.906255882352937, 
   }, 
   [19450] = { 
-    volume = 571, 
-    average = 9.254694029850748, 
+    volume = 313, 
+    average = 10.630139583333337, 
   }, 
   [19468] = { 
-    volume = 8, 
-    average = 56.16385, 
+    volume = 4, 
+    average = 67.39, 
   }, 
   [19470] = { 
     volume = 2, 
-    average = 279.79999999999995, 
+    average = 279.765, 
   }, 
   [19472] = { 
-    volume = 1, 
-    average = 400, 
-  }, 
-  [19812] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [19812] = { 
+    volume = 10, 
+    average = 4.9999, 
   }, 
   [19943] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [19944] = { 
-    volume = 100, 
-    average = 0.4375, 
+    volume = 326, 
+    average = 0.36252, 
   }, 
   [19945] = { 
-    volume = 117, 
-    average = 0.1993, 
+    volume = 1360, 
+    average = 0.24160000000000004, 
   }, 
   [19946] = { 
-    volume = 3369, 
-    average = 0.17515000000000003, 
+    volume = 3175, 
+    average = 0.2512058823529411, 
   }, 
   [19947] = { 
-    volume = 936, 
-    average = 0.4401454545454546, 
+    volume = 1449, 
+    average = 1.002863157894737, 
   }, 
   [19948] = { 
-    volume = 837, 
-    average = 0.14374285714285714, 
+    volume = 1505, 
+    average = 0.1485, 
   }, 
   [20139] = { 
-    volume = 1, 
-    average = 250, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20140] = { 
     volume =  nil, 
@@ -1548,16 +1544,16 @@ return {
     average =  nil, 
   }, 
   [20472] = { 
-    volume = 2, 
-    average = 2275.0005, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20473] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [20474] = { 
-    volume = 1, 
-    average = 4000, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20475] = { 
     volume =  nil, 
@@ -1568,8 +1564,8 @@ return {
     average =  nil, 
   }, 
   [20479] = { 
-    volume = 1, 
-    average = 3399.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20528] = { 
     volume =  nil, 
@@ -1592,12 +1588,8 @@ return {
     average =  nil, 
   }, 
   [20555] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [20557] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 4, 
+    average = 389.5, 
   }, 
   [20582] = { 
     volume =  nil, 
@@ -1620,8 +1612,8 @@ return {
     average =  nil, 
   }, 
   [20717] = { 
-    volume = 1, 
-    average = 3333, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20744] = { 
     volume =  nil, 
@@ -1648,8 +1640,8 @@ return {
     average =  nil, 
   }, 
   [20798] = { 
-    volume = 1, 
-    average = 37999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20801] = { 
     volume =  nil, 
@@ -1676,16 +1668,16 @@ return {
     average =  nil, 
   }, 
   [20933] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 2, 
+    average = 399.5, 
   }, 
   [20951] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [20957] = { 
-    volume = 1, 
-    average = 50, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [20960] = { 
     volume =  nil, 
@@ -1696,10 +1688,6 @@ return {
     average =  nil, 
   }, 
   [20978] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [20987] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -1724,16 +1712,16 @@ return {
     average =  nil, 
   }, 
   [21165] = { 
-    volume = 7, 
-    average = 229.65002857142858, 
+    volume = 2, 
+    average = 270, 
   }, 
   [21166] = { 
-    volume = 1, 
-    average = 179, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21167] = { 
-    volume = 1, 
-    average = 115, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21168] = { 
     volume =  nil, 
@@ -1747,37 +1735,33 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [21171] = { 
+  [21172] = { 
     volume =  nil, 
     average =  nil, 
-  }, 
-  [21172] = { 
-    volume = 1, 
-    average = 130.0009, 
   }, 
   [21173] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [21174] = { 
-    volume = 1, 
-    average = 160, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21191] = { 
     volume = 1, 
-    average = 150, 
+    average = 150.9998, 
   }, 
   [21850] = { 
-    volume = 1, 
-    average = 1.01, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21860] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [21863] = { 
-    volume = 1, 
-    average = 15, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21866] = { 
     volume =  nil, 
@@ -1788,12 +1772,12 @@ return {
     average =  nil, 
   }, 
   [21874] = { 
-    volume = 1, 
-    average = 0.201, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21875] = { 
     volume = 1, 
-    average = 39, 
+    average = 9.89, 
   }, 
   [21876] = { 
     volume =  nil, 
@@ -1806,6 +1790,10 @@ return {
   [21889] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [21897] = { 
+    volume = 1, 
+    average = 15, 
   }, 
   [21899] = { 
     volume =  nil, 
@@ -1852,8 +1840,8 @@ return {
     average =  nil, 
   }, 
   [21927] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 9, 
   }, 
   [21934] = { 
     volume =  nil, 
@@ -1872,8 +1860,8 @@ return {
     average =  nil, 
   }, 
   [21944] = { 
-    volume = 1, 
-    average = 40, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21945] = { 
     volume =  nil, 
@@ -1884,8 +1872,8 @@ return {
     average =  nil, 
   }, 
   [21960] = { 
-    volume = 1, 
-    average = 5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21961] = { 
     volume =  nil, 
@@ -1894,6 +1882,10 @@ return {
   [21962] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [21967] = { 
+    volume = 1, 
+    average = 5, 
   }, 
   [21971] = { 
     volume =  nil, 
@@ -1908,8 +1900,8 @@ return {
     average =  nil, 
   }, 
   [21985] = { 
-    volume = 1, 
-    average = 0.267, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [21986] = { 
     volume =  nil, 
@@ -1924,16 +1916,20 @@ return {
     average =  nil, 
   }, 
   [22009] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [22011] = { 
     volume = 1, 
-    average = 5, 
+    average = 0.199, 
   }, 
   [22013] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [22014] = { 
-    volume = 1, 
-    average = 3.05, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22019] = { 
     volume =  nil, 
@@ -1959,6 +1955,10 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [22051] = { 
+    volume = 1, 
+    average = 3, 
+  }, 
   [22053] = { 
     volume =  nil, 
     average =  nil, 
@@ -1972,12 +1972,12 @@ return {
     average =  nil, 
   }, 
   [22078] = { 
-    volume = 1, 
-    average = 3, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22083] = { 
-    volume = 1, 
-    average = 10, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22085] = { 
     volume =  nil, 
@@ -1994,6 +1994,10 @@ return {
   [22088] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [22092] = { 
+    volume = 1, 
+    average = 3, 
   }, 
   [22098] = { 
     volume =  nil, 
@@ -2023,13 +2027,21 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [22125] = { 
+    volume = 1, 
+    average = 0.3706, 
+  }, 
+  [22129] = { 
+    volume = 1, 
+    average = 0.2782, 
+  }, 
   [22130] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [22135] = { 
-    volume = 1, 
-    average = 2, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22137] = { 
     volume =  nil, 
@@ -2068,16 +2080,16 @@ return {
     average =  nil, 
   }, 
   [22158] = { 
-    volume = 1, 
-    average = 99.9998, 
+    volume = 6, 
+    average = 81.82655, 
   }, 
   [22162] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [22166] = { 
-    volume = 1, 
-    average = 20, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22169] = { 
     volume =  nil, 
@@ -2127,15 +2139,15 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [22210] = { 
+    volume = 1, 
+    average = 2.99, 
+  }, 
   [22212] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [22214] = { 
-    volume = 1, 
-    average = 15, 
-  }, 
-  [22218] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -2144,8 +2156,8 @@ return {
     average =  nil, 
   }, 
   [22223] = { 
-    volume = 1, 
-    average = 22, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22224] = { 
     volume =  nil, 
@@ -2166,6 +2178,10 @@ return {
   [22229] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [22233] = { 
+    volume = 1, 
+    average = 5, 
   }, 
   [22235] = { 
     volume =  nil, 
@@ -2188,8 +2204,8 @@ return {
     average =  nil, 
   }, 
   [22289] = { 
-    volume = 1, 
-    average = 2, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22291] = { 
     volume =  nil, 
@@ -2212,16 +2228,20 @@ return {
     average =  nil, 
   }, 
   [22337] = { 
-    volume = 1, 
-    average = 0.1, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22339] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [22340] = { 
-    volume = 1, 
-    average = 0.1, 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [22347] = { 
+    volume = 2, 
+    average = 0.102, 
   }, 
   [22348] = { 
     volume =  nil, 
@@ -2244,8 +2264,8 @@ return {
     average =  nil, 
   }, 
   [22366] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 0.1, 
   }, 
   [22377] = { 
     volume =  nil, 
@@ -2284,8 +2304,8 @@ return {
     average =  nil, 
   }, 
   [22480] = { 
-    volume = 1, 
-    average = 10, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22488] = { 
     volume =  nil, 
@@ -2316,8 +2336,8 @@ return {
     average =  nil, 
   }, 
   [22535] = { 
-    volume = 1, 
-    average = 0.102, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [22536] = { 
     volume =  nil, 
@@ -2326,6 +2346,10 @@ return {
   [22537] = { 
     volume = 1, 
     average = 2, 
+  }, 
+  [22543] = { 
+    volume = 1, 
+    average = 0.102, 
   }, 
   [22551] = { 
     volume =  nil, 
@@ -2340,8 +2364,12 @@ return {
     average =  nil, 
   }, 
   [22572] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 0.0624, 
+  }, 
+  [22589] = { 
+    volume = 1, 
+    average = 44, 
   }, 
   [22590] = { 
     volume =  nil, 
@@ -2368,8 +2396,12 @@ return {
     average =  nil, 
   }, 
   [22619] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [22625] = { 
     volume = 1, 
-    average = 0.0426, 
+    average = 5, 
   }, 
   [22629] = { 
     volume =  nil, 
@@ -2378,6 +2410,10 @@ return {
   [22646] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [22657] = { 
+    volume = 1, 
+    average = 0.201, 
   }, 
   [22671] = { 
     volume =  nil, 
@@ -2391,9 +2427,9 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [22687] = { 
-    volume =  nil, 
-    average =  nil, 
+  [22685] = { 
+    volume = 1, 
+    average = 0.1614, 
   }, 
   [22702] = { 
     volume =  nil, 
@@ -2420,16 +2456,20 @@ return {
     average =  nil, 
   }, 
   [22793] = { 
-    volume = 1, 
-    average = 8, 
-  }, 
-  [22802] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [22798] = { 
+    volume = 1, 
+    average = 0.0882, 
   }, 
   [22803] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [22807] = { 
+    volume = 1, 
+    average = 19, 
   }, 
   [22810] = { 
     volume =  nil, 
@@ -2440,16 +2480,16 @@ return {
     average =  nil, 
   }, 
   [23537] = { 
-    volume = 1, 
-    average = 888, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [23638] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [23653] = { 
-    volume = 5097, 
-    average = 14.854397988505752, 
+    volume = 4250, 
+    average = 14.78050402476781, 
   }, 
   [23663] = { 
     volume =  nil, 
@@ -2464,52 +2504,48 @@ return {
     average =  nil, 
   }, 
   [23670] = { 
-    volume = 271, 
-    average = 1.1099, 
+    volume = 400, 
+    average = 1.0997, 
   }, 
   [23671] = { 
-    volume = 11386, 
-    average = 0.12158888888888887, 
+    volume = 6270, 
+    average = 0.10608076923076923, 
   }, 
   [23698] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 3199.9999, 
   }, 
   [23722] = { 
-    volume = 1, 
+    volume = 2, 
     average = 48.52, 
   }, 
   [23725] = { 
-    volume = 1, 
-    average = 100, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [23735] = { 
-    volume = 1, 
-    average = 0.106, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [23741] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [23744] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 0.0529, 
   }, 
   [23748] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [23750] = { 
+  [23752] = { 
     volume =  nil, 
     average =  nil, 
-  }, 
-  [23752] = { 
-    volume = 1, 
-    average = 0.107, 
   }, 
   [23753] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 5, 
   }, 
   [23765] = { 
     volume =  nil, 
@@ -2551,13 +2587,13 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [23810] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [23813] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [23817] = { 
+    volume = 1, 
+    average = 5, 
   }, 
   [23838] = { 
     volume =  nil, 
@@ -2575,17 +2611,21 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [24109] = { 
+    volume = 1, 
+    average = 0.0232, 
+  }, 
   [24121] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 810, 
   }, 
   [24122] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 250, 
   }, 
   [24439] = { 
-    volume = 1, 
-    average = 0.105, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24443] = { 
     volume =  nil, 
@@ -2608,8 +2648,8 @@ return {
     average =  nil, 
   }, 
   [24450] = { 
-    volume = 1, 
-    average = 0.0165, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24451] = { 
     volume =  nil, 
@@ -2664,16 +2704,8 @@ return {
     average =  nil, 
   }, 
   [24581] = { 
-    volume = 202, 
-    average = 13.175570297029715, 
-  }, 
-  [24615] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [24616] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 172, 
+    average = 22.84653139534882, 
   }, 
   [24621] = { 
     volume =  nil, 
@@ -2712,8 +2744,8 @@ return {
     average =  nil, 
   }, 
   [24660] = { 
-    volume = 1, 
-    average = 45, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24661] = { 
     volume =  nil, 
@@ -2728,8 +2760,8 @@ return {
     average =  nil, 
   }, 
   [24664] = { 
-    volume = 2, 
-    average = 124.55915, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24665] = { 
     volume =  nil, 
@@ -2768,12 +2800,12 @@ return {
     average =  nil, 
   }, 
   [24677] = { 
-    volume = 1, 
-    average = 35, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24678] = { 
-    volume = 2, 
-    average = 35, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24679] = { 
     volume =  nil, 
@@ -2784,8 +2816,8 @@ return {
     average =  nil, 
   }, 
   [24682] = { 
-    volume = 1, 
-    average = 49.55, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24683] = { 
     volume =  nil, 
@@ -2803,13 +2835,9 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [24691] = { 
+  [24693] = { 
     volume =  nil, 
     average =  nil, 
-  }, 
-  [24693] = { 
-    volume = 6, 
-    average = 287.1115666666667, 
   }, 
   [24694] = { 
     volume =  nil, 
@@ -2820,24 +2848,24 @@ return {
     average =  nil, 
   }, 
   [24714] = { 
-    volume = 2, 
-    average = 273.2395, 
+    volume = 3, 
+    average = 271.6628, 
   }, 
   [24717] = { 
-    volume = 1, 
-    average = 359.5596, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24721] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [24745] = { 
-    volume = 2, 
-    average = 239.99765, 
+    volume = 1, 
+    average = 226.9969, 
   }, 
   [24749] = { 
-    volume = 1, 
-    average = 377.5499, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [24846] = { 
     volume =  nil, 
@@ -2920,28 +2948,28 @@ return {
     average =  nil, 
   }, 
   [24911] = { 
-    volume = 2815, 
-    average = 0.06770178571428573, 
+    volume = 3725, 
+    average = 0.05270289855072463, 
   }, 
   [24912] = { 
-    volume = 33, 
-    average = 1.5475400000000001, 
+    volume = 14, 
+    average = 1.33, 
   }, 
   [24913] = { 
-    volume = 153, 
-    average = 4.359870476190477, 
+    volume = 182, 
+    average = 3.8974888888888892, 
   }, 
   [24914] = { 
-    volume = 13, 
-    average = 13.004900000000001, 
+    volume = 22, 
+    average = 14.19926, 
   }, 
   [24915] = { 
-    volume = 259, 
-    average = 0.2772833333333333, 
+    volume = 210, 
+    average = 1.0458666666666667, 
   }, 
   [24916] = { 
-    volume = 352, 
-    average = 22.04700104166666, 
+    volume = 325, 
+    average = 22.683209677419345, 
   }, 
   [25232] = { 
     volume =  nil, 
@@ -2996,32 +3024,32 @@ return {
     average =  nil, 
   }, 
   [25799] = { 
-    volume = 2, 
-    average = 0.2989, 
+    volume = 12, 
+    average = 0.0012833333333333334, 
   }, 
   [25800] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26295] = { 
-    volume = 1, 
-    average = 250, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26377] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26380] = { 
-    volume = 83, 
-    average = 29.60039166666667, 
+    volume = 62, 
+    average = 29.959684615384614, 
   }, 
   [26441] = { 
-    volume = 1, 
-    average = 4.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26442] = { 
-    volume = 2, 
-    average = 0.99965, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26443] = { 
     volume =  nil, 
@@ -3040,24 +3068,24 @@ return {
     average =  nil, 
   }, 
   [26452] = { 
-    volume = 96, 
-    average = 0.75, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26453] = { 
-    volume = 7, 
-    average = 0.012285714285714285, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26455] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26456] = { 
-    volume = 132, 
+    volume = 10, 
     average = 2, 
   }, 
   [26457] = { 
-    volume = 7, 
-    average = 0.7999999999999999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26458] = { 
     volume =  nil, 
@@ -3092,62 +3120,58 @@ return {
     average =  nil, 
   }, 
   [26470] = { 
-    volume = 333, 
-    average = 0.299875, 
+    volume = 100, 
+    average = 0.5999, 
   }, 
   [26471] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26548] = { 
-    volume = 6866, 
-    average = 1.5418741935483868, 
+    volume = 5238, 
+    average = 1.827840291262137, 
   }, 
   [26632] = { 
-    volume = 1, 
-    average = 3000, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26633] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26634] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 69.9995, 
   }, 
   [26673] = { 
-    volume = 8, 
-    average = 0.13495000000000001, 
-  }, 
-  [26674] = { 
-    volume = 2797, 
-    average = 0.09974000000000001, 
-  }, 
-  [26675] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [26674] = { 
+    volume = 2972, 
+    average = 0.09519999999999999, 
+  }, 
+  [26675] = { 
+    volume = 2, 
+    average = 5795.4955, 
+  }, 
   [26744] = { 
-    volume = 3847, 
-    average = 0.4520121951219513, 
+    volume = 4390, 
+    average = 0.39763191489361704, 
   }, 
   [26768] = { 
-    volume = 11, 
-    average = 24.9999, 
+    volume = 4, 
+    average = 25.9998, 
   }, 
   [26769] = { 
-    volume = 4, 
-    average = 9.9998, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26770] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26771] = { 
-    volume = 5, 
-    average = 0.0752, 
-  }, 
-  [26790] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -3156,64 +3180,64 @@ return {
     average =  nil, 
   }, 
   [26821] = { 
-    volume = 30, 
-    average = 4.866666666666667, 
+    volume = 20, 
+    average = 4.895, 
   }, 
   [26853] = { 
-    volume = 99, 
-    average = 33.26304736842105, 
+    volume = 122, 
+    average = 32.855935714285714, 
   }, 
   [26855] = { 
-    volume = 1, 
-    average = 379.0906, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26856] = { 
-    volume = 1, 
-    average = 409.5576, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26857] = { 
-    volume = 2, 
-    average = 398.99739999999997, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26858] = { 
-    volume = 2, 
-    average = 397.9952, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26859] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26880] = { 
-    volume = 385, 
-    average = 204.0944304878049, 
+    volume = 279, 
+    average = 202.36656621621628, 
   }, 
   [26956] = { 
-    volume = 1, 
-    average = 150.9999, 
+    volume = 5, 
+    average = 149.999975, 
   }, 
   [26968] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 40, 
+    average = 9.9999, 
   }, 
   [26969] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [26970] = { 
-    volume = 1, 
-    average = 9, 
-  }, 
-  [26971] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [26971] = { 
+    volume = 20, 
+    average = 4, 
+  }, 
   [26978] = { 
-    volume = 3, 
-    average = 22.666666666666668, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26979] = { 
     volume = 1, 
-    average = 40, 
+    average = 49.9999, 
   }, 
   [26980] = { 
     volume =  nil, 
@@ -3229,15 +3253,15 @@ return {
   }, 
   [26983] = { 
     volume = 1, 
-    average = 82, 
+    average = 45.9999, 
   }, 
   [26984] = { 
-    volume = 4, 
-    average = 57.709925, 
+    volume = 1, 
+    average = 44, 
   }, 
   [26985] = { 
-    volume = 2, 
-    average = 83, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26986] = { 
     volume =  nil, 
@@ -3248,8 +3272,8 @@ return {
     average =  nil, 
   }, 
   [26988] = { 
-    volume = 1, 
-    average = 1.089, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [26989] = { 
     volume =  nil, 
@@ -3275,13 +3299,9 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [26996] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [26997] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 22, 
   }, 
   [26998] = { 
     volume =  nil, 
@@ -3299,10 +3319,6 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [27002] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [27003] = { 
     volume =  nil, 
     average =  nil, 
@@ -3313,31 +3329,31 @@ return {
   }, 
   [27005] = { 
     volume = 1, 
-    average = 50, 
+    average = 45.9998, 
   }, 
   [27006] = { 
-    volume = 1, 
-    average = 17.9998, 
+    volume = 2, 
+    average = 19.98995, 
   }, 
   [27007] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27008] = { 
-    volume = 2, 
-    average = 19.99975, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27009] = { 
-    volume = 4, 
-    average = 24.999850000000002, 
+    volume = 3, 
+    average = 89.99993333333333, 
   }, 
   [27010] = { 
     volume = 1, 
-    average = 40, 
+    average = 30, 
   }, 
   [27011] = { 
-    volume = 1, 
-    average = 50, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27012] = { 
     volume =  nil, 
@@ -3396,8 +3412,8 @@ return {
     average =  nil, 
   }, 
   [27028] = { 
-    volume = 1, 
-    average = 25, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27029] = { 
     volume =  nil, 
@@ -3409,7 +3425,7 @@ return {
   }, 
   [27031] = { 
     volume = 1, 
-    average = 19.9998, 
+    average = 59, 
   }, 
   [27033] = { 
     volume =  nil, 
@@ -3444,60 +3460,56 @@ return {
     average =  nil, 
   }, 
   [27142] = { 
-    volume = 174638, 
-    average = 0.048083486631016054, 
-  }, 
-  [27210] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 201915, 
+    average = 0.056608675799086725, 
   }, 
   [27213] = { 
+    volume = 100, 
+    average = 0.05, 
+  }, 
+  [27217] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [27217] = { 
-    volume = 31, 
-    average = 0.06999999999999999, 
-  }, 
   [27218] = { 
-    volume = 2000, 
-    average = 0.019899999999999998, 
+    volume = 453, 
+    average = 0.003011037527593819, 
   }, 
   [27219] = { 
-    volume = 1894, 
-    average = 0.05867838590604027, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27220] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27221] = { 
-    volume = 28, 
-    average = 0.039650000000000005, 
+    volume = 118, 
+    average = 0.039599999999999996, 
   }, 
   [27222] = { 
+    volume = 258, 
+    average = 0.09995000000000001, 
+  }, 
+  [27223] = { 
+    volume = 91, 
+    average = 0.0030109890109890113, 
+  }, 
+  [27224] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [27223] = { 
-    volume = 112, 
-    average = 0.0032772727272727276, 
-  }, 
-  [27224] = { 
-    volume = 5, 
-    average = 0.0038, 
-  }, 
   [27225] = { 
-    volume = 36, 
-    average = 0.056400000000000006, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27226] = { 
-    volume = 7, 
-    average = 0.0035714285714285718, 
+    volume = 55, 
+    average = 0.0030181818181818183, 
   }, 
   [27227] = { 
-    volume = 59, 
-    average = 0.11, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27228] = { 
     volume =  nil, 
@@ -3512,20 +3524,20 @@ return {
     average =  nil, 
   }, 
   [27231] = { 
-    volume = 22, 
-    average = 0.21995000000000003, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27232] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27233] = { 
-    volume = 1, 
-    average = 0.0185, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27234] = { 
-    volume = 12, 
-    average = 0.016916666666666667, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27235] = { 
     volume =  nil, 
@@ -3536,8 +3548,8 @@ return {
     average =  nil, 
   }, 
   [27237] = { 
-    volume = 7, 
-    average = 0.010499999999999999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27238] = { 
     volume =  nil, 
@@ -3548,40 +3560,40 @@ return {
     average =  nil, 
   }, 
   [27241] = { 
-    volume = 44, 
-    average = 2.1121000000000003, 
+    volume = 10, 
+    average = 1.5048, 
   }, 
   [27242] = { 
-    volume = 14, 
-    average = 0.008357142857142858, 
-  }, 
-  [27246] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [27246] = { 
+    volume = 5, 
+    average = 0.0077, 
+  }, 
   [27247] = { 
     volume = 1, 
-    average = 0.8, 
+    average = 1.0498, 
   }, 
   [27248] = { 
-    volume = 18, 
-    average = 1.3299500000000002, 
+    volume = 20, 
+    average = 3.7093000000000003, 
   }, 
   [27249] = { 
-    volume = 5, 
-    average = 0.8, 
+    volume = 16, 
+    average = 0.03458888888888889, 
   }, 
   [27250] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27251] = { 
-    volume = 74, 
-    average = 0.6777666666666665, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27252] = { 
-    volume = 70, 
-    average = 0.6499, 
+    volume = 1014, 
+    average = 0.1453, 
   }, 
   [27253] = { 
     volume =  nil, 
@@ -3596,56 +3608,56 @@ return {
     average =  nil, 
   }, 
   [27256] = { 
-    volume = 2, 
-    average = 2.1999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27257] = { 
-    volume = 6, 
-    average = 10.757433333333333, 
+    volume = 10, 
+    average = 10.7575, 
   }, 
   [27258] = { 
-    volume = 1, 
-    average = 0.035, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27259] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27271] = { 
-    volume = 30, 
-    average = 22.9999, 
+    volume = 8, 
+    average = 27.599880000000002, 
   }, 
   [27278] = { 
-    volume = 10677, 
-    average = 0.15375000000000005, 
+    volume = 7518, 
+    average = 0.17841875000000001, 
   }, 
   [27293] = { 
-    volume = 2, 
-    average = 369.99995, 
+    volume = 1, 
+    average = 299.9999, 
   }, 
   [27294] = { 
     volume = 1, 
-    average = 350, 
+    average = 500, 
   }, 
   [27295] = { 
-    volume = 1, 
-    average = 849, 
+    volume = 4, 
+    average = 671.249975, 
   }, 
   [27296] = { 
-    volume = 2, 
-    average = 449.99995, 
+    volume = 1, 
+    average = 776.9997, 
   }, 
   [27297] = { 
-    volume = 2, 
-    average = 325.4999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27298] = { 
     volume = 1, 
-    average = 349.9999, 
+    average = 350.9998, 
   }, 
   [27299] = { 
-    volume = 2, 
-    average = 209.99995, 
+    volume = 1, 
+    average = 249.9999, 
   }, 
   [27313] = { 
     volume =  nil, 
@@ -3656,32 +3668,32 @@ return {
     average =  nil, 
   }, 
   [27315] = { 
-    volume = 91, 
-    average = 3.44598, 
+    volume = 90, 
+    average = 3.4984555555555557, 
   }, 
   [27316] = { 
-    volume = 20, 
-    average = 7.9099, 
+    volume = 10, 
+    average = 6.5, 
   }, 
   [27317] = { 
-    volume = 36, 
-    average = 10.29335, 
+    volume = 38, 
+    average = 7.999528571428571, 
   }, 
   [27318] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 25, 
+    average = 5, 
   }, 
   [27319] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27321] = { 
-    volume = 10, 
-    average = 0.5496000000000001, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27323] = { 
-    volume = 4, 
-    average = 5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27324] = { 
     volume =  nil, 
@@ -3696,8 +3708,8 @@ return {
     average =  nil, 
   }, 
   [27328] = { 
-    volume = 8, 
-    average = 9.5736125, 
+    volume = 9, 
+    average = 8.132766666666665, 
   }, 
   [27438] = { 
     volume =  nil, 
@@ -3708,12 +3720,12 @@ return {
     average =  nil, 
   }, 
   [27440] = { 
-    volume = 2, 
-    average = 170, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27443] = { 
-    volume = 1, 
-    average = 100, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27444] = { 
     volume =  nil, 
@@ -3728,16 +3740,16 @@ return {
     average =  nil, 
   }, 
   [27450] = { 
-    volume = 1, 
-    average = 100, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27498] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27545] = { 
-    volume = 3894, 
-    average = 0.6449411764705884, 
+    volume = 4502, 
+    average = 0.4332085714285716, 
   }, 
   [27687] = { 
     volume =  nil, 
@@ -3752,22 +3764,18 @@ return {
     average =  nil, 
   }, 
   [27746] = { 
-    volume = 280, 
-    average = 1.1455200000000003, 
+    volume = 60, 
+    average = 1.1099999999999997, 
   }, 
   [27902] = { 
-    volume = 2, 
-    average = 0.8, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [27994] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [27995] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [27996] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -3784,16 +3792,12 @@ return {
     average =  nil, 
   }, 
   [28013] = { 
-    volume = 2, 
-    average = 1750, 
+    volume = 1, 
+    average = 1699.9999, 
   }, 
   [28031] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [28034] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 3, 
+    average = 19.712366666666664, 
   }, 
   [28041] = { 
     volume =  nil, 
@@ -3812,16 +3816,16 @@ return {
     average =  nil, 
   }, 
   [28079] = { 
-    volume = 1, 
-    average = 10, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28085] = { 
-    volume = 27, 
-    average = 133.55991199999997, 
+    volume = 31, 
+    average = 136.89610000000002, 
   }, 
   [28175] = { 
-    volume = 4082, 
-    average = 3.25505230769231, 
+    volume = 2991, 
+    average = 12.250783333333336, 
   }, 
   [28210] = { 
     volume =  nil, 
@@ -3832,72 +3836,76 @@ return {
     average =  nil, 
   }, 
   [28296] = { 
-    volume = 47, 
-    average = 940.6411595744682, 
+    volume = 14, 
+    average = 941.0503428571428, 
   }, 
   [28297] = { 
-    volume = 37, 
-    average = 524.5373324324323, 
+    volume = 45, 
+    average = 501.94844666666694, 
   }, 
   [28298] = { 
-    volume = 1467, 
-    average = 49.513546784776885, 
+    volume = 1013, 
+    average = 47.49892628205126, 
   }, 
   [28299] = { 
-    volume = 1703, 
-    average = 29.819865849056598, 
+    volume = 1873, 
+    average = 28.75004290780144, 
   }, 
   [28300] = { 
-    volume = 66, 
-    average = 890.8623184615387, 
+    volume = 47, 
+    average = 881.0936531914891, 
   }, 
   [28301] = { 
-    volume = 865, 
-    average = 39.20042999999999, 
+    volume = 1024, 
+    average = 39.44018750000001, 
   }, 
   [28302] = { 
-    volume = 1648, 
-    average = 20.378843719972544, 
+    volume = 944, 
+    average = 20.295650000000006, 
   }, 
   [28303] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [28304] = { 
-    volume = 17, 
-    average = 2, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28305] = { 
-    volume = 3321, 
-    average = 4.221027272727275, 
+    volume = 2816, 
+    average = 4.3533368421052625, 
   }, 
   [28308] = { 
-    volume = 88, 
-    average = 478.3113590909093, 
+    volume = 61, 
+    average = 446.52162786885253, 
+  }, 
+  [28315] = { 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28318] = { 
-    volume = 1, 
-    average = 49.9998, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28319] = { 
-    volume = 2, 
-    average = 44.499849999999995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28320] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [28323] = { 
-    volume = 2, 
-    average = 54.99995, 
+    volume = 3, 
+    average = 55.99963333333333, 
   }, 
   [28324] = { 
-    volume = 1, 
-    average = 370, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28325] = { 
-    volume = 1, 
-    average = 32.2298, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28326] = { 
     volume =  nil, 
@@ -3908,32 +3916,32 @@ return {
     average =  nil, 
   }, 
   [28386] = { 
-    volume = 2, 
-    average = 245, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28480] = { 
-    volume = 31, 
-    average = 25.423909090909092, 
+    volume = 5, 
+    average = 29.9993, 
   }, 
   [28481] = { 
-    volume = 6759, 
-    average = 0.8745423076923077, 
+    volume = 4347, 
+    average = 0.8129954545454546, 
   }, 
   [28482] = { 
-    volume = 12, 
-    average = 69.79182, 
+    volume = 21, 
+    average = 48.87965, 
   }, 
   [28483] = { 
-    volume = 26, 
-    average = 16.99969090909091, 
+    volume = 10, 
+    average = 26.555544444444443, 
   }, 
   [28484] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [28485] = { 
-    volume = 148, 
-    average = 0.2599, 
+    volume = 78, 
+    average = 0.0999, 
   }, 
   [28490] = { 
     volume =  nil, 
@@ -3953,11 +3961,11 @@ return {
   }, 
   [28723] = { 
     volume = 1, 
-    average = 3900, 
+    average = 3998, 
   }, 
   [28914] = { 
-    volume = 49, 
-    average = 52.77935454545456, 
+    volume = 44, 
+    average = 55.1241, 
   }, 
   [28971] = { 
     volume =  nil, 
@@ -3969,27 +3977,27 @@ return {
   }, 
   [28978] = { 
     volume = 1, 
-    average = 949.9922, 
+    average = 949.9999, 
   }, 
   [28979] = { 
-    volume = 32, 
-    average = 64.1066, 
+    volume = 58, 
+    average = 58.629392592592616, 
   }, 
   [28981] = { 
-    volume = 50, 
-    average = 0.1011, 
+    volume = 267, 
+    average = 0.071225, 
   }, 
   [28982] = { 
-    volume = 14, 
-    average = 27.186844444444443, 
+    volume = 17, 
+    average = 19.01778, 
   }, 
   [28983] = { 
-    volume = 1, 
-    average = 5, 
-  }, 
-  [28984] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [28984] = { 
+    volume = 1, 
+    average = 50, 
   }, 
   [28986] = { 
     volume =  nil, 
@@ -4016,20 +4024,20 @@ return {
     average =  nil, 
   }, 
   [29216] = { 
-    volume = 4, 
-    average = 35.499075, 
+    volume = 12, 
+    average = 35.50742222222222, 
   }, 
   [29252] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [29254] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 6, 
+    average = 0.5, 
   }, 
   [29255] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 3, 
+    average = 1, 
   }, 
   [29256] = { 
     volume =  nil, 
@@ -4044,24 +4052,20 @@ return {
     average =  nil, 
   }, 
   [29300] = { 
-    volume = 201, 
-    average = 10.909302127659572, 
+    volume = 109, 
+    average = 10.76547272727273, 
   }, 
   [29311] = { 
-    volume = 1070, 
-    average = 1.3390833333333336, 
+    volume = 1080, 
+    average = 1.3389241379310348, 
   }, 
   [29415] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [29613] = { 
-    volume = 33, 
-    average = 0.8497333333333333, 
-  }, 
-  [29618] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 31, 
+    average = 0.6799999999999999, 
   }, 
   [29624] = { 
     volume = 1, 
@@ -4072,36 +4076,36 @@ return {
     average =  nil, 
   }, 
   [29687] = { 
-    volume = 1, 
-    average = 30, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [29692] = { 
-    volume = 52, 
-    average = 192.26920384615383, 
+    volume = 42, 
+    average = 348.74078095238093, 
   }, 
   [29882] = { 
-    volume = 20, 
-    average = 12.999, 
+    volume = 23, 
+    average = 12.755259999999998, 
   }, 
   [29883] = { 
-    volume = 78, 
-    average = 16.41227142857143, 
+    volume = 360, 
+    average = 12.395487499999998, 
   }, 
   [29884] = { 
-    volume = 137, 
-    average = 8.810799999999999, 
+    volume = 255, 
+    average = 8.748953846153844, 
   }, 
   [29885] = { 
-    volume = 15, 
-    average = 11.984849999999998, 
+    volume = 50, 
+    average = 11.916633333333332, 
   }, 
   [29955] = { 
-    volume = 1, 
-    average = 35, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [29956] = { 
-    volume = 1, 
-    average = 150, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [29957] = { 
     volume =  nil, 
@@ -4116,8 +4120,8 @@ return {
     average =  nil, 
   }, 
   [30044] = { 
-    volume = 1, 
-    average = 400, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30045] = { 
     volume =  nil, 
@@ -4128,20 +4132,20 @@ return {
     average = 350, 
   }, 
   [30047] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 399.9995, 
   }, 
   [30048] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30049] = { 
-    volume = 1, 
-    average = 488.9993, 
-  }, 
-  [30050] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [30050] = { 
+    volume = 1, 
+    average = 450.9999, 
   }, 
   [30051] = { 
     volume =  nil, 
@@ -4172,8 +4176,8 @@ return {
     average =  nil, 
   }, 
   [30060] = { 
-    volume = 1, 
-    average = 40, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30288] = { 
     volume =  nil, 
@@ -4188,48 +4192,48 @@ return {
     average =  nil, 
   }, 
   [30340] = { 
-    volume = 60, 
-    average = 0.5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30432] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30812] = { 
-    volume = 5, 
-    average = 790.1999, 
+    volume = 2, 
+    average = 774.99995, 
   }, 
   [30898] = { 
-    volume = 91000, 
-    average = 0.061064, 
+    volume = 102805, 
+    average = 0.05867157142857144, 
   }, 
   [30899] = { 
-    volume = 5630, 
-    average = 0.0741923076923077, 
+    volume = 8815, 
+    average = 0.09765882352941177, 
   }, 
   [30900] = { 
-    volume = 140350, 
-    average = 0.09979324324324321, 
+    volume = 141495, 
+    average = 0.09604324324324316, 
   }, 
   [30901] = { 
-    volume = 10750, 
-    average = 0.019336842105263156, 
+    volume = 19100, 
+    average = 0.03659131818181818, 
   }, 
   [30902] = { 
-    volume = 103040, 
-    average = 0.0497000000000001, 
+    volume = 172604, 
+    average = 0.04826598882681568, 
   }, 
   [30903] = { 
-    volume = 42579, 
-    average = 0.07472865079365082, 
+    volume = 36151, 
+    average = 0.07838536585365855, 
   }, 
   [30904] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 20, 
+    average = 6.7493, 
   }, 
   [30905] = { 
-    volume = 210550, 
-    average = 0.022978378378378347, 
+    volume = 156576, 
+    average = 0.022477377906976726, 
   }, 
   [30907] = { 
     volume =  nil, 
@@ -4243,53 +4247,49 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [30911] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [30915] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30916] = { 
-    volume = 3, 
-    average = 39, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30917] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30926] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 4, 
+    average = 250, 
   }, 
   [30928] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30929] = { 
-    volume = 12, 
-    average = 992.6658916666669, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30930] = { 
-    volume = 5, 
-    average = 1198.5585600000002, 
+    volume = 3, 
+    average = 1132.2223333333334, 
   }, 
   [30931] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30937] = { 
-    volume = 16, 
-    average = 1256.687175, 
+    volume = 21, 
+    average = 1213.2844117647057, 
   }, 
   [30938] = { 
-    volume = 1, 
-    average = 1369, 
+    volume = 4, 
+    average = 1303.777625, 
   }, 
   [30939] = { 
-    volume = 3, 
-    average = 1.5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30941] = { 
     volume =  nil, 
@@ -4311,13 +4311,9 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [30950] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [30951] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 4, 
+    average = 2.999966666666667, 
   }, 
   [30955] = { 
     volume =  nil, 
@@ -4332,36 +4328,36 @@ return {
     average =  nil, 
   }, 
   [30963] = { 
-    volume = 2, 
-    average = 99.99995, 
+    volume = 1, 
+    average = 15, 
   }, 
   [30964] = { 
-    volume = 1, 
-    average = 100, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30965] = { 
-    volume = 2, 
-    average = 99.99995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30966] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30967] = { 
-    volume = 4, 
-    average = 4.0774, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30970] = { 
-    volume = 1, 
-    average = 150.9999, 
+    volume = 2, 
+    average = 64.99995, 
   }, 
   [30972] = { 
-    volume = 2, 
-    average = 110.99995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30973] = { 
-    volume = 6, 
-    average = 59.16653333333333, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30974] = { 
     volume =  nil, 
@@ -4380,104 +4376,104 @@ return {
     average =  nil, 
   }, 
   [30986] = { 
-    volume = 1, 
-    average = 1100, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30987] = { 
-    volume = 1, 
-    average = 1398.9999, 
+    volume = 2, 
+    average = 1389.99995, 
   }, 
   [30988] = { 
-    volume = 3, 
-    average = 1100.9999, 
+    volume = 1, 
+    average = 1397, 
   }, 
   [30989] = { 
     volume = 1, 
-    average = 1450, 
+    average = 1299.9999, 
   }, 
   [30990] = { 
-    volume = 1, 
-    average = 1.9899, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30993] = { 
-    volume = 4, 
-    average = 1349.9995, 
+    volume = 2, 
+    average = 1398.9911, 
   }, 
   [30994] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30995] = { 
-    volume = 2, 
-    average = 1349.9995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [30996] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [30997] = { 
-    volume = 13, 
-    average = 0.09995, 
+    volume = 8, 
+    average = 0.8801, 
   }, 
   [31000] = { 
-    volume = 2, 
-    average = 1300.005, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31001] = { 
-    volume = 1, 
-    average = 1425, 
+    volume = 5, 
+    average = 1448.55862, 
   }, 
   [31002] = { 
-    volume = 9, 
-    average = 1250.0040285714288, 
+    volume = 4, 
+    average = 1285.00285, 
   }, 
   [31005] = { 
-    volume = 9, 
-    average = 1350.5576444444443, 
+    volume = 5, 
+    average = 1458.80372, 
   }, 
   [31006] = { 
-    volume = 2, 
-    average = 1350, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31007] = { 
     volume = 2, 
-    average = 1250.00655, 
+    average = 1360.0059500000002, 
   }, 
   [31008] = { 
-    volume = 3, 
-    average = 1499.9998000000003, 
+    volume = 2, 
+    average = 1499.9998, 
   }, 
   [31009] = { 
-    volume = 2054, 
-    average = 1.811180821917808, 
+    volume = 2511, 
+    average = 1.8065354166666676, 
   }, 
   [31010] = { 
-    volume = 334, 
-    average = 52.356181395348855, 
+    volume = 258, 
+    average = 50.79283939393939, 
   }, 
   [31011] = { 
-    volume = 468, 
-    average = 11.285075000000003, 
+    volume = 318, 
+    average = 14.481147368421052, 
   }, 
   [31012] = { 
-    volume = 2786, 
-    average = 2.0775083333333324, 
+    volume = 2100, 
+    average = 2.3193051546391756, 
   }, 
   [31013] = { 
-    volume = 238, 
-    average = 79.37893636363634, 
+    volume = 183, 
+    average = 73.31295925925927, 
   }, 
   [31014] = { 
-    volume = 215, 
-    average = 17.520323076923074, 
+    volume = 282, 
+    average = 15.104700000000001, 
   }, 
   [31015] = { 
-    volume = 5, 
-    average = 9.999649999999999, 
+    volume = 8, 
+    average = 8.186166666666667, 
   }, 
   [31019] = { 
-    volume = 30, 
-    average = 3, 
+    volume = 7, 
+    average = 2.4896666666666665, 
   }, 
   [31024] = { 
     volume =  nil, 
@@ -4488,36 +4484,36 @@ return {
     average =  nil, 
   }, 
   [31028] = { 
-    volume = 20, 
-    average = 0.75, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31032] = { 
-    volume = 3, 
-    average = 69.5, 
+    volume = 6, 
+    average = 99.98989999999999, 
   }, 
   [31036] = { 
-    volume = 3, 
-    average = 199.99996666666667, 
+    volume = 9, 
+    average = 264.1428, 
   }, 
   [31041] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [31042] = { 
-    volume = 2, 
-    average = 8, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31045] = { 
-    volume = 6, 
-    average = 28.333, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31049] = { 
-    volume = 5, 
-    average = 10, 
+    volume = 11, 
+    average = 20.79984, 
   }, 
   [31053] = { 
-    volume = 1, 
-    average = 20.9999, 
+    volume = 6, 
+    average = 19.9999, 
   }, 
   [31056] = { 
     volume =  nil, 
@@ -4528,68 +4524,68 @@ return {
     average =  nil, 
   }, 
   [31059] = { 
-    volume = 2, 
-    average = 0.0305, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31062] = { 
-    volume = 9, 
-    average = 9.988900000000001, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31066] = { 
     volume = 4, 
-    average = 0.03875, 
+    average = 0.0382, 
   }, 
   [31067] = { 
-    volume = 3, 
-    average = 0.98985, 
+    volume = 31, 
+    average = 0.9729, 
   }, 
   [31069] = { 
-    volume = 10, 
-    average = 0.0793, 
+    volume = 12, 
+    average = 0.08274, 
   }, 
   [31070] = { 
-    volume = 2, 
-    average = 0.2475, 
+    volume = 7, 
+    average = 0.0599, 
   }, 
   [31071] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [31072] = { 
-    volume = 3, 
-    average = 0.0496, 
+    volume = 5, 
+    average = 0.0489, 
   }, 
   [31073] = { 
-    volume = 10, 
-    average = 34.749874999999996, 
+    volume = 6, 
+    average = 44.999925, 
   }, 
   [31075] = { 
-    volume = 14, 
-    average = 28.499916666666664, 
+    volume = 2, 
+    average = 2, 
   }, 
   [31076] = { 
-    volume = 6, 
-    average = 6.992933333333333, 
+    volume = 4, 
+    average = 5.99985, 
   }, 
   [31077] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [31078] = { 
-    volume = 7, 
-    average = 0.044149999999999995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31079] = { 
-    volume = 19, 
-    average = 2.23045, 
+    volume = 2, 
+    average = 1, 
   }, 
   [31081] = { 
-    volume = 6, 
-    average = 0.2172, 
+    volume = 8, 
+    average = 4.74995, 
   }, 
   [31082] = { 
     volume = 2, 
-    average = 2.998, 
+    average = 2.9899, 
   }, 
   [31083] = { 
     volume =  nil, 
@@ -4599,15 +4595,11 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [31176] = { 
+    volume = 1, 
+    average = 18000, 
+  }, 
   [31241] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [31362] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [31364] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -4616,8 +4608,8 @@ return {
     average =  nil, 
   }, 
   [31368] = { 
-    volume = 1, 
-    average = 35145.5418, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31376] = { 
     volume =  nil, 
@@ -4680,8 +4672,8 @@ return {
     average =  nil, 
   }, 
   [31416] = { 
-    volume = 1, 
-    average = 19000, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31433] = { 
     volume =  nil, 
@@ -4732,8 +4724,8 @@ return {
     average =  nil, 
   }, 
   [31513] = { 
-    volume = 1, 
-    average = 75000, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31514] = { 
     volume =  nil, 
@@ -4767,10 +4759,6 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [31553] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [31557] = { 
     volume =  nil, 
     average =  nil, 
@@ -4800,8 +4788,8 @@ return {
     average =  nil, 
   }, 
   [31579] = { 
-    volume = 815, 
-    average = 0.19323333333333337, 
+    volume = 897, 
+    average = 0.2765727272727273, 
   }, 
   [31624] = { 
     volume =  nil, 
@@ -4816,16 +4804,16 @@ return {
     average =  nil, 
   }, 
   [31627] = { 
-    volume = 3, 
-    average = 799.9889666666667, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31629] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [31630] = { 
-    volume = 1, 
-    average = 500, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31631] = { 
     volume =  nil, 
@@ -4896,8 +4884,8 @@ return {
     average =  nil, 
   }, 
   [31657] = { 
-    volume = 1, 
-    average = 14299.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31658] = { 
     volume =  nil, 
@@ -4916,12 +4904,12 @@ return {
     average =  nil, 
   }, 
   [31662] = { 
-    volume = 1, 
-    average = 6350, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [31663] = { 
     volume = 1, 
-    average = 4999.9999, 
+    average = 5555.5555, 
   }, 
   [31692] = { 
     volume =  nil, 
@@ -4944,132 +4932,140 @@ return {
     average =  nil, 
   }, 
   [31719] = { 
-    volume = 26, 
-    average = 32.55151666666667, 
+    volume = 13, 
+    average = 29.989058333333332, 
   }, 
   [31771] = { 
-    volume = 200, 
-    average = 0.1, 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [31773] = { 
+    volume = 100, 
+    average = 0.05, 
   }, 
   [31775] = { 
-    volume = 3613, 
-    average = 0.9947124255952385, 
+    volume = 3044, 
+    average = 0.9965659574468083, 
   }, 
   [31778] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [31780] = { 
-    volume = 850, 
-    average = 0.7257058823529413, 
+    volume = 570, 
+    average = 1.0237, 
   }, 
   [31781] = { 
-    volume = 1255, 
-    average = 0.6977931034482758, 
+    volume = 485, 
+    average = 0.7065153846153845, 
   }, 
   [31782] = { 
-    volume = 640, 
-    average = 0.6282800000000001, 
+    volume = 630, 
+    average = 0.59385, 
   }, 
   [31783] = { 
-    volume = 5, 
-    average = 1, 
+    volume = 6, 
+    average = 0.64995, 
   }, 
   [31809] = { 
-    volume = 1, 
-    average = 39.9989, 
+    volume = 10, 
+    average = 35, 
   }, 
   [31810] = { 
-    volume = 15, 
-    average = 34.70039, 
+    volume = 6, 
+    average = 33.99379999999999, 
   }, 
   [31891] = { 
-    volume = 57930, 
-    average = 0.8259902077151329, 
+    volume = 57553, 
+    average = 0.8939220512820513, 
   }, 
   [31927] = { 
-    volume = 1, 
-    average = 315, 
+    volume = 2, 
+    average = 460.49955, 
   }, 
   [31928] = { 
-    volume = 362, 
-    average = 32.48180338983052, 
+    volume = 108, 
+    average = 23.876336842105264, 
   }, 
   [31929] = { 
-    volume = 244, 
-    average = 17.52173714285715, 
+    volume = 229, 
+    average = 14.926854545454542, 
   }, 
   [31930] = { 
-    volume = 24, 
-    average = 324.2073500000001, 
+    volume = 5, 
+    average = 384.99992000000003, 
   }, 
   [31934] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 450, 
+  }, 
+  [31939] = { 
+    volume = 1, 
+    average = 2, 
   }, 
   [31974] = { 
-    volume = 16, 
-    average = 225.1777625, 
+    volume = 30, 
+    average = 210.39862999999994, 
   }, 
   [32025] = { 
-    volume = 1, 
-    average = 1.9899, 
-  }, 
-  [32033] = { 
-    volume = 1, 
-    average = 4.05, 
-  }, 
-  [32038] = { 
-    volume = 4701, 
-    average = 3.355411538461538, 
-  }, 
-  [32039] = { 
-    volume = 37126, 
-    average = 0.15886923076923073, 
-  }, 
-  [32095] = { 
-    volume = 419, 
-    average = 9.248064705882353, 
-  }, 
-  [32103] = { 
-    volume = 86098, 
-    average = 1.5903602006688984, 
-  }, 
-  [32106] = { 
-    volume = 1069, 
-    average = 21.19296293706294, 
-  }, 
-  [32212] = { 
-    volume = 16, 
-    average = 32.33665, 
-  }, 
-  [32574] = { 
-    volume = 2, 
-    average = 1395.2297, 
-  }, 
-  [32575] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [32033] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [32038] = { 
+    volume = 2903, 
+    average = 3.6057, 
+  }, 
+  [32039] = { 
+    volume = 21897, 
+    average = 0.1612416666666667, 
+  }, 
+  [32095] = { 
+    volume = 116, 
+    average = 10.57322222222222, 
+  }, 
+  [32103] = { 
+    volume = 75667, 
+    average = 1.5813786982248534, 
+  }, 
+  [32106] = { 
+    volume = 826, 
+    average = 21.1252905882353, 
+  }, 
+  [32212] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [32574] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [32575] = { 
+    volume = 3, 
+    average = 0.9964500000000001, 
+  }, 
   [32576] = { 
-    volume = 2, 
-    average = 19, 
+    volume = 3, 
+    average = 18.99485, 
   }, 
   [32578] = { 
     volume = 5, 
-    average = 1.7884499999999999, 
+    average = 1.7782499999999999, 
   }, 
   [32582] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [32583] = { 
-    volume = 1, 
-    average = 0.2, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [32584] = { 
-    volume = 22, 
-    average = 0.9549, 
+    volume = 10, 
+    average = 0.8898999999999999, 
   }, 
   [32917] = { 
     volume =  nil, 
@@ -5084,28 +5080,28 @@ return {
     average =  nil, 
   }, 
   [32932] = { 
-    volume = 8, 
-    average = 24.99, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [32933] = { 
-    volume = 20, 
+    volume = 10, 
     average = 4.9899000000000004, 
   }, 
   [32934] = { 
-    volume = 50, 
-    average = 4.839575, 
+    volume = 10, 
+    average = 4.9899000000000004, 
   }, 
   [32935] = { 
-    volume = 8, 
-    average = 24.99915, 
+    volume = 12, 
+    average = 24.9986, 
   }, 
   [32936] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [32937] = { 
-    volume = 23, 
-    average = 42.89485, 
+    volume = 25, 
+    average = 40.08484, 
   }, 
   [32938] = { 
     volume =  nil, 
@@ -5124,8 +5120,8 @@ return {
     average =  nil, 
   }, 
   [34242] = { 
-    volume = 91, 
-    average = 13.30938048780488, 
+    volume = 88, 
+    average = 11.899504761904762, 
   }, 
   [34243] = { 
     volume =  nil, 
@@ -5148,8 +5144,8 @@ return {
     average =  nil, 
   }, 
   [34323] = { 
-    volume = 90, 
-    average = 78.96985454545452, 
+    volume = 59, 
+    average = 78.39112499999999, 
   }, 
   [34376] = { 
     volume =  nil, 
@@ -5157,71 +5153,67 @@ return {
   }, 
   [34563] = { 
     volume = 65, 
-    average = 55.70814761904763, 
+    average = 56.1364488372093, 
   }, 
   [34602] = { 
-    volume = 2, 
-    average = 160.99995, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34603] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [34604] = { 
-    volume = 2, 
-    average = 4500, 
-  }, 
-  [34605] = { 
-    volume = 1, 
-    average = 2500, 
-  }, 
-  [34606] = { 
-    volume = 1, 
-    average = 155, 
-  }, 
-  [34609] = { 
-    volume = 6, 
-    average = 1262.5084000000004, 
-  }, 
-  [34610] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [34605] = { 
+    volume = 1, 
+    average = 122, 
+  }, 
+  [34606] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [34609] = { 
+    volume = 3, 
+    average = 133, 
+  }, 
+  [34610] = { 
+    volume = 1, 
+    average = 277, 
+  }, 
   [34611] = { 
-    volume = 7, 
-    average = 3072.9681571428564, 
+    volume = 30, 
+    average = 89.80703999999999, 
   }, 
   [34612] = { 
-    volume = 1, 
-    average = 150.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34613] = { 
-    volume = 1, 
-    average = 150, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34614] = { 
-    volume = 3, 
-    average = 3400.3333, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34615] = { 
-    volume = 3, 
-    average = 1727.3333, 
+    volume = 2, 
+    average = 17950, 
   }, 
   [34616] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [34617] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 6999, 
   }, 
   [34618] = { 
-    volume = 3, 
-    average = 3900, 
-  }, 
-  [34619] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 2, 
+    average = 119.99985, 
   }, 
   [34620] = { 
     volume =  nil, 
@@ -5232,8 +5224,8 @@ return {
     average =  nil, 
   }, 
   [34628] = { 
-    volume = 1, 
-    average = 125, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34630] = { 
     volume =  nil, 
@@ -5276,8 +5268,8 @@ return {
     average =  nil, 
   }, 
   [34645] = { 
-    volume = 1, 
-    average = 7500, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34646] = { 
     volume =  nil, 
@@ -5288,12 +5280,12 @@ return {
     average =  nil, 
   }, 
   [34648] = { 
-    volume = 2, 
-    average = 21500, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34649] = { 
-    volume = 1, 
-    average = 30900, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34651] = { 
     volume =  nil, 
@@ -5324,132 +5316,132 @@ return {
     average =  nil, 
   }, 
   [34724] = { 
-    volume = 3937, 
-    average = 0.3262285714285715, 
+    volume = 9355, 
+    average = 0.2578926829268293, 
   }, 
   [34725] = { 
-    volume = 1617, 
-    average = 0.4996611111111111, 
+    volume = 257, 
+    average = 0.37194166666666667, 
   }, 
   [34726] = { 
-    volume = 169, 
-    average = 26.360930000000007, 
+    volume = 86, 
+    average = 25.189216666666667, 
   }, 
   [34727] = { 
-    volume = 31, 
-    average = 0.9533230769230769, 
+    volume = 54, 
+    average = 0.76897, 
   }, 
   [34728] = { 
-    volume = 183, 
-    average = 4.65294705882353, 
+    volume = 83, 
+    average = 1.2088818181818182, 
   }, 
   [34729] = { 
-    volume = 733, 
-    average = 7.586119148936173, 
+    volume = 574, 
+    average = 6.847136363636364, 
   }, 
   [34730] = { 
-    volume = 566, 
-    average = 2.3263, 
+    volume = 459, 
+    average = 0.8532400000000001, 
   }, 
   [34731] = { 
-    volume = 691, 
-    average = 2.6475066666666667, 
+    volume = 460, 
+    average = 3.305327272727273, 
   }, 
   [34732] = { 
-    volume = 49, 
-    average = 59.74595, 
+    volume = 25, 
+    average = 49.9908888888889, 
   }, 
   [34733] = { 
-    volume = 29, 
-    average = 2.9109750000000005, 
+    volume = 53, 
+    average = 3.2429333333333332, 
   }, 
   [34734] = { 
-    volume = 49, 
-    average = 1.43235, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34735] = { 
-    volume = 81, 
-    average = 34.80140909090909, 
+    volume = 8, 
+    average = 32.00975, 
   }, 
   [34736] = { 
-    volume = 20, 
-    average = 102.74928750000001, 
+    volume = 36, 
+    average = 88.89021249999998, 
   }, 
   [34737] = { 
-    volume = 9, 
-    average = 98.54155000000002, 
+    volume = 27, 
+    average = 71.09957, 
   }, 
   [34738] = { 
-    volume = 6, 
-    average = 4.9895, 
+    volume = 13, 
+    average = 3.8171399999999998, 
   }, 
   [34739] = { 
-    volume = 51, 
-    average = 82.20792222222222, 
+    volume = 8, 
+    average = 28.25048, 
   }, 
   [34740] = { 
-    volume = 4, 
-    average = 70.247225, 
+    volume = 1, 
+    average = 69.9991, 
   }, 
   [34741] = { 
     volume = 1, 
-    average = 90.9865, 
+    average = 83.9979, 
   }, 
   [34742] = { 
-    volume = 1, 
-    average = 22.978, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34743] = { 
-    volume = 1, 
-    average = 50.99, 
+    volume = 3, 
+    average = 67.99753333333332, 
   }, 
   [34744] = { 
     volume = 4, 
-    average = 87.997025, 
+    average = 172.74987500000003, 
   }, 
   [34745] = { 
-    volume = 3, 
-    average = 73.99743333333333, 
+    volume = 2, 
+    average = 62.99385, 
   }, 
   [34746] = { 
-    volume = 6, 
-    average = 115.83461666666666, 
+    volume = 3, 
+    average = 113.99983333333334, 
   }, 
   [34747] = { 
-    volume = 2, 
-    average = 93.94925, 
+    volume = 4, 
+    average = 92.73872499999999, 
   }, 
   [34748] = { 
     volume = 1, 
-    average = 110.101, 
+    average = 118.999, 
   }, 
   [34751] = { 
-    volume = 1, 
-    average = 450.998, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34752] = { 
-    volume = 3, 
-    average = 8750.930266666668, 
+    volume = 1, 
+    average = 8996, 
   }, 
   [34753] = { 
-    volume = 2, 
-    average = 137.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [34754] = { 
-    volume = 13, 
-    average = 12.163116666666667, 
+    volume = 2, 
+    average = 9.99495, 
   }, 
   [34755] = { 
-    volume = 31, 
-    average = 24.16712, 
+    volume = 4, 
+    average = 22.996633333333335, 
   }, 
   [34756] = { 
-    volume = 5, 
-    average = 449.1915, 
+    volume = 1, 
+    average = 723.9999, 
   }, 
   [34757] = { 
-    volume = 1, 
-    average = 1300.9889, 
+    volume = 2, 
+    average = 1300.4946, 
   }, 
   [34758] = { 
     volume =  nil, 
@@ -5460,8 +5452,8 @@ return {
     average =  nil, 
   }, 
   [34760] = { 
-    volume = 2, 
-    average = 199.9999, 
+    volume = 4, 
+    average = 187.4977, 
   }, 
   [34761] = { 
     volume = 1, 
@@ -5476,8 +5468,8 @@ return {
     average =  nil, 
   }, 
   [34919] = { 
-    volume = 80, 
-    average = 22.7499, 
+    volume = 108, 
+    average = 21.44226923076923, 
   }, 
   [34936] = { 
     volume =  nil, 
@@ -5508,32 +5500,32 @@ return {
     average =  nil, 
   }, 
   [34983] = { 
-    volume = 6, 
-    average = 77.99982, 
+    volume = 32, 
+    average = 71.99702857142857, 
   }, 
   [35011] = { 
-    volume = 2, 
-    average = 49.99, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35028] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35036] = { 
-    volume = 1933, 
-    average = 9.131918699186993, 
+    volume = 1300, 
+    average = 8.882642452830193, 
   }, 
   [35060] = { 
-    volume = 8, 
-    average = 19.9998, 
+    volume = 15, 
+    average = 10.9998, 
   }, 
   [35065] = { 
-    volume = 1, 
+    volume = 2, 
     average = 1500, 
   }, 
   [35138] = { 
-    volume = 1, 
-    average = 90, 
+    volume = 3, 
+    average = 100.9994, 
   }, 
   [35139] = { 
     volume =  nil, 
@@ -5552,24 +5544,24 @@ return {
     average =  nil, 
   }, 
   [35263] = { 
-    volume = 2, 
-    average = 130, 
-  }, 
-  [35264] = { 
-    volume = 2, 
-    average = 132.99995, 
-  }, 
-  [35267] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [35264] = { 
+    volume = 1, 
+    average = 129.99, 
+  }, 
+  [35267] = { 
+    volume = 1, 
+    average = 10, 
+  }, 
   [35301] = { 
-    volume = 746, 
-    average = 0.50444, 
+    volume = 1109, 
+    average = 0.5021842105263158, 
   }, 
   [35303] = { 
-    volume = 17, 
-    average = 16.74044, 
+    volume = 31, 
+    average = 20.462599999999995, 
   }, 
   [35315] = { 
     volume =  nil, 
@@ -5584,8 +5576,8 @@ return {
     average =  nil, 
   }, 
   [35318] = { 
-    volume = 1, 
-    average = 170, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35319] = { 
     volume =  nil, 
@@ -5608,8 +5600,8 @@ return {
     average =  nil, 
   }, 
   [35352] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 98, 
   }, 
   [35354] = { 
     volume =  nil, 
@@ -5628,16 +5620,16 @@ return {
     average =  nil, 
   }, 
   [35396] = { 
-    volume = 3, 
-    average = 148.99983333333333, 
+    volume = 1, 
+    average = 140, 
   }, 
   [35397] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35399] = { 
-    volume = 1, 
-    average = 1300, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35401] = { 
     volume =  nil, 
@@ -5656,8 +5648,8 @@ return {
     average =  nil, 
   }, 
   [35411] = { 
-    volume = 2, 
-    average = 2750, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35413] = { 
     volume =  nil, 
@@ -5674,6 +5666,10 @@ return {
   [35420] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [35421] = { 
+    volume = 1, 
+    average = 149.89, 
   }, 
   [35427] = { 
     volume =  nil, 
@@ -5704,52 +5700,56 @@ return {
     average =  nil, 
   }, 
   [35581] = { 
-    volume = 2, 
-    average = 1589.5, 
+    volume = 3, 
+    average = 200.66639999999998, 
   }, 
   [35582] = { 
-    volume = 1, 
-    average = 4350, 
+    volume = 7, 
+    average = 469.85710000000006, 
   }, 
   [35583] = { 
-    volume = 1, 
-    average = 1400, 
+    volume = 3, 
+    average = 289.9998, 
   }, 
   [35584] = { 
-    volume = 7, 
-    average = 2034.1428428571428, 
+    volume = 4, 
+    average = 8495.99995, 
   }, 
   [35585] = { 
-    volume = 6, 
-    average = 1883.6666666666667, 
+    volume = 1, 
+    average = 1589, 
   }, 
   [35586] = { 
-    volume = 1, 
-    average = 36000, 
+    volume = 5, 
+    average = 1264.99998, 
   }, 
   [35587] = { 
-    volume = 3, 
-    average = 15429.6296, 
+    volume = 1, 
+    average = 2000, 
   }, 
   [35588] = { 
-    volume = 2, 
-    average = 2849.5, 
+    volume = 3, 
+    average = 299, 
   }, 
   [35589] = { 
-    volume = 1, 
-    average = 1590, 
+    volume = 5, 
+    average = 7063.999859999999, 
   }, 
   [35590] = { 
-    volume = 2, 
-    average = 2794.99995, 
+    volume = 1, 
+    average = 4100, 
   }, 
   [35591] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35592] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 4998, 
+  }, 
+  [35593] = { 
+    volume = 1, 
+    average = 4998, 
   }, 
   [35594] = { 
     volume =  nil, 
@@ -5780,16 +5780,16 @@ return {
     average =  nil, 
   }, 
   [35604] = { 
-    volume = 1, 
-    average = 4099, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35605] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35611] = { 
-    volume = 1, 
-    average = 4200, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35612] = { 
     volume =  nil, 
@@ -5816,8 +5816,8 @@ return {
     average =  nil, 
   }, 
   [35619] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 29888, 
   }, 
   [35620] = { 
     volume =  nil, 
@@ -5843,53 +5843,49 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [35668] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [35672] = { 
-    volume =  nil, 
-    average =  nil, 
+  [35680] = { 
+    volume = 1, 
+    average = 8000, 
   }, 
   [35721] = { 
-    volume = 100, 
-    average = 0.2, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35756] = { 
     volume = 1, 
-    average = 123.4567, 
+    average = 119.9995, 
   }, 
   [35885] = { 
-    volume = 3780, 
-    average = 1.2187186046511629, 
+    volume = 2931, 
+    average = 1.4924136363636367, 
   }, 
   [35887] = { 
-    volume = 663, 
-    average = 0.22562499999999996, 
+    volume = 694, 
+    average = 0.12777692307692307, 
   }, 
   [35888] = { 
-    volume = 276, 
-    average = 0.6879904761904763, 
+    volume = 4, 
+    average = 3.75155, 
   }, 
   [35889] = { 
-    volume = 4, 
-    average = 0.3236, 
+    volume = 12, 
+    average = 0.31185, 
   }, 
   [35898] = { 
-    volume = 1354, 
-    average = 1.033111764705882, 
+    volume = 1572, 
+    average = 0.902696153846154, 
   }, 
   [35926] = { 
-    volume = 1, 
-    average = 145.9994, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35927] = { 
-    volume = 2, 
-    average = 28.999650000000003, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35928] = { 
-    volume = 1, 
-    average = 41.9994, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35929] = { 
     volume =  nil, 
@@ -5912,84 +5908,84 @@ return {
     average =  nil, 
   }, 
   [35934] = { 
-    volume = 5, 
-    average = 3.9998000000000005, 
+    volume = 9, 
+    average = 5.998625, 
   }, 
   [35936] = { 
     volume = 7, 
-    average = 4.028116666666667, 
+    average = 4.6316, 
   }, 
   [35938] = { 
-    volume = 16, 
-    average = 3.99965, 
+    volume = 11, 
+    average = 4.992977777777778, 
   }, 
   [35939] = { 
-    volume = 20, 
-    average = 5.998933333333333, 
+    volume = 32, 
+    average = 4.49985, 
   }, 
   [35940] = { 
-    volume = 11, 
-    average = 7.249883333333334, 
+    volume = 62, 
+    average = 5.628, 
   }, 
   [35941] = { 
-    volume = 8, 
-    average = 3.9998000000000005, 
+    volume = 2, 
+    average = 2.5951, 
   }, 
   [35942] = { 
-    volume = 14, 
-    average = 5.9829, 
+    volume = 1, 
+    average = 4, 
   }, 
   [35943] = { 
     volume = 7, 
-    average = 4.285500000000001, 
+    average = 4.749775, 
   }, 
   [35948] = { 
-    volume = 5, 
-    average = 8.0412, 
+    volume = 7, 
+    average = 4.999085714285714, 
   }, 
   [35949] = { 
-    volume = 11, 
-    average = 9.332422222222222, 
+    volume = 17, 
+    average = 4.920818181818182, 
   }, 
   [35950] = { 
-    volume = 8, 
-    average = 9.6998, 
+    volume = 21, 
+    average = 5.009600000000001, 
   }, 
   [35951] = { 
-    volume = 9, 
-    average = 3.9998000000000005, 
+    volume = 5, 
+    average = 4.9995, 
   }, 
   [35952] = { 
-    volume = 17, 
-    average = 5.0188500000000005, 
+    volume = 2, 
+    average = 4.99955, 
   }, 
   [35953] = { 
-    volume = 3, 
-    average = 4.9999, 
+    volume = 28, 
+    average = 4.8626000000000005, 
   }, 
   [35954] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 280, 
   }, 
   [35955] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35956] = { 
-    volume = 8, 
-    average = 5.280985714285714, 
+    volume = 25, 
+    average = 5.6659, 
   }, 
   [35958] = { 
-    volume = 5, 
-    average = 239.99988, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35959] = { 
-    volume = 2, 
-    average = 50, 
+    volume = 1, 
+    average = 55, 
   }, 
   [35960] = { 
-    volume = 2, 
-    average = 187.501, 
+    volume = 4, 
+    average = 145.49995, 
   }, 
   [35961] = { 
     volume =  nil, 
@@ -6016,20 +6012,20 @@ return {
     average =  nil, 
   }, 
   [35969] = { 
-    volume = 1, 
-    average = 30, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35970] = { 
-    volume = 1, 
-    average = 740, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35971] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [35972] = { 
-    volume = 2, 
-    average = 5.51495, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35973] = { 
     volume =  nil, 
@@ -6040,12 +6036,12 @@ return {
     average =  nil, 
   }, 
   [35975] = { 
-    volume = 1, 
-    average = 8.0195, 
-  }, 
-  [35976] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [35976] = { 
+    volume = 1, 
+    average = 90.9999, 
   }, 
   [35977] = { 
     volume =  nil, 
@@ -6056,8 +6052,8 @@ return {
     average =  nil, 
   }, 
   [35979] = { 
-    volume = 1, 
-    average = 15, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35980] = { 
     volume =  nil, 
@@ -6072,8 +6068,8 @@ return {
     average =  nil, 
   }, 
   [35983] = { 
-    volume = 1, 
-    average = 0.1895, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [35984] = { 
     volume =  nil, 
@@ -6089,15 +6085,15 @@ return {
   }, 
   [35987] = { 
     volume = 1, 
-    average = 20, 
+    average = 109.9999, 
   }, 
   [35988] = { 
     volume = 1, 
-    average = 155.9798, 
+    average = 77.0093, 
   }, 
   [35989] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 0.1905, 
   }, 
   [35990] = { 
     volume =  nil, 
@@ -6111,25 +6107,21 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [35994] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [35999] = { 
-    volume = 2, 
-    average = 666.99905, 
+    volume = 1, 
+    average = 900.9993, 
   }, 
   [36000] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [36001] = { 
-    volume = 1, 
-    average = 599.9899, 
-  }, 
-  [36002] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [36002] = { 
+    volume = 1, 
+    average = 150, 
   }, 
   [36141] = { 
     volume =  nil, 
@@ -6161,7 +6153,7 @@ return {
   }, 
   [36318] = { 
     volume = 1, 
-    average = 490.9994, 
+    average = 250.9993, 
   }, 
   [36338] = { 
     volume =  nil, 
@@ -6215,53 +6207,53 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [37143] = { 
+    volume = 1, 
+    average = 1500, 
+  }, 
   [37144] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [37893] = { 
-    volume = 6, 
-    average = 33, 
+    volume = 12, 
+    average = 22.00106666666667, 
   }, 
   [37894] = { 
-    volume = 2, 
-    average = 8, 
-  }, 
-  [37895] = { 
-    volume = 1, 
-    average = 20, 
-  }, 
-  [37896] = { 
-    volume = 3, 
-    average = 50, 
-  }, 
-  [38087] = { 
-    volume = 2, 
-    average = 27.5, 
-  }, 
-  [38139] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [37895] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [37896] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [38087] = { 
+    volume = 1, 
+    average = 20, 
+  }, 
   [38163] = { 
     volume = 1, 
-    average = 1199, 
+    average = 1198.9999, 
   }, 
   [38169] = { 
-    volume = 2, 
-    average = 1399.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38173] = { 
-    volume = 2, 
-    average = 1400.9976000000001, 
+    volume = 3, 
+    average = 1400, 
   }, 
   [38179] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [38181] = { 
-    volume = 1, 
-    average = 1399.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38228] = { 
     volume =  nil, 
@@ -6284,16 +6276,16 @@ return {
     average =  nil, 
   }, 
   [38440] = { 
-    volume = 1, 
-    average = 45.9098, 
+    volume = 39, 
+    average = 52.1957, 
   }, 
   [38481] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [38504] = { 
-    volume = 1, 
-    average = 15.993, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38506] = { 
     volume =  nil, 
@@ -6312,112 +6304,112 @@ return {
     average =  nil, 
   }, 
   [38612] = { 
-    volume = 7, 
-    average = 198.9981571428571, 
+    volume = 1, 
+    average = 749.9999, 
   }, 
   [38707] = { 
-    volume = 14, 
-    average = 11, 
+    volume = 5, 
+    average = 7.889799999999999, 
   }, 
   [38708] = { 
-    volume = 211, 
-    average = 10.745859649122805, 
+    volume = 238, 
+    average = 11.497539999999999, 
   }, 
   [38755] = { 
-    volume = 137, 
-    average = 624.2929237037037, 
+    volume = 128, 
+    average = 612.9993796875, 
   }, 
   [38762] = { 
-    volume = 1, 
-    average = 17.9999, 
+    volume = 2, 
+    average = 41.99995, 
   }, 
   [38763] = { 
-    volume = 1, 
-    average = 9, 
+    volume = 2, 
+    average = 10.49995, 
   }, 
   [38764] = { 
-    volume = 1, 
-    average = 6, 
+    volume = 5, 
+    average = 10.6065, 
   }, 
   [38765] = { 
-    volume = 4, 
-    average = 16.9975, 
+    volume = 1, 
+    average = 0.0325, 
   }, 
   [38766] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [38767] = { 
-    volume = 1, 
-    average = 29, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38803] = { 
-    volume = 5, 
-    average = 1307.99748, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38834] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [38835] = { 
-    volume = 144, 
-    average = 110.2170736842105, 
+    volume = 77, 
+    average = 114.68819062499995, 
   }, 
   [38836] = { 
-    volume = 10, 
-    average = 113.79848, 
+    volume = 35, 
+    average = 111.53188666666668, 
   }, 
   [38837] = { 
-    volume = 330, 
-    average = 85.71251594202897, 
+    volume = 292, 
+    average = 87.91985087719294, 
   }, 
   [38839] = { 
-    volume = 24, 
-    average = 91.6994, 
+    volume = 3, 
+    average = 100.48880000000001, 
   }, 
   [38840] = { 
-    volume = 74, 
-    average = 75.56692448979588, 
+    volume = 55, 
+    average = 86.89935111111112, 
   }, 
   [38841] = { 
-    volume = 87, 
-    average = 25.634006666666664, 
+    volume = 200, 
+    average = 25.4044, 
   }, 
   [38843] = { 
-    volume = 534, 
-    average = 26.376685000000016, 
+    volume = 1494, 
+    average = 26.13467676767677, 
   }, 
   [38844] = { 
-    volume = 966, 
-    average = 30.67764666666667, 
+    volume = 1476, 
+    average = 30.314409541984745, 
   }, 
   [38845] = { 
-    volume = 80, 
-    average = 49.88483125, 
+    volume = 137, 
+    average = 49.588994444444445, 
   }, 
   [38983] = { 
-    volume = 1, 
-    average = 650, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [38990] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [38996] = { 
-    volume = 2, 
-    average = 699.9991, 
+    volume = 4, 
+    average = 775.2499250000001, 
   }, 
   [38997] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 3600, 
   }, 
   [39005] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39042] = { 
-    volume = 3, 
-    average = 4.998866666666667, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39043] = { 
     volume =  nil, 
@@ -6444,8 +6436,8 @@ return {
     average =  nil, 
   }, 
   [39060] = { 
-    volume = 1, 
-    average = 344.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39061] = { 
     volume =  nil, 
@@ -6456,24 +6448,24 @@ return {
     average =  nil, 
   }, 
   [39063] = { 
-    volume = 1, 
-    average = 549, 
+    volume = 5, 
+    average = 503.79997999999995, 
   }, 
   [39068] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39069] = { 
-    volume = 1, 
-    average = 529.9999, 
+    volume = 2, 
+    average = 459.9999, 
   }, 
   [39070] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 4, 
+    average = 449.9999, 
   }, 
   [39071] = { 
-    volume = 3, 
-    average = 489.33323333333334, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39128] = { 
     volume =  nil, 
@@ -6481,11 +6473,11 @@ return {
   }, 
   [39129] = { 
     volume = 1, 
-    average = 1.6385, 
+    average = 4.9999, 
   }, 
   [39130] = { 
-    volume = 2, 
-    average = 14.999400000000001, 
+    volume = 1, 
+    average = 14.9999, 
   }, 
   [39131] = { 
     volume =  nil, 
@@ -6493,23 +6485,23 @@ return {
   }, 
   [39132] = { 
     volume = 1, 
-    average = 25, 
+    average = 33, 
   }, 
   [39133] = { 
-    volume = 1, 
-    average = 20.9999, 
-  }, 
-  [39134] = { 
-    volume = 1, 
-    average = 49, 
-  }, 
-  [39135] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [39136] = { 
+  [39134] = { 
+    volume = 2, 
+    average = 14, 
+  }, 
+  [39135] = { 
     volume = 1, 
-    average = 1.3208, 
+    average = 25, 
+  }, 
+  [39136] = { 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39137] = { 
     volume =  nil, 
@@ -6520,24 +6512,24 @@ return {
     average =  nil, 
   }, 
   [39139] = { 
+    volume = 1, 
+    average = 49.9999, 
+  }, 
+  [39140] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [39140] = { 
-    volume = 2, 
-    average = 14.99995, 
-  }, 
   [39141] = { 
-    volume = 1, 
-    average = 48.9999, 
+    volume = 2, 
+    average = 38, 
   }, 
   [39142] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39143] = { 
-    volume = 1, 
-    average = 10, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39181] = { 
     volume =  nil, 
@@ -6548,20 +6540,16 @@ return {
     average =  nil, 
   }, 
   [39183] = { 
-    volume = 3, 
-    average = 58.565599999999996, 
+    volume = 4, 
+    average = 33.749975, 
   }, 
   [39184] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 50, 
   }, 
   [39185] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
-  [39187] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 20, 
   }, 
   [39195] = { 
     volume =  nil, 
@@ -6572,12 +6560,12 @@ return {
     average =  nil, 
   }, 
   [39197] = { 
-    volume = 2, 
-    average = 24.99995, 
-  }, 
-  [39198] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [39198] = { 
+    volume = 1, 
+    average = 25, 
   }, 
   [39199] = { 
     volume =  nil, 
@@ -6615,10 +6603,6 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [39223] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [39224] = { 
     volume =  nil, 
     average =  nil, 
@@ -6640,24 +6624,24 @@ return {
     average =  nil, 
   }, 
   [39238] = { 
-    volume = 2, 
-    average = 39.5, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39239] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39240] = { 
-    volume = 1, 
-    average = 15, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39241] = { 
-    volume = 1, 
-    average = 49.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39242] = { 
-    volume = 1, 
-    average = 0.2953, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39243] = { 
     volume =  nil, 
@@ -6672,12 +6656,12 @@ return {
     average =  nil, 
   }, 
   [39254] = { 
-    volume = 1, 
-    average = 24.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39255] = { 
-    volume = 1, 
-    average = 22, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39256] = { 
     volume =  nil, 
@@ -6700,12 +6684,12 @@ return {
     average =  nil, 
   }, 
   [39268] = { 
-    volume = 1, 
-    average = 18, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39269] = { 
-    volume = 1, 
-    average = 49.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39270] = { 
     volume =  nil, 
@@ -6725,11 +6709,11 @@ return {
   }, 
   [39281] = { 
     volume = 2, 
-    average = 39.4999, 
+    average = 37.49995, 
   }, 
   [39282] = { 
     volume = 1, 
-    average = 34, 
+    average = 22, 
   }, 
   [39283] = { 
     volume =  nil, 
@@ -6752,8 +6736,8 @@ return {
     average =  nil, 
   }, 
   [39288] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 22.9802, 
   }, 
   [39289] = { 
     volume =  nil, 
@@ -6776,8 +6760,8 @@ return {
     average =  nil, 
   }, 
   [39294] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 50, 
   }, 
   [39295] = { 
     volume =  nil, 
@@ -6785,35 +6769,35 @@ return {
   }, 
   [39296] = { 
     volume = 1, 
-    average = 80, 
+    average = 20, 
   }, 
   [39298] = { 
-    volume = 1, 
-    average = 13.1198, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39299] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39307] = { 
-    volume = 2, 
-    average = 189.5, 
+    volume = 3, 
+    average = 38.999766666666666, 
   }, 
   [39308] = { 
-    volume = 1, 
-    average = 50, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39309] = { 
-    volume = 1, 
-    average = 55, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39310] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39311] = { 
-    volume = 1, 
-    average = 49.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39312] = { 
     volume =  nil, 
@@ -6829,67 +6813,71 @@ return {
   }, 
   [39320] = { 
     volume = 1, 
-    average = 182.99, 
+    average = 179, 
   }, 
   [39321] = { 
-    volume = 3, 
-    average = 83.33333333333333, 
+    volume = 5, 
+    average = 80.15552, 
   }, 
   [8000026] = { 
-    volume = 2172, 
-    average = 2.2540879999999985, 
+    volume = 2412, 
+    average = 1.9928523809523808, 
   }, 
   [8000056] = { 
-    volume = 12, 
-    average = 9.967433333333334, 
+    volume = 8, 
+    average = 9.955, 
   }, 
   [8000053] = { 
     volume = 1, 
-    average = 429.53, 
+    average = 429.54, 
   }, 
   [8000055] = { 
-    volume = 14, 
-    average = 285.28376428571426, 
+    volume = 13, 
+    average = 284.9025454545454, 
   }, 
   [8000054] = { 
-    volume = 1, 
-    average = 159.86, 
+    volume = 2, 
+    average = 159.85000000000002, 
   }, 
   [8000057] = { 
-    volume = 2, 
-    average = 89.47999999999999, 
+    volume = 1, 
+    average = 89, 
   }, 
   [8000317] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8000318] = { 
-    volume = 1, 
-    average = 119.6966, 
-  }, 
-  [8000336] = { 
-    volume = 50, 
-    average = 14.71, 
-  }, 
-  [8000337] = { 
     volume =  nil, 
     average =  nil, 
   }, 
+  [8000336] = { 
+    volume = 45, 
+    average = 12.382200000000001, 
+  }, 
+  [8000337] = { 
+    volume = 12, 
+    average = 14.99975, 
+  }, 
   [8000338] = { 
-    volume = 1, 
-    average = 24, 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [8000341] = { 
+    volume = 15, 
+    average = 22, 
   }, 
   [8000567] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8000568] = { 
-    volume = 2, 
-    average = 850.4999, 
+    volume = 1, 
+    average = 750, 
   }, 
   [8000569] = { 
-    volume = 7, 
-    average = 1074.7127857142857, 
+    volume = 1, 
+    average = 1277.9996, 
   }, 
   [39591] = { 
     volume =  nil, 
@@ -6944,16 +6932,20 @@ return {
     average =  nil, 
   }, 
   [39614] = { 
-    volume = 1, 
-    average = 49.99, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39615] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [39620] = { 
+  [39617] = { 
     volume = 1, 
     average = 50, 
+  }, 
+  [39620] = { 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39621] = { 
     volume =  nil, 
@@ -6964,26 +6956,22 @@ return {
     average =  nil, 
   }, 
   [39658] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 50, 
   }, 
   [39659] = { 
     volume = 1, 
-    average = 44, 
+    average = 22, 
   }, 
   [39660] = { 
+    volume = 1, 
+    average = 4, 
+  }, 
+  [39661] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [39661] = { 
-    volume = 2, 
-    average = 29.99995, 
-  }, 
   [39662] = { 
-    volume = 1, 
-    average = 150, 
-  }, 
-  [39663] = { 
     volume =  nil, 
     average =  nil, 
   }, 
@@ -6992,20 +6980,20 @@ return {
     average =  nil, 
   }, 
   [39665] = { 
-    volume = 2, 
-    average = 95, 
-  }, 
-  [39666] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [39666] = { 
+    volume = 1, 
+    average = 99, 
   }, 
   [39667] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [39668] = { 
-    volume = 1, 
-    average = 40, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39679] = { 
     volume =  nil, 
@@ -7056,36 +7044,36 @@ return {
     average =  nil, 
   }, 
   [39768] = { 
-    volume = 2, 
-    average = 250, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39801] = { 
-    volume = 202, 
-    average = 4.1990083333333335, 
+    volume = 146, 
+    average = 4.097270000000001, 
   }, 
   [39802] = { 
-    volume = 41, 
-    average = 4.189166666666666, 
+    volume = 130, 
+    average = 4.178425, 
   }, 
   [39803] = { 
-    volume = 12, 
-    average = 85, 
+    volume = 7, 
+    average = 80.34965, 
   }, 
   [39814] = { 
-    volume = 2, 
-    average = 329.99985000000004, 
+    volume = 4, 
+    average = 250.9997, 
   }, 
   [39815] = { 
-    volume = 2, 
-    average = 174.99995, 
+    volume = 5, 
+    average = 115.98922499999998, 
   }, 
   [39816] = { 
-    volume = 5, 
-    average = 110.3329, 
+    volume = 4, 
+    average = 139.99949999999998, 
   }, 
   [39826] = { 
-    volume = 1, 
-    average = 0.3999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [39827] = { 
     volume =  nil, 
@@ -7108,8 +7096,8 @@ return {
     average =  nil, 
   }, 
   [39999] = { 
-    volume = 1, 
-    average = 555.9795, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [40005] = { 
     volume =  nil, 
@@ -7139,10 +7127,6 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [40012] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [40014] = { 
     volume =  nil, 
     average =  nil, 
@@ -7156,16 +7140,16 @@ return {
     average =  nil, 
   }, 
   [40091] = { 
-    volume = 10, 
-    average = 1390.3967100000002, 
+    volume = 4, 
+    average = 1374.6245749999998, 
   }, 
   [40092] = { 
-    volume = 9, 
-    average = 1894.3333111111108, 
+    volume = 8, 
+    average = 1851.125, 
   }, 
   [40093] = { 
-    volume = 9, 
-    average = 294.5495333333333, 
+    volume = 4, 
+    average = 294.12622500000003, 
   }, 
   [8000772] = { 
     volume =  nil, 
@@ -7176,24 +7160,24 @@ return {
     average =  nil, 
   }, 
   [8000800] = { 
-    volume = 2, 
-    average = 65.99945, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8000803] = { 
     volume = 1, 
-    average = 25, 
+    average = 50, 
   }, 
   [8000806] = { 
-    volume = 1, 
-    average = 29.9997, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8000929] = { 
-    volume = 107, 
-    average = 26.799025233644873, 
+    volume = 29, 
+    average = 29.096041379310336, 
   }, 
   [8000930] = { 
-    volume = 1, 
-    average = 59, 
+    volume = 4, 
+    average = 59.9999, 
   }, 
   [8000931] = { 
     volume =  nil, 
@@ -7204,20 +7188,20 @@ return {
     average =  nil, 
   }, 
   [8000938] = { 
-    volume = 1, 
-    average = 29.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8000952] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8000951] = { 
-    volume = 150, 
-    average = 6.33, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8000950] = { 
-    volume = 5676, 
-    average = 2.801559354838709, 
+    volume = 4262, 
+    average = 2.789626785714285, 
   }, 
   [8000953] = { 
     volume =  nil, 
@@ -7228,24 +7212,24 @@ return {
     average =  nil, 
   }, 
   [40522] = { 
-    volume = 1, 
-    average = 200, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [40538] = { 
-    volume = 1, 
-    average = 2499.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [40736] = { 
-    volume = 18, 
-    average = 954.19684, 
+    volume = 10, 
+    average = 970.249975, 
   }, 
   [40841] = { 
     volume = 9, 
-    average = 995.6103777777777, 
+    average = 1192.5547555555556, 
   }, 
   [40870] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 10, 
+    average = 0.99, 
   }, 
   [40900] = { 
     volume =  nil, 
@@ -7299,37 +7283,33 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
-  [41016] = { 
-    volume =  nil, 
-    average =  nil, 
-  }, 
   [41030] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [41038] = { 
-    volume = 1, 
-    average = 4.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8000966] = { 
-    volume = 517, 
-    average = 42.81209594594592, 
+    volume = 277, 
+    average = 40.97340666666667, 
   }, 
   [8001000] = { 
-    volume = 77, 
-    average = 991.0603585714289, 
+    volume = 21, 
+    average = 997.2853190476189, 
   }, 
   [8001008] = { 
-    volume = 4, 
-    average = 1255.5, 
+    volume = 1, 
+    average = 1147, 
   }, 
   [8001081] = { 
-    volume = 27, 
-    average = 20.942117647058826, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001094] = { 
-    volume = 1, 
-    average = 90, 
+    volume = 3, 
+    average = 70, 
   }, 
   [8001189] = { 
     volume =  nil, 
@@ -7348,24 +7328,24 @@ return {
     average =  nil, 
   }, 
   [41455] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 6, 
+    average = 0.030166666666666665, 
   }, 
   [41457] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [41459] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 186, 
+    average = 1, 
   }, 
   [41461] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [41474] = { 
-    volume = 300, 
-    average = 0.9999000000000001, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [41478] = { 
     volume =  nil, 
@@ -7379,113 +7359,113 @@ return {
     volume =  nil, 
     average =  nil, 
   }, 
+  [41979] = { 
+    volume = 9, 
+    average = 5, 
+  }, 
   [42027] = { 
-    volume = 1, 
-    average = 7299, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [42043] = { 
-    volume = 50, 
-    average = 3.989, 
+    volume = 148, 
+    average = 3.9493, 
   }, 
   [42044] = { 
-    volume = 250, 
-    average = 3.98986, 
+    volume = 100, 
+    average = 3.98985, 
   }, 
   [42045] = { 
-    volume = 275, 
-    average = 7.978311764705883, 
+    volume = 105, 
+    average = 7.978183333333333, 
   }, 
   [42046] = { 
-    volume = 95, 
-    average = 7.9995, 
+    volume = 40, 
+    average = 7.999300000000001, 
   }, 
   [42078] = { 
-    volume = 340, 
-    average = 43.704570370370405, 
+    volume = 475, 
+    average = 42.650842011834285, 
   }, 
   [42162] = { 
-    volume = 636, 
-    average = 4.456241999999998, 
+    volume = 610, 
+    average = 4.443205454545456, 
   }, 
   [42166] = { 
-    volume = 615, 
-    average = 6.696884374999999, 
+    volume = 411, 
+    average = 7.589602325581398, 
   }, 
   [42168] = { 
-    volume = 250, 
-    average = 4.098364285714286, 
+    volume = 217, 
+    average = 4.488253333333334, 
   }, 
   [42170] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [42171] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 10, 
+    average = 3, 
   }, 
   [42177] = { 
-    volume = 190, 
-    average = 5.778757142857143, 
-  }, 
-  [42236] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 145, 
+    average = 6.119407692307694, 
   }, 
   [42247] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [42260] = { 
-    volume = 200, 
-    average = 0.9981, 
+    volume = 155, 
+    average = 0.8660333333333333, 
   }, 
   [42314] = { 
-    volume = 333, 
-    average = 4.518283333333332, 
+    volume = 499, 
+    average = 4.6005199999999995, 
   }, 
   [42333] = { 
-    volume = 205, 
-    average = 2.0627857142857144, 
+    volume = 536, 
+    average = 3.194536507936508, 
   }, 
   [42335] = { 
-    volume = 20, 
-    average = 39, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [42336] = { 
-    volume = 57, 
-    average = 35.963011111111115, 
+    volume = 60, 
+    average = 39.03998, 
   }, 
   [42342] = { 
-    volume = 1003, 
-    average = 2.20961875, 
+    volume = 513, 
+    average = 2.1446466666666666, 
   }, 
   [42343] = { 
-    volume = 1828, 
-    average = 4.500376470588236, 
+    volume = 1716, 
+    average = 4.137002272727274, 
   }, 
   [42344] = { 
-    volume = 365, 
-    average = 3.698536363636363, 
+    volume = 433, 
+    average = 3.8942086956521726, 
   }, 
   [42394] = { 
-    volume = 1967, 
-    average = 1.7188661764705881, 
+    volume = 857, 
+    average = 1.2802300000000002, 
   }, 
   [42432] = { 
-    volume = 4, 
-    average = 1.066, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [42449] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [42582] = { 
-    volume = 7357, 
-    average = 0.0498, 
+    volume = 1000, 
+    average = 0.0499, 
   }, 
   [42585] = { 
-    volume = 37, 
-    average = 1.9899499999999999, 
+    volume = 46, 
+    average = 1.6749166666666666, 
   }, 
   [42586] = { 
     volume =  nil, 
@@ -7496,7 +7476,7 @@ return {
     average =  nil, 
   }, 
   [42588] = { 
-    volume = 50, 
+    volume = 5, 
     average = 15.999799999999999, 
   }, 
   [42602] = { 
@@ -7512,52 +7492,52 @@ return {
     average =  nil, 
   }, 
   [42613] = { 
-    volume = 1, 
-    average = 350, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [42614] = { 
-    volume = 1, 
-    average = 300, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [42634] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [42645] = { 
-    volume = 1000, 
-    average = 1.3767899999999997, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001399] = { 
-    volume = 101, 
-    average = 28.2483, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001400] = { 
-    volume = 71, 
-    average = 20.99845, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001401] = { 
-    volume = 12, 
-    average = 10, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001402] = { 
-    volume = 200, 
-    average = 96.9999, 
+    volume = 100, 
+    average = 97.9999, 
   }, 
   [8001403] = { 
-    volume = 100, 
-    average = 86, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001540] = { 
-    volume = 1, 
-    average = 7150.992, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001543] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8001674] = { 
-    volume = 9, 
-    average = 419.24987500000003, 
+    volume = 14, 
+    average = 394.57354285714285, 
   }, 
   [8001716] = { 
     volume =  nil, 
@@ -7572,52 +7552,52 @@ return {
     average =  nil, 
   }, 
   [8001843] = { 
-    volume =  nil, 
-    average =  nil, 
+    volume = 1, 
+    average = 500, 
   }, 
   [8001844] = { 
-    volume = 1, 
-    average = 750, 
-  }, 
-  [8001845] = { 
     volume =  nil, 
     average =  nil, 
+  }, 
+  [8001845] = { 
+    volume = 2, 
+    average = 478.99955, 
   }, 
   [8001846] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [8001855] = { 
-    volume = 1, 
-    average = 449, 
-  }, 
-  [8001856] = { 
-    volume = 1, 
-    average = 498.9999, 
-  }, 
-  [8001857] = { 
     volume =  nil, 
     average =  nil, 
   }, 
-  [8001858] = { 
+  [8001856] = { 
+    volume =  nil, 
+    average =  nil, 
+  }, 
+  [8001857] = { 
     volume = 1, 
-    average = 450, 
+    average = 477.9999, 
+  }, 
+  [8001858] = { 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [8001875] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [9000027] = { 
-    volume = 4, 
-    average = 22.49995, 
+    volume = 7, 
+    average = 18.999966666666666, 
   }, 
   [9000028] = { 
-    volume = 140, 
-    average = 79.12198222222221, 
+    volume = 142, 
+    average = 80.448202919708, 
   }, 
   [9000029] = { 
     volume = 1, 
-    average = 1199, 
+    average = 1500, 
   }, 
   [9000076] = { 
     volume =  nil, 
@@ -7636,8 +7616,8 @@ return {
     average =  nil, 
   }, 
   [9000163] = { 
-    volume = 3, 
-    average = 5.0195, 
+    volume = 210, 
+    average = 6.616740000000002, 
   }, 
   [9000333] = { 
     volume =  nil, 
@@ -7656,100 +7636,100 @@ return {
     average =  nil, 
   }, 
   [38815] = { 
-    volume = 653, 
-    average = 24.441691578947378, 
+    volume = 377, 
+    average = 23.544638888888887, 
   }, 
   [39780] = { 
-    volume = 71, 
-    average = 54.07051538461539, 
+    volume = 97, 
+    average = 49.169953846153845, 
   }, 
   [35885] = { 
-    volume = 3780, 
-    average = 1.2187186046511629, 
+    volume = 2931, 
+    average = 1.4924136363636367, 
   }, 
   [34724] = { 
-    volume = 3937, 
-    average = 0.3262285714285715, 
+    volume = 9355, 
+    average = 0.2578926829268293, 
   }, 
   [34725] = { 
-    volume = 1617, 
-    average = 0.4996611111111111, 
+    volume = 257, 
+    average = 0.37194166666666667, 
   }, 
   [34727] = { 
-    volume = 31, 
-    average = 0.9533230769230769, 
+    volume = 54, 
+    average = 0.76897, 
   }, 
   [34726] = { 
-    volume = 169, 
-    average = 26.360930000000007, 
+    volume = 86, 
+    average = 25.189216666666667, 
   }, 
   [35889] = { 
-    volume = 4, 
-    average = 0.3236, 
+    volume = 12, 
+    average = 0.31185, 
   }, 
   [35888] = { 
-    volume = 276, 
-    average = 0.6879904761904763, 
+    volume = 4, 
+    average = 3.75155, 
   }, 
   [35887] = { 
-    volume = 663, 
-    average = 0.22562499999999996, 
+    volume = 694, 
+    average = 0.12777692307692307, 
   }, 
   [28188] = { 
-    volume = 423, 
-    average = 2.894965, 
+    volume = 357, 
+    average = 3.9050976190476185, 
   }, 
   [45609] = { 
-    volume = 6, 
-    average = 29.688233333333333, 
+    volume = 5, 
+    average = 22.991600000000002, 
   }, 
   [45610] = { 
-    volume = 1, 
-    average = 95.9999, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [45612] = { 
-    volume = 5, 
-    average = 98.7254, 
+    volume = 3, 
+    average = 98.40893333333334, 
   }, 
   [45613] = { 
     volume = 1, 
-    average = 228, 
+    average = 248.9999, 
   }, 
   [45614] = { 
-    volume = 5, 
-    average = 349.94582, 
+    volume = 2, 
+    average = 314.4996, 
   }, 
   [46501] = { 
-    volume = 4, 
-    average = 573.9993999999999, 
+    volume = 2, 
+    average = 549.9997, 
   }, 
   [45611] = { 
-    volume = 1, 
-    average = 200, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [45501] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [46464] = { 
-    volume = 3, 
-    average = 604.0003666666668, 
+    volume = 2, 
+    average = 524.9999, 
   }, 
   [43128] = { 
-    volume = 729, 
-    average = 2.3550153846153847, 
+    volume = 477, 
+    average = 1.8375454545454544, 
   }, 
   [43131] = { 
     volume =  nil, 
     average =  nil, 
   }, 
   [43129] = { 
-    volume = 735, 
-    average = 0.6308125000000001, 
+    volume = 915, 
+    average = 0.4675032258064516, 
   }, 
   [43130] = { 
-    volume = 1, 
-    average = 179.9998, 
+    volume =  nil, 
+    average =  nil, 
   }, 
 
 }
