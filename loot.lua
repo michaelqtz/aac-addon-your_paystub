@@ -19,6 +19,8 @@ local ITEM_TASK_ID_PICKED_PACK_UP = 23
 local ITEM_TASK_ID_PACK_WAS_CRAFTED = 27
 --> AAC 39 = Drank a potion
 local ITEM_TASK_ID_CONSUMABLE_USED = 39
+--> AAC 41 = From dawnsdrop pickaxe
+local ITEM_TASK_ID_DAWNSDROP_PICKAXE = 41
 --> AAC 46 = Mailed item OR take item out of mail
 local ITEM_TASK_ID_MAIL_SEND_OR_RECEIVE = 46
 --> AAC 61 = Dropped pack on the floor
@@ -296,7 +298,7 @@ end
   
 local function lootedItem(itemLinkText, itemCount, itemTaskType, tradeOtherName)
     local itemId = itemIdFromItemLinkText(itemLinkText)
-    if itemTaskType == ITEM_TASK_ID_LOOTED_FROM_MONSTER or itemTaskType == ITEM_TASK_ID_FARMED then 
+    if itemTaskType == ITEM_TASK_ID_LOOTED_FROM_MONSTER or itemTaskType == ITEM_TASK_ID_FARMED or ITEM_TASK_ID_DAWNSDROP_PICKAXE then 
         addItemToSession(itemId, itemCount)
     end
 
@@ -445,6 +447,42 @@ end
 local function fillInArcheumTreePrices()
 
 end
+
+local function fillInPureOrePrices()
+    local PURE_ORE_CONVERSION_MULTIPLIER = 9
+    local PURE_ORE_IDS = {}
+    PURE_ORE_IDS["Pure Iron Ore"] = 8081
+    PURE_ORE_IDS["Pure Copper Ore"] = 8067
+    PURE_ORE_IDS["Pure Silver Ore"] = 8085
+    PURE_ORE_IDS["Pure Gold Ore"] = 8086
+    PURE_ORE_IDS["Pure Archeum Ore"] = 17715
+
+    local ironPrice = AH_PRICES[8022] -- Iron Ore
+    local copperPrice = AH_PRICES[3411] -- Copper Ore
+    local silverPrice = AH_PRICES[8023] -- Silver Ore
+    local goldPrice = AH_PRICES[8027] -- Gold Ore
+    local archeumPrice = AH_PRICES[1386] -- Archeum Ore
+    if ironPrice ~= nil then ironPrice = ironPrice.average else ironPrice = 0 end
+    if copperPrice ~= nil then copperPrice = copperPrice.average else copperPrice = 0 end
+    if silverPrice ~= nil then silverPrice = silverPrice.average else silverPrice = 0 end
+    if goldPrice ~= nil then goldPrice = goldPrice.average else goldPrice = 0 end
+    if archeumPrice ~= nil then archeumPrice = archeumPrice.average else archeumPrice = 0 end
+    ironPrice = ironPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]] = {}
+    AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]].average = ironPrice
+    copperPrice = copperPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    AH_PRICES[PURE_ORE_IDS["Pure Copper Ore"]] = {}
+    AH_PRICES[PURE_ORE_IDS["Pure Copper Ore"]].average = copperPrice
+    silverPrice = silverPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    AH_PRICES[PURE_ORE_IDS["Pure Silver Ore"]] = {}
+    AH_PRICES[PURE_ORE_IDS["Pure Silver Ore"]].average = silverPrice
+    goldPrice = goldPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    AH_PRICES[PURE_ORE_IDS["Pure Gold Ore"]] = {}
+    AH_PRICES[PURE_ORE_IDS["Pure Gold Ore"]].average = goldPrice
+    archeumPrice = archeumPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    AH_PRICES[PURE_ORE_IDS["Pure Archeum Ore"]] = {}
+    AH_PRICES[PURE_ORE_IDS["Pure Archeum Ore"]].average = archeumPrice
+end 
 
 --- Loot Session Details Window Drawing
 local function drawLootSessionDetails(sessionIndex)
