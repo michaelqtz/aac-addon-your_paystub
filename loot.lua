@@ -467,19 +467,19 @@ local function fillInPureOrePrices()
     if silverPrice ~= nil then silverPrice = silverPrice.average else silverPrice = 0 end
     if goldPrice ~= nil then goldPrice = goldPrice.average else goldPrice = 0 end
     if archeumPrice ~= nil then archeumPrice = archeumPrice.average else archeumPrice = 0 end
-    ironPrice = ironPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    ironPrice = ironPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]].average = ironPrice
-    copperPrice = copperPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    copperPrice = copperPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Copper Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Copper Ore"]].average = copperPrice
-    silverPrice = silverPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    silverPrice = silverPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Silver Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Silver Ore"]].average = silverPrice
-    goldPrice = goldPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    goldPrice = goldPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Gold Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Gold Ore"]].average = goldPrice
-    archeumPrice = archeumPrice.average * PURE_ORE_CONVERSION_MULTIPLIER
+    archeumPrice = archeumPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Archeum Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Archeum Ore"]].average = archeumPrice
 end 
@@ -893,6 +893,8 @@ local function OnLoad()
     fillInRegradeBrazierPrices()
     -- Fill in archeum tree loot prices
     fillInArcheumTreePrices()
+    -- Fill in pure ore prices
+    fillInPureOrePrices()
     
     -- Load previous sessions, or make empty file.
     pastSessions = api.File:Read(pastSessionsFilename)
