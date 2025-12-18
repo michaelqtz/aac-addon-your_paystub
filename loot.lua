@@ -325,30 +325,10 @@ local function fillInAHPricesForCrates()
         local treeId = 35301
         local mgpId = 23653 --> Mysterious Garden Powder
 
-        local sunDustPrice = AH_PRICES[sunDustId]
-        if sunDustPrice ~= nil then 
-            sunDustPrice = sunDustPrice.average 
-        else 
-            sunDustPrice = 0 
-        end
-        local moonDustPrice = AH_PRICES[moonDustId]
-        if moonDustPrice ~= nil then 
-            moonDustPrice = moonDustPrice.average 
-        else 
-            moonDustPrice = 0 
-        end
-        local starDustPrice = AH_PRICES[starDustId]
-        if starDustPrice ~= nil then 
-            starDustPrice = starDustPrice.average 
-        else 
-            starDustPrice = 0 
-        end
-        local mgpPrice = AH_PRICES[mgpId]
-        if mgpPrice ~= nil then 
-            mgpPrice = mgpPrice.average 
-        else 
-            mgpPrice = 0 
-        end
+        local sunDustPrice = (AH_PRICES[sunDustId] and AH_PRICES[sunDustId].average) or 0
+        local moonDustPrice = (AH_PRICES[moonDustId] and AH_PRICES[moonDustId].average) or 0
+        local starDustPrice = (AH_PRICES[starDustId] and AH_PRICES[starDustId].average) or 0
+        local mgpPrice = (AH_PRICES[mgpId] and AH_PRICES[mgpId].average) or 0
 
         local brazierPrice = 0.5
         local treePrice = 0.5
@@ -402,19 +382,12 @@ local function fillInRegradeBrazierPrices()
     REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"] = 28300
 
     -- Basic Regrade Point Fragments
-    local sunFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]]
-    local sunpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint"]]
-    local moonFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]]
-    local moonpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint"]]
-    local starFragmentPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]]
-    local starpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint"]]
-
-    if sunFragmentPrice ~= nil then sunFragmentPrice = sunFragmentPrice.average end
-    if sunpointPrice ~= nil then sunpointPrice = sunpointPrice.average end
-    if moonFragmentPrice ~= nil then moonFragmentPrice = moonFragmentPrice.average end
-    if moonpointPrice ~= nil then moonpointPrice = moonpointPrice.average end
-    if starFragmentPrice ~= nil then starFragmentPrice = starFragmentPrice.average end
-    if starpointPrice ~= nil then starpointPrice = starpointPrice.average end
+    local sunFragmentPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]].average) or 0
+    local sunpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint"]].average) or 0
+    local moonFragmentPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint Fragment"]].average) or 0
+    local moonpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Moonpoint"]].average) or 0
+    local starFragmentPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]].average) or 0
+    local starpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint"]].average) or 0
     if sunpointPrice ~= nil then 
         sunFragmentPrice = sunpointPrice / 10
         AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Sunpoint Fragment"]] = {}
@@ -431,18 +404,12 @@ local function fillInRegradeBrazierPrices()
         AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Starpoint Fragment"]].average = starFragmentPrice
     end
     -- Lucky Regrade Point Shards
-    local luckySunShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]]
-    local luckySunpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"]]
-    local luckyMoonShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]]
-    local luckyMoonpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint"]]
-    local luckyStarShardPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]]
-    local luckyStarpointPrice = AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint"]]
-    if luckySunShardPrice ~= nil then luckySunShardPrice = luckySunShardPrice.average end
-    if luckySunpointPrice ~= nil then luckySunpointPrice = luckySunpointPrice.average end
-    if luckyMoonShardPrice ~= nil then luckyMoonShardPrice = luckyMoonShardPrice.average end
-    if luckyMoonpointPrice ~= nil then luckyMoonpointPrice = luckyMoonpointPrice.average end
-    if luckyStarShardPrice ~= nil then luckyStarShardPrice = luckyStarShardPrice.average end
-    if luckyStarpointPrice ~= nil then luckyStarpointPrice = luckyStarpointPrice.average end
+    local luckySunShardPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]].average) or 0
+    local luckySunpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint"]].average) or 0
+    local luckyMoonShardPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint Shard"]].average) or 0
+    local luckyMoonpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Moonpoint"]].average) or 0
+    local luckyStarShardPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint Shard"]].average) or 0
+    local luckyStarpointPrice = (AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint"]] and AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Starpoint"]].average) or 0
     if luckySunpointPrice ~= nil then 
         luckySunShardPrice = luckySunpointPrice / 3
         AH_PRICES[REGRADE_BRAZIER_LOOT_IDS["Lucky Sunpoint Shard"]] = {}
@@ -473,16 +440,11 @@ local function fillInPureOrePrices()
     PURE_ORE_IDS["Pure Gold Ore"] = 8086
     PURE_ORE_IDS["Pure Archeum Ore"] = 17715
 
-    local ironPrice = AH_PRICES[8022] -- Iron Ore
-    local copperPrice = AH_PRICES[3411] -- Copper Ore
-    local silverPrice = AH_PRICES[8023] -- Silver Ore
-    local goldPrice = AH_PRICES[8027] -- Gold Ore
-    local archeumPrice = AH_PRICES[1386] -- Archeum Ore
-    if ironPrice ~= nil then ironPrice = ironPrice.average else ironPrice = 0 end
-    if copperPrice ~= nil then copperPrice = copperPrice.average else copperPrice = 0 end
-    if silverPrice ~= nil then silverPrice = silverPrice.average else silverPrice = 0 end
-    if goldPrice ~= nil then goldPrice = goldPrice.average else goldPrice = 0 end
-    if archeumPrice ~= nil then archeumPrice = archeumPrice.average else archeumPrice = 0 end
+    local ironPrice = (AH_PRICES[8022] and AH_PRICES[8022].average) or 0 -- Iron Ore
+    local copperPrice = (AH_PRICES[3411] and AH_PRICES[3411].average) or 0 -- Copper Ore
+    local silverPrice = (AH_PRICES[8023] and AH_PRICES[8023].average) or 0 -- Silver Ore
+    local goldPrice = (AH_PRICES[8027] and AH_PRICES[8027].average) or 0 -- Gold Ore
+    local archeumPrice = (AH_PRICES[1386] and AH_PRICES[1386].average) or 0 -- Archeum Ore
     ironPrice = ironPrice * PURE_ORE_CONVERSION_MULTIPLIER
     AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]] = {}
     AH_PRICES[PURE_ORE_IDS["Pure Iron Ore"]].average = ironPrice
