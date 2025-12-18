@@ -326,13 +326,29 @@ local function fillInAHPricesForCrates()
         local mgpId = 23653 --> Mysterious Garden Powder
 
         local sunDustPrice = AH_PRICES[sunDustId]
-        if sunDustPrice ~= nil then sunDustPrice = sunDustPrice.average end
+        if sunDustPrice ~= nil then 
+            sunDustPrice = sunDustPrice.average 
+        else 
+            sunDustPrice = 0 
+        end
         local moonDustPrice = AH_PRICES[moonDustId]
-        if moonDustPrice ~= nil then moonDustPrice = moonDustPrice.average end
+        if moonDustPrice ~= nil then 
+            moonDustPrice = moonDustPrice.average 
+        else 
+            moonDustPrice = 0 
+        end
         local starDustPrice = AH_PRICES[starDustId]
-        if starDustPrice ~= nil then starDustPrice = starDustPrice.average end
+        if starDustPrice ~= nil then 
+            starDustPrice = starDustPrice.average 
+        else 
+            starDustPrice = 0 
+        end
         local mgpPrice = AH_PRICES[mgpId]
-        if mgpPrice ~= nil then mgpPrice = mgpPrice.average end
+        if mgpPrice ~= nil then 
+            mgpPrice = mgpPrice.average 
+        else 
+            mgpPrice = 0 
+        end
 
         local brazierPrice = 0.5
         local treePrice = 0.5
