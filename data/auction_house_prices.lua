@@ -3772,8 +3772,8 @@ return {
     average =  nil, 
   }, 
   [28297] = { 
-    volume = 1, 
-    average = 439.9996, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28298] = { 
     volume =  nil, 
@@ -3792,8 +3792,8 @@ return {
     average =  nil, 
   }, 
   [28302] = { 
-    volume = 51, 
-    average = 15.333100000000002, 
+    volume =  nil, 
+    average =  nil, 
   }, 
   [28303] = { 
     volume =  nil, 
