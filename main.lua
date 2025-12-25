@@ -2,7 +2,7 @@
 local your_paystub_addon = {
 	name = "Your Paystub",
 	author = "Michaelqt",
-	version = "1.6.0",
+	version = "1.6.1",
 	desc = "Keep track of how much you get paid!"
 }
 

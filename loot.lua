@@ -482,6 +482,7 @@ local function drawLootSessionDetails(sessionIndex)
     local profitPerHour = profitTotal / (duration / 3600)
     local killsPerHour = kills / (duration / 3600)
     local laborPerHour = laborSpent / (duration / 3600)
+    local silverPerLabor = profitTotal * 100 / laborSpent
     local titleStr = zone .. " (" .. string.format("%02d/%02d/%04d", date.month, date.day, date.year) .. ")"
 
     local lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
@@ -648,11 +649,12 @@ local function OnUpdate(dt)
         if currentSession ~= nil then
             local profitPerHour = currentSession["profitTotal"] / (lootTrackerSessionTimer / 1000) * 3600
             local killsPerHour = currentSession["kills"] / (lootTrackerSessionTimer / 1000) * 3600
-            local laborPerHour = currentSession["laborSpent"] / (lootTrackerSessionTimer / 1000) * 3600
+            -- local laborPerHour = currentSession["laborSpent"] / (lootTrackerSessionTimer / 1000) * 3600
+            local silverPerLabor = currentSession["profitTotal"] * 100 / currentSession["laborSpent"]
 
             lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: " .. string.format('%.0f', tostring(currentSession["profitTotal"])) .. "g" .. " (" .. string.format('%.0f', tostring(profitPerHour)) .. "g/hr)")
             lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: " .. tostring(currentSession["kills"]) .. " (" .. string.format('%.0f', tostring(killsPerHour)) .. "/hr)")
-            lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: " .. tostring(currentSession["laborSpent"] .. " (" .. string.format('%.0f', tostring(laborPerHour)) .. "/hr)"))
+            lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: " .. tostring(currentSession["laborSpent"] .. " (" .. string.format('%.0f', tostring(silverPerLabor)) .. "s/labor)"))
         else 
             lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: 0g")
             lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: 0")
