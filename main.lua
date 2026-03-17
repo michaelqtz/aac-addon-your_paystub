@@ -326,10 +326,10 @@ local function CreateAccountingWindow(wndParent)
     ApplyTextColor(title, FONT_COLOR.TITLE)
     title:SetText("Accounting")
     title:AddAnchor("TOP", wnd, 0, 10)
-    -- Session-holding Scroll List
+    -- Session-holding Scroll List (offset down to make room for time window labels)
     local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
     sessionScrollList:Show(true)
-    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 4)
+    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 44)
     sessionScrollList:AddAnchor("BOTTOMRIGHT", wnd, -4, -4)
 end
 
@@ -418,7 +418,8 @@ local function OnLoad()
             paystubDisplayWindow:Show(false)
         else
             paystubDisplayWindow:Show(true)
-        end 
+            accountingAddon:UpdateTimeWindowLabels()
+        end
     end 
     paystubBtn:SetHandler("OnClick", paystubBtn.OnClick)
     
