@@ -39,7 +39,7 @@ local latestMoneyChange = 0
 local sessionSaveTimer = 0
 local SESSION_SAVE_TIME = 60000
 
--- Rolling time window tracking (volatile, resets on logout)
+-- Rolling time window tracking (persisted to disk)
 local totalEarnedNum = 0
 local totalSpentNum = 0
 
@@ -342,8 +342,19 @@ local function saveCurrentSessionToFile()
 
     pastSessions["sessions"][currentSession.dateKey] = currentSession
 
-    
-    -- api.Log:Info(pastSessions)
+    pastSessions["timeWindows"] = {
+        totalEarnedNum = totalEarnedNum,
+        totalSpentNum = totalSpentNum,
+        minuteEarned = minuteEarned,
+        minuteSpent = minuteSpent,
+        minuteHead = minuteHead,
+        minuteCount = minuteCount,
+        hourEarned = hourEarned,
+        hourSpent = hourSpent,
+        hourHead = hourHead,
+        hourCount = hourCount,
+    }
+
     api.File:Write(pastSessionsFilename, pastSessions)
     -- Refresh accounting session list
     local sessionScrollList = accountingWindow.sessionScrollList
@@ -415,19 +426,24 @@ local function SessionSetFunc(subItem, data, setValue)
         local titleStr = dateStr .. ": "
         data.profit = X2Util:StrNumericSub(data.goldEnd, data.goldStart)
         -- format the string in data.profit as last two digies are copper, next two are silver, rest is gold
-        local profitStr = formatStringAsGold(data.profit)
-        local endStr = formatStringAsGold(data.goldEnd)   
+        local profitNum = tonumber(data.profit) or 0
+        local sign = profitNum < 0 and "-" or ""
+        local profitStr = sign .. formatGoldShort(profitNum)
+        local endStr = formatStringAsGold(data.goldEnd)
 
+        local earned = tonumber(data.goldEarned or "0") or 0
+        local spent = tonumber(data.goldSpent or "0") or 0
         titleStr = titleStr .. " " .. endStr .. " (Profit: " .. profitStr .. ")"
 
-        if string.find(data.profit, "-") then
+        if profitNum < 0 then
             subItem.bg:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 0.4) -- Red
         else
             subItem.bg:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 0.4) -- Green
         end
 
-
         subItem.sessionTitle:SetText(titleStr)
+        subItem.earnedLabel:SetText("▲ " .. formatGoldShort(earned))
+        subItem.spentLabel:SetText("▼ " .. formatGoldShort(spent))
     end
 end
 
@@ -449,14 +465,34 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     sessionTitle:AddAnchor("TOPLEFT", subItem, 10, 10)
     sessionTitle:SetAutoResize(true)
     sessionTitle.style:SetAlign(ALIGN.LEFT)
-    
+
+    -- Earned label (green ▲) same row, after title
+    local earnedLabel = subItem:CreateChildWidget("label", "earnedLabel", 0, true)
+    earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    earnedLabel.style:SetAlign(ALIGN.LEFT)
+    earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
+    earnedLabel:SetText("")
+    earnedLabel:AddAnchor("LEFT", sessionTitle, 370, 0)
+    earnedLabel:SetAutoResize(true)
+    subItem.earnedLabel = earnedLabel
+
+    -- Spent label (red ▼) same row, after earned
+    local spentLabel = subItem:CreateChildWidget("label", "spentLabel", 0, true)
+    spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    spentLabel.style:SetAlign(ALIGN.LEFT)
+    spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
+    spentLabel:SetText("")
+    spentLabel:AddAnchor("LEFT", earnedLabel, 100, 0)
+    spentLabel:SetAutoResize(true)
+    subItem.spentLabel = spentLabel
+
     -- Interact Layer overtop of everything
     local clickOverlay = subItem:CreateChildWidget("button", "clickOverlay", 0, true)
     clickOverlay:AddAnchor("TOPLEFT", subItem, 0, 0)
     clickOverlay:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
     function clickOverlay:OnClick()
         api.Log:Info("Ding!")
-    end 
+    end
     clickOverlay:SetHandler("OnClick", clickOverlay.OnClick)
 end
 
@@ -600,17 +636,32 @@ local function OnLoad()
     end
 
     fillSessionTableData(sessionScrollList, 1)
-    startAccountingSession()
 
-    -- Seed initial snapshots so time windows have a baseline immediately
-    minuteHead = 1
-    minuteEarned[1] = 0
-    minuteSpent[1] = 0
-    minuteCount = 1
-    hourHead = 1
-    hourEarned[1] = 0
-    hourSpent[1] = 0
-    hourCount = 1
+    -- Restore time window data from disk, or seed fresh (must be before startAccountingSession)
+    if pastSessions and pastSessions.timeWindows then
+        local tw = pastSessions.timeWindows
+        totalEarnedNum = tw.totalEarnedNum or 0
+        totalSpentNum = tw.totalSpentNum or 0
+        minuteEarned = tw.minuteEarned or {}
+        minuteSpent = tw.minuteSpent or {}
+        minuteHead = tw.minuteHead or 0
+        minuteCount = tw.minuteCount or 0
+        hourEarned = tw.hourEarned or {}
+        hourSpent = tw.hourSpent or {}
+        hourHead = tw.hourHead or 0
+        hourCount = tw.hourCount or 0
+    else
+        minuteHead = 1
+        minuteEarned[1] = 0
+        minuteSpent[1] = 0
+        minuteCount = 1
+        hourHead = 1
+        hourEarned[1] = 0
+        hourSpent[1] = 0
+        hourCount = 1
+    end
+
+    startAccountingSession()
 
     api.On("UPDATE", OnUpdate)
     api.SaveSettings()
