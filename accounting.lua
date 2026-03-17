@@ -39,6 +39,25 @@ local latestMoneyChange = 0
 local sessionSaveTimer = 0
 local SESSION_SAVE_TIME = 60000
 
+-- Rolling time window tracking (persisted to disk)
+local totalEarnedNum = 0
+local totalSpentNum = 0
+
+local minuteEarned = {}
+local minuteSpent = {}
+local minuteHead = 0
+local minuteCount = 0
+
+local hourEarned = {}
+local hourSpent = {}
+local hourHead = 0
+local hourCount = 0
+
+local minuteSnapshotTimer = 0
+local MINUTE_SNAPSHOT_TIME = 60000
+local hourSnapshotTimer = 0
+local HOUR_SNAPSHOT_TIME = 3600000
+
 local pageSize = 20 --> number of sessions on page
 local maxPage
 
@@ -117,13 +136,15 @@ end
 local function recordPlayerMoneyEvent(change, changeStr, itemTaskType, tradeOtherName)
     latestMoneyChangeStr = changeStr
     latestMoneyChange = change
-    if change > 0 then 
+    if change > 0 then
         addMoneyStrToSessionField(changeStr, "goldEarned")
+        totalEarnedNum = totalEarnedNum + change
     elseif change < 0 then
-        addMoneyStrToSessionField(changeStr, "goldSpent") 
-    end 
+        addMoneyStrToSessionField(changeStr, "goldSpent")
+        totalSpentNum = totalSpentNum + (-change)
+    end
     -- api.Log:Info("PLAYER_MONEY")
-end 
+end
 
 local function recordMailboxMoneyTakenEvent()
     if latestMoneyChange > 0 then 
@@ -155,6 +176,44 @@ local function formatStringAsGold(moneyStr)
     return endStr
 end
 
+
+local function formatGoldShort(num)
+    local val = math.floor(math.abs(num))
+    local gold = math.floor(val / 10000)
+    local silver = math.floor((val % 10000) / 100)
+    return string.format("%d.%02dg", gold, silver)
+end
+
+local function getTimeWindowValues(earnedBuf, spentBuf, head, count, bufSize, slotsBack)
+    if count == 0 then return nil, nil end
+    local actualBack = math.min(slotsBack, count - 1)
+    local idx = ((head - actualBack - 1) % bufSize) + 1
+    return totalEarnedNum - earnedBuf[idx], totalSpentNum - spentBuf[idx]
+end
+
+local function updateTimeWindowLabels()
+    if accountingWindow == nil then return end
+    local windows = {
+        {earnedBuf = minuteEarned, spentBuf = minuteSpent, head = minuteHead, count = minuteCount, bufSize = 60, slotsBack = 15, label = "15m"},
+        {earnedBuf = minuteEarned, spentBuf = minuteSpent, head = minuteHead, count = minuteCount, bufSize = 60, slotsBack = 60, label = "1h"},
+        {earnedBuf = hourEarned, spentBuf = hourSpent, head = hourHead, count = hourCount, bufSize = 24, slotsBack = 5, label = "5h"},
+        {earnedBuf = hourEarned, spentBuf = hourSpent, head = hourHead, count = hourCount, bufSize = 24, slotsBack = 12, label = "12h"},
+    }
+    for i, w in ipairs(windows) do
+        local earned, spent = getTimeWindowValues(w.earnedBuf, w.spentBuf, w.head, w.count, w.bufSize, w.slotsBack)
+        local earnedLabel = accountingWindow["twEarned" .. i]
+        local spentLabel = accountingWindow["twSpent" .. i]
+        if earnedLabel and spentLabel then
+            if earned then
+                earnedLabel:SetText(w.label .. "  ▲ " .. formatGoldShort(earned))
+                spentLabel:SetText("▼ " .. formatGoldShort(spent))
+            else
+                earnedLabel:SetText(w.label .. "  ▲ ...")
+                spentLabel:SetText("▼ ...")
+            end
+        end
+    end
+end
 
 local function laborPointsChanged(diff, laborPoints)
     -- If labor is spent, start the labor used timer for accurate kill tracking
@@ -283,8 +342,19 @@ local function saveCurrentSessionToFile()
 
     pastSessions["sessions"][currentSession.dateKey] = currentSession
 
-    
-    -- api.Log:Info(pastSessions)
+    pastSessions["timeWindows"] = {
+        totalEarnedNum = totalEarnedNum,
+        totalSpentNum = totalSpentNum,
+        minuteEarned = minuteEarned,
+        minuteSpent = minuteSpent,
+        minuteHead = minuteHead,
+        minuteCount = minuteCount,
+        hourEarned = hourEarned,
+        hourSpent = hourSpent,
+        hourHead = hourHead,
+        hourCount = hourCount,
+    }
+
     api.File:Write(pastSessionsFilename, pastSessions)
     -- Refresh accounting session list
     local sessionScrollList = accountingWindow.sessionScrollList
@@ -356,19 +426,24 @@ local function SessionSetFunc(subItem, data, setValue)
         local titleStr = dateStr .. ": "
         data.profit = X2Util:StrNumericSub(data.goldEnd, data.goldStart)
         -- format the string in data.profit as last two digies are copper, next two are silver, rest is gold
-        local profitStr = formatStringAsGold(data.profit)
-        local endStr = formatStringAsGold(data.goldEnd)   
+        local profitNum = tonumber(data.profit) or 0
+        local sign = profitNum < 0 and "-" or ""
+        local profitStr = sign .. formatGoldShort(profitNum)
+        local endStr = formatStringAsGold(data.goldEnd)
 
+        local earned = tonumber(data.goldEarned or "0") or 0
+        local spent = tonumber(data.goldSpent or "0") or 0
         titleStr = titleStr .. " " .. endStr .. " (Profit: " .. profitStr .. ")"
 
-        if string.find(data.profit, "-") then
+        if profitNum < 0 then
             subItem.bg:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 0.4) -- Red
         else
             subItem.bg:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 0.4) -- Green
         end
 
-
         subItem.sessionTitle:SetText(titleStr)
+        subItem.earnedLabel:SetText("▲ " .. formatGoldShort(earned))
+        subItem.spentLabel:SetText("▼ " .. formatGoldShort(spent))
     end
 end
 
@@ -390,27 +465,67 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     sessionTitle:AddAnchor("TOPLEFT", subItem, 10, 10)
     sessionTitle:SetAutoResize(true)
     sessionTitle.style:SetAlign(ALIGN.LEFT)
-    
+
+    -- Earned label (green ▲) same row, after title
+    local earnedLabel = subItem:CreateChildWidget("label", "earnedLabel", 0, true)
+    earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    earnedLabel.style:SetAlign(ALIGN.LEFT)
+    earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
+    earnedLabel:SetText("")
+    earnedLabel:AddAnchor("LEFT", sessionTitle, 370, 0)
+    earnedLabel:SetAutoResize(true)
+    subItem.earnedLabel = earnedLabel
+
+    -- Spent label (red ▼) same row, after earned
+    local spentLabel = subItem:CreateChildWidget("label", "spentLabel", 0, true)
+    spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    spentLabel.style:SetAlign(ALIGN.LEFT)
+    spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
+    spentLabel:SetText("")
+    spentLabel:AddAnchor("LEFT", earnedLabel, 100, 0)
+    spentLabel:SetAutoResize(true)
+    subItem.spentLabel = spentLabel
+
     -- Interact Layer overtop of everything
     local clickOverlay = subItem:CreateChildWidget("button", "clickOverlay", 0, true)
     clickOverlay:AddAnchor("TOPLEFT", subItem, 0, 0)
     clickOverlay:AddAnchor("BOTTOMRIGHT", subItem, 0, 0)
     function clickOverlay:OnClick()
         api.Log:Info("Ding!")
-    end 
+    end
     clickOverlay:SetHandler("OnClick", clickOverlay.OnClick)
 end
 
 local function OnUpdate(dt)
     -- Every 60 seconds, save the current session to file
-    if currentSession ~= nil then 
+    if currentSession ~= nil then
         sessionSaveTimer = sessionSaveTimer + dt
-        if sessionSaveTimer >= SESSION_SAVE_TIME then 
+        if sessionSaveTimer >= SESSION_SAVE_TIME then
             sessionSaveTimer = 0
             startAccountingSession()
-        end 
+        end
     end
-end 
+
+    -- Minute snapshots for 15m/1h windows
+    minuteSnapshotTimer = minuteSnapshotTimer + dt
+    if minuteSnapshotTimer >= MINUTE_SNAPSHOT_TIME then
+        minuteSnapshotTimer = 0
+        minuteHead = (minuteHead % 60) + 1
+        minuteEarned[minuteHead] = totalEarnedNum
+        minuteSpent[minuteHead] = totalSpentNum
+        if minuteCount < 60 then minuteCount = minuteCount + 1 end
+    end
+
+    -- Hour snapshots for 12h/24h windows
+    hourSnapshotTimer = hourSnapshotTimer + dt
+    if hourSnapshotTimer >= HOUR_SNAPSHOT_TIME then
+        hourSnapshotTimer = 0
+        hourHead = (hourHead % 24) + 1
+        hourEarned[hourHead] = totalEarnedNum
+        hourSpent[hourHead] = totalSpentNum
+        if hourCount < 24 then hourCount = hourCount + 1 end
+    end
+end
 
 local function OnLoad()
     -- Initializing addon-wide variables
@@ -496,7 +611,56 @@ local function OnLoad()
     past30daysStr:SetAutoResize(true)
     accountingWindow.past30daysStr = past30daysStr
 
+    -- Time window labels (15m, 1h on row 1; 12h, 24h on row 2)
+    local twLabels = {"15m", "1h", "5h", "12h"}
+    local twXOffsets = {15, 310, 15, 310}
+    local twYOffsets = {30, 30, 48, 48}
+    for i = 1, 4 do
+        local earnedLabel = accountingWindow:CreateChildWidget("label", "twEarned" .. i, 0, true)
+        earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+        earnedLabel.style:SetAlign(ALIGN.LEFT)
+        earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
+        earnedLabel:SetText(twLabels[i] .. "  ▲ ...")
+        earnedLabel:AddAnchor("TOPLEFT", accountingWindow, twXOffsets[i], twYOffsets[i])
+        earnedLabel:SetAutoResize(true)
+        accountingWindow["twEarned" .. i] = earnedLabel
+
+        local spentLabel = accountingWindow:CreateChildWidget("label", "twSpent" .. i, 0, true)
+        spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+        spentLabel.style:SetAlign(ALIGN.LEFT)
+        spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
+        spentLabel:SetText("▼ ...")
+        spentLabel:AddAnchor("LEFT", earnedLabel, 130, 0)
+        spentLabel:SetAutoResize(true)
+        accountingWindow["twSpent" .. i] = spentLabel
+    end
+
     fillSessionTableData(sessionScrollList, 1)
+
+    -- Restore time window data from disk, or seed fresh (must be before startAccountingSession)
+    if pastSessions and pastSessions.timeWindows then
+        local tw = pastSessions.timeWindows
+        totalEarnedNum = tw.totalEarnedNum or 0
+        totalSpentNum = tw.totalSpentNum or 0
+        minuteEarned = tw.minuteEarned or {}
+        minuteSpent = tw.minuteSpent or {}
+        minuteHead = tw.minuteHead or 0
+        minuteCount = tw.minuteCount or 0
+        hourEarned = tw.hourEarned or {}
+        hourSpent = tw.hourSpent or {}
+        hourHead = tw.hourHead or 0
+        hourCount = tw.hourCount or 0
+    else
+        minuteHead = 1
+        minuteEarned[1] = 0
+        minuteSpent[1] = 0
+        minuteCount = 1
+        hourHead = 1
+        hourEarned[1] = 0
+        hourSpent[1] = 0
+        hourCount = 1
+    end
+
     startAccountingSession()
 
     api.On("UPDATE", OnUpdate)
@@ -516,6 +680,7 @@ local function OnUnload()
 end
 
 accounting_addon.OnLoad = OnLoad
+accounting_addon.UpdateTimeWindowLabels = updateTimeWindowLabels
 accounting_addon.OnUnload = OnUnload
 
 return accounting_addon
