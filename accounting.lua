@@ -28,8 +28,9 @@ local ITEM_TASK_ID_PACK_TURNED_IN = 109
 
 local AH_PRICES
 
-local yourPaystubWindow 
+local yourPaystubWindow
 local accountingWindow
+local accountingUIInitialized = false
 
 local currentSession
 
@@ -37,7 +38,8 @@ local latestMoneyChangeStr = "0"
 local latestMoneyChange = 0
 
 local sessionSaveTimer = 0
-local SESSION_SAVE_TIME = 60000
+local SESSION_SAVE_TIME = 180000
+local sessionDirty = false
 
 -- Rolling time window tracking (persisted to disk)
 local totalEarnedNum = 0
@@ -62,7 +64,7 @@ local pageSize = 20 --> number of sessions on page
 local maxPage
 
 -- helpers 
-function split(s, sep)
+local function split(s, sep)
     local fields = {}
     
     local sep = sep or " "
@@ -84,20 +86,20 @@ local function differenceBetweenTimestamps(time1, time2)
     return timeDiff
 end 
 local function displayTimeString(timeInSeconds)
-    timeInMs = tonumber(timeInSeconds)
+    local timeInMs = tonumber(timeInSeconds)
     local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60  
+    local minutes = math.floor(timeInSeconds / (1*60)) % 60
     local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-    
+
     return string.format("%02dh %02dm", hours, minutes)
 end
 
 local function displayOverlayTimeString(timeInSeconds)
-    timeInMs = tonumber(timeInSeconds)
+    local timeInMs = tonumber(timeInSeconds)
     local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60  
+    local minutes = math.floor(timeInSeconds / (1*60)) % 60
     local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-    
+
     return string.format("%02d:%02d:%02d", hours, minutes, seconds)
 end
 
@@ -139,19 +141,20 @@ local function recordPlayerMoneyEvent(change, changeStr, itemTaskType, tradeOthe
     if change > 0 then
         addMoneyStrToSessionField(changeStr, "goldEarned")
         totalEarnedNum = totalEarnedNum + change
+        sessionDirty = true
     elseif change < 0 then
         addMoneyStrToSessionField(changeStr, "goldSpent")
         totalSpentNum = totalSpentNum + (-change)
+        sessionDirty = true
     end
-    -- api.Log:Info("PLAYER_MONEY")
 end
 
 local function recordMailboxMoneyTakenEvent()
-    if latestMoneyChange > 0 then 
+    if latestMoneyChange > 0 then
         addMoneyStrToSessionField(latestMoneyChangeStr, "goldMailEarned")
+        sessionDirty = true
     end
-    -- api.Log:Info("MAIL_INBOX_MONEY_TAKEN")
-end 
+end
 local function recordAuctionBiddenEvent(itemName, moneyStr)
     -- api.Log:Info("AUCTION_BIDDEN")
 end
@@ -222,9 +225,10 @@ local function laborPointsChanged(diff, laborPoints)
         laborUsed = true
     end
     
-    if diff < 0 and currentSession ~= nil then 
+    if diff < 0 and currentSession ~= nil then
         currentSession["laborSpent"] = currentSession["laborSpent"] + (diff*-1)
-    end 
+        sessionDirty = true
+    end
 end
 
 local function itemIdFromItemLinkText(itemLinkText)
@@ -266,7 +270,7 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     if pageIndex > 1 then 
         startingIndex = ((pageIndex - 1) * pageSize) + 1 
     end
-    endingIndex = startingIndex + pageSize
+    local endingIndex = startingIndex + pageSize
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
@@ -334,11 +338,29 @@ local function getCurrentPlayerMoney()
 end 
 
 
+local function refreshAccountingUI()
+    if not accountingUIInitialized then return end
+    local sessionScrollList = accountingWindow.sessionScrollList
+    if pastSessions ~= nil then
+        if pastSessions.sessions ~= nil then
+            local sessionCount = getSessionCount(pastSessions["sessions"])
+            maxPage = math.ceil(sessionCount / pageSize)
+        else
+            maxPage = 1
+        end
+    else
+        maxPage = 1
+    end
+    sessionScrollList.pageControl.maxPage = maxPage
+    fillSessionTableData(sessionScrollList, 1)
+    sessionScrollList.pageControl:SetCurrentPage(1, true)
+end
+
 local function saveCurrentSessionToFile()
-    if pastSessions == nil then 
+    if pastSessions == nil then
         pastSessions = {}
         pastSessions["sessions"] = {}
-    end 
+    end
 
     pastSessions["sessions"][currentSession.dateKey] = currentSession
 
@@ -356,22 +378,11 @@ local function saveCurrentSessionToFile()
     }
 
     api.File:Write(pastSessionsFilename, pastSessions)
-    -- Refresh accounting session list
-    local sessionScrollList = accountingWindow.sessionScrollList
-    if pastSessions ~= nil then
-        if pastSessions.sessions ~= nil then
-            local sessionCount = getSessionCount(pastSessions["sessions"])
-            maxPage = math.ceil(sessionCount / pageSize)    
-        else
-            maxPage = 1
-        end   
-    else
-        maxPage = 1
-    end 
-    sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
-end 
+
+    if paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+        refreshAccountingUI()
+    end
+end
 
 local function endAccountingSession()
     if currentSession == nil then return end 
@@ -386,7 +397,7 @@ end
 
 local function startAccountingSession()
     -- api.Log:Info("[Your Paystub] Starting accounting session")
-    sessionToStart = {}
+    local sessionToStart = {}
     sessionToStart["localTimestamp"] = api.Time:GetLocalTime()
     local date = api.Time:TimeToDate(sessionToStart["localTimestamp"])
     local dateKey = string.format("date%02d%02d%04d", date.month, date.day, date.year)
@@ -497,12 +508,37 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
 end
 
 local function OnUpdate(dt)
-    -- Every 60 seconds, save the current session to file
     if currentSession ~= nil then
         sessionSaveTimer = sessionSaveTimer + dt
         if sessionSaveTimer >= SESSION_SAVE_TIME then
             sessionSaveTimer = 0
-            startAccountingSession()
+            if sessionDirty then
+                sessionDirty = false
+                currentSession["endTimestamp"] = api.Time:GetLocalTime()
+                currentSession["goldEnd"] = getCurrentPlayerMoney()
+                currentSession["goldEndBank"] = nil
+                if pastSessions == nil then
+                    pastSessions = {}
+                    pastSessions["sessions"] = {}
+                end
+                pastSessions["sessions"][currentSession.dateKey] = currentSession
+                pastSessions["timeWindows"] = {
+                    totalEarnedNum = totalEarnedNum,
+                    totalSpentNum = totalSpentNum,
+                    minuteEarned = minuteEarned,
+                    minuteSpent = minuteSpent,
+                    minuteHead = minuteHead,
+                    minuteCount = minuteCount,
+                    hourEarned = hourEarned,
+                    hourSpent = hourSpent,
+                    hourHead = hourHead,
+                    hourCount = hourCount,
+                }
+                api.File:Write(pastSessionsFilename, pastSessions)
+                if accountingUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+                    refreshAccountingUI()
+                end
+            end
         end
     end
 
@@ -525,6 +561,61 @@ local function OnUpdate(dt)
         hourSpent[hourHead] = totalSpentNum
         if hourCount < 24 then hourCount = hourCount + 1 end
     end
+end
+
+local function initAccountingUI()
+    if accountingUIInitialized then return end
+    accountingUIInitialized = true
+
+    accountingWindow = paystubDisplayWindow.tab.window[5].accountingWindow
+
+    local sessionScrollList = accountingWindow.sessionScrollList
+    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
+    sessionScrollList:InsertRows(16, false)
+    sessionScrollList.listCtrl:DisuseSorting()
+    sessionScrollList.pageControl.maxPage = maxPage
+
+    sessionScrollList.pageControl:SetCurrentPage(1, true)
+    function sessionScrollList:OnPageChangedProc(pageIndex)
+        sessionScrollList:DeleteAllDatas()
+        sessionScrollList:ResetScroll(0)
+        fillSessionTableData(sessionScrollList, pageIndex)
+    end
+
+    local past30daysStr = accountingWindow:CreateChildWidget("label", "past30daysStr", 0, true)
+    past30daysStr.style:SetFontSize(FONT_SIZE.LARGE)
+    past30daysStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(past30daysStr, FONT_COLOR.DEFAULT)
+    past30daysStr:SetText("Past 30 Days Profit/Loss: ")
+    past30daysStr:AddAnchor("BOTTOMLEFT", accountingWindow, 15, 50)
+    past30daysStr:SetAutoResize(true)
+    accountingWindow.past30daysStr = past30daysStr
+
+    -- Time window labels (15m, 1h on row 1; 5h, 12h on row 2)
+    local twLabels = {"15m", "1h", "5h", "12h"}
+    local twXOffsets = {15, 310, 15, 310}
+    local twYOffsets = {30, 30, 48, 48}
+    for i = 1, 4 do
+        local earnedLabel = accountingWindow:CreateChildWidget("label", "twEarned" .. i, 0, true)
+        earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+        earnedLabel.style:SetAlign(ALIGN.LEFT)
+        earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
+        earnedLabel:SetText(twLabels[i] .. "  ▲ ...")
+        earnedLabel:AddAnchor("TOPLEFT", accountingWindow, twXOffsets[i], twYOffsets[i])
+        earnedLabel:SetAutoResize(true)
+        accountingWindow["twEarned" .. i] = earnedLabel
+
+        local spentLabel = accountingWindow:CreateChildWidget("label", "twSpent" .. i, 0, true)
+        spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+        spentLabel.style:SetAlign(ALIGN.LEFT)
+        spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
+        spentLabel:SetText("▼ ...")
+        spentLabel:AddAnchor("LEFT", earnedLabel, 130, 0)
+        spentLabel:SetAutoResize(true)
+        accountingWindow["twSpent" .. i] = spentLabel
+    end
+
+    fillSessionTableData(sessionScrollList, 1)
 end
 
 local function OnLoad()
@@ -584,59 +675,6 @@ local function OnLoad()
 
     yourPaystubWindow:RegisterEvent("CHAT_JOINED_CHANNEL")
 
-    -- paystubDisplayWindow:Show(false)
-    accountingWindow = paystubDisplayWindow.tab.window[5].accountingWindow
-
-    
-    local sessionScrollList = accountingWindow.sessionScrollList
-    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
-    sessionScrollList:InsertRows(16, false)
-    sessionScrollList.listCtrl:DisuseSorting()
-    sessionScrollList.pageControl.maxPage = maxPage
-    
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
-    function sessionScrollList:OnPageChangedProc(pageIndex)
-        sessionScrollList:DeleteAllDatas()
-        sessionScrollList:ResetScroll(0)
-        fillSessionTableData(sessionScrollList, pageIndex)
-    end 
-
-    -- Add past 30 days profit/loss
-    local past30daysStr = accountingWindow:CreateChildWidget("label", "past30daysStr", 0, true)
-    past30daysStr.style:SetFontSize(FONT_SIZE.LARGE)
-    past30daysStr.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(past30daysStr, FONT_COLOR.DEFAULT)
-    past30daysStr:SetText("Past 30 Days Profit/Loss: ")
-    past30daysStr:AddAnchor("BOTTOMLEFT", accountingWindow, 15, 50)
-    past30daysStr:SetAutoResize(true)
-    accountingWindow.past30daysStr = past30daysStr
-
-    -- Time window labels (15m, 1h on row 1; 12h, 24h on row 2)
-    local twLabels = {"15m", "1h", "5h", "12h"}
-    local twXOffsets = {15, 310, 15, 310}
-    local twYOffsets = {30, 30, 48, 48}
-    for i = 1, 4 do
-        local earnedLabel = accountingWindow:CreateChildWidget("label", "twEarned" .. i, 0, true)
-        earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
-        earnedLabel.style:SetAlign(ALIGN.LEFT)
-        earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
-        earnedLabel:SetText(twLabels[i] .. "  ▲ ...")
-        earnedLabel:AddAnchor("TOPLEFT", accountingWindow, twXOffsets[i], twYOffsets[i])
-        earnedLabel:SetAutoResize(true)
-        accountingWindow["twEarned" .. i] = earnedLabel
-
-        local spentLabel = accountingWindow:CreateChildWidget("label", "twSpent" .. i, 0, true)
-        spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
-        spentLabel.style:SetAlign(ALIGN.LEFT)
-        spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
-        spentLabel:SetText("▼ ...")
-        spentLabel:AddAnchor("LEFT", earnedLabel, 130, 0)
-        spentLabel:SetAutoResize(true)
-        accountingWindow["twSpent" .. i] = spentLabel
-    end
-
-    fillSessionTableData(sessionScrollList, 1)
-
     -- Restore time window data from disk, or seed fresh (must be before startAccountingSession)
     if pastSessions and pastSessions.timeWindows then
         local tw = pastSessions.timeWindows
@@ -673,14 +711,17 @@ local function OnUnload()
     api.Interface:Free(yourPaystubWindow)
     api.On("UPDATE", function() return end)
     yourPaystubWindow = nil
-    accountingWindow:Show(false)
-    api.Interface:Free(accountingWindow)
-    accountingWindow = nil
+    if accountingWindow ~= nil then
+        accountingWindow:Show(false)
+        api.Interface:Free(accountingWindow)
+        accountingWindow = nil
+    end
     api.SaveSettings()
 end
 
 accounting_addon.OnLoad = OnLoad
 accounting_addon.UpdateTimeWindowLabels = updateTimeWindowLabels
 accounting_addon.OnUnload = OnUnload
+accounting_addon.initUI = initAccountingUI
 
 return accounting_addon

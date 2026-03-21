@@ -405,14 +405,16 @@ local function OnLoad()
     paystubBtn:SetExtent(50, 50)
     paystubBtn:Show(true)
     function paystubBtn:OnClick()
-        if paystubDisplayWindow:IsVisible() then 
-            --> this is where i'd clear the heavy RAM wise table
+        if paystubDisplayWindow:IsVisible() then
             paystubDisplayWindow:Show(false)
         else
+            packsAddon:initUI()
+            lootAddon:initUI()
+            accountingAddon:initUI()
             paystubDisplayWindow:Show(true)
             accountingAddon:UpdateTimeWindowLabels()
         end
-    end 
+    end
     paystubBtn:SetHandler("OnClick", paystubBtn.OnClick)
     
     -- for key, value in pairs(bagFrame) do 
@@ -459,11 +461,11 @@ local function OnUnload()
     accountingAddon:OnUnload()
     accountingAddon = nil
     paystubDisplayWindow:Show(false)
-    paystubDisplayWindow = nil
     api.Interface:Free(paystubDisplayWindow)
+    paystubDisplayWindow = nil
     paystubBtn:Show(false)
-    paystubBtn = nil
     api.Interface:Free(paystubBtn)
+    paystubBtn = nil
 end
 
 your_paystub_addon.OnLoad = OnLoad
