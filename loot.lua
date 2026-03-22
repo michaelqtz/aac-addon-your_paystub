@@ -30,8 +30,10 @@ local ITEM_TASK_ID_PACK_TURNED_IN = 109
 
 local AH_PRICES
 
-local yourPaystubWindow 
+local yourPaystubWindow
 local lootWindow
+local lootSessionDetailsWindow
+local lootUIInitialized = false
 
 local lastKnownZone
 local currentZone
@@ -58,7 +60,7 @@ local pageSize = 20 --> number of sessions on page
 local maxPage
 
 -- helpers 
-function split(s, sep)
+local function split(s, sep)
     local fields = {}
     
     local sep = sep or " "
@@ -80,20 +82,20 @@ local function differenceBetweenTimestamps(time1, time2)
     return timeDiff
 end 
 local function displayTimeString(timeInSeconds)
-    timeInMs = tonumber(timeInSeconds)
+    local timeInMs = tonumber(timeInSeconds)
     local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60  
+    local minutes = math.floor(timeInSeconds / (1*60)) % 60
     local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-    
+
     return string.format("%02dh %02dm", hours, minutes)
 end
 
 local function displayOverlayTimeString(timeInSeconds)
-    timeInMs = tonumber(timeInSeconds)
+    local timeInMs = tonumber(timeInSeconds)
     local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60  
+    local minutes = math.floor(timeInSeconds / (1*60)) % 60
     local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-    
+
     return string.format("%02d:%02d:%02d", hours, minutes, seconds)
 end
 
@@ -121,7 +123,7 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     if pageIndex > 1 then 
         startingIndex = ((pageIndex - 1) * pageSize) + 1 
     end
-    endingIndex = startingIndex + pageSize
+    local endingIndex = startingIndex + pageSize
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
@@ -198,20 +200,22 @@ local function saveCurrentSessionToFile()
     table.insert(pastSessions["sessions"], 1, currentSession)
     api.File:Write(pastSessionsFilename, pastSessions)
 
-    -- Refresh loot session list
-    local sessionScrollList = lootWindow.sessionScrollList
-    if pastSessions ~= nil then
-        if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+    -- Refresh loot session list (only if UI is initialized)
+    if lootUIInitialized then
+        local sessionScrollList = lootWindow.sessionScrollList
+        if pastSessions ~= nil then
+            if pastSessions.sessions ~= nil then
+                maxPage = math.ceil(#pastSessions.sessions / pageSize)
+            else
+                maxPage = 1
+            end
         else
             maxPage = 1
-        end   
-    else
-        maxPage = 1
-    end 
-    sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
+        end
+        sessionScrollList.pageControl.maxPage = maxPage
+        fillSessionTableData(sessionScrollList, 1)
+        sessionScrollList.pageControl:SetCurrentPage(1, true)
+    end
 end 
 
 local function endLootTrackerSession()
@@ -224,7 +228,7 @@ end
 
 local function startLootTrackerSession()
     api.Log:Info("[Your Paystub] Starting loot tracker session")
-    sessionToStart = {}
+    local sessionToStart = {}
     sessionToStart["localTimestamp"] = api.Time:GetLocalTime()
     sessionToStart["zone"] = currentZone
     sessionToStart["kills"] = 0
@@ -298,7 +302,7 @@ end
   
 local function lootedItem(itemLinkText, itemCount, itemTaskType, tradeOtherName)
     local itemId = itemIdFromItemLinkText(itemLinkText)
-    if itemTaskType == ITEM_TASK_ID_LOOTED_FROM_MONSTER or itemTaskType == ITEM_TASK_ID_FARMED or ITEM_TASK_ID_DAWNSDROP_PICKAXE then 
+    if itemTaskType == ITEM_TASK_ID_LOOTED_FROM_MONSTER or itemTaskType == ITEM_TASK_ID_FARMED or itemTaskType == ITEM_TASK_ID_DAWNSDROP_PICKAXE then
         addItemToSession(itemId, itemCount)
     end
 
@@ -477,15 +481,21 @@ local function drawLootSessionDetails(sessionIndex)
     local localTimestamp = session.localTimestamp
     local endTimestamp = session.endTimestamp
     local duration = differenceBetweenTimestamps(endTimestamp, localTimestamp)
+    if duration <= 0 then duration = 1 end
     local durationStr = displayTimeString(duration)
     local date = api.Time:TimeToDate(localTimestamp)
     local profitPerHour = profitTotal / (duration / 3600)
-    local killsPerHour = kills / (duration / 3600)
-    local laborPerHour = laborSpent / (duration / 3600)
-    local silverPerLabor = profitTotal * 100 / laborSpent
+    local killsPerHour = kills > 0 and (kills / (duration / 3600)) or 0
+    local laborPerHour = laborSpent > 0 and (laborSpent / (duration / 3600)) or 0
+    local silverPerLabor = laborSpent > 0 and (profitTotal * 100 / laborSpent) or 0
     local titleStr = zone .. " (" .. string.format("%02d/%02d/%04d", date.month, date.day, date.year) .. ")"
 
-    local lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
+    if lootSessionDetailsWindow ~= nil then
+        lootSessionDetailsWindow:Show(false)
+        api.Interface:Free(lootSessionDetailsWindow)
+        lootSessionDetailsWindow = nil
+    end
+    lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
     lootSessionDetailsWindow:SetExtent(430, 450)
     lootSessionDetailsWindow:AddAnchor("CENTER", "UIParent", 0, 0)
     lootSessionDetailsWindow:Show(true)
@@ -522,13 +532,13 @@ local function drawLootSessionDetails(sessionIndex)
     lootSessionPerKillLabel.style:SetAlign(ALIGN.LEFT)
     ApplyTextColor(lootSessionPerKillLabel, FONT_COLOR.DEFAULT)
     lootSessionPerKillLabel:AddAnchor("TOPLEFT", lootSessionDurationLabel, 0, 24)
-    lootSessionPerKillLabel:SetText("Profit per Kill: " .. string.format('%.2f', profitTotal / kills) .. "g")
+    lootSessionPerKillLabel:SetText("Profit per Kill: " .. string.format('%.2f', kills > 0 and (profitTotal / kills) or 0) .. "g")
     local lootSessionPerLaborLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionPerLaborLabel", 0, true)
     lootSessionPerLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
     lootSessionPerLaborLabel.style:SetAlign(ALIGN.LEFT)
     ApplyTextColor(lootSessionPerLaborLabel, FONT_COLOR.DEFAULT)
     lootSessionPerLaborLabel:AddAnchor("TOPLEFT", lootSessionPerKillLabel, 0, 0)
-    lootSessionPerLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', profitTotal * 100 / laborSpent) .. "s")
+    lootSessionPerLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', silverPerLabor) .. "s")
     -- Flip flop between labor and kills being displayed based on labor spent being higher than kills
     if laborSpent > kills then 
         lootSessionKillsLabel:Show(false)
@@ -622,17 +632,15 @@ local function OnUpdate(dt)
         initializeLootWindowPos = true
     end 
     
-    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
-        -- endLootTrackerSession()
-
+    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
         displayRefreshCounter = 0
-        local sessionScrollList = lootWindow.sessionScrollList
-        sessionScrollList.pageControl.maxPage = maxPage
-        fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
-
-        
-    end 
+        if lootUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+            local sessionScrollList = lootWindow.sessionScrollList
+            sessionScrollList.pageControl.maxPage = maxPage
+            fillSessionTableData(sessionScrollList, 1)
+            sessionScrollList.pageControl:SetCurrentPage(1, true)
+        end
+    end
     displayRefreshCounter = displayRefreshCounter + dt
 
     -- Labor used timer for excluding from kill count
@@ -643,23 +651,32 @@ local function OnUpdate(dt)
     end
     laborUsedTimer = laborUsedTimer + dt
 
-    if sessionClockRefreshTimer + dt > SESSION_CLOCK_REFRESH_RATE then 
+    if sessionClockRefreshTimer + dt > SESSION_CLOCK_REFRESH_RATE then
         sessionClockRefreshTimer = 0
         lootWindow.lootTrackerOverlay.timerLabel:SetText(displayOverlayTimeString(lootTrackerSessionTimer / 1000))
         if currentSession ~= nil then
-            local profitPerHour = currentSession["profitTotal"] / (lootTrackerSessionTimer / 1000) * 3600
-            local killsPerHour = currentSession["kills"] / (lootTrackerSessionTimer / 1000) * 3600
-            -- local laborPerHour = currentSession["laborSpent"] / (lootTrackerSessionTimer / 1000) * 3600
-            local silverPerLabor = currentSession["profitTotal"] * 100 / currentSession["laborSpent"]
-
-            lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: " .. string.format('%.0f', tostring(currentSession["profitTotal"])) .. "g" .. " (" .. string.format('%.0f', tostring(profitPerHour)) .. "g/hr)")
-            lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: " .. tostring(currentSession["kills"]) .. " (" .. string.format('%.0f', tostring(killsPerHour)) .. "/hr)")
-            lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: " .. tostring(currentSession["laborSpent"] .. " (" .. string.format('%.0f', tostring(silverPerLabor)) .. "s/labor)"))
-        else 
+            local elapsedSecs = lootTrackerSessionTimer / 1000
+            if elapsedSecs > 0 then
+                local profitPerHour = currentSession["profitTotal"] / elapsedSecs * 3600
+                local killsPerHour = currentSession["kills"] / elapsedSecs * 3600
+                lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: " .. string.format('%.0f', tostring(currentSession["profitTotal"])) .. "g" .. " (" .. string.format('%.0f', tostring(profitPerHour)) .. "g/hr)")
+                lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: " .. tostring(currentSession["kills"]) .. " (" .. string.format('%.0f', tostring(killsPerHour)) .. "/hr)")
+            else
+                lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: " .. string.format('%.0f', tostring(currentSession["profitTotal"])) .. "g")
+                lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: " .. tostring(currentSession["kills"]))
+            end
+            local laborSpent = currentSession["laborSpent"]
+            if laborSpent > 0 then
+                local silverPerLabor = currentSession["profitTotal"] * 100 / laborSpent
+                lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: " .. tostring(laborSpent) .. " (" .. string.format('%.0f', tostring(silverPerLabor)) .. "s/labor)")
+            else
+                lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: " .. tostring(laborSpent))
+            end
+        else
             lootWindow.lootTrackerOverlay.profitLabel:SetText("Profit: 0g")
             lootWindow.lootTrackerOverlay.killsLabel:SetText("Kills: 0")
             lootWindow.lootTrackerOverlay.laborLabel:SetText("Labor: 0")
-        end 
+        end
     end
     sessionClockRefreshTimer = sessionClockRefreshTimer + dt
 
@@ -856,7 +873,41 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     subItem.clickOverlay = clickOverlay
 end
 
+local function initLootUI()
+    if lootUIInitialized then return end
+    lootUIInitialized = true
 
+    local sessionScrollList = lootWindow.sessionScrollList
+    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
+    sessionScrollList:InsertRows(8, false)
+    sessionScrollList.listCtrl:DisuseSorting()
+    sessionScrollList.pageControl.maxPage = maxPage
+    fillSessionTableData(sessionScrollList, 1)
+    sessionScrollList.pageControl:SetCurrentPage(1, true)
+    function sessionScrollList:OnPageChangedProc(pageIndex)
+        sessionScrollList:DeleteAllDatas()
+        sessionScrollList:ResetScroll(0)
+        fillSessionTableData(sessionScrollList, pageIndex)
+    end
+
+    local settings = api.GetSettings("your_paystub")
+    local lootTrackerOverlay = lootWindow.lootTrackerOverlay
+    local toggleOverlayBtn = lootWindow:CreateChildWidget("button", "toggleOverlayBtn", 0, true)
+    toggleOverlayBtn:SetText("Toggle Overlay")
+    toggleOverlayBtn:AddAnchor("BOTTOMRIGHT", lootWindow, -10, 50)
+    ApplyButtonSkin(toggleOverlayBtn, BUTTON_BASIC.DEFAULT)
+    function toggleOverlayBtn:OnClick()
+        if lootTrackerOverlay:IsVisible() then
+            lootTrackerOverlay:Show(false)
+            settings.lootOverlayVisible = false
+        else
+            lootTrackerOverlay:Show(true)
+            settings.lootOverlayVisible = true
+        end
+        api.SaveSettings()
+    end
+    toggleOverlayBtn:SetHandler("OnClick", toggleOverlayBtn.OnClick)
+end
 
 local function OnLoad()
     -- Initializing addon-wide variables
@@ -919,21 +970,8 @@ local function OnLoad()
     yourPaystubWindow:RegisterEvent("STORE_SELL")
     yourPaystubWindow:RegisterEvent("CHAT_JOINED_CHANNEL")
 
-    -- Initializing Loot Tracker Tab
-    -- paystubDisplayWindow:Show(false)
+    -- Keep lootWindow reference for overlay
     lootWindow = paystubDisplayWindow.tab.window[2].lootWindow
-    local sessionScrollList = lootWindow.sessionScrollList
-    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
-    sessionScrollList:InsertRows(8, false)
-    sessionScrollList.listCtrl:DisuseSorting()
-    sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
-    function sessionScrollList:OnPageChangedProc(pageIndex)
-        sessionScrollList:DeleteAllDatas()
-        sessionScrollList:ResetScroll(0)
-        fillSessionTableData(sessionScrollList, pageIndex)
-    end 
 
     -- Initialize Loot Tracker overlay
     local lootTrackerOverlay = api.Interface:CreateEmptyWindow("lootTrackerOverlay", "UIParent")
@@ -1049,39 +1087,30 @@ local function OnLoad()
     moveWnd:EnableDrag(true)
     lootWindow.lootTrackerOverlay = lootTrackerOverlay
 
-    local toggleOverlayBtn = lootWindow:CreateChildWidget("button", "toggleOverlayBtn", 0, true)
-	toggleOverlayBtn:SetText("Toggle Overlay")
-	toggleOverlayBtn:AddAnchor("BOTTOMRIGHT", lootWindow, -10, 50)
-    ApplyButtonSkin(toggleOverlayBtn, BUTTON_BASIC.DEFAULT)
-    function toggleOverlayBtn:OnClick()
-        if lootTrackerOverlay:IsVisible() then
-            lootTrackerOverlay:Show(false)
-            settings.lootOverlayVisible = false
-        else
-            lootTrackerOverlay:Show(true)
-            settings.lootOverlayVisible = true
-        end
-        api.SaveSettings()
-    end
-    toggleOverlayBtn:SetHandler("OnClick", toggleOverlayBtn.OnClick)
-
-    -- startLootTrackerSession()
-    
     api.On("UPDATE", OnUpdate)
     api.SaveSettings()
 end
 
 local function OnUnload()
     local settings = api.GetSettings("your_paystub")
+    if lootSessionDetailsWindow ~= nil then
+        lootSessionDetailsWindow:Show(false)
+        api.Interface:Free(lootSessionDetailsWindow)
+        lootSessionDetailsWindow = nil
+    end
+    if lootWindow ~= nil and lootWindow.lootTrackerOverlay ~= nil then
+        lootWindow.lootTrackerOverlay:Show(false)
+        api.Interface:Free(lootWindow.lootTrackerOverlay)
+    end
     api.Interface:Free(yourPaystubWindow)
     api.On("UPDATE", function() return end)
     yourPaystubWindow = nil
-    lootWindow.lootTrackerOverlay:Show(false)
     lootWindow = nil
     api.SaveSettings()
 end
 
 your_loot_addon.OnLoad = OnLoad
 your_loot_addon.OnUnload = OnUnload
+your_loot_addon.initUI = initLootUI
 
 return your_loot_addon

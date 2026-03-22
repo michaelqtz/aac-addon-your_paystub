@@ -27,8 +27,9 @@ local AH_PRICES
 
 local packs_helper
 
-local yourPaystubWindow 
+local yourPaystubWindow
 local commerceWindow
+local commerceUIInitialized = false
 
 local currentBackSlotItem
 local lastKnownZone
@@ -42,14 +43,13 @@ local pastSessions
 local pastSessionsFilename
 
 local sessionTimeoutCounter = 0
-local SESSION_TIMEOUT_MS = 60000 * 3  --> 1 minute is 60000
-local SESSION_TIMEOUT_MS = 1000 * 45  --> TEST OVERRIDE
+local SESSION_TIMEOUT_MS = 1000 * 45
 
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
 
 local packSlotCheckCounter = 0
-local PACK_SLOT_CHECK_MS = 100
+local PACK_SLOT_CHECK_MS = 500
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
 
@@ -57,7 +57,7 @@ local pageSize = 20 --> number of sessions on page
 local maxPage
 
 -- helpers 
-function split(s, sep)
+local function split(s, sep)
     local fields = {}
     
     local sep = sep or " "
@@ -81,11 +81,11 @@ local function differenceBetweenTimestamps(time1, time2)
     return timeDiff
 end 
 local function displayTimeString(timeInSeconds)
-    timeInMs = tonumber(timeInSeconds)
+    local timeInMs = tonumber(timeInSeconds)
     local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60  
+    local minutes = math.floor(timeInSeconds / (1*60)) % 60
     local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-    
+
     return string.format("%02dh %02dm", hours, minutes)
 end
 
@@ -158,7 +158,7 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     if pageIndex > 1 then 
         startingIndex = ((pageIndex - 1) * pageSize) + 1 
     end
-    endingIndex = startingIndex + pageSize
+    local endingIndex = startingIndex + pageSize
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
@@ -223,24 +223,26 @@ local function saveCurrentSessionToFile()
     table.insert(pastSessions["sessions"], 1, currentSession)
     api.File:Write(pastSessionsFilename, pastSessions)
 
-    -- Refresh payment list
-    local sessionScrollList = commerceWindow.sessionScrollList
-    if pastSessions ~= nil then
-        if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
+    -- Refresh payment list (only if UI is initialized)
+    if commerceUIInitialized then
+        local sessionScrollList = commerceWindow.sessionScrollList
+        if pastSessions ~= nil then
+            if pastSessions.sessions ~= nil then
+                maxPage = math.ceil(#pastSessions.sessions / pageSize)
+            else
+                maxPage = 1
+            end
         else
             maxPage = 1
-        end   
-    else
-        maxPage = 1
-    end 
-    sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
+        end
+        sessionScrollList.pageControl.maxPage = maxPage
+        fillSessionTableData(sessionScrollList, 1)
+        sessionScrollList.pageControl:SetCurrentPage(1, true)
+    end
 end 
 
 local function startPackTurnInSession(packId, coinTypeId)
-    sessionToStart = {}
+    local sessionToStart = {}
     sessionToStart["packId"] = packId
     sessionToStart["coinTypeId"] = coinTypeId
     sessionToStart["localTimestamp"] = api.Time:GetLocalTime()
@@ -265,10 +267,9 @@ local function addPackToSession(refund, coinTypeId, packId)
         -- api.Log:Info("[Your Paystub] Adding pack to current session for packId: " .. tostring(packId) .. " with coinTypeId: " .. tostring(coinTypeId))
         currentSession["packCount"] = currentSession["packCount"] + 1
         currentSession["refundTotal"] = currentSession["refundTotal"] + refund
-        -- Also, reset the timestamp to latest turn in
         currentSession["localTimestamp"] = api.Time:GetLocalTime()
-        -- We need to update the current session timeout as well.
         sessionTimeoutCounter = 0
+        api.Log:Info("[Your Paystub] Packs turned in: " .. tostring(currentSession["packCount"]))
     end 
 end 
 
@@ -325,7 +326,7 @@ local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOt
     if packs_helper:IsASpecialtyPackById(tonumber(itemId)) == true then
         currentBackSlotItem = itemId
         if currentBackSlotItem ~= nil and packs_helper:GetSpecialtyPackNameById(tonumber(currentBackSlotItem)) ~= nil then 
-            packOriginId = packs_helper:GetSpecialtyPackZoneIdById(tonumber(itemId))
+            local packOriginId = packs_helper:GetSpecialtyPackZoneIdById(tonumber(itemId))
             api.Store:GetSpecialtyRatioBetween(packOriginId, 8)
         end
     end 
@@ -392,15 +393,16 @@ local function OnUpdate(dt)
     end 
     sessionTimeoutCounter = sessionTimeoutCounter + dt
 
-    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
+    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
         displayRefreshCounter = 0
-        local sessionScrollList = commerceWindow.sessionScrollList
-        sessionScrollList.pageControl.maxPage = maxPage
-        fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
-        -- Refresh stats
-        refreshStatisticsLabels()
-    end 
+        if commerceUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+            local sessionScrollList = commerceWindow.sessionScrollList
+            sessionScrollList.pageControl.maxPage = maxPage
+            fillSessionTableData(sessionScrollList, 1)
+            sessionScrollList.pageControl:SetCurrentPage(1, true)
+            refreshStatisticsLabels()
+        end
+    end
     displayRefreshCounter = displayRefreshCounter + dt
 
     if packSlotCheckCounter + dt > PACK_SLOT_CHECK_MS then 
@@ -552,6 +554,70 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
 end
 ---
 
+local function initCommerceUI()
+    if commerceUIInitialized then return end
+    commerceUIInitialized = true
+
+    local totalGold = getTotalGoldMadeFromPacks()
+    local totalPacks = getTotalPacksTurnedIn()
+    local favouritePackId = getFavouritePackType()
+    local pendingGold = getPendingPackGoldTotal()
+
+    commerceWindow = paystubDisplayWindow.tab.window[1].commerceWindow
+    local sessionScrollList = commerceWindow.sessionScrollList
+    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
+    sessionScrollList:InsertRows(8, false)
+    sessionScrollList.listCtrl:DisuseSorting()
+    sessionScrollList.pageControl.maxPage = maxPage
+    fillSessionTableData(sessionScrollList, 1)
+    sessionScrollList.pageControl:SetCurrentPage(1, true)
+    function sessionScrollList:OnPageChangedProc(pageIndex)
+        sessionScrollList:DeleteAllDatas()
+        sessionScrollList:ResetScroll(0)
+        fillSessionTableData(sessionScrollList, pageIndex)
+    end
+    commerceWindow.sessionScrollList = sessionScrollList
+
+    local pendingGoldStr = commerceWindow:CreateChildWidget("label", "pendingGoldStr", 0, true)
+    pendingGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
+    pendingGoldStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(pendingGoldStr, FONT_COLOR.DEFAULT)
+    pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
+    pendingGoldStr:AddAnchor("BOTTOMLEFT", commerceWindow, 15, 50)
+    commerceWindow.pendingGoldStr = pendingGoldStr
+
+    local totalGoldStr = commerceWindow:CreateChildWidget("label", "totalGoldStr", 0, true)
+    totalGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
+    totalGoldStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(totalGoldStr, FONT_COLOR.DEFAULT)
+    totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
+    totalGoldStr:AddAnchor("BOTTOMLEFT", pendingGoldStr, 0, 30)
+    commerceWindow.totalGoldStr = totalGoldStr
+
+    local totalPacksStr = commerceWindow:CreateChildWidget("label", "totalPacksStr", 0, true)
+    totalPacksStr.style:SetFontSize(FONT_SIZE.LARGE)
+    totalPacksStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(totalPacksStr, FONT_COLOR.DEFAULT)
+    totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
+    totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
+    commerceWindow.totalPacksStr = totalPacksStr
+
+    if favouritePackId == nil then favouritePackId = 0 end
+    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
+    if favouritePackName ~= nil then
+        favouritePackName = favouritePackName.name
+    else
+        favouritePackName = "No favourite yet."
+    end
+    local favouritePackStr = commerceWindow:CreateChildWidget("label", "favouritePackStr", 0, true)
+    favouritePackStr.style:SetFontSize(FONT_SIZE.LARGE)
+    favouritePackStr.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(favouritePackStr, FONT_COLOR.DEFAULT)
+    favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
+    favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
+    commerceWindow.favouritePackStr = favouritePackStr
+end
+
 local function OnLoad()
     packs_helper = require("your_paystub/packs_helper")
     AH_PRICES = require("your_paystub/data/auction_house_prices")
@@ -609,13 +675,6 @@ local function OnLoad()
         
     end 
     
-    -- Load and write statistics to paystub window
-    local totalGold = getTotalGoldMadeFromPacks()
-    local totalPacks = getTotalPacksTurnedIn()
-    local favouritePackId = getFavouritePackType()
-    local pendingGold = getPendingPackGoldTotal()
-
-    local productionZones = api.Store:GetProductionZoneGroups()
     function yourPaystubWindow:OnEvent(event, ...)
         if event == "REMOVED_ITEM" then      
             recordPackPayment(unpack(arg))
@@ -654,64 +713,6 @@ local function OnLoad()
     yourPaystubWindow:RegisterEvent("UPDATE_SPECIALTY_RATIO")
     yourPaystubWindow:RegisterEvent("SELL_SPECIALTY_CONTENT_INFO")
 
-    -- Initializing Commerce Tab
-    paystubDisplayWindow:Show(false)
-    commerceWindow = paystubDisplayWindow.tab.window[1].commerceWindow
-    local sessionScrollList = commerceWindow.sessionScrollList
-    sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
-    sessionScrollList:InsertRows(8, false)
-    sessionScrollList.listCtrl:DisuseSorting()
-    sessionScrollList.pageControl.maxPage = maxPage
-    fillSessionTableData(sessionScrollList, 1)
-    sessionScrollList.pageControl:SetCurrentPage(1, true)
-    function sessionScrollList:OnPageChangedProc(pageIndex)
-        sessionScrollList:DeleteAllDatas()
-        sessionScrollList:ResetScroll(0)
-        fillSessionTableData(sessionScrollList, pageIndex)
-    end 
-    commerceWindow.sessionScrollList = sessionScrollList
-
-    local pendingGoldStr = commerceWindow:CreateChildWidget("label", "pendingGoldStr", 0, true)
-    pendingGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
-    pendingGoldStr.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(pendingGoldStr, FONT_COLOR.DEFAULT)
-    pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
-    pendingGoldStr:AddAnchor("BOTTOMLEFT", commerceWindow, 15, 50)
-    commerceWindow.pendingGoldStr = pendingGoldStr
-
-    local totalGoldStr = commerceWindow:CreateChildWidget("label", "totalGoldStr", 0, true)
-    totalGoldStr.style:SetFontSize(FONT_SIZE.LARGE)
-    totalGoldStr.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(totalGoldStr, FONT_COLOR.DEFAULT)
-    totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
-    totalGoldStr:AddAnchor("BOTTOMLEFT", pendingGoldStr, 0, 30)
-    commerceWindow.totalGoldStr = totalGoldStr
-
-    local totalPacksStr = commerceWindow:CreateChildWidget("label", "totalPacksStr", 0, true)
-    totalPacksStr.style:SetFontSize(FONT_SIZE.LARGE)
-    totalPacksStr.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(totalPacksStr, FONT_COLOR.DEFAULT)
-    totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
-    totalPacksStr:AddAnchor("BOTTOMLEFT", totalGoldStr, 0, 20)
-    commerceWindow.totalPacksStr = totalPacksStr
-
-    if favouritePackId == nil then favouritePackId = 0 end
-    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
-    if favouritePackName ~= nil then 
-        favouritePackName = favouritePackName.name
-    else 
-        favouritePackName = "No favourite yet."
-    end
-    local favouritePackStr = commerceWindow:CreateChildWidget("label", "favouritePackStr", 0, true)
-    favouritePackStr.style:SetFontSize(FONT_SIZE.LARGE)
-    favouritePackStr.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(favouritePackStr, FONT_COLOR.DEFAULT)
-    favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
-    favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
-    
-    -- api.Map:ToggleMapWithPortal(323, 16461, 11630, 100)
-    -- api.Log:Info(tostring(currentDate.year) .. "-" .. tostring(currentDate.month) .. "-" .. tostring(currentDate.day))
-
     api.On("UPDATE", OnUpdate)
     -- api.SaveSettings()
 end
@@ -724,5 +725,6 @@ end
 
 your_packs_addon.OnLoad = OnLoad
 your_packs_addon.OnUnload = OnUnload
+your_packs_addon.initUI = initCommerceUI
 
 return your_packs_addon
