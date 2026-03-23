@@ -47,11 +47,13 @@ local SESSION_TIMEOUT_MS = 1000 * 45
 
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
+local displayDirty = false
 
 local packSlotCheckCounter = 0
 local PACK_SLOT_CHECK_MS = 500
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
+local MAX_SESSIONS = 200
 
 local pageSize = 20 --> number of sessions on page
 local maxPage
@@ -195,10 +197,11 @@ local function fillSessionTableData(itemScrollList, pageIndex)
 end
 
 local function saveCurrentSessionToFile()
-    if pastSessions == nil then 
+    displayDirty = true
+    if pastSessions == nil then
         pastSessions = {}
         pastSessions["sessions"] = {}
-    end 
+    end
 
     local coinTypeId = currentSession["coinTypeId"]
     -- Let's fill in the AH prices
@@ -221,6 +224,9 @@ local function saveCurrentSessionToFile()
 
     -- Insert it into the top position (to sort by most recent)
     table.insert(pastSessions["sessions"], 1, currentSession)
+    while #pastSessions["sessions"] > MAX_SESSIONS do
+        table.remove(pastSessions["sessions"])
+    end
     api.File:Write(pastSessionsFilename, pastSessions)
 
     -- Refresh payment list (only if UI is initialized)
@@ -238,8 +244,9 @@ local function saveCurrentSessionToFile()
         sessionScrollList.pageControl.maxPage = maxPage
         fillSessionTableData(sessionScrollList, 1)
         sessionScrollList.pageControl:SetCurrentPage(1, true)
+        refreshStatisticsLabels()
     end
-end 
+end
 
 local function startPackTurnInSession(packId, coinTypeId)
     local sessionToStart = {}
@@ -269,8 +276,9 @@ local function addPackToSession(refund, coinTypeId, packId)
         currentSession["refundTotal"] = currentSession["refundTotal"] + refund
         currentSession["localTimestamp"] = api.Time:GetLocalTime()
         sessionTimeoutCounter = 0
+        displayDirty = true
         api.Log:Info("[Your Paystub] Packs turned in: " .. tostring(currentSession["packCount"]))
-    end 
+    end
 end 
 
 local function itemIdFromItemLinkText(itemLinkText)
@@ -395,7 +403,8 @@ local function OnUpdate(dt)
 
     if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
         displayRefreshCounter = 0
-        if commerceUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+        if displayDirty and commerceUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+            displayDirty = false
             local sessionScrollList = commerceWindow.sessionScrollList
             sessionScrollList.pageControl.maxPage = maxPage
             fillSessionTableData(sessionScrollList, 1)
@@ -426,7 +435,7 @@ local function SessionSetFunc(subItem, data, setValue)
         -- Data Assignments
         local sessionIndex = data.index
         local packObject = packs_helper:GetSpecialtyPackNameById(tonumber(data.packId))
-        local packName = "Unknown Pack (id: " .. tostring(data.packId) .. ")" 
+        local packName = "Unknown Pack (id: " .. string.format("%.0f", tonumber(data.packId)) .. ")"
         if packObject ~= nil then 
             if packObject.name ~= nil then packName = packObject.name end
         end
@@ -460,10 +469,14 @@ local function SessionSetFunc(subItem, data, setValue)
             rightTextStr = rightTextStr .. " \n " .. "Cost: " .. tostring(costTotal)
         end 
         -- api.Log:Info(subItem.subItemIcon)
-        if data.packId ~= nil then 
-            local packInfo = api.Item:GetItemInfoByType(tonumber(data.packId))
+        if data.packId ~= nil then
+            local iconLookupId = tonumber(data.packId)
+            if packObject ~= nil and packObject.iconId ~= nil then
+                iconLookupId = packObject.iconId
+            end
+            local packInfo = api.Item:GetItemInfoByType(iconLookupId)
             F_SLOT.SetIconBackGround(subItem.subItemIcon, packInfo.path)
-        end 
+        end
         -- api.Log:Info(packInfo.path)
         
         local titleStr = "Unknown Zone Specialty Turn-in"
@@ -616,6 +629,20 @@ local function initCommerceUI()
     favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
     favouritePackStr:AddAnchor("BOTTOMLEFT", totalPacksStr, 0, 20)
     commerceWindow.favouritePackStr = favouritePackStr
+
+    local endSessionBtn = commerceWindow:CreateChildWidget("button", "endSessionBtn", 0, true)
+    endSessionBtn:SetText("End Session")
+    endSessionBtn:SetExtent(90, 30)
+    ApplyButtonSkin(endSessionBtn, BUTTON_BASIC.DEFAULT)
+    endSessionBtn:AddAnchor("BOTTOMRIGHT", commerceWindow, -15, 90)
+    function endSessionBtn:OnClick()
+        if currentSession ~= nil then
+            saveCurrentSessionToFile()
+            currentSession = nil
+            sessionTimeoutCounter = 0
+        end
+    end
+    endSessionBtn:SetHandler("OnClick", endSessionBtn.OnClick)
 end
 
 local function OnLoad()

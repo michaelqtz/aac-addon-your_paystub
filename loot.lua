@@ -53,8 +53,8 @@ local sessionPaused
 
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
-
-local initializeLootWindowPos = false
+local displayDirty = false
+local MAX_SESSIONS = 200
 
 local pageSize = 20 --> number of sessions on page
 local maxPage
@@ -155,10 +155,11 @@ local function fillSessionTableData(itemScrollList, pageIndex)
 end
 
 local function saveCurrentSessionToFile()
-    if pastSessions == nil then 
+    displayDirty = true
+    if pastSessions == nil then
         pastSessions = {}
         pastSessions["sessions"] = {}
-    end 
+    end
 
     local items = currentSession["items"]
     -- Let's fill in the AH prices
@@ -198,6 +199,9 @@ local function saveCurrentSessionToFile()
     end
     -- Insert it into the top position (to sort by most recent)
     table.insert(pastSessions["sessions"], 1, currentSession)
+    while #pastSessions["sessions"] > MAX_SESSIONS do
+        table.remove(pastSessions["sessions"])
+    end
     api.File:Write(pastSessionsFilename, pastSessions)
 
     -- Refresh loot session list (only if UI is initialized)
@@ -264,6 +268,7 @@ local function addItemToSession(itemId, itemCount)
         itemPrice = 0
     end
     currentSession["profitTotal"] = currentSession["profitTotal"] + (itemPrice * itemCount)
+    displayDirty = true
 end
 
 local function laborPointsChanged(diff, laborPoints)
@@ -466,122 +471,137 @@ local function fillInPureOrePrices()
     AH_PRICES[PURE_ORE_IDS["Pure Archeum Ore"]].average = archeumPrice
 end 
 
---- Loot Session Details Window Drawing
+--- Loot Session Details Window — created once, reused on subsequent calls
+local lootDetailsWidgets = {}
+
+local function createLootSessionDetailsWindow()
+    lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", "Loot Session Details")
+    lootSessionDetailsWindow:SetExtent(430, 450)
+    lootSessionDetailsWindow:AddAnchor("CENTER", "UIParent", 0, 0)
+
+    local w = lootSessionDetailsWindow
+    --- Session Summary Statistics
+    local profitLabel = w:CreateChildWidget("label", "lootSessionProfitLabel", 0, true)
+    profitLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    profitLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(profitLabel, FONT_COLOR.DEFAULT)
+    profitLabel:AddAnchor("TOPLEFT", w, 10, 50)
+    lootDetailsWidgets.profitLabel = profitLabel
+
+    local durationLabel = w:CreateChildWidget("label", "lootSessionDurationLabel", 0, true)
+    durationLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    durationLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(durationLabel, FONT_COLOR.DEFAULT)
+    durationLabel:AddAnchor("TOPLEFT", w, 250, 50)
+    lootDetailsWidgets.durationLabel = durationLabel
+
+    local killsLabel = w:CreateChildWidget("label", "lootSessionKillsLabel", 0, true)
+    killsLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    killsLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(killsLabel, FONT_COLOR.DEFAULT)
+    killsLabel:AddAnchor("TOPLEFT", profitLabel, 0, 24)
+    lootDetailsWidgets.killsLabel = killsLabel
+
+    local laborLabel = w:CreateChildWidget("label", "lootSessionLaborLabel", 0, true)
+    laborLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    laborLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(laborLabel, FONT_COLOR.DEFAULT)
+    laborLabel:AddAnchor("TOPLEFT", killsLabel, 0, 0)
+    lootDetailsWidgets.laborLabel = laborLabel
+
+    local perKillLabel = w:CreateChildWidget("label", "lootSessionPerKillLabel", 0, true)
+    perKillLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    perKillLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(perKillLabel, FONT_COLOR.DEFAULT)
+    perKillLabel:AddAnchor("TOPLEFT", durationLabel, 0, 24)
+    lootDetailsWidgets.perKillLabel = perKillLabel
+
+    local perLaborLabel = w:CreateChildWidget("label", "lootSessionPerLaborLabel", 0, true)
+    perLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
+    perLaborLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(perLaborLabel, FONT_COLOR.DEFAULT)
+    perLaborLabel:AddAnchor("TOPLEFT", perKillLabel, 0, 0)
+    lootDetailsWidgets.perLaborLabel = perLaborLabel
+
+    local deleteLabel = w:CreateChildWidget("textbox", "lootSessionDeleteLabel", 0, true)
+    deleteLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
+    deleteLabel.style:SetAlign(ALIGN.LEFT)
+    ApplyTextColor(deleteLabel, FONT_COLOR.RED)
+    deleteLabel:AddAnchor("BOTTOMLEFT", w, 10, -10)
+    deleteLabel:SetText("Deleting a session will remove it permanently. \n This action cannot be undone.")
+    deleteLabel:SetExtent(350, 24)
+
+    local deleteBtn = w:CreateChildWidget("button", "lootSessionDeleteBtn", 0, true)
+    deleteBtn:SetText("Delete Session")
+    deleteBtn:AddAnchor("BOTTOMRIGHT", w, -20, -10)
+    ApplyButtonSkin(deleteBtn, BUTTON_BASIC.DEFAULT)
+    lootDetailsWidgets.deleteBtn = deleteBtn
+
+end
+
 local function drawLootSessionDetails(sessionIndex)
-    -- api.Log:Info("Drawing loot session details for session index: " .. sessionIndex)
     local session = pastSessions["sessions"][sessionIndex]
-    if session == nil then return end 
+    if session == nil then return end
+
+    -- Create window once, reuse on subsequent calls
+    if lootSessionDetailsWindow == nil then
+        createLootSessionDetailsWindow()
+    end
+
     local zone = session.zone
     if zone == nil then zone = "Unknown" end
     local items = session.items
     local profitTotal = session.profitTotal
     local laborSpent = session.laborSpent
-    local costTotal = session.costTotal
     local kills = session.kills
     local localTimestamp = session.localTimestamp
     local endTimestamp = session.endTimestamp
     local duration = differenceBetweenTimestamps(endTimestamp, localTimestamp)
     if duration <= 0 then duration = 1 end
     local durationStr = displayTimeString(duration)
-    local date = api.Time:TimeToDate(localTimestamp)
     local profitPerHour = profitTotal / (duration / 3600)
     local killsPerHour = kills > 0 and (kills / (duration / 3600)) or 0
     local laborPerHour = laborSpent > 0 and (laborSpent / (duration / 3600)) or 0
     local silverPerLabor = laborSpent > 0 and (profitTotal * 100 / laborSpent) or 0
-    local titleStr = zone .. " (" .. string.format("%02d/%02d/%04d", date.month, date.day, date.year) .. ")"
 
-    if lootSessionDetailsWindow ~= nil then
-        lootSessionDetailsWindow:Show(false)
-        api.Interface:Free(lootSessionDetailsWindow)
-        lootSessionDetailsWindow = nil
-    end
-    lootSessionDetailsWindow = api.Interface:CreateWindow("lootSessionDetailsWindow", titleStr)
-    lootSessionDetailsWindow:SetExtent(430, 450)
-    lootSessionDetailsWindow:AddAnchor("CENTER", "UIParent", 0, 0)
-    lootSessionDetailsWindow:Show(true)
-    --- Session Summary Statistics
-    local lootSessionProfitLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionProfitLabel", 0, true)
-    lootSessionProfitLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionProfitLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionProfitLabel, FONT_COLOR.DEFAULT)
-    lootSessionProfitLabel:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 50)
-    lootSessionProfitLabel:SetText("Profit: " .. string.format('%.0f', profitTotal) .. "g" .. " (" .. string.format('%.0f', profitPerHour) .. "g/hr)")
-    local lootSessionDurationLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionDurationLabel", 0, true)
-    lootSessionDurationLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionDurationLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionDurationLabel, FONT_COLOR.DEFAULT)
-    lootSessionDurationLabel:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 250, 50)
-    lootSessionDurationLabel:SetText("Duration: " .. durationStr)
+    -- Update label text
+    lootDetailsWidgets.profitLabel:SetText("Profit: " .. string.format('%.0f', profitTotal) .. "g" .. " (" .. string.format('%.0f', profitPerHour) .. "g/hr)")
+    lootDetailsWidgets.durationLabel:SetText("Duration: " .. durationStr)
+    lootDetailsWidgets.killsLabel:SetText("Kills: " .. tostring(kills) .. " (" .. string.format('%.0f', killsPerHour) .. "/hr)")
+    lootDetailsWidgets.laborLabel:SetText("Labor: " .. tostring(laborSpent) .. " (" .. string.format('%.0f', laborPerHour) .. "/hr)")
+    lootDetailsWidgets.perKillLabel:SetText("Profit per Kill: " .. string.format('%.2f', kills > 0 and (profitTotal / kills) or 0) .. "g")
+    lootDetailsWidgets.perLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', silverPerLabor) .. "s")
 
-    local lootSessionKillsLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionKillsLabel", 0, true)
-    lootSessionKillsLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionKillsLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionKillsLabel, FONT_COLOR.DEFAULT)
-    lootSessionKillsLabel:AddAnchor("TOPLEFT", lootSessionProfitLabel, 0, 24)
-    lootSessionKillsLabel:SetText("Kills: " .. tostring(kills) .. " (" .. string.format('%.0f', killsPerHour) .. "/hr)")
-
-    local lootSessionLaborLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionLaborLabel", 0, true)
-    lootSessionLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionLaborLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionLaborLabel, FONT_COLOR.DEFAULT)
-    lootSessionLaborLabel:AddAnchor("TOPLEFT", lootSessionKillsLabel, 0, 0)
-    lootSessionLaborLabel:SetText("Labor: " .. tostring(laborSpent) .. " (" .. string.format('%.0f', laborPerHour) .. "/hr)")
-
-    local lootSessionPerKillLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionPerKillLabel", 0, true)
-    lootSessionPerKillLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionPerKillLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionPerKillLabel, FONT_COLOR.DEFAULT)
-    lootSessionPerKillLabel:AddAnchor("TOPLEFT", lootSessionDurationLabel, 0, 24)
-    lootSessionPerKillLabel:SetText("Profit per Kill: " .. string.format('%.2f', kills > 0 and (profitTotal / kills) or 0) .. "g")
-    local lootSessionPerLaborLabel = lootSessionDetailsWindow:CreateChildWidget("label", "lootSessionPerLaborLabel", 0, true)
-    lootSessionPerLaborLabel.style:SetFontSize(FONT_SIZE.LARGE)
-    lootSessionPerLaborLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionPerLaborLabel, FONT_COLOR.DEFAULT)
-    lootSessionPerLaborLabel:AddAnchor("TOPLEFT", lootSessionPerKillLabel, 0, 0)
-    lootSessionPerLaborLabel:SetText("Silver Per Labor: " .. string.format('%.2f', silverPerLabor) .. "s")
-    -- Flip flop between labor and kills being displayed based on labor spent being higher than kills
-    if laborSpent > kills then 
-        lootSessionKillsLabel:Show(false)
-        lootSessionPerKillLabel:Show(false)
-        lootSessionPerLaborLabel:Show(true)
-        lootSessionLaborLabel:Show(true)
+    -- Flip flop between labor and kills being displayed
+    if laborSpent > kills then
+        lootDetailsWidgets.killsLabel:Show(false)
+        lootDetailsWidgets.perKillLabel:Show(false)
+        lootDetailsWidgets.perLaborLabel:Show(true)
+        lootDetailsWidgets.laborLabel:Show(true)
     else
-        lootSessionLaborLabel:Show(false)
-        lootSessionPerLaborLabel:Show(false)
-        lootSessionKillsLabel:Show(true)
-        lootSessionPerKillLabel:Show(true)
+        lootDetailsWidgets.laborLabel:Show(false)
+        lootDetailsWidgets.perLaborLabel:Show(false)
+        lootDetailsWidgets.killsLabel:Show(true)
+        lootDetailsWidgets.perKillLabel:Show(true)
     end
 
-    local lootSessionDeleteLabel = lootSessionDetailsWindow:CreateChildWidget("textbox", "lootSessionDeleteLabel", 0, true)
-    lootSessionDeleteLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
-    lootSessionDeleteLabel.style:SetAlign(ALIGN.LEFT)
-    ApplyTextColor(lootSessionDeleteLabel, FONT_COLOR.RED)
-    lootSessionDeleteLabel:AddAnchor("BOTTOMLEFT", lootSessionDetailsWindow, 10, -10)
-    lootSessionDeleteLabel:SetText("Deleting a session will remove it permanently. \n This action cannot be undone.")
-    lootSessionDeleteLabel:SetExtent(350, 24)
-    local lootSessionDeleteBtn = lootSessionDetailsWindow:CreateChildWidget("button", "lootSessionDeleteBtn", 0, true)
-    lootSessionDeleteBtn:SetText("Delete Session")
-	lootSessionDeleteBtn:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -20, -10)
-	ApplyButtonSkin(lootSessionDeleteBtn, BUTTON_BASIC.DEFAULT)
-    function lootSessionDeleteBtn:OnClick()
-        -- Remove the session from the past sessions
+    -- Update delete button handler with current sessionIndex
+    function lootDetailsWidgets.deleteBtn:OnClick()
         table.remove(pastSessions["sessions"], sessionIndex)
-        -- Iterate through old sessions and change their item arrays to use [itemId] format
-        for _, pastSession in ipairs(pastSessions.sessions) do 
+        for _, pastSession in ipairs(pastSessions.sessions) do
             local oldItems = pastSession.items
             local newItems = {}
-            for oldItemId, itemCount in pairs(oldItems) do 
+            for oldItemId, itemCount in pairs(oldItems) do
                 if string.sub(oldItemId, 1, 1) == "[" and string.sub(oldItemId, -1) == "]" then
                     newItems[oldItemId] = itemCount
                 else
                     newItems["[" .. oldItemId .. "]"] = itemCount
                 end
-            end 
+            end
             pastSession.items = newItems
         end
-        -- Finally, write it.
         api.File:Write(pastSessionsFilename, pastSessions)
-        
+
         lootSessionDetailsWindow:Show(false)
         local sessionScrollList = lootWindow.sessionScrollList
         sessionScrollList:DeleteAllDatas()
@@ -589,15 +609,18 @@ local function drawLootSessionDetails(sessionIndex)
         fillSessionTableData(sessionScrollList, 1)
         sessionScrollList.pageControl:SetCurrentPage(1, true)
     end
-    lootSessionDeleteBtn:SetHandler("OnClick", lootSessionDeleteBtn.OnClick)
+    lootDetailsWidgets.deleteBtn:SetHandler("OnClick", lootDetailsWidgets.deleteBtn.OnClick)
 
-
-    --- Session Details Items List
-    local lootSessionItemsList = W_CTRL.CreateScrollListBox("lootSessionItemsList", lootSessionDetailsWindow, "TYPE2")
-    lootSessionItemsList:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 100)
-    lootSessionItemsList:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -10, -60)
-    lootSessionItemsList:SetExtent(400, 300)
-    -- Sort the list of items by it's value
+    -- Rebuild items list (destroy old one, create fresh)
+    if lootDetailsWidgets.itemsList ~= nil then
+        api.Interface:Free(lootDetailsWidgets.itemsList)
+        lootDetailsWidgets.itemsList = nil
+    end
+    local itemsList = W_CTRL.CreateScrollListBox("lootSessionItemsList", lootSessionDetailsWindow, "TYPE2")
+    itemsList:AddAnchor("TOPLEFT", lootSessionDetailsWindow, 10, 100)
+    itemsList:AddAnchor("BOTTOMRIGHT", lootSessionDetailsWindow, -10, -60)
+    itemsList:SetExtent(400, 300)
+    lootDetailsWidgets.itemsList = itemsList
     local sortedItemsByAHPrice = {}
     for itemId, itemCount in pairs(items) do
         local cleanedItemId = getCleanedItemId(itemId)
@@ -611,30 +634,22 @@ local function drawLootSessionDetails(sessionIndex)
     table.sort(sortedItemsByAHPrice, function(a, b)
         return a.totalValue > b.totalValue
     end)
-    -- Fill the item list with the new sorted list, most valuable at the top
-    count = 1
-    for _, item in ipairs(sortedItemsByAHPrice) do 
+    local count = 1
+    for _, item in ipairs(sortedItemsByAHPrice) do
         local itemInfo = api.Item:GetItemInfoByType(tonumber(getCleanedItemId(item.itemId)))
         local displayStr = itemInfo.name .. " x" .. item.itemCount .. " (" .. string.format('%.0f', item.totalValue) .. "g)"
-        lootSessionItemsList:AppendItem(displayStr, count)
+        itemsList:AppendItem(displayStr, count)
         count = count + 1
-    end 
+    end
 
-
-end 
+    lootSessionDetailsWindow:Show(true)
+end
 
 local function OnUpdate(dt)
-    local settings = api.GetSettings("your_paystub")
-    -- Initialize the loot window position
-    if initializeLootWindowPos ~= true then 
-        lootWindow.lootTrackerOverlay:RemoveAllAnchors()
-        lootWindow.lootTrackerOverlay:AddAnchor("TOPLEFT", "UIParent", settings.lootOverlayX, settings.lootOverlayY)
-        initializeLootWindowPos = true
-    end 
-    
     if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
         displayRefreshCounter = 0
-        if lootUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+        if displayDirty and lootUIInitialized and paystubDisplayWindow ~= nil and paystubDisplayWindow:IsVisible() then
+            displayDirty = false
             local sessionScrollList = lootWindow.sessionScrollList
             sessionScrollList.pageControl.maxPage = maxPage
             fillSessionTableData(sessionScrollList, 1)
@@ -1097,6 +1112,7 @@ local function OnUnload()
         lootSessionDetailsWindow:Show(false)
         api.Interface:Free(lootSessionDetailsWindow)
         lootSessionDetailsWindow = nil
+        lootDetailsWidgets = {}
     end
     if lootWindow ~= nil and lootWindow.lootTrackerOverlay ~= nil then
         lootWindow.lootTrackerOverlay:Show(false)
