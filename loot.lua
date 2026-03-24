@@ -613,6 +613,14 @@ local function drawLootSessionDetails(sessionIndex)
 
 end 
 
+local function isLootWindowOpen()
+    if paystubDisplayWindow:IsVisible() then 
+        return true
+    else 
+        return false
+    end 
+end
+
 local function OnUpdate(dt)
     local settings = api.GetSettings("your_paystub")
     -- Initialize the loot window position
@@ -622,18 +630,20 @@ local function OnUpdate(dt)
         initializeLootWindowPos = true
     end 
     
-    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
-        -- endLootTrackerSession()
+    if isLootWindowOpen() then
+        if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
+            -- endLootTrackerSession()
+            displayRefreshCounter = 0
 
-        displayRefreshCounter = 0
-        local sessionScrollList = lootWindow.sessionScrollList
-        sessionScrollList.pageControl.maxPage = maxPage
-        fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
-
-        
-    end 
-    displayRefreshCounter = displayRefreshCounter + dt
+            local sessionScrollList = lootWindow.sessionScrollList
+            sessionScrollList.pageControl.maxPage = maxPage
+            fillSessionTableData(sessionScrollList, 1)
+            sessionScrollList.pageControl:SetCurrentPage(1, true)
+        end
+        displayRefreshCounter = displayRefreshCounter + dt
+    else
+        displayRefreshCounter = DISPLAY_REFRESH_MS
+    end
 
     -- Labor used timer for excluding from kill count
     if laborUsedTimer + dt > LABOR_USED_TIMER_RATE then 

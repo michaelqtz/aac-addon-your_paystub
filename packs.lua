@@ -194,6 +194,14 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     end 
 end
 
+local function isPaystubWindowOpen()
+    if paystubDisplayWindow:IsVisible() then 
+        return true
+    else 
+        return false
+    end 
+end
+
 local function saveCurrentSessionToFile()
     if pastSessions == nil then 
         pastSessions = {}
@@ -392,16 +400,23 @@ local function OnUpdate(dt)
     end 
     sessionTimeoutCounter = sessionTimeoutCounter + dt
 
-    if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
-        displayRefreshCounter = 0
-        local sessionScrollList = commerceWindow.sessionScrollList
-        sessionScrollList.pageControl.maxPage = maxPage
-        fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
-        -- Refresh stats
-        refreshStatisticsLabels()
-    end 
-    displayRefreshCounter = displayRefreshCounter + dt
+    -- Only refresh the display if the paystub window is open
+    if isPaystubWindowOpen() then
+        if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then 
+            displayRefreshCounter = 0
+            local sessionScrollList = commerceWindow.sessionScrollList
+            sessionScrollList.pageControl.maxPage = maxPage
+            fillSessionTableData(sessionScrollList, 1)
+            sessionScrollList.pageControl:SetCurrentPage(1, true)
+
+            -- Refresh stats
+            refreshStatisticsLabels()
+        end 
+        displayRefreshCounter = displayRefreshCounter + dt
+    else
+        -- Optional: reset so it refreshes promptly when reopened
+        displayRefreshCounter = DISPLAY_REFRESH_MS
+    end
 
     if packSlotCheckCounter + dt > PACK_SLOT_CHECK_MS then 
         packSlotCheckCounter = 0

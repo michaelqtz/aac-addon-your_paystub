@@ -37,7 +37,7 @@ local latestMoneyChangeStr = "0"
 local latestMoneyChange = 0
 
 local sessionSaveTimer = 0
-local SESSION_SAVE_TIME = 60000
+local SESSION_SAVE_TIME = 300000
 
 -- Rolling time window tracking (persisted to disk)
 local totalEarnedNum = 0
@@ -497,7 +497,7 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
 end
 
 local function OnUpdate(dt)
-    -- Every 60 seconds, save the current session to file
+    -- Every 300 seconds, save the current session to file
     if currentSession ~= nil then
         sessionSaveTimer = sessionSaveTimer + dt
         if sessionSaveTimer >= SESSION_SAVE_TIME then
