@@ -6,6 +6,8 @@ local your_packs_addon = {
 	desc = ""
 }
 
+local sa = require("your_paystub/session_archive")
+
 local itemTaskTypes = {}
 --- Item Task Type IDs
 --> AAC 16 = Placed pack into vehicle trade slot
@@ -53,43 +55,17 @@ local packSlotCheckCounter = 0
 local PACK_SLOT_CHECK_MS = 500
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
-local MAX_SESSIONS = 200
 
 local pageSize = 20 --> number of sessions on page
 local maxPage
 
--- helpers 
-local function split(s, sep)
-    local fields = {}
-    
-    local sep = sep or " "
-    local pattern = string.format("([^%s]+)", sep)
-    string.gsub(s, pattern, function(c) fields[#fields + 1] = c end)
-    
-    return fields
-end
-local function ConvertColor(color)
-    return color / 255
-end 
+local archiveFilename = "your_paystub_pack_sessions_archive.lua"
 
-
-local function differenceBetweenTimestamps(time1, time2)
-    local time1Prefix = string.sub(time1, 1, 2)
-    local time1Suffix = string.sub(time1, (#time1 - 2) * -1)
-
-    local time2Prefix = string.sub(time2, 1, 2) 
-    local time2Suffix = string.sub(time2, (#time2 - 2) * -1)
-    local timeDiff = tonumber(time1Suffix) - tonumber(time2Suffix)
-    return timeDiff
-end 
-local function displayTimeString(timeInSeconds)
-    local timeInMs = tonumber(timeInSeconds)
-    local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60
-    local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-
-    return string.format("%02dh %02dm", hours, minutes)
-end
+-- Shared helpers (from session_archive)
+local split = sa.split
+local ConvertColor = sa.ConvertColor
+local differenceBetweenTimestamps = sa.differenceBetweenTimestamps
+local displayTimeString = sa.displayTimeString
 
 local function updateLastKnownChannel(channelId, channelName)
     local targetChannelId = 1
@@ -106,19 +82,25 @@ end
 local function getTotalGoldMadeFromPacks()
     local totalGold = 0
     if pastSessions == nil then return totalGold end
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
-        if sessionObject.profitTotal ~= "Unknown" then 
+    for _, sessionObject in pairs(pastSessions["sessions"]) do
+        if sessionObject.profitTotal ~= "Unknown" then
             totalGold = totalGold + sessionObject.profitTotal
-        end 
-    end 
+        end
+    end
+    if pastSessions.archivedStats then
+        totalGold = totalGold + pastSessions.archivedStats.totalGold
+    end
     return totalGold
-end 
+end
 local function getTotalPacksTurnedIn()
     local totalPacks = 0
     if pastSessions == nil then return totalPacks end
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+    for _, sessionObject in pairs(pastSessions["sessions"]) do
         totalPacks = totalPacks + sessionObject.packCount
-    end 
+    end
+    if pastSessions.archivedStats then
+        totalPacks = totalPacks + pastSessions.archivedStats.totalPacks
+    end
     return totalPacks
 end
 local function getFavouritePackType()
@@ -130,6 +112,11 @@ local function getFavouritePackType()
             packCounts[packId] = 0
         end
         packCounts[packId] = packCounts[packId] + sessionObject.packCount
+    end
+    if pastSessions.archivedStats and pastSessions.archivedStats.packCounts then
+        for packId, count in pairs(pastSessions.archivedStats.packCounts) do
+            packCounts[packId] = (packCounts[packId] or 0) + count
+        end
     end
 
     local favouritePackId = nil
@@ -146,104 +133,100 @@ end
 local function getPendingPackGoldTotal()
     local pendingGold = 0
     if pastSessions == nil then return pendingGold end
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
+    for _, sessionObject in pairs(pastSessions["sessions"]) do
         local timeDiffTilNow = PACK_TIMER_8HRS_IN_SECS - differenceBetweenTimestamps(api.Time:GetLocalTime(), sessionObject.localTimestamp)
-        if timeDiffTilNow > 0 then
+        if timeDiffTilNow > 0 and sessionObject.profitTotal ~= "Unknown" then
             pendingGold = pendingGold + sessionObject.profitTotal
-        end 
-    end 
+        end
+    end
     return pendingGold
 end
 
+local function getSessionByIndex(index)
+    return sa.getSessionByIndex(pastSessions, archiveFilename, index)
+end
+
 local function fillSessionTableData(itemScrollList, pageIndex)
-    local startingIndex = 1
-    if pageIndex > 1 then 
-        startingIndex = ((pageIndex - 1) * pageSize) + 1 
-    end
+    local startingIndex = ((pageIndex - 1) * pageSize) + 1
     local endingIndex = startingIndex + pageSize
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
-    
-    local count = 1
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
-        if count >= startingIndex and count < endingIndex then 
-            local itemData = {
-                -- localTimestamp = "1733471130",
-                -- packId = "42023",
-                -- refundTotal = 482872,
-                -- packCount = 1,
-                -- coinTypeId = 0,
-                -- Sessions data fields
-                localTimestamp = sessionObject.localTimestamp,
-                packId = sessionObject.packId,
-                refundTotal = sessionObject.refundTotal,
-                profitTotal = sessionObject.profitTotal,
-                costTotal = sessionObject.costTotal,
-                packCount = sessionObject.packCount, 
-                coinTypeId = sessionObject.coinTypeId,
-                turnInZone = sessionObject.turnInZone,
-                
-                index = count,
 
-                -- Required fields
-                isViewData = true, 
-                isAbstention = false
-            }
-            itemScrollList:InsertData(count, 1, itemData)
-        end
+    local count = 1
+    for i = startingIndex, endingIndex - 1 do
+        local sessionObject = getSessionByIndex(i)
+        if sessionObject == nil then break end
+        local itemData = {
+            localTimestamp = sessionObject.localTimestamp,
+            packId = sessionObject.packId,
+            refundTotal = sessionObject.refundTotal,
+            profitTotal = sessionObject.profitTotal,
+            costTotal = sessionObject.costTotal,
+            packCount = sessionObject.packCount,
+            coinTypeId = sessionObject.coinTypeId,
+            turnInZone = sessionObject.turnInZone,
+
+            index = i,
+
+            -- Required fields
+            isViewData = true,
+            isAbstention = false
+        }
+        itemScrollList:InsertData(count, 1, itemData)
         count = count + 1
-    end 
+    end
 end
 
-local function saveCurrentSessionToFile()
+local function saveCurrentSessionToFile(session)
+    session = session or currentSession
+    if session == nil then return end
     displayDirty = true
     if pastSessions == nil then
         pastSessions = {}
         pastSessions["sessions"] = {}
     end
 
-    local coinTypeId = currentSession["coinTypeId"]
+    local coinTypeId = session["coinTypeId"]
     -- Let's fill in the AH prices
     if coinTypeId == 0 then --> Gold
-        currentSession["profitTotal"] = currentSession["refundTotal"] / 10000
+        session["profitTotal"] = session["refundTotal"] / 10000
     elseif coinTypeId == 32103 or coinTypeId == 32106 then --> Charcoal Stabilizers & Dragon Essence Stabilizers
         local stabilizerPrice = AH_PRICES[coinTypeId].average
-        currentSession["profitTotal"] = stabilizerPrice * currentSession["refundTotal"]
+        session["profitTotal"] = stabilizerPrice * session["refundTotal"]
     elseif coinTypeId == 23633 then --> Gilda Star, valued as Gilda Dust
         local gildaDustPrice = AH_PRICES[8000026].average
-        currentSession["profitTotal"] = gildaDustPrice * currentSession["refundTotal"]
+        session["profitTotal"] = gildaDustPrice * session["refundTotal"]
     elseif coinTypeId == 40229 then --> Lord's Pence, valued as Lord's Coin
         local lordsCoinPrice = AH_PRICES[26880].average
-        currentSession["profitTotal"] = lordsCoinPrice * (currentSession["refundTotal"] / 100)
-    else --> Unknown/untradeable/unpriceable 
-        currentSession["profitTotal"] = "Unknown"
-    end 
+        session["profitTotal"] = lordsCoinPrice * (session["refundTotal"] / 100)
+    else --> Unknown/untradeable/unpriceable
+        session["profitTotal"] = "Unknown"
+    end
     -- TODO: Fill in pack costs
-    currentSession["costTotal"] = "Unknown"
+    session["costTotal"] = "Unknown"
 
     -- Insert it into the top position (to sort by most recent)
-    table.insert(pastSessions["sessions"], 1, currentSession)
-    while #pastSessions["sessions"] > MAX_SESSIONS do
-        table.remove(pastSessions["sessions"])
-    end
+    table.insert(pastSessions["sessions"], 1, session)
+
+    -- Archive overflow: move oldest sessions to archive file (with stats accumulation)
+    pastSessions.archivedStats = pastSessions.archivedStats or { totalGold = 0, totalPacks = 0, packCounts = {} }
+    local stats = pastSessions.archivedStats
+    sa.archiveOverflow(pastSessions, archiveFilename, function(overflow)
+        if overflow.profitTotal ~= "Unknown" then
+            stats.totalGold = stats.totalGold + overflow.profitTotal
+        end
+        stats.totalPacks = stats.totalPacks + overflow.packCount
+        stats.packCounts[overflow.packId] = (stats.packCounts[overflow.packId] or 0) + overflow.packCount
+    end)
+
     api.File:Write(pastSessionsFilename, pastSessions)
 
     -- Refresh payment list (only if UI is initialized)
     if commerceUIInitialized then
         local sessionScrollList = commerceWindow.sessionScrollList
-        if pastSessions ~= nil then
-            if pastSessions.sessions ~= nil then
-                maxPage = math.ceil(#pastSessions.sessions / pageSize)
-            else
-                maxPage = 1
-            end
-        else
-            maxPage = 1
-        end
-        sessionScrollList.pageControl.maxPage = maxPage
+        maxPage = sa.refreshPageControl(sessionScrollList, pastSessions, pageSize)
         fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
         refreshStatisticsLabels()
     end
 end
@@ -391,12 +374,12 @@ local function OnUpdate(dt)
     if sessionTimeoutCounter + dt > SESSION_TIMEOUT_MS then
         -- Save, and clear session
         -- api.Log:Info("[Your Paystub] Pack session timed out due to inactivity.")
-        if currentSession ~= nil then 
+        if currentSession ~= nil then
             api.Log:Info("[Your Paystub] Ending current pack session...")
-            saveCurrentSessionToFile()
+            local sessionToSave = currentSession
             currentSession = nil
-            
-        end 
+            saveCurrentSessionToFile(sessionToSave)
+        end
         sessionTimeoutCounter = 0
     end 
     sessionTimeoutCounter = sessionTimeoutCounter + dt
@@ -637,9 +620,10 @@ local function initCommerceUI()
     endSessionBtn:AddAnchor("BOTTOMRIGHT", commerceWindow, -15, 90)
     function endSessionBtn:OnClick()
         if currentSession ~= nil then
-            saveCurrentSessionToFile()
+            local sessionToSave = currentSession
             currentSession = nil
             sessionTimeoutCounter = 0
+            saveCurrentSessionToFile(sessionToSave)
         end
     end
     endSessionBtn:SetHandler("OnClick", endSessionBtn.OnClick)
@@ -661,19 +645,7 @@ local function OnLoad()
     pastSessionsFilename = "your_paystub_pack_sessions.lua"
 
     -- Load past sessions
-    pastSessions = api.File:Read(pastSessionsFilename)
-    if pastSessions ~= nil then
-        if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
-        else
-            maxPage = 1
-        end   
-    else
-        pastSessions = {}
-        pastSessions["sessions"] = {}
-        api.File:Write(pastSessionsFilename, pastSessions)
-        maxPage = 1
-    end 
+    pastSessions, maxPage = sa.loadOrInitSessions(pastSessionsFilename, pageSize)
     
 
     for packId, pack in pairs(packs_helper.packsInfo) do

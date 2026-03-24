@@ -5,6 +5,8 @@ local your_loot_addon = {
 	desc = ""
 }
 
+local sa = require("your_paystub/session_archive")
+
 local itemTaskTypes = {}
 --- Item Task Type IDs'
 --> AAC 9 = harvested wild potato
@@ -54,41 +56,17 @@ local sessionPaused
 local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
 local displayDirty = false
-local MAX_SESSIONS = 200
 
 local pageSize = 20 --> number of sessions on page
 local maxPage
 
--- helpers 
-local function split(s, sep)
-    local fields = {}
-    
-    local sep = sep or " "
-    local pattern = string.format("([^%s]+)", sep)
-    string.gsub(s, pattern, function(c) fields[#fields + 1] = c end)
-    
-    return fields
-end
-local function ConvertColor(color)
-    return color / 255
-end 
-local function differenceBetweenTimestamps(time1, time2)
-    local time1Prefix = string.sub(time1, 1, 2)
-    local time1Suffix = string.sub(time1, (#time1 - 2) * -1)
+local archiveFilename = "your_paystub_loot_sessions_archive.lua"
 
-    local time2Prefix = string.sub(time2, 1, 2) 
-    local time2Suffix = string.sub(time2, (#time2 - 2) * -1)
-    local timeDiff = tonumber(time1Suffix) - tonumber(time2Suffix)
-    return timeDiff
-end 
-local function displayTimeString(timeInSeconds)
-    local timeInMs = tonumber(timeInSeconds)
-    local seconds = math.floor(timeInSeconds) % 60
-    local minutes = math.floor(timeInSeconds / (1*60)) % 60
-    local hours = math.floor(timeInSeconds / (1*60*60)) % 24
-
-    return string.format("%02dh %02dm", hours, minutes)
-end
+-- Shared helpers (from session_archive)
+local split = sa.split
+local ConvertColor = sa.ConvertColor
+local differenceBetweenTimestamps = sa.differenceBetweenTimestamps
+local displayTimeString = sa.displayTimeString
 
 local function displayOverlayTimeString(timeInSeconds)
     local timeInMs = tonumber(timeInSeconds)
@@ -118,40 +96,39 @@ local function getCleanedItemId(itemId)
     return itemId
 end 
 
+local function getSessionByIndex(index)
+    return sa.getSessionByIndex(pastSessions, archiveFilename, index)
+end
+
 local function fillSessionTableData(itemScrollList, pageIndex)
-    local startingIndex = 1
-    if pageIndex > 1 then 
-        startingIndex = ((pageIndex - 1) * pageSize) + 1 
-    end
+    local startingIndex = ((pageIndex - 1) * pageSize) + 1
     local endingIndex = startingIndex + pageSize
     itemScrollList:DeleteAllDatas()
 
     if pastSessions == nil then return end
-    
-    local count = 1
-    for _, sessionObject in pairs(pastSessions["sessions"]) do 
-        if count >= startingIndex and count < endingIndex then 
-            local itemData = {
-                -- Sessions data fields
-                localTimestamp = sessionObject.localTimestamp,
-                endTimestamp = sessionObject.endTimestamp,
-                items = sessionObject.items,
-                profitTotal = sessionObject.profitTotal,
-                laborSpent = sessionObject.laborSpent,
-                costTotal = sessionObject.costTotal,
-                kills = sessionObject.kills, 
-                zone = sessionObject.zone,
-                index = count,
 
-                -- Required fields
-                isViewData = true, 
-                isAbstention = false
-            }
-            -- api.Log:Info(itemData.items)
-            itemScrollList:InsertData(count, 1, itemData)
-        end
+    local count = 1
+    for i = startingIndex, endingIndex - 1 do
+        local sessionObject = getSessionByIndex(i)
+        if sessionObject == nil then break end
+        local itemData = {
+            localTimestamp = sessionObject.localTimestamp,
+            endTimestamp = sessionObject.endTimestamp,
+            items = sessionObject.items,
+            profitTotal = sessionObject.profitTotal,
+            laborSpent = sessionObject.laborSpent,
+            costTotal = sessionObject.costTotal,
+            kills = sessionObject.kills,
+            zone = sessionObject.zone,
+            index = i,
+
+            -- Required fields
+            isViewData = true,
+            isAbstention = false
+        }
+        itemScrollList:InsertData(count, 1, itemData)
         count = count + 1
-    end 
+    end
 end
 
 local function saveCurrentSessionToFile()
@@ -199,28 +176,19 @@ local function saveCurrentSessionToFile()
     end
     -- Insert it into the top position (to sort by most recent)
     table.insert(pastSessions["sessions"], 1, currentSession)
-    while #pastSessions["sessions"] > MAX_SESSIONS do
-        table.remove(pastSessions["sessions"])
-    end
+
+    -- Archive overflow: move oldest sessions to archive file
+    sa.archiveOverflow(pastSessions, archiveFilename)
+
     api.File:Write(pastSessionsFilename, pastSessions)
 
     -- Refresh loot session list (only if UI is initialized)
     if lootUIInitialized then
         local sessionScrollList = lootWindow.sessionScrollList
-        if pastSessions ~= nil then
-            if pastSessions.sessions ~= nil then
-                maxPage = math.ceil(#pastSessions.sessions / pageSize)
-            else
-                maxPage = 1
-            end
-        else
-            maxPage = 1
-        end
-        sessionScrollList.pageControl.maxPage = maxPage
+        maxPage = sa.refreshPageControl(sessionScrollList, pastSessions, pageSize)
         fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
     end
-end 
+end
 
 local function endLootTrackerSession()
     if currentSession == nil then return end 
@@ -540,7 +508,7 @@ local function createLootSessionDetailsWindow()
 end
 
 local function drawLootSessionDetails(sessionIndex)
-    local session = pastSessions["sessions"][sessionIndex]
+    local session = getSessionByIndex(sessionIndex)
     if session == nil then return end
 
     -- Create window once, reuse on subsequent calls
@@ -587,27 +555,13 @@ local function drawLootSessionDetails(sessionIndex)
 
     -- Update delete button handler with current sessionIndex
     function lootDetailsWidgets.deleteBtn:OnClick()
-        table.remove(pastSessions["sessions"], sessionIndex)
-        for _, pastSession in ipairs(pastSessions.sessions) do
-            local oldItems = pastSession.items
-            local newItems = {}
-            for oldItemId, itemCount in pairs(oldItems) do
-                if string.sub(oldItemId, 1, 1) == "[" and string.sub(oldItemId, -1) == "]" then
-                    newItems[oldItemId] = itemCount
-                else
-                    newItems["[" .. oldItemId .. "]"] = itemCount
-                end
-            end
-            pastSession.items = newItems
-        end
-        api.File:Write(pastSessionsFilename, pastSessions)
+        sa.deleteSessionByIndex(pastSessions, archiveFilename, pastSessionsFilename, sessionIndex)
 
         lootSessionDetailsWindow:Show(false)
         local sessionScrollList = lootWindow.sessionScrollList
         sessionScrollList:DeleteAllDatas()
-        sessionScrollList.pageControl.maxPage = math.ceil(#pastSessions.sessions / pageSize)
+        maxPage = sa.refreshPageControl(sessionScrollList, pastSessions, pageSize)
         fillSessionTableData(sessionScrollList, 1)
-        sessionScrollList.pageControl:SetCurrentPage(1, true)
     end
     lootDetailsWidgets.deleteBtn:SetHandler("OnClick", lootDetailsWidgets.deleteBtn.OnClick)
 
@@ -943,19 +897,7 @@ local function OnLoad()
     fillInPureOrePrices()
     
     -- Load previous sessions, or make empty file.
-    pastSessions = api.File:Read(pastSessionsFilename)
-    if pastSessions ~= nil then
-        if pastSessions.sessions ~= nil then
-            maxPage = math.ceil(#pastSessions.sessions / pageSize)    
-        else
-            maxPage = 1
-        end   
-    else
-        pastSessions = {}
-        pastSessions["sessions"] = {}
-        api.File:Write(pastSessionsFilename, pastSessions)
-        maxPage = 1
-    end 
+    pastSessions, maxPage = sa.loadOrInitSessions(pastSessionsFilename, pageSize)
 
     function yourPaystubWindow:OnEvent(event, ...)
         if event == "REMOVED_ITEM" then      
