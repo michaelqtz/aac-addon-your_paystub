@@ -44,6 +44,15 @@ local currentSession
 local pastSessions
 local pastSessionsFilename
 
+local turnInCounter = {}
+local counterTimeoutCounter = 0
+local COUNTER_TIMEOUT_MS = 1000 * 60 * 10
+
+local function resetTurnInCounter()
+    for k in pairs(turnInCounter) do turnInCounter[k] = nil end
+    counterTimeoutCounter = 0
+end
+
 local sessionTimeoutCounter = 0
 local SESSION_TIMEOUT_MS = 1000 * 45
 
@@ -178,6 +187,25 @@ local function fillSessionTableData(itemScrollList, pageIndex)
     end
 end
 
+local function refreshStatisticsLabels()
+    local totalGold = getTotalGoldMadeFromPacks()
+    local totalPacks = getTotalPacksTurnedIn()
+    local favouritePackId = getFavouritePackType()
+    local pendingGold = getPendingPackGoldTotal()
+
+    commerceWindow.pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
+    commerceWindow.totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
+    commerceWindow.totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
+    if favouritePackId == nil then favouritePackId = 0 end
+    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
+    if favouritePackName ~= nil then
+        favouritePackName = favouritePackName.name
+    else
+        favouritePackName = "No favourite yet."
+    end
+    commerceWindow.favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
+end
+
 local function saveCurrentSessionToFile(session)
     session = session or currentSession
     if session == nil then return end
@@ -252,7 +280,20 @@ local function startPackTurnInSession(packId, coinTypeId)
     currentSession = sessionToStart
 end 
 
-local function addPackToSession(refund, coinTypeId, packId) 
+local function logTurnInCounter()
+    local msg = nil
+    for packId, count in pairs(turnInCounter) do
+        local packObject = packs_helper:GetSpecialtyPackNameById(packId)
+        local name = packObject and packObject.name or "Unknown Pack"
+        local entry = name .. ": " .. count
+        msg = msg and (msg .. ", " .. entry) or entry
+    end
+    if msg then
+        api.Log:Info("[Your Paystub] Packs turned in - " .. msg)
+    end
+end
+
+local function addPackToSession(refund, coinTypeId, packId)
     if coinTypeId == currentSession["coinTypeId"] and packId == currentSession["packId"] then 
         -- api.Log:Info("[Your Paystub] Adding pack to current session for packId: " .. tostring(packId) .. " with coinTypeId: " .. tostring(coinTypeId))
         currentSession["packCount"] = currentSession["packCount"] + 1
@@ -260,7 +301,9 @@ local function addPackToSession(refund, coinTypeId, packId)
         currentSession["localTimestamp"] = api.Time:GetLocalTime()
         sessionTimeoutCounter = 0
         displayDirty = true
-        api.Log:Info("[Your Paystub] Packs turned in: " .. tostring(currentSession["packCount"]))
+        turnInCounter[packId] = (turnInCounter[packId] or 0) + 1
+        counterTimeoutCounter = 0
+        logTurnInCounter()
     end
 end 
 
@@ -315,7 +358,7 @@ local function recordPackPickedUp(itemLinkText, itemCount, itemTaskType, tradeOt
 
     --- Legacy code, please do not touch.
     if packs_helper:IsASpecialtyPackById(tonumber(itemId)) == true then
-        currentBackSlotItem = itemId
+        currentBackSlotItem = tonumber(itemId)
         if currentBackSlotItem ~= nil and packs_helper:GetSpecialtyPackNameById(tonumber(currentBackSlotItem)) ~= nil then 
             local packOriginId = packs_helper:GetSpecialtyPackZoneIdById(tonumber(itemId))
             api.Store:GetSpecialtyRatioBetween(packOriginId, 8)
@@ -351,26 +394,7 @@ local function traderDialogOpened(refund, itemType, itemGrade, coinType)
     lastSeenCoinType = coinType
 end
 
-local function refreshStatisticsLabels()
-    local totalGold = getTotalGoldMadeFromPacks()
-    local totalPacks = getTotalPacksTurnedIn()
-    local favouritePackId = getFavouritePackType()
-    local pendingGold = getPendingPackGoldTotal()
-
-    commerceWindow.pendingGoldStr:SetText("Pending Pack Value: " .. string.format('%.2f', pendingGold) .. "g")
-    commerceWindow.totalGoldStr:SetText("Total Gold Value Made: " .. string.format('%.2f', totalGold) .. "g")
-    commerceWindow.totalPacksStr:SetText("Total Packs Turned In: " .. totalPacks)
-    if favouritePackId == nil then favouritePackId = 0 end
-    local favouritePackName = api.Item:GetItemInfoByType(tonumber(favouritePackId))
-    if favouritePackName ~= nil then 
-        favouritePackName = favouritePackName.name
-    else 
-        favouritePackName = "No favourite yet."
-    end
-    commerceWindow.favouritePackStr:SetText("Favourite Pack: " .. favouritePackName)
-end 
-
-local function OnUpdate(dt) 
+local function OnUpdate(dt)
     if sessionTimeoutCounter + dt > SESSION_TIMEOUT_MS then
         -- Save, and clear session
         -- api.Log:Info("[Your Paystub] Pack session timed out due to inactivity.")
@@ -383,6 +407,11 @@ local function OnUpdate(dt)
         sessionTimeoutCounter = 0
     end 
     sessionTimeoutCounter = sessionTimeoutCounter + dt
+
+    if counterTimeoutCounter + dt > COUNTER_TIMEOUT_MS then
+        resetTurnInCounter()
+    end
+    counterTimeoutCounter = counterTimeoutCounter + dt
 
     if displayRefreshCounter + dt > DISPLAY_REFRESH_MS then
         displayRefreshCounter = 0
@@ -625,6 +654,7 @@ local function initCommerceUI()
             sessionTimeoutCounter = 0
             saveCurrentSessionToFile(sessionToSave)
         end
+        resetTurnInCounter()
     end
     endSessionBtn:SetHandler("OnClick", endSessionBtn.OnClick)
 end
@@ -642,6 +672,7 @@ local function OnLoad()
     currentSession = nil
     lastSeenPrice = nil
     lastSeenCoinType = nil
+    resetTurnInCounter()
     pastSessionsFilename = "your_paystub_pack_sessions.lua"
 
     -- Load past sessions
