@@ -202,28 +202,60 @@ local function isPaystubWindowOpen()
     end 
 end
 
+local function getSafeAveragePrice(itemId)
+    if type(AH_PRICES) ~= "table" then
+        return nil
+    end
+
+    local entry = AH_PRICES[tonumber(itemId)]
+    if type(entry) ~= "table" then
+        return nil
+    end
+
+    local average = tonumber(entry.average)
+    if average == nil or average < 0 then
+        return nil
+    end
+
+    return average
+end
+
 local function saveCurrentSessionToFile()
     if pastSessions == nil then 
         pastSessions = {}
-        pastSessions["sessions"] = {}
     end 
+    if type(pastSessions["sessions"]) ~= "table" then
+        pastSessions["sessions"] = {}
+    end
 
-    local coinTypeId = currentSession["coinTypeId"]
+    local coinTypeId = tonumber(currentSession["coinTypeId"])
+    local refundTotal = tonumber(currentSession["refundTotal"]) or 0
+    local profitTotal = nil
     -- Let's fill in the AH prices
     if coinTypeId == 0 then --> Gold
-        currentSession["profitTotal"] = currentSession["refundTotal"] / 10000
+        profitTotal = refundTotal / 10000
     elseif coinTypeId == 32103 or coinTypeId == 32106 then --> Charcoal Stabilizers & Dragon Essence Stabilizers
-        local stabilizerPrice = AH_PRICES[coinTypeId].average
-        currentSession["profitTotal"] = stabilizerPrice * currentSession["refundTotal"]
+        local stabilizerPrice = getSafeAveragePrice(coinTypeId)
+        if stabilizerPrice ~= nil then
+            profitTotal = stabilizerPrice * refundTotal
+        end
     elseif coinTypeId == 23633 then --> Gilda Star, valued as Gilda Dust
-        local gildaDustPrice = AH_PRICES[8000026].average
-        currentSession["profitTotal"] = gildaDustPrice * currentSession["refundTotal"]
+        local gildaDustPrice = getSafeAveragePrice(8000026)
+        if gildaDustPrice ~= nil then
+            profitTotal = gildaDustPrice * refundTotal
+        end
     elseif coinTypeId == 40229 then --> Lord's Pence, valued as Lord's Coin
-        local lordsCoinPrice = AH_PRICES[26880].average
-        currentSession["profitTotal"] = lordsCoinPrice * (currentSession["refundTotal"] / 100)
-    else --> Unknown/untradeable/unpriceable 
-        currentSession["profitTotal"] = "Unknown"
+        local lordsCoinPrice = getSafeAveragePrice(26880)
+        if lordsCoinPrice ~= nil then
+            profitTotal = lordsCoinPrice * (refundTotal / 100)
+        end
     end 
+    if profitTotal ~= nil then
+        currentSession["profitTotal"] = profitTotal
+    else
+        currentSession["profitTotal"] = "Unknown"
+        api.Log:Info("[Your Paystub] Missing payout price for coinTypeId: " .. tostring(coinTypeId))
+    end
     -- TODO: Fill in pack costs
     currentSession["costTotal"] = "Unknown"
 
@@ -392,7 +424,10 @@ local function OnUpdate(dt)
         -- api.Log:Info("[Your Paystub] Pack session timed out due to inactivity.")
         if currentSession ~= nil then 
             api.Log:Info("[Your Paystub] Ending current pack session...")
-            saveCurrentSessionToFile()
+            local ok, err = pcall(saveCurrentSessionToFile)
+            if not ok then
+                api.Log:Err("[Your Paystub] Failed to save pack session: " .. tostring(err))
+            end
             currentSession = nil
             
         end 
