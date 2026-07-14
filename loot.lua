@@ -874,7 +874,8 @@ local function OnLoad()
     pastSessionsFilename = "your_paystub_loot_sessions.lua"
     AH_PRICES = require("your_paystub/data/auction_house_prices")
     -- Initialize the addon's empty window
-    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubWindow", "UIParent")
+    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubLootWindow", "UIParent")
+    yourPaystubWindow:Show(true)
     sessionPaused = false
 
     -- Fill in AH prices for noble's, jester's, prince's, queen's and ancestral crates
@@ -931,7 +932,7 @@ local function OnLoad()
 
     -- Initializing Loot Tracker Tab
     -- paystubDisplayWindow:Show(false)
-    lootWindow = paystubDisplayWindow.tab.window[2].lootWindow
+    lootWindow = paystubDisplayWindow.tab.window[3].lootWindow
     local sessionScrollList = lootWindow.sessionScrollList
     sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
     sessionScrollList:InsertRows(8, false)

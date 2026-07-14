@@ -1031,7 +1031,7 @@ local packsInfo = {
     [8001204] = { name = "Golden Treasure Chest", zone = 0, destinations = {
 
     }},
-    [9000362] = { name = "Fish Food Supplies", zone = 0, destinations = {
+    [9000410] = { name = "Fish Food Supply Pack", zone = 0, iconId = 9000414, destinations = {
 
     }},
     [9000414] = { name = "Fish Food Supply Pack", zone = 0, destinations = {

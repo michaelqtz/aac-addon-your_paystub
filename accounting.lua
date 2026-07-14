@@ -533,7 +533,8 @@ local function OnLoad()
     pastSessionsFilename = "your_paystub_accounting_sessions.lua"
     AH_PRICES = require("your_paystub/data/auction_house_prices")
     -- Initialize the addon's empty window
-    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubWindow", "UIParent")
+    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubAccountingWindow", "UIParent")
+    yourPaystubWindow:Show(true)
 
     -- Load previous sessions, or make empty file.
     pastSessions = api.File:Read(pastSessionsFilename)

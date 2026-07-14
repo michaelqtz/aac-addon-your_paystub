@@ -8,6 +8,7 @@ local your_paystub_addon = {
 
 local packsAddon = require("your_paystub/packs")
 local lootAddon = require("your_paystub/loot")
+local fishingAddon = require("your_paystub/fishing")
 local accountingADdon = require("your_paystub/accounting")
 
 paystubDisplayWindow = nil
@@ -314,6 +315,28 @@ local function CreateLootTrackerWindow(wndParent)
     return wnd
 end 
 
+local function CreateFishingWindow(wndParent)
+    -- Fishing Parent Window
+    local wnd = wndParent:CreateChildWidget("emptywidget", "fishingWindow", 0, true)
+    wnd:SetExtent(600, 600)
+    wnd:AddAnchor("TOP", wndParent, 0, 0)
+    local title = wnd:CreateChildWidget("label", "title", 0, true)
+    title:SetAutoResize(true)
+    title:SetHeight(FONT_SIZE.XLARGE)
+    title.style:SetAlign(ALIGN.CENTER)
+    title.style:SetFontSize(FONT_SIZE.XLARGE)
+    ApplyTextColor(title, FONT_COLOR.TITLE)
+    title:SetText("Fishing Tracker")
+    title:AddAnchor("TOP", wnd, 0, 10)
+    -- Session-holding Scroll List
+    local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
+    sessionScrollList:Show(true)
+    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 4)
+    sessionScrollList:AddAnchor("BOTTOMRIGHT", wnd, -4, -4)
+
+    return wnd
+end
+
 local function CreateAccountingWindow(wndParent)
     local wnd = wndParent:CreateChildWidget("emptywidget", "accountingWindow", 0, true)
     wnd:SetExtent(600, 600)
@@ -350,8 +373,9 @@ end
 local function OnLoad()
     packsAddon = require("your_paystub/packs")
     lootAddon = require("your_paystub/loot")
+    fishingAddon = require("your_paystub/fishing")
     accountingAddon = require("your_paystub/accounting")
-    
+
     local tabInfo = {
         {
             validationCheckFunc = function()
@@ -366,18 +390,18 @@ local function OnLoad()
             validationCheckFunc = function()
                 return true
             end,
-            title = "Loot Tracker",
+            title = "Fishing",
             subWindowConstructor = function(parent)
-                CreateLootTrackerWindow(parent)
+                CreateFishingWindow(parent)
             end
         },
         {
             validationCheckFunc = function()
                 return true
             end,
-            title = "Recipe Profit",
+            title = "Loot Tracker",
             subWindowConstructor = function(parent)
-                CreateUnderConstructionWindow(parent)
+                CreateLootTrackerWindow(parent)
             end
         },
         {
@@ -430,6 +454,7 @@ local function OnLoad()
 
     packsAddon:OnLoad()
     lootAddon:OnLoad()
+    fishingAddon:OnLoad()
     accountingAddon:OnLoad()
     -- for key, value in pairs(getmetatable(paystubDisplayWindow.tab)) do 
     --     api.Log:Info(key .. " " .. tostring(value))
@@ -463,6 +488,8 @@ local function OnUnload()
     packsAddon = nil
     lootAddon:OnUnload()
     lootAddon = nil
+    fishingAddon:OnUnload()
+    fishingAddon = nil
     accountingAddon:OnUnload()
     accountingAddon = nil
     paystubDisplayWindow:Show(false)

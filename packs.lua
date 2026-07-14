@@ -571,7 +571,8 @@ local function OnLoad()
     packs_helper = require("your_paystub/packs_helper")
     AH_PRICES = require("your_paystub/data/auction_house_prices")
     -- Initialize the addon's empty window
-    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubWindow", "UIParent")
+    yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubPacksWindow", "UIParent")
+    yourPaystubWindow:Show(true)
     
     -- Initializing addon-level variables
     currentBackSlotItem = nil
