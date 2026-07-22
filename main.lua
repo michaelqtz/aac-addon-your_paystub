@@ -2,7 +2,7 @@
 local your_paystub_addon = {
 	name = "Your Paystub",
 	author = "Michaelqt",
-	version = "1.7.0",
+	version = "1.8.0",
 	desc = "Keep track of how much you get paid!"
 }
 
@@ -349,10 +349,30 @@ local function CreateAccountingWindow(wndParent)
     ApplyTextColor(title, FONT_COLOR.TITLE)
     title:SetText("Accounting")
     title:AddAnchor("TOP", wnd, 0, 10)
+
+    -- Month prev/next arrows, flanking the title (wired up by accounting.lua).
+    local prevMonthBtn = wnd:CreateChildWidget("button", "prevMonthBtn", 0, true)
+    prevMonthBtn:SetText("<")
+    prevMonthBtn:SetExtent(24, 24)
+    ApplyButtonSkin(prevMonthBtn, BUTTON_BASIC.DEFAULT)
+    prevMonthBtn:AddAnchor("RIGHT", title, "LEFT", -10, 0)
+
+    local nextMonthBtn = wnd:CreateChildWidget("button", "nextMonthBtn", 0, true)
+    nextMonthBtn:SetText(">")
+    nextMonthBtn:SetExtent(24, 24)
+    ApplyButtonSkin(nextMonthBtn, BUTTON_BASIC.DEFAULT)
+    nextMonthBtn:AddAnchor("LEFT", title, "RIGHT", 10, 0)
+
+    -- Gold Trend Chart Area (populated by accounting.lua via graph_helper).
+    -- 230px tall -- matches the height passed to CreateBarLineChart.
+    local goldTrendChartArea = wnd:CreateChildWidget("emptywidget", "goldTrendChartArea", 0, true)
+    goldTrendChartArea:SetExtent(560, 230)
+    goldTrendChartArea:AddAnchor("TOP", title, "BOTTOM", 0, 10)
+
     -- Session-holding Scroll List
     local sessionScrollList = W_CTRL.CreatePageScrollListCtrl("sessionScrollList", wnd)
     sessionScrollList:Show(true)
-    sessionScrollList:AddAnchor("TOPLEFT", wnd, 4, 4)
+    sessionScrollList:AddAnchor("TOPLEFT", goldTrendChartArea, "BOTTOMLEFT", -16, 10)
     sessionScrollList:AddAnchor("BOTTOMRIGHT", wnd, -4, -4)
 end
 

@@ -7,6 +7,7 @@ local your_fishing_addon = {
 }
 
 local fishing_helper
+local accountingAddon
 
 --- Item Task Type IDs (shared with packs.lua)
 --> AAC 16 = Placed item into vehicle trade slot
@@ -229,6 +230,9 @@ end
 local function tryMatchFishSale()
     if pendingFishId ~= nil and pendingGold ~= nil and pendingGold > 0 then
         addFishToSession(pendingGold, 0, pendingFishId)
+        if accountingAddon ~= nil and accountingAddon.RecordFishGold ~= nil then
+            accountingAddon.RecordFishGold(pendingGold)
+        end
         displayRefreshCounter = DISPLAY_REFRESH_MS
         pendingFishId = nil
         pendingGold = nil
@@ -430,6 +434,7 @@ end
 
 local function OnLoad()
     fishing_helper = require("your_paystub/fishing_helper")
+    accountingAddon = require("your_paystub/accounting")
 
     -- Initializing the addon's empty window
     yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubFishingWindow", "UIParent")

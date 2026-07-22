@@ -24,6 +24,7 @@ local ITEM_TASK_ID_PACK_DROPPED = 61
 local ITEM_TASK_ID_PACK_TURNED_IN = 109
 
 local AH_PRICES
+local accountingAddon
 
 local packs_helper
 
@@ -268,8 +269,8 @@ local function startPackTurnInSession(packId, coinTypeId)
     currentSession = sessionToStart
 end 
 
-local function addPackToSession(refund, coinTypeId, packId) 
-    if coinTypeId == currentSession["coinTypeId"] and packId == currentSession["packId"] then 
+local function addPackToSession(refund, coinTypeId, packId)
+    if coinTypeId == currentSession["coinTypeId"] and packId == currentSession["packId"] then
         -- api.Log:Info("[Your Paystub] Adding pack to current session for packId: " .. tostring(packId) .. " with coinTypeId: " .. tostring(coinTypeId))
         currentSession["packCount"] = currentSession["packCount"] + 1
         currentSession["refundTotal"] = currentSession["refundTotal"] + refund
@@ -277,7 +278,13 @@ local function addPackToSession(refund, coinTypeId, packId)
         currentSession["localTimestamp"] = api.Time:GetLocalTime()
         -- We need to update the current session timeout as well.
         sessionTimeoutCounter = 0
-    end 
+
+        -- Only gold-paying turn-ins (coinTypeId 0) count as accounting gold;
+        -- international/stabilizer-paid packs aren't gold, so skip those.
+        if coinTypeId == 0 and accountingAddon ~= nil and accountingAddon.RecordTradeGold ~= nil then
+            accountingAddon.RecordTradeGold(refund)
+        end
+    end
 end 
 
 local function itemIdFromItemLinkText(itemLinkText)
@@ -570,6 +577,7 @@ end
 local function OnLoad()
     packs_helper = require("your_paystub/packs_helper")
     AH_PRICES = require("your_paystub/data/auction_house_prices")
+    accountingAddon = require("your_paystub/accounting")
     -- Initialize the addon's empty window
     yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubPacksWindow", "UIParent")
     yourPaystubWindow:Show(true)

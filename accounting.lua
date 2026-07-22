@@ -27,11 +27,17 @@ local ITEM_TASK_ID_PACK_DROPPED = 61
 local ITEM_TASK_ID_PACK_TURNED_IN = 109
 
 local AH_PRICES
+local graph_helper
 
-local yourPaystubWindow 
+local yourPaystubWindow
 local accountingWindow
 
 local currentSession
+
+-- Gold trend chart view state. nil/nil = the live rolling "last 30 days"
+-- view (the default); otherwise a specific calendar month being browsed via
+-- the prev/next arrows.
+local viewedMonth, viewedYear
 
 local latestMoneyChangeStr = "0"
 local latestMoneyChange = 0
@@ -329,9 +335,161 @@ local function fillSessionTableData(itemScrollList, pageIndex)
 
 end
 
+-- Each daily session already tracks goldStart/goldEnd for that calendar day,
+-- so goldEnd doubles as "overall gold at end of day" (the trend line) and
+-- goldEnd - goldStart is that day's net gain/loss (the bars) -- no separate
+-- running total needs to be computed.
+local function getLast30DaysChartEntries()
+    local entries = {}
+    if pastSessions == nil or pastSessions["sessions"] == nil then return entries end
+    cleanBadSessions(pastSessions["sessions"])
+
+    local ascendingKeys = getKeysSortedByValue(pastSessions["sessions"], function(a, b)
+        return tonumber(a.endTimestamp) < tonumber(b.endTimestamp)
+    end)
+
+    local sessionsAscending = {}
+    for _, key in ipairs(ascendingKeys) do
+        table.insert(sessionsAscending, pastSessions["sessions"][key])
+    end
+
+    -- Keep only the most recent 30 days, still oldest-first for left-to-right plotting.
+    local startIdx = math.max(1, #sessionsAscending - 30 + 1)
+    for i = startIdx, #sessionsAscending do
+        local session = sessionsAscending[i]
+        local goldStart = tonumber(session.goldStart) or 0
+        local goldEnd = tonumber(session.goldEnd) or 0
+        table.insert(entries, {
+            netGold = goldEnd - goldStart,
+            totalGold = goldEnd,
+            endTimestamp = session.endTimestamp,
+            details = {
+                { label = "Fishing", amount = tonumber(session.goldFishEarned) or 0 },
+                { label = "Packs (Gold)", amount = tonumber(session.goldTradeEarned) or 0 },
+            },
+        })
+    end
+
+    return entries
+end
+
+-- Same shape/fields as getLast30DaysChartEntries, but filtered to one
+-- specific calendar month (for the prev/next month browsing arrows)
+-- instead of a rolling 30-day window. Sessions are keyed by dateKey =
+-- "dateMMDDYYYY", so month/year can be read directly off that string.
+local function getMonthChartEntries(month, year)
+    local entries = {}
+    if pastSessions == nil or pastSessions["sessions"] == nil then return entries end
+    cleanBadSessions(pastSessions["sessions"])
+
+    local matchingSessions = {}
+    for _, session in pairs(pastSessions["sessions"]) do
+        local dateKey = session.dateKey or ""
+        local sessionMonth = tonumber(string.sub(dateKey, 5, 6))
+        local sessionYear = tonumber(string.sub(dateKey, 9, 12))
+        if sessionMonth == month and sessionYear == year then
+            table.insert(matchingSessions, session)
+        end
+    end
+    table.sort(matchingSessions, function(a, b) return tonumber(a.endTimestamp) < tonumber(b.endTimestamp) end)
+
+    for _, session in ipairs(matchingSessions) do
+        local goldStart = tonumber(session.goldStart) or 0
+        local goldEnd = tonumber(session.goldEnd) or 0
+        table.insert(entries, {
+            netGold = goldEnd - goldStart,
+            totalGold = goldEnd,
+            endTimestamp = session.endTimestamp,
+            details = {
+                { label = "Fishing", amount = tonumber(session.goldFishEarned) or 0 },
+                { label = "Packs (Gold)", amount = tonumber(session.goldTradeEarned) or 0 },
+            },
+        })
+    end
+
+    return entries
+end
+
+local function getPreviousCalendarMonth(month, year)
+    month = month - 1
+    if month < 1 then
+        month = 12
+        year = year - 1
+    end
+    return month, year
+end
+
+local function getNextCalendarMonth(month, year)
+    month = month + 1
+    if month > 12 then
+        month = 1
+        year = year + 1
+    end
+    return month, year
+end
+
+local function formatDateLabel(timestamp)
+    local date = api.Time:TimeToDate(timestamp)
+    if date == nil then return "" end
+    return string.format("%02d/%02d", date.month, date.day)
+end
+
+local function refreshChart()
+    if accountingWindow == nil or accountingWindow.goldTrendChart == nil then return end
+
+    local entries
+    if viewedMonth == nil then
+        entries = getLast30DaysChartEntries()
+    else
+        entries = getMonthChartEntries(viewedMonth, viewedYear)
+    end
+
+    local dateLabels = nil
+    if #entries > 0 then
+        dateLabels = {
+            start = formatDateLabel(entries[1].endTimestamp),
+            mid   = formatDateLabel(entries[math.ceil(#entries / 2)].endTimestamp),
+            ["end"] = formatDateLabel(entries[#entries].endTimestamp),
+        }
+    end
+    graph_helper:SetChartData(accountingWindow.goldTrendChart, entries, dateLabels)
+end
+
+-- The back arrow always lands on a fully-completed month: the first press
+-- (from the live rolling view) jumps to the most recent complete month
+-- (last month, since the current month is still in progress), and each
+-- further press steps one more month into the past.
+local function goToPreviousMonth()
+    if viewedMonth == nil then
+        local now = api.Time:TimeToDate(api.Time:GetLocalTime())
+        viewedMonth, viewedYear = getPreviousCalendarMonth(now.month, now.year)
+    else
+        viewedMonth, viewedYear = getPreviousCalendarMonth(viewedMonth, viewedYear)
+    end
+    refreshChart()
+end
+
+-- Steps forward one month at a time; stepping forward past the most recent
+-- complete month returns to the live rolling view rather than showing the
+-- still-in-progress current month as if it were a complete one.
+local function goToNextMonth()
+    if viewedMonth == nil then return end
+
+    local now = api.Time:TimeToDate(api.Time:GetLocalTime())
+    local lastCompleteMonth, lastCompleteYear = getPreviousCalendarMonth(now.month, now.year)
+    local nextMonth, nextYear = getNextCalendarMonth(viewedMonth, viewedYear)
+
+    if nextYear > lastCompleteYear or (nextYear == lastCompleteYear and nextMonth > lastCompleteMonth) then
+        viewedMonth, viewedYear = nil, nil
+    else
+        viewedMonth, viewedYear = nextMonth, nextYear
+    end
+    refreshChart()
+end
+
 local function getCurrentPlayerMoney()
     return tostring(X2Util:GetMyMoneyString())
-end 
+end
 
 
 local function saveCurrentSessionToFile()
@@ -371,7 +529,8 @@ local function saveCurrentSessionToFile()
     sessionScrollList.pageControl.maxPage = maxPage
     fillSessionTableData(sessionScrollList, 1)
     sessionScrollList.pageControl:SetCurrentPage(1, true)
-end 
+    refreshChart()
+end
 
 local function endAccountingSession()
     if currentSession == nil then return end 
@@ -423,17 +582,14 @@ local function SessionSetFunc(subItem, data, setValue)
     if setValue then
         local date = api.Time:TimeToDate(data["localTimestamp"])
         local dateStr = string.format("%02d/%02d/%04d", date.month, date.day, date.year)
-        local titleStr = dateStr .. ": "
         data.profit = X2Util:StrNumericSub(data.goldEnd, data.goldStart)
         -- format the string in data.profit as last two digies are copper, next two are silver, rest is gold
         local profitNum = tonumber(data.profit) or 0
-        local sign = profitNum < 0 and "-" or ""
-        local profitStr = sign .. formatGoldShort(profitNum)
         local endStr = formatStringAsGold(data.goldEnd)
 
         local earned = tonumber(data.goldEarned or "0") or 0
         local spent = tonumber(data.goldSpent or "0") or 0
-        titleStr = titleStr .. " " .. endStr .. " (Profit: " .. profitStr .. ")"
+        local titleStr = dateStr .. ": " .. endStr
 
         if profitNum < 0 then
             subItem.bg:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 0.4) -- Red
@@ -448,7 +604,7 @@ local function SessionSetFunc(subItem, data, setValue)
 end
 
 local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
-    subItem:SetExtent(580, 35)
+    subItem:SetExtent(580, 42)
     -- Background colouring
     local bg = subItem:CreateNinePartDrawable(TEXTURE_PATH.HUD, "background")
     bg:SetColor(ConvertColor(210),ConvertColor(94),ConvertColor(84),0.4)
@@ -459,7 +615,7 @@ local function SessionsColumnLayoutSetFunc(frame, rowIndex, colIndex, subItem)
     subItem.bg = bg
     -- Top-left Session Title
     local sessionTitle = subItem:CreateChildWidget("label", "sessionTitle", 0, true)
-    sessionTitle.style:SetFontSize(FONT_SIZE.LARGE)
+    sessionTitle.style:SetFontSize(FONT_SIZE.MIDDLE)
     ApplyTextColor(sessionTitle, FONT_COLOR.DEFAULT)
     sessionTitle:SetText("Unknown Date")
     sessionTitle:AddAnchor("TOPLEFT", subItem, 10, 10)
@@ -532,6 +688,7 @@ local function OnLoad()
     local settings = api.GetSettings("your_paystub")
     pastSessionsFilename = "your_paystub_accounting_sessions.lua"
     AH_PRICES = require("your_paystub/data/auction_house_prices")
+    graph_helper = require("your_paystub/graph_helper")
     -- Initialize the addon's empty window
     yourPaystubWindow = api.Interface:CreateEmptyWindow("yourPaystubAccountingWindow", "UIParent")
     yourPaystubWindow:Show(true)
@@ -588,7 +745,39 @@ local function OnLoad()
     -- paystubDisplayWindow:Show(false)
     accountingWindow = paystubDisplayWindow.tab.window[5].accountingWindow
 
-    
+    -- Gold Trend Chart: bars are each day's net gain/loss (green/red),
+    -- the line is overall gold at the end of each day, past 30 days.
+    accountingWindow.goldTrendChart = graph_helper:CreateBarLineChart(accountingWindow.goldTrendChartArea, "goldTrendChart", 560, 230)
+
+    local chartLegendRow = accountingWindow:CreateChildWidget("emptywidget", "chartLegendRow", 0, true)
+    chartLegendRow:SetExtent(400, 16)
+    chartLegendRow:AddAnchor("TOP", accountingWindow.goldTrendChartArea, "BOTTOM", 0, 8)
+
+    local gainLegend = graph_helper:CreateLegendItem(chartLegendRow, "gainLegend", "Daily Gain", graph_helper.COLOR.GAIN)
+    gainLegend:AddAnchor("LEFT", chartLegendRow, 0, 0)
+
+    local lossLegend = graph_helper:CreateLegendItem(chartLegendRow, "lossLegend", "Daily Loss", graph_helper.COLOR.LOSS)
+    lossLegend:AddAnchor("LEFT", gainLegend, "RIGHT", 20, 0)
+
+    local trendLegend = graph_helper:CreateLegendItem(chartLegendRow, "trendLegend", "Overall Gold", graph_helper.COLOR.TREND)
+    trendLegend:AddAnchor("LEFT", lossLegend, "RIGHT", 20, 0)
+
+    -- Month prev/next arrows (shells created in main.lua, flanking the
+    -- title). Back always lands on a complete month; forward past the most
+    -- recent complete month returns to the live rolling view (see
+    -- goToPreviousMonth/goToNextMonth).
+    local prevMonthBtn = accountingWindow.prevMonthBtn
+    function prevMonthBtn:OnClick()
+        goToPreviousMonth()
+    end
+    prevMonthBtn:SetHandler("OnClick", prevMonthBtn.OnClick)
+
+    local nextMonthBtn = accountingWindow.nextMonthBtn
+    function nextMonthBtn:OnClick()
+        goToNextMonth()
+    end
+    nextMonthBtn:SetHandler("OnClick", nextMonthBtn.OnClick)
+
     local sessionScrollList = accountingWindow.sessionScrollList
     sessionScrollList:InsertColumn("", 600, 1, SessionSetFunc, nil, nil, SessionsColumnLayoutSetFunc)
     sessionScrollList:InsertRows(16, false)
@@ -612,31 +801,8 @@ local function OnLoad()
     past30daysStr:SetAutoResize(true)
     accountingWindow.past30daysStr = past30daysStr
 
-    -- Time window labels (15m, 1h on row 1; 12h, 24h on row 2)
-    local twLabels = {"15m", "1h", "5h", "12h"}
-    local twXOffsets = {15, 310, 15, 310}
-    local twYOffsets = {30, 30, 48, 48}
-    for i = 1, 4 do
-        local earnedLabel = accountingWindow:CreateChildWidget("label", "twEarned" .. i, 0, true)
-        earnedLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
-        earnedLabel.style:SetAlign(ALIGN.LEFT)
-        earnedLabel.style:SetColor(ConvertColor(11), ConvertColor(156), ConvertColor(35), 1)
-        earnedLabel:SetText(twLabels[i] .. "  ▲ ...")
-        earnedLabel:AddAnchor("TOPLEFT", accountingWindow, twXOffsets[i], twYOffsets[i])
-        earnedLabel:SetAutoResize(true)
-        accountingWindow["twEarned" .. i] = earnedLabel
-
-        local spentLabel = accountingWindow:CreateChildWidget("label", "twSpent" .. i, 0, true)
-        spentLabel.style:SetFontSize(FONT_SIZE.MIDDLE)
-        spentLabel.style:SetAlign(ALIGN.LEFT)
-        spentLabel.style:SetColor(ConvertColor(210), ConvertColor(94), ConvertColor(84), 1)
-        spentLabel:SetText("▼ ...")
-        spentLabel:AddAnchor("LEFT", earnedLabel, 130, 0)
-        spentLabel:SetAutoResize(true)
-        accountingWindow["twSpent" .. i] = spentLabel
-    end
-
     fillSessionTableData(sessionScrollList, 1)
+    refreshChart()
 
     -- Restore time window data from disk, or seed fresh (must be before startAccountingSession)
     if pastSessions and pastSessions.timeWindows then
@@ -678,6 +844,25 @@ local function OnUnload()
     api.Interface:Free(accountingWindow)
     accountingWindow = nil
     api.SaveSettings()
+end
+
+-- Public hooks for other tab modules (fishing.lua, packs.lua) to report gold
+-- they've already identified the source of. Note: accounting.lua's own
+-- PLAYER_MONEY listener (recordPlayerMoneyEvent) independently captures
+-- every gold change into the generic goldEarned/totalEarnedNum bucket
+-- already, so these only add to the category-specific breakdown field --
+-- they must NOT also touch goldEarned/totalEarnedNum, or that gold would be
+-- double-counted.
+function accounting_addon.RecordFishGold(amountCopper)
+    amountCopper = tonumber(amountCopper)
+    if amountCopper == nil or amountCopper <= 0 then return end
+    addMoneyStrToSessionField(tostring(amountCopper), "goldFishEarned")
+end
+
+function accounting_addon.RecordTradeGold(amountCopper)
+    amountCopper = tonumber(amountCopper)
+    if amountCopper == nil or amountCopper <= 0 then return end
+    addMoneyStrToSessionField(tostring(amountCopper), "goldTradeEarned")
 end
 
 accounting_addon.OnLoad = OnLoad
