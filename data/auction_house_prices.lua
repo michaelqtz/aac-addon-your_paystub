@@ -16,44 +16,44 @@ return {
     average = nan, 
   }, 
   [125] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 2.0, 
+    average = 149.99995, 
   }, 
   [126] = { 
-    volume = 1.0, 
-    average = 378.9998, 
+    volume = 2.0, 
+    average = 348.99965, 
   }, 
   [685] = { 
     volume = nan, 
     average = nan, 
   }, 
   [773] = { 
-    volume = 6647.0, 
-    average = 0.17467966101694907, 
+    volume = 9054.0, 
+    average = 0.18791333333333335, 
   }, 
   [784] = { 
-    volume = 137368.0, 
-    average = 0.027424999999999974, 
+    volume = 215962.0, 
+    average = 0.025255203619909433, 
   }, 
   [1386] = { 
-    volume = 3197.0, 
-    average = 0.12384599999999997, 
+    volume = 5446.0, 
+    average = 0.2846944444444445, 
   }, 
   [2178] = { 
-    volume = 4285.0, 
-    average = 0.24884999999999996, 
+    volume = 3375.0, 
+    average = 0.26009999999999994, 
   }, 
   [2201] = { 
-    volume = 137.0, 
-    average = 1.2062, 
+    volume = 142.0, 
+    average = 1.1997, 
   }, 
   [3332] = { 
-    volume = 1169.0, 
-    average = 4.053724193548385, 
+    volume = 342.0, 
+    average = 4.577615999999999, 
   }, 
   [3411] = { 
-    volume = 10111.0, 
-    average = 1.0206763636363636, 
+    volume = 19773.0, 
+    average = 0.9924736363636364, 
   }, 
   [3479] = { 
     volume = nan, 
@@ -64,120 +64,120 @@ return {
     average = nan, 
   }, 
   [3507] = { 
-    volume = 60.0, 
-    average = 0.7445, 
+    volume = 497.0, 
+    average = 0.7432666666666666, 
   }, 
   [3515] = { 
-    volume = 60.0, 
-    average = 0.7421000000000001, 
+    volume = 205.0, 
+    average = 0.7296, 
   }, 
   [3545] = { 
-    volume = 3401.0, 
-    average = 0.30734999999999996, 
+    volume = 4558.0, 
+    average = 0.28005833333333324, 
   }, 
   [3546] = { 
-    volume = 582.0, 
-    average = 0.020967333333333334, 
+    volume = 2000.0, 
+    average = 0.0397, 
   }, 
   [3553] = { 
-    volume = 1379.0, 
-    average = 0.4053, 
+    volume = 500.0, 
+    average = 0.4026, 
   }, 
   [3564] = { 
-    volume = 5413.0, 
-    average = 0.22241081081081082, 
+    volume = 3042.0, 
+    average = 0.32209, 
   }, 
   [3581] = { 
     volume = nan, 
     average = nan, 
   }, 
   [3583] = { 
-    volume = 128.0, 
-    average = 0.28995, 
+    volume = 528.0, 
+    average = 0.08458571428571429, 
   }, 
   [3587] = { 
-    volume = 119.0, 
-    average = 0.7926333333333334, 
+    volume = 84.0, 
+    average = 0.4898, 
   }, 
   [3588] = { 
-    volume = 126.0, 
-    average = 0.6320500000000001, 
+    volume = 1034.0, 
+    average = 0.5136333333333334, 
   }, 
   [3592] = { 
-    volume = 1771.0, 
-    average = 0.11750909090909091, 
+    volume = 2201.0, 
+    average = 0.04333333333333334, 
   }, 
   [3603] = { 
-    volume = 3022.0, 
-    average = 0.11798421052631576, 
+    volume = 1834.0, 
+    average = 0.14751538461538458, 
   }, 
   [3622] = { 
-    volume = 864.0, 
-    average = 0.28330000000000005, 
+    volume = nan, 
+    average = nan, 
   }, 
   [3627] = { 
-    volume = 21950.0, 
-    average = 0.048932142857142855, 
+    volume = 10888.0, 
+    average = 0.07972142857142858, 
   }, 
   [3628] = { 
-    volume = 1486.0, 
-    average = 0.330723076923077, 
+    volume = 1202.0, 
+    average = 0.25046666666666667, 
   }, 
   [3630] = { 
-    volume = 515.0, 
-    average = 0.08508888888888888, 
+    volume = 4610.0, 
+    average = 0.10027777777777777, 
   }, 
   [3659] = { 
-    volume = 170.0, 
-    average = 0.2977, 
+    volume = 1086.0, 
+    average = 0.2535333333333334, 
   }, 
   [3667] = { 
-    volume = 57696.0, 
-    average = 0.08885066666666668, 
+    volume = 38820.0, 
+    average = 0.06636875, 
   }, 
   [3671] = { 
-    volume = 6998.0, 
-    average = 0.3098687499999999, 
+    volume = 5252.0, 
+    average = 0.32436666666666664, 
   }, 
   [3675] = { 
-    volume = 3638.0, 
-    average = 0.24750454545454542, 
+    volume = 5044.0, 
+    average = 0.2578866666666667, 
   }, 
   [3680] = { 
-    volume = 3026.0, 
-    average = 0.44524615384615385, 
+    volume = 855.0, 
+    average = 0.41313333333333335, 
   }, 
   [3684] = { 
-    volume = 88903.0, 
-    average = 0.05684897959183673, 
+    volume = 80044.0, 
+    average = 0.05249090909090908, 
   }, 
   [3685] = { 
-    volume = 17187.0, 
-    average = 0.07284545454545453, 
+    volume = 11176.0, 
+    average = 0.06094090909090911, 
   }, 
   [3694] = { 
-    volume = 492.0, 
-    average = 1.7767625000000002, 
+    volume = 53.0, 
+    average = 1.9975666666666667, 
   }, 
   [3711] = { 
-    volume = 21143.0, 
-    average = 0.06138666666666668, 
+    volume = 19004.0, 
+    average = 0.07081, 
   }, 
   [3712] = { 
-    volume = 49677.0, 
-    average = 0.30721400000000026, 
+    volume = 39183.0, 
+    average = 0.29852345679012365, 
   }, 
   [3713] = { 
-    volume = 8025.0, 
-    average = 0.09913333333333334, 
+    volume = 3615.0, 
+    average = 0.06502000000000001, 
   }, 
   [4014] = { 
-    volume = 2.0, 
-    average = 74.99889999999999, 
+    volume = 1.0, 
+    average = 74.9078, 
   }, 
   [4052] = { 
-    volume = 32246.0, 
-    average = 0.3133559055118111, 
+    volume = 28900.0, 
+    average = 0.32361428571428613, 
   }, 
   [4859] = { 
     volume = nan, 
@@ -196,8 +196,12 @@ return {
     average = nan, 
   }, 
   [4867] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 11.0, 
+    average = 2.0084, 
+  }, 
+  [4889] = { 
+    volume = 6.0, 
+    average = 0.06, 
   }, 
   [5318] = { 
     volume = nan, 
@@ -215,6 +219,10 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [6202] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [7711] = { 
     volume = nan, 
     average = nan, 
@@ -223,13 +231,17 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [7713] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [7722] = { 
-    volume = 2.0, 
-    average = 294.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [7723] = { 
-    volume = 1.0, 
-    average = 40.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [7724] = { 
     volume = nan, 
@@ -240,204 +252,208 @@ return {
     average = nan, 
   }, 
   [7728] = { 
+    volume = 1.0, 
+    average = 1200.0, 
+  }, 
+  [7744] = { 
     volume = nan, 
     average = nan, 
   }, 
   [7747] = { 
-    volume = 18145.0, 
-    average = 0.03925199999999998, 
+    volume = 5382.0, 
+    average = 0.046533333333333336, 
   }, 
   [7764] = { 
     volume = nan, 
     average = nan, 
   }, 
   [7992] = { 
-    volume = 10803.0, 
-    average = 0.038500000000000006, 
+    volume = 6129.0, 
+    average = 0.040475, 
   }, 
   [7994] = { 
-    volume = 643.0, 
-    average = 0.31478333333333336, 
+    volume = 317.0, 
+    average = 0.2999, 
   }, 
   [7998] = { 
-    volume = 3640.0, 
-    average = 0.061360000000000005, 
+    volume = 510.0, 
+    average = 0.11578333333333331, 
   }, 
   [8000] = { 
-    volume = 10865.0, 
-    average = 0.26308695652173913, 
+    volume = 6397.0, 
+    average = 0.295908, 
   }, 
   [8001] = { 
-    volume = 3447.0, 
-    average = 0.07059999999999998, 
+    volume = 1229.0, 
+    average = 0.09179999999999999, 
   }, 
   [8004] = { 
-    volume = 13360.0, 
-    average = 0.267113043478261, 
+    volume = 8243.0, 
+    average = 0.2915, 
   }, 
   [8005] = { 
-    volume = 36465.0, 
-    average = 0.049373076923076915, 
+    volume = 44906.0, 
+    average = 0.04466875000000001, 
   }, 
   [8006] = { 
-    volume = 1366.0, 
-    average = 0.26919999999999994, 
+    volume = 820.0, 
+    average = 0.3133166666666667, 
   }, 
   [8007] = { 
-    volume = 39763.0, 
-    average = 0.1322254545454545, 
+    volume = 43567.0, 
+    average = 0.13309843859649126, 
   }, 
   [8008] = { 
-    volume = 180729.0, 
-    average = 0.0029446511627906997, 
+    volume = 174938.0, 
+    average = 0.005781730769230769, 
   }, 
   [8009] = { 
-    volume = 233.0, 
-    average = 0.5154, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8010] = { 
-    volume = 1046.0, 
-    average = 0.06995, 
+    volume = 6.0, 
+    average = 0.0698, 
   }, 
   [8012] = { 
-    volume = 65610.0, 
-    average = 0.037372463768115906, 
+    volume = 27428.0, 
+    average = 0.04022, 
   }, 
   [8013] = { 
-    volume = 109212.0, 
-    average = 0.035337068965517256, 
+    volume = 117288.0, 
+    average = 0.0478451612903226, 
   }, 
   [8015] = { 
-    volume = 302.0, 
-    average = 0.303275, 
+    volume = 190.0, 
+    average = 0.2531333333333334, 
   }, 
   [8016] = { 
-    volume = 2437.0, 
-    average = 0.06773333333333333, 
+    volume = 1096.0, 
+    average = 0.04326666666666667, 
   }, 
   [8017] = { 
-    volume = 269146.0, 
-    average = 0.009654697986577181, 
+    volume = 241002.0, 
+    average = 0.010366920152091251, 
   }, 
   [8018] = { 
-    volume = 2790.0, 
-    average = 0.146, 
+    volume = 1105.0, 
+    average = 0.09928, 
   }, 
   [8019] = { 
-    volume = 2290.0, 
-    average = 0.0798625, 
+    volume = 1162.0, 
+    average = 0.07327142857142857, 
   }, 
   [8022] = { 
-    volume = 168841.0, 
-    average = 0.17395040650406493, 
+    volume = 172478.0, 
+    average = 0.17053471698113207, 
   }, 
   [8023] = { 
-    volume = 6683.0, 
-    average = 0.9417604166666669, 
+    volume = 17554.0, 
+    average = 0.9512411111111112, 
   }, 
   [8027] = { 
-    volume = 14093.0, 
-    average = 0.12578395061728384, 
+    volume = 1529.0, 
+    average = 0.14153999999999997, 
   }, 
   [8028] = { 
-    volume = 310.0, 
-    average = 1.2058, 
+    volume = 227.0, 
+    average = 0.9232211764705882, 
   }, 
   [8034] = { 
-    volume = 350.0, 
-    average = 0.270625, 
+    volume = 641.0, 
+    average = 0.251175, 
   }, 
   [8035] = { 
-    volume = 888.0, 
-    average = 0.1584, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8036] = { 
-    volume = 42151.0, 
-    average = 0.15619841269841264, 
+    volume = 55757.0, 
+    average = 0.1357470588235295, 
   }, 
   [8038] = { 
-    volume = 3192.0, 
-    average = 0.05341666666666667, 
+    volume = 2032.0, 
+    average = 0.19893999999999998, 
   }, 
   [8040] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8048] = { 
-    volume = 870.0, 
-    average = 0.16272659574468085, 
+    volume = 2843.0, 
+    average = 0.18860000000000002, 
   }, 
   [8050] = { 
-    volume = 49.0, 
-    average = 1.46215, 
+    volume = 21.0, 
+    average = 1.0078000000000003, 
   }, 
   [8052] = { 
-    volume = 471.0, 
-    average = 0.4862777777777777, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8053] = { 
-    volume = 60692.0, 
-    average = 0.07556470588235291, 
+    volume = 59722.0, 
+    average = 0.07106406250000001, 
   }, 
   [8054] = { 
-    volume = 3933.0, 
-    average = 0.38295, 
+    volume = 1212.0, 
+    average = 0.4696888888888889, 
   }, 
   [8055] = { 
-    volume = 111212.0, 
-    average = 0.09690662251655624, 
+    volume = 74032.0, 
+    average = 0.09472643678160919, 
   }, 
   [8065] = { 
-    volume = 11940.0, 
-    average = 0.08257008301404853, 
+    volume = 6820.0, 
+    average = 0.09488148148148147, 
   }, 
   [8067] = { 
-    volume = 95.0, 
-    average = 8.999300000000002, 
+    volume = 77.0, 
+    average = 7.6315333333333335, 
   }, 
   [8076] = { 
-    volume = 377.0, 
-    average = 17.973234722222223, 
+    volume = 138.0, 
+    average = 18.016057142857147, 
   }, 
   [8077] = { 
-    volume = 257.0, 
-    average = 0.7334666666666666, 
+    volume = 412.0, 
+    average = 0.31111904761904763, 
   }, 
   [8078] = { 
-    volume = 223.0, 
-    average = 0.44753125, 
+    volume = 499.0, 
+    average = 0.32778823529411766, 
   }, 
   [8079] = { 
-    volume = 762.0, 
-    average = 0.5629421052631577, 
+    volume = 164.0, 
+    average = 0.2364833333333333, 
   }, 
   [8080] = { 
-    volume = 7201.0, 
-    average = 4.197100000000001, 
+    volume = 7644.0, 
+    average = 4.258927536231884, 
   }, 
   [8081] = { 
-    volume = 718.0, 
-    average = 2.025762, 
+    volume = 452.0, 
+    average = 1.4143370370370367, 
   }, 
   [8082] = { 
-    volume = 318.0, 
-    average = 5.185398648648646, 
+    volume = 376.0, 
+    average = 6.470155844155845, 
   }, 
   [8083] = { 
-    volume = 1817.0, 
-    average = 1.4921181818181815, 
+    volume = 2345.0, 
+    average = 1.150971428571429, 
   }, 
   [8084] = { 
-    volume = 554.0, 
-    average = 6.102636538461539, 
+    volume = 161.0, 
+    average = 7.207408333333334, 
   }, 
   [8085] = { 
-    volume = 19.0, 
-    average = 8.802940000000001, 
+    volume = 32.0, 
+    average = 7.4227625, 
   }, 
   [8086] = { 
-    volume = 22.0, 
-    average = 1.0718571428571428, 
+    volume = 5.0, 
+    average = 1.5988, 
   }, 
   [8210] = { 
     volume = nan, 
@@ -456,20 +472,20 @@ return {
     average = nan, 
   }, 
   [8256] = { 
-    volume = 33460.0, 
-    average = 0.4313976190476192, 
+    volume = 30802.0, 
+    average = 0.42004239130434806, 
   }, 
   [8318] = { 
-    volume = 112609.0, 
-    average = 0.6668527851458876, 
+    volume = 121330.0, 
+    average = 0.6699377833753153, 
   }, 
   [8319] = { 
-    volume = 330.0, 
-    average = 23.760288235294126, 
+    volume = 316.0, 
+    average = 24.31061304347826, 
   }, 
   [8320] = { 
-    volume = 4776.0, 
-    average = 3.13706759259259, 
+    volume = 5081.0, 
+    average = 3.249724999999999, 
   }, 
   [8324] = { 
     volume = nan, 
@@ -484,43 +500,43 @@ return {
     average = nan, 
   }, 
   [8330] = { 
-    volume = 4426.0, 
-    average = 0.5359866666666663, 
+    volume = 400.0, 
+    average = 0.696775, 
   }, 
   [8337] = { 
-    volume = 83689.0, 
-    average = 0.1380335616438358, 
+    volume = 116735.0, 
+    average = 0.10704748243075639, 
   }, 
   [8343] = { 
-    volume = 58625.0, 
-    average = 0.08091981981981981, 
+    volume = 76723.0, 
+    average = 0.11818137931034477, 
   }, 
   [8357] = { 
-    volume = 5853.0, 
-    average = 0.0630076923076923, 
+    volume = 2955.0, 
+    average = 0.0884, 
   }, 
   [8502] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8504] = { 
-    volume = 275.0, 
-    average = 2.6665666666666668, 
+    volume = 70.0, 
+    average = 3.9892000000000003, 
   }, 
   [8505] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8506] = { 
-    volume = 10.0, 
-    average = 0.8355, 
-  }, 
-  [8507] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [8507] = { 
+    volume = 300.0, 
+    average = 0.82, 
+  }, 
   [8508] = { 
-    volume = 60.0, 
+    volume = 40.0, 
     average = 1.1, 
   }, 
   [8515] = { 
@@ -532,27 +548,27 @@ return {
     average = nan, 
   }, 
   [8527] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 712.0, 
+    average = 1.2, 
   }, 
   [8528] = { 
     volume = nan, 
     average = nan, 
   }, 
   [11115] = { 
-    volume = 2.0, 
+    volume = 4.0, 
     average = 0.4999, 
   }, 
   [11116] = { 
-    volume = 4.0, 
-    average = 0.9999, 
+    volume = 3.0, 
+    average = 0.9998999999999999, 
   }, 
   [11117] = { 
-    volume = 5.0, 
+    volume = 3.0, 
     average = 1.4999, 
   }, 
   [11118] = { 
-    volume = 4.0, 
+    volume = 3.0, 
     average = 2.2222, 
   }, 
   [13724] = { 
@@ -560,52 +576,52 @@ return {
     average = nan, 
   }, 
   [13726] = { 
-    volume = 25.0, 
-    average = 2.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [13728] = { 
-    volume = 66.0, 
-    average = 2.99995, 
+    volume = 129.0, 
+    average = 2.8266666666666667, 
   }, 
   [13731] = { 
-    volume = 1.0, 
-    average = 0.101, 
+    volume = nan, 
+    average = nan, 
   }, 
   [14620] = { 
-    volume = 952.0, 
-    average = 0.0613857142857143, 
+    volume = 1222.0, 
+    average = 0.115175, 
   }, 
   [14621] = { 
-    volume = 1123.0, 
-    average = 0.09872727272727273, 
+    volume = 356.0, 
+    average = 0.299775, 
   }, 
   [14627] = { 
-    volume = 48.0, 
-    average = 0.918925, 
+    volume = nan, 
+    average = nan, 
   }, 
   [14629] = { 
-    volume = 3839.0, 
-    average = 0.1890266666666667, 
+    volume = 3270.0, 
+    average = 0.23384, 
   }, 
   [14630] = { 
-    volume = 26900.0, 
-    average = 0.058600000000000006, 
+    volume = 16893.0, 
+    average = 0.05170454545454546, 
   }, 
   [14631] = { 
-    volume = 4711.0, 
-    average = 0.06996000000000001, 
+    volume = 3141.0, 
+    average = 0.07888, 
   }, 
   [14632] = { 
-    volume = 4.0, 
-    average = 66.49992499999999, 
+    volume = 5.0, 
+    average = 49.9998, 
   }, 
   [14782] = { 
     volume = nan, 
     average = nan, 
   }, 
   [14894] = { 
-    volume = 1.0, 
-    average = 0.101, 
+    volume = nan, 
+    average = nan, 
   }, 
   [14895] = { 
     volume = nan, 
@@ -639,33 +655,37 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [14949] = { 
+    volume = 7.0, 
+    average = 0.0037142857142857142, 
+  }, 
   [14971] = { 
-    volume = 1142.0, 
-    average = 0.25595833333333334, 
+    volume = 185.0, 
+    average = 0.2919333333333333, 
   }, 
   [15563] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15581] = { 
-    volume = 1990.0, 
-    average = 0.7752375, 
+    volume = 370.0, 
+    average = 0.555175, 
   }, 
   [15582] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15583] = { 
-    volume = 10.0, 
-    average = 1.1736, 
+    volume = nan, 
+    average = nan, 
   }, 
   [15584] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15621] = { 
-    volume = 647.0, 
-    average = 0.060512500000000004, 
+    volume = 397.0, 
+    average = 0.0515, 
   }, 
   [15625] = { 
     volume = nan, 
@@ -676,8 +696,8 @@ return {
     average = nan, 
   }, 
   [15632] = { 
-    volume = 1634.0, 
-    average = 14.776643396226417, 
+    volume = 1125.0, 
+    average = 14.717239682539685, 
   }, 
   [15636] = { 
     volume = nan, 
@@ -685,17 +705,21 @@ return {
   }, 
   [15637] = { 
     volume = 1.0, 
-    average = 50.9999, 
+    average = 100.9997, 
   }, 
   [15638] = { 
-    volume = 1.0, 
-    average = 290.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [15646] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15651] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [15652] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -720,10 +744,6 @@ return {
     average = nan, 
   }, 
   [15664] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [15665] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -756,8 +776,8 @@ return {
     average = nan, 
   }, 
   [15673] = { 
-    volume = 900.0, 
-    average = 0.04989999999999999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [15674] = { 
     volume = nan, 
@@ -767,45 +787,53 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [15677] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [15682] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15709] = { 
-    volume = 27.0, 
-    average = 1018.6143962962963, 
+    volume = 38.0, 
+    average = 1062.5404131578944, 
   }, 
   [15715] = { 
     volume = nan, 
     average = nan, 
   }, 
   [15730] = { 
-    volume = 51.0, 
-    average = 65.60288333333334, 
+    volume = 90.0, 
+    average = 71.67247272727273, 
   }, 
   [15765] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 20.0, 
+    average = 60.0, 
   }, 
   [15767] = { 
-    volume = 1273.0, 
-    average = 0.32862499999999994, 
+    volume = 1100.0, 
+    average = 0.27885000000000004, 
   }, 
   [15770] = { 
-    volume = 177.0, 
-    average = 0.35768000000000005, 
+    volume = 150.0, 
+    average = 0.49924285714285715, 
   }, 
   [15905] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [15908] = { 
+    volume = 1.0, 
+    average = 9.0909, 
+  }, 
   [15983] = { 
-    volume = 5357.0, 
-    average = 0.6877168539325846, 
+    volume = 3717.0, 
+    average = 0.616663650793651, 
   }, 
   [16000] = { 
-    volume = 581.0, 
-    average = 0.7881833333333333, 
+    volume = 540.0, 
+    average = 0.7795833333333332, 
   }, 
   [16199] = { 
     volume = nan, 
@@ -824,12 +852,12 @@ return {
     average = nan, 
   }, 
   [16220] = { 
-    volume = 389.0, 
-    average = 3.8206235294117645, 
+    volume = 979.0, 
+    average = 3.479777215189877, 
   }, 
   [16221] = { 
-    volume = 38.0, 
-    average = 0.2499, 
+    volume = nan, 
+    average = nan, 
   }, 
   [16225] = { 
     volume = nan, 
@@ -844,8 +872,8 @@ return {
     average = nan, 
   }, 
   [16268] = { 
-    volume = 489.0, 
-    average = 0.5575, 
+    volume = 1088.0, 
+    average = 0.5137714285714285, 
   }, 
   [16270] = { 
     volume = nan, 
@@ -856,28 +884,28 @@ return {
     average = nan, 
   }, 
   [16273] = { 
-    volume = 517.0, 
-    average = 0.34923333333333334, 
+    volume = 21.0, 
+    average = 0.2775, 
   }, 
   [16276] = { 
-    volume = 243.0, 
-    average = 0.5499666666666667, 
+    volume = 505.0, 
+    average = 0.5996, 
   }, 
   [16279] = { 
     volume = nan, 
     average = nan, 
   }, 
   [16283] = { 
-    volume = 111.0, 
-    average = 0.2596, 
+    volume = 1014.0, 
+    average = 0.40945, 
   }, 
   [16284] = { 
-    volume = 1001.0, 
-    average = 0.21744999999999998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [16290] = { 
-    volume = 2496.0, 
-    average = 0.15411999999999998, 
+    volume = 4485.0, 
+    average = 0.44833999999999996, 
   }, 
   [16294] = { 
     volume = nan, 
@@ -888,32 +916,32 @@ return {
     average = nan, 
   }, 
   [16323] = { 
-    volume = 3.0, 
-    average = 250.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [16324] = { 
-    volume = 853.0, 
-    average = 12.514679452054791, 
+    volume = 795.0, 
+    average = 11.25177733333334, 
   }, 
   [16325] = { 
-    volume = 22.0, 
-    average = 375.73436666666674, 
+    volume = 42.0, 
+    average = 364.116548275862, 
   }, 
   [16326] = { 
-    volume = 72.0, 
-    average = 260.4540692307692, 
+    volume = 3.0, 
+    average = 249.97693333333333, 
   }, 
   [16327] = { 
-    volume = 36732.0, 
-    average = 0.5351786764705879, 
+    volume = 39859.0, 
+    average = 0.5670416666666666, 
   }, 
   [16328] = { 
-    volume = 453.0, 
-    average = 14.545697826086958, 
+    volume = 193.0, 
+    average = 19.69615151515152, 
   }, 
   [16330] = { 
-    volume = 33.0, 
-    average = 255.99834444444437, 
+    volume = 15.0, 
+    average = 260.8136, 
   }, 
   [16334] = { 
     volume = nan, 
@@ -924,60 +952,60 @@ return {
     average = nan, 
   }, 
   [16344] = { 
-    volume = 174.0, 
-    average = 15.153179166666668, 
+    volume = 151.0, 
+    average = 19.960241935483875, 
   }, 
   [16346] = { 
-    volume = 10.0, 
-    average = 294.99326666666667, 
+    volume = 12.0, 
+    average = 280.9820583333334, 
   }, 
   [16347] = { 
-    volume = 8160.0, 
-    average = 0.07383368421052633, 
+    volume = 784.0, 
+    average = 0.1129, 
   }, 
   [16348] = { 
-    volume = 12819.0, 
-    average = 0.3853777777777781, 
+    volume = 8022.0, 
+    average = 0.4314563829787235, 
   }, 
   [16349] = { 
-    volume = 10676.0, 
-    average = 1.462516952380953, 
+    volume = 8059.0, 
+    average = 1.6617057971014502, 
   }, 
   [16350] = { 
-    volume = 1166.0, 
-    average = 0.3764964285714285, 
+    volume = 426.0, 
+    average = 0.4198588235294118, 
   }, 
   [16351] = { 
-    volume = 533.0, 
-    average = 2.0344304347826085, 
+    volume = 656.0, 
+    average = 2.0128371428571428, 
   }, 
   [16352] = { 
-    volume = 76.0, 
-    average = 4.28685652173913, 
+    volume = 459.0, 
+    average = 4.5160687500000005, 
   }, 
   [16353] = { 
-    volume = 2044.0, 
-    average = 3.0189854838709667, 
+    volume = 967.0, 
+    average = 2.8737890909090904, 
   }, 
   [16354] = { 
-    volume = 1920.0, 
-    average = 10.95975579710145, 
+    volume = 1489.0, 
+    average = 10.591538582677169, 
   }, 
   [16355] = { 
-    volume = 668.0, 
-    average = 19.776073770491813, 
+    volume = 559.0, 
+    average = 20.54225882352941, 
   }, 
   [16356] = { 
-    volume = 327.0, 
-    average = 16.93783333333333, 
+    volume = 517.0, 
+    average = 16.260841975308647, 
   }, 
   [16357] = { 
-    volume = 461.0, 
-    average = 62.081971034482685, 
+    volume = 409.0, 
+    average = 61.26405585585586, 
   }, 
   [16358] = { 
-    volume = 342.0, 
-    average = 113.44191595744677, 
+    volume = 308.0, 
+    average = 115.54678409090911, 
   }, 
   [16419] = { 
     volume = nan, 
@@ -988,24 +1016,24 @@ return {
     average = nan, 
   }, 
   [17619] = { 
-    volume = 2.0, 
-    average = 9.9908, 
+    volume = nan, 
+    average = nan, 
   }, 
   [17630] = { 
     volume = nan, 
     average = nan, 
   }, 
   [17665] = { 
-    volume = 10.0, 
-    average = 0.2733, 
-  }, 
-  [17666] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [17666] = { 
+    volume = 100.0, 
+    average = 0.6999, 
+  }, 
   [17667] = { 
     volume = 150.0, 
-    average = 0.5966666666666667, 
+    average = 0.5996333333333334, 
   }, 
   [17668] = { 
     volume = nan, 
@@ -1024,36 +1052,36 @@ return {
     average = nan, 
   }, 
   [17707] = { 
-    volume = 1.0, 
-    average = 300.0, 
-  }, 
-  [17711] = { 
-    volume = 2.0, 
-    average = 6.99975, 
-  }, 
-  [17715] = { 
-    volume = 26.0, 
-    average = 1.9978833333333332, 
-  }, 
-  [17774] = { 
-    volume = 6424.0, 
-    average = 3.1103855670103098, 
-  }, 
-  [17775] = { 
-    volume = 2324.0, 
-    average = 0.7503389830508477, 
-  }, 
-  [17776] = { 
-    volume = 1918.0, 
-    average = 0.9757224489795918, 
-  }, 
-  [17797] = { 
-    volume = 2.0, 
-    average = 2250.0, 
-  }, 
-  [17798] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [17711] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [17715] = { 
+    volume = 108.0, 
+    average = 2.749625, 
+  }, 
+  [17774] = { 
+    volume = 6159.0, 
+    average = 3.1510491228070165, 
+  }, 
+  [17775] = { 
+    volume = 3265.0, 
+    average = 0.8677337662337662, 
+  }, 
+  [17776] = { 
+    volume = 757.0, 
+    average = 1.3726315789473686, 
+  }, 
+  [17797] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [17798] = { 
+    volume = 1.0, 
+    average = 3333.0, 
   }, 
   [17856] = { 
     volume = nan, 
@@ -1064,8 +1092,8 @@ return {
     average = nan, 
   }, 
   [17886] = { 
-    volume = 1.0, 
-    average = 6000.0, 
+    volume = 2.0, 
+    average = 1299.99975, 
   }, 
   [17897] = { 
     volume = nan, 
@@ -1096,12 +1124,12 @@ return {
     average = nan, 
   }, 
   [18442] = { 
-    volume = 96.0, 
-    average = 28.79652608695653, 
+    volume = 157.0, 
+    average = 30.704265116279082, 
   }, 
   [18459] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 250.9994, 
   }, 
   [18470] = { 
     volume = nan, 
@@ -1109,11 +1137,11 @@ return {
   }, 
   [18471] = { 
     volume = 2.0, 
-    average = 249.9999, 
+    average = 265.0, 
   }, 
   [18472] = { 
     volume = 1.0, 
-    average = 250.0, 
+    average = 300.9999, 
   }, 
   [18481] = { 
     volume = nan, 
@@ -1140,16 +1168,16 @@ return {
     average = nan, 
   }, 
   [18749] = { 
-    volume = 293.0, 
-    average = 17.5950775, 
+    volume = 450.0, 
+    average = 17.469440350877193, 
   }, 
   [18753] = { 
-    volume = 1860.0, 
-    average = 0.9763956521739132, 
+    volume = 1676.0, 
+    average = 0.9983833333333333, 
   }, 
   [18760] = { 
-    volume = 180.0, 
-    average = 0.7348800000000001, 
+    volume = 20.0, 
+    average = 2.0, 
   }, 
   [18795] = { 
     volume = nan, 
@@ -1171,17 +1199,13 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [18819] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [18820] = { 
     volume = 2.0, 
-    average = 2350.0050499999998, 
+    average = 1219.9998500000002, 
   }, 
   [18821] = { 
-    volume = 1.0, 
-    average = 6430.0, 
+    volume = 5.0, 
+    average = 2016.6, 
   }, 
   [18822] = { 
     volume = nan, 
@@ -1192,76 +1216,72 @@ return {
     average = nan, 
   }, 
   [18829] = { 
-    volume = 200.0, 
-    average = 0.40979999999999994, 
-  }, 
-  [18830] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1000.0, 
+    average = 0.45, 
   }, 
   [18831] = { 
     volume = nan, 
     average = nan, 
   }, 
   [18936] = { 
-    volume = 11657.0, 
-    average = 0.277904347826087, 
+    volume = 14017.0, 
+    average = 0.23521621621621625, 
   }, 
   [18937] = { 
-    volume = 2057.0, 
-    average = 0.31081111111111115, 
+    volume = 400.0, 
+    average = 0.3042, 
   }, 
   [18938] = { 
-    volume = 6422.0, 
-    average = 0.33990714285714285, 
+    volume = 4964.0, 
+    average = 0.4292277777777778, 
   }, 
   [18940] = { 
-    volume = 2798.0, 
-    average = 0.4927727272727273, 
+    volume = 2803.0, 
+    average = 0.5280333333333334, 
   }, 
   [18941] = { 
-    volume = 214.0, 
-    average = 1.24485, 
+    volume = 127.0, 
+    average = 1.3258666666666665, 
   }, 
   [18942] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 2323.0, 
+    average = 0.51795, 
   }, 
   [18943] = { 
-    volume = 250.0, 
-    average = 0.8199, 
+    volume = 1261.0, 
+    average = 0.6369285714285714, 
   }, 
   [18954] = { 
-    volume = 41.0, 
-    average = 1.9336600000000002, 
+    volume = 33.0, 
+    average = 2.499275, 
   }, 
   [18955] = { 
-    volume = 22.0, 
-    average = 0.6796407407407408, 
+    volume = 24.0, 
+    average = 0.98975, 
   }, 
   [19020] = { 
-    volume = 27.0, 
-    average = 26.217942857142855, 
+    volume = 42.0, 
+    average = 29.499699999999997, 
   }, 
   [19035] = { 
-    volume = 1030.0, 
-    average = 0.3301545454545455, 
+    volume = 400.0, 
+    average = 0.38586, 
   }, 
   [19041] = { 
-    volume = 866.0, 
-    average = 4.07266, 
+    volume = 1094.0, 
+    average = 4.492380357142857, 
   }, 
   [19042] = { 
-    volume = 1599.0, 
-    average = 1.3120913043478262, 
+    volume = 2400.0, 
+    average = 0.9984242424242427, 
   }, 
   [19043] = { 
-    volume = 734.0, 
-    average = 3.971443478260869, 
+    volume = 860.0, 
+    average = 5.133140384615384, 
   }, 
   [19045] = { 
-    volume = 301.0, 
-    average = 3.6963476190476183, 
+    volume = 67.0, 
+    average = 4.9988375, 
   }, 
   [19326] = { 
     volume = nan, 
@@ -1280,40 +1300,40 @@ return {
     average = nan, 
   }, 
   [19330] = { 
-    volume = 2.0, 
-    average = 2790.0, 
-  }, 
-  [19331] = { 
-    volume = 1.0, 
-    average = 8000.0, 
-  }, 
-  [19332] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [19331] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [19332] = { 
+    volume = 1.0, 
+    average = 3200.0, 
   }, 
   [19333] = { 
     volume = nan, 
     average = nan, 
   }, 
   [19334] = { 
-    volume = 2.0, 
-    average = 17.999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [19335] = { 
     volume = 1.0, 
-    average = 19.9778, 
+    average = 19.9699, 
   }, 
   [19336] = { 
-    volume = 1.0, 
-    average = 21.9997, 
+    volume = nan, 
+    average = nan, 
   }, 
   [19337] = { 
-    volume = 1.0, 
-    average = 19.5556, 
+    volume = 2.0, 
+    average = 19.5548, 
   }, 
   [19338] = { 
-    volume = 3.0, 
-    average = 17.596233333333334, 
+    volume = nan, 
+    average = nan, 
   }, 
   [19339] = { 
     volume = nan, 
@@ -1344,76 +1364,76 @@ return {
     average = nan, 
   }, 
   [19401] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 250.0, 
   }, 
   [19402] = { 
-    volume = 5.0, 
-    average = 44.999649999999995, 
+    volume = 10.0, 
+    average = 42.9995, 
   }, 
   [19403] = { 
     volume = nan, 
     average = nan, 
   }, 
   [19404] = { 
-    volume = 1.0, 
-    average = 198.9985, 
+    volume = nan, 
+    average = nan, 
   }, 
   [19407] = { 
-    volume = 37.0, 
-    average = 41.784281818181825, 
+    volume = 67.0, 
+    average = 41.966660714285716, 
   }, 
   [19408] = { 
-    volume = 3.0, 
-    average = 104.9991, 
+    volume = 12.0, 
+    average = 148.99972, 
   }, 
   [19409] = { 
-    volume = 12.0, 
-    average = 244.98787000000002, 
+    volume = 5.0, 
+    average = 244.97660000000002, 
   }, 
   [19410] = { 
-    volume = 71.0, 
-    average = 49.51380975609756, 
+    volume = 33.0, 
+    average = 58.99069999999999, 
   }, 
   [19411] = { 
-    volume = 12.0, 
-    average = 178.9957111111111, 
+    volume = 3.0, 
+    average = 177.99966666666668, 
   }, 
   [19412] = { 
-    volume = 20.0, 
-    average = 177.99994, 
+    volume = 12.0, 
+    average = 176.18073636363636, 
   }, 
   [19429] = { 
     volume = nan, 
     average = nan, 
   }, 
   [19448] = { 
-    volume = 6.0, 
-    average = 9.498439999999999, 
+    volume = 125.0, 
+    average = 8.999212499999999, 
   }, 
   [19449] = { 
-    volume = 1076.0, 
-    average = 7.569348148148144, 
+    volume = 647.0, 
+    average = 7.958863999999997, 
   }, 
   [19450] = { 
-    volume = 448.0, 
-    average = 7.45548, 
+    volume = 461.0, 
+    average = 8.67170434782609, 
   }, 
   [19467] = { 
     volume = nan, 
     average = nan, 
   }, 
   [19468] = { 
-    volume = 8.0, 
-    average = 73.99875, 
+    volume = 4.0, 
+    average = 80.9948, 
   }, 
   [19470] = { 
-    volume = 3.0, 
-    average = 275.9697, 
+    volume = 1.0, 
+    average = 199.9897, 
   }, 
   [19472] = { 
-    volume = 4.0, 
-    average = 321.745, 
+    volume = nan, 
+    average = nan, 
   }, 
   [19939] = { 
     volume = nan, 
@@ -1424,24 +1444,24 @@ return {
     average = nan, 
   }, 
   [19944] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 329.0, 
+    average = 0.79845, 
   }, 
   [19945] = { 
-    volume = 199.0, 
-    average = 0.18006666666666668, 
+    volume = 1007.0, 
+    average = 0.21484999999999999, 
   }, 
   [19946] = { 
-    volume = 3855.0, 
-    average = 0.09293333333333333, 
+    volume = 4857.0, 
+    average = 0.11565238095238094, 
   }, 
   [19947] = { 
-    volume = 216.0, 
-    average = 0.10975000000000001, 
+    volume = 503.0, 
+    average = 0.14316666666666666, 
   }, 
   [19948] = { 
-    volume = 1853.0, 
-    average = 0.18007, 
+    volume = 11152.0, 
+    average = 0.16637619047619043, 
   }, 
   [20139] = { 
     volume = nan, 
@@ -1468,12 +1488,12 @@ return {
     average = nan, 
   }, 
   [20404] = { 
-    volume = 1.0, 
-    average = 32999.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20416] = { 
-    volume = 1.0, 
-    average = 250.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20435] = { 
     volume = nan, 
@@ -1512,8 +1532,12 @@ return {
     average = nan, 
   }, 
   [20479] = { 
-    volume = 2.0, 
-    average = 4269.5, 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [20483] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [20555] = { 
     volume = nan, 
@@ -1524,16 +1548,16 @@ return {
     average = nan, 
   }, 
   [20582] = { 
-    volume = 1.0, 
-    average = 3999.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20609] = { 
-    volume = 1.0, 
-    average = 4000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20636] = { 
-    volume = 2.0, 
-    average = 4500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20663] = { 
     volume = nan, 
@@ -1560,10 +1584,6 @@ return {
     average = nan, 
   }, 
   [20798] = { 
-    volume = 1.0, 
-    average = 27000.0, 
-  }, 
-  [20806] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -1576,8 +1596,8 @@ return {
     average = nan, 
   }, 
   [20879] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 4999.0, 
   }, 
   [20885] = { 
     volume = nan, 
@@ -1592,8 +1612,8 @@ return {
     average = nan, 
   }, 
   [20908] = { 
-    volume = 1.0, 
-    average = 11119.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [20917] = { 
     volume = nan, 
@@ -1604,14 +1624,10 @@ return {
     average = nan, 
   }, 
   [20933] = { 
-    volume = 1.0, 
-    average = 4999.0, 
-  }, 
-  [20937] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [20947] = { 
+  [20937] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -1628,6 +1644,10 @@ return {
     average = nan, 
   }, 
   [20984] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [20986] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -1648,8 +1668,8 @@ return {
     average = nan, 
   }, 
   [21014] = { 
-    volume = 1.0, 
-    average = 4999.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21039] = { 
     volume = nan, 
@@ -1660,26 +1680,14 @@ return {
     average = nan, 
   }, 
   [21041] = { 
-    volume = 1.0, 
-    average = 4661.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21042] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [21048] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [21068] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [21073] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [21080] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -1696,32 +1704,28 @@ return {
     average = nan, 
   }, 
   [21095] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [21103] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 3500.0, 
   }, 
   [21165] = { 
-    volume = 1.0, 
-    average = 305.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21166] = { 
     volume = nan, 
     average = nan, 
   }, 
   [21167] = { 
-    volume = 4.0, 
-    average = 100.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21168] = { 
-    volume = 2.0, 
-    average = 123.99495, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21169] = { 
-    volume = 1.0, 
-    average = 125.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21170] = { 
     volume = nan, 
@@ -1736,20 +1740,20 @@ return {
     average = nan, 
   }, 
   [21173] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 135.0, 
   }, 
   [21174] = { 
     volume = nan, 
     average = nan, 
   }, 
   [21191] = { 
-    volume = 2.0, 
-    average = 149.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21850] = { 
-    volume = 3507.0, 
-    average = 1.034200000000001, 
+    volume = 1709.0, 
+    average = 1.1771451612903223, 
   }, 
   [21851] = { 
     volume = nan, 
@@ -1763,6 +1767,10 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [21863] = { 
+    volume = 1.0, 
+    average = 8.35, 
+  }, 
   [21864] = { 
     volume = nan, 
     average = nan, 
@@ -1772,8 +1780,8 @@ return {
     average = nan, 
   }, 
   [21873] = { 
-    volume = 1.0, 
-    average = 0.4, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21874] = { 
     volume = nan, 
@@ -1800,12 +1808,12 @@ return {
     average = nan, 
   }, 
   [21890] = { 
-    volume = 1.0, 
-    average = 15.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21894] = { 
-    volume = 1.0, 
-    average = 4.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21895] = { 
     volume = nan, 
@@ -1820,8 +1828,8 @@ return {
     average = nan, 
   }, 
   [21900] = { 
-    volume = 1.0, 
-    average = 0.268, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21901] = { 
     volume = nan, 
@@ -1835,21 +1843,21 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [21913] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [21914] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [21915] = { 
+    volume = 1.0, 
+    average = 10.25, 
   }, 
   [21916] = { 
     volume = nan, 
     average = nan, 
   }, 
   [21917] = { 
-    volume = 1.0, 
-    average = 0.463, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21918] = { 
     volume = nan, 
@@ -1872,8 +1880,8 @@ return {
     average = nan, 
   }, 
   [21940] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 7.0, 
   }, 
   [21944] = { 
     volume = nan, 
@@ -1884,12 +1892,12 @@ return {
     average = nan, 
   }, 
   [21946] = { 
-    volume = 1.0, 
-    average = 3.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21947] = { 
-    volume = 1.0, 
-    average = 20.463, 
+    volume = nan, 
+    average = nan, 
   }, 
   [21948] = { 
     volume = nan, 
@@ -1924,8 +1932,8 @@ return {
     average = nan, 
   }, 
   [21962] = { 
-    volume = 1.0, 
-    average = 66.0, 
+    volume = 3.0, 
+    average = 66.66333333333334, 
   }, 
   [21967] = { 
     volume = nan, 
@@ -1935,17 +1943,9 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [21970] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [21975] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [21988] = { 
-    volume = nan, 
-    average = nan, 
+  [21974] = { 
+    volume = 1.0, 
+    average = 10.25, 
   }, 
   [21989] = { 
     volume = nan, 
@@ -1954,6 +1954,10 @@ return {
   [22002] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [22005] = { 
+    volume = 1.0, 
+    average = 2.0, 
   }, 
   [22008] = { 
     volume = nan, 
@@ -1964,10 +1968,6 @@ return {
     average = nan, 
   }, 
   [22010] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [22012] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -1992,8 +1992,8 @@ return {
     average = nan, 
   }, 
   [22026] = { 
-    volume = 1.0, 
-    average = 0.199, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22030] = { 
     volume = nan, 
@@ -2012,16 +2012,16 @@ return {
     average = nan, 
   }, 
   [22038] = { 
-    volume = 1.0, 
-    average = 20.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22041] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22044] = { 
-    volume = 1.0, 
-    average = 10.6478, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22045] = { 
     volume = nan, 
@@ -2032,10 +2032,6 @@ return {
     average = nan, 
   }, 
   [22052] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [22061] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2093,7 +2089,7 @@ return {
   }, 
   [22088] = { 
     volume = 1.0, 
-    average = 20.0, 
+    average = 10.0, 
   }, 
   [22092] = { 
     volume = nan, 
@@ -2111,9 +2107,13 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [22101] = { 
+  [22100] = { 
     volume = 1.0, 
-    average = 6.99, 
+    average = 8.0, 
+  }, 
+  [22101] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [22107] = { 
     volume = nan, 
@@ -2123,7 +2123,7 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [22119] = { 
+  [22115] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2136,20 +2136,20 @@ return {
     average = nan, 
   }, 
   [22125] = { 
-    volume = 1.0, 
-    average = 4.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22126] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22127] = { 
-    volume = 1.0, 
-    average = 0.3, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22129] = { 
-    volume = 1.0, 
-    average = 6.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22135] = { 
     volume = nan, 
@@ -2188,8 +2188,8 @@ return {
     average = nan, 
   }, 
   [22156] = { 
-    volume = 1.0, 
-    average = 9.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22157] = { 
     volume = nan, 
@@ -2197,7 +2197,7 @@ return {
   }, 
   [22158] = { 
     volume = 2.0, 
-    average = 1100.0, 
+    average = 225.49984999999998, 
   }, 
   [22162] = { 
     volume = nan, 
@@ -2223,17 +2223,13 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [22179] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [22183] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22185] = { 
-    volume = 1.0, 
-    average = 0.29, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22204] = { 
     volume = nan, 
@@ -2288,10 +2284,14 @@ return {
     average = nan, 
   }, 
   [22226] = { 
+    volume = 1.0, 
+    average = 0.25, 
+  }, 
+  [22228] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [22228] = { 
+  [22238] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2304,8 +2304,12 @@ return {
     average = nan, 
   }, 
   [22246] = { 
-    volume = 1.0, 
-    average = 0.2096, 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [22250] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [22251] = { 
     volume = nan, 
@@ -2336,14 +2340,18 @@ return {
     average = nan, 
   }, 
   [22279] = { 
-    volume = 1.0, 
-    average = 10.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22280] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22281] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [22283] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2356,6 +2364,10 @@ return {
     average = nan, 
   }, 
   [22298] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [22301] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2383,10 +2395,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [22323] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [22325] = { 
     volume = nan, 
     average = nan, 
@@ -2400,8 +2408,8 @@ return {
     average = nan, 
   }, 
   [22333] = { 
-    volume = 1.0, 
-    average = 2.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22334] = { 
     volume = nan, 
@@ -2419,6 +2427,10 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [22355] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [22374] = { 
     volume = nan, 
     average = nan, 
@@ -2428,10 +2440,6 @@ return {
     average = nan, 
   }, 
   [22384] = { 
-    volume = 1.0, 
-    average = 10.0, 
-  }, 
-  [22385] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2448,12 +2456,12 @@ return {
     average = nan, 
   }, 
   [22420] = { 
-    volume = 1.0, 
-    average = 5.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22423] = { 
-    volume = 1.0, 
-    average = 0.0406, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22429] = { 
     volume = nan, 
@@ -2468,10 +2476,14 @@ return {
     average = nan, 
   }, 
   [22443] = { 
-    volume = 1.0, 
-    average = 4.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22445] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [22447] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2492,8 +2504,8 @@ return {
     average = nan, 
   }, 
   [22473] = { 
-    volume = 1.0, 
-    average = 0.5, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22474] = { 
     volume = nan, 
@@ -2511,6 +2523,10 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [22486] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [22488] = { 
     volume = nan, 
     average = nan, 
@@ -2519,19 +2535,19 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [22502] = { 
+    volume = 1.0, 
+    average = 15.0, 
+  }, 
   [22505] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22506] = { 
-    volume = 1.0, 
-    average = 3.99, 
-  }, 
-  [22513] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [22515] = { 
+  [22513] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2550,6 +2566,10 @@ return {
   [22535] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [22536] = { 
+    volume = 1.0, 
+    average = 5.0, 
   }, 
   [22558] = { 
     volume = nan, 
@@ -2591,25 +2611,29 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [22604] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [22616] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22617] = { 
-    volume = 1.0, 
-    average = 2.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22618] = { 
-    volume = 1.0, 
-    average = 8.0, 
-  }, 
-  [22622] = { 
     volume = nan, 
     average = nan, 
   }, 
   [22625] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [22628] = { 
+    volume = 1.0, 
+    average = 40.0, 
   }, 
   [22639] = { 
     volume = nan, 
@@ -2619,11 +2643,7 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [22641] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [22645] = { 
+  [22643] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2648,8 +2668,8 @@ return {
     average = nan, 
   }, 
   [22667] = { 
-    volume = 1.0, 
-    average = 0.265, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22669] = { 
     volume = nan, 
@@ -2674,6 +2694,10 @@ return {
   [22682] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [22683] = { 
+    volume = 1.0, 
+    average = 10.0, 
   }, 
   [22702] = { 
     volume = nan, 
@@ -2708,8 +2732,8 @@ return {
     average = nan, 
   }, 
   [22760] = { 
-    volume = 1.0, 
-    average = 0.199, 
+    volume = nan, 
+    average = nan, 
   }, 
   [22761] = { 
     volume = nan, 
@@ -2724,6 +2748,10 @@ return {
     average = nan, 
   }, 
   [22774] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [22781] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2748,10 +2776,6 @@ return {
     average = nan, 
   }, 
   [22794] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [22799] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -2796,8 +2820,8 @@ return {
     average = nan, 
   }, 
   [23635] = { 
-    volume = 443.0, 
-    average = 0.3485600000000001, 
+    volume = 410.0, 
+    average = 0.09163333333333334, 
   }, 
   [23636] = { 
     volume = nan, 
@@ -2808,40 +2832,40 @@ return {
     average = nan, 
   }, 
   [23653] = { 
-    volume = 5091.0, 
-    average = 14.482767638036801, 
+    volume = 5563.0, 
+    average = 13.795825993883794, 
   }, 
   [23663] = { 
     volume = nan, 
     average = nan, 
   }, 
   [23664] = { 
-    volume = 1.0, 
-    average = 149.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [23665] = { 
     volume = nan, 
     average = nan, 
   }, 
   [23670] = { 
-    volume = 3800.0, 
-    average = 1.0079212121212124, 
+    volume = 245.0, 
+    average = 0.7852, 
   }, 
   [23671] = { 
-    volume = 13915.0, 
-    average = 0.04800625, 
+    volume = 10000.0, 
+    average = 0.0368, 
   }, 
   [23698] = { 
-    volume = 1.0, 
-    average = 2333.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [23722] = { 
     volume = 1.0, 
     average = 59.97, 
   }, 
   [23725] = { 
-    volume = 1.0, 
-    average = 299.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [23734] = { 
     volume = nan, 
@@ -2884,8 +2908,8 @@ return {
     average = nan, 
   }, 
   [23765] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 15.0, 
   }, 
   [23767] = { 
     volume = nan, 
@@ -2900,12 +2924,12 @@ return {
     average = nan, 
   }, 
   [23775] = { 
-    volume = 1.0, 
-    average = 3.8899, 
+    volume = nan, 
+    average = nan, 
   }, 
   [23776] = { 
-    volume = 1.0, 
-    average = 3.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [23777] = { 
     volume = nan, 
@@ -3017,7 +3041,7 @@ return {
   }, 
   [24121] = { 
     volume = 2.0, 
-    average = 689.99995, 
+    average = 675.0, 
   }, 
   [24122] = { 
     volume = nan, 
@@ -3033,15 +3057,15 @@ return {
   }, 
   [24443] = { 
     volume = 1.0, 
-    average = 3.99, 
+    average = 0.1396, 
   }, 
   [24444] = { 
     volume = nan, 
     average = nan, 
   }, 
   [24446] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 1.0, 
   }, 
   [24448] = { 
     volume = nan, 
@@ -3052,12 +3076,12 @@ return {
     average = nan, 
   }, 
   [24450] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 2.0, 
   }, 
   [24451] = { 
-    volume = 1.0, 
-    average = 2.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [24458] = { 
     volume = nan, 
@@ -3075,17 +3099,9 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [24476] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [24477] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [24581] = { 
-    volume = 166.0, 
-    average = 40.29758253012042, 
+    volume = 54.0, 
+    average = 21.941509259259263, 
   }, 
   [24620] = { 
     volume = nan, 
@@ -3136,16 +3152,16 @@ return {
     average = nan, 
   }, 
   [24661] = { 
-    volume = 1.0, 
-    average = 29.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [24662] = { 
     volume = nan, 
     average = nan, 
   }, 
   [24663] = { 
-    volume = 1.0, 
-    average = 30.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [24664] = { 
     volume = nan, 
@@ -3159,10 +3175,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [24667] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [24668] = { 
     volume = nan, 
     average = nan, 
@@ -3171,15 +3183,7 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [24670] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [24673] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [24674] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -3220,16 +3224,16 @@ return {
     average = nan, 
   }, 
   [24693] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 499.0, 
   }, 
   [24694] = { 
     volume = nan, 
     average = nan, 
   }, 
   [24714] = { 
-    volume = 2.0, 
-    average = 399.05575, 
+    volume = 4.0, 
+    average = 398.41270000000003, 
   }, 
   [24715] = { 
     volume = nan, 
@@ -3237,11 +3241,11 @@ return {
   }, 
   [24717] = { 
     volume = 2.0, 
-    average = 399.21935, 
+    average = 469.9993, 
   }, 
   [24745] = { 
     volume = 2.0, 
-    average = 69.6266, 
+    average = 69.69665, 
   }, 
   [24749] = { 
     volume = nan, 
@@ -3272,10 +3276,6 @@ return {
     average = nan, 
   }, 
   [24852] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [24853] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -3355,37 +3355,29 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [24889] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [24890] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [24911] = { 
-    volume = 3019.0, 
-    average = 0.06696478873239436, 
+    volume = 3276.0, 
+    average = 0.07720000000000002, 
   }, 
   [24912] = { 
-    volume = 56.0, 
-    average = 0.7555, 
+    volume = 98.0, 
+    average = 1.4979000000000002, 
   }, 
   [24913] = { 
-    volume = 59.0, 
-    average = 10.43386875, 
+    volume = 124.0, 
+    average = 8.356385714285716, 
   }, 
   [24914] = { 
-    volume = 92.0, 
-    average = 13.74368888888889, 
+    volume = 24.0, 
+    average = 14.994619999999998, 
   }, 
   [24915] = { 
-    volume = 170.0, 
-    average = 0.7987777777777778, 
+    volume = 147.0, 
+    average = 0.29714782608695645, 
   }, 
   [24916] = { 
-    volume = 399.0, 
-    average = 26.544350793650807, 
+    volume = 217.0, 
+    average = 29.81221166666667, 
   }, 
   [25116] = { 
     volume = nan, 
@@ -3412,10 +3404,6 @@ return {
     average = nan, 
   }, 
   [25501] = { 
-    volume = 1.0, 
-    average = 4.99, 
-  }, 
-  [25519] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -3439,21 +3427,17 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [25689] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [25798] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 0.0596, 
   }, 
   [25799] = { 
-    volume = 10.0, 
-    average = 0.157375, 
+    volume = nan, 
+    average = nan, 
   }, 
   [25800] = { 
-    volume = 1.0, 
-    average = 0.1, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26005] = { 
     volume = nan, 
@@ -3461,19 +3445,19 @@ return {
   }, 
   [26295] = { 
     volume = 1.0, 
-    average = 255.9953, 
+    average = 358.9999, 
   }, 
   [26377] = { 
     volume = nan, 
     average = nan, 
   }, 
   [26378] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 217.0, 
+    average = 0.4666666666666666, 
   }, 
   [26380] = { 
     volume = 104.0, 
-    average = 37.55039777777778, 
+    average = 33.717818181818174, 
   }, 
   [26431] = { 
     volume = nan, 
@@ -3488,20 +3472,16 @@ return {
     average = nan, 
   }, 
   [26443] = { 
-    volume = 1.0, 
-    average = 9.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26444] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [26449] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [26451] = { 
-    volume = 77.0, 
-    average = 1.0, 
+    volume = 2.0, 
+    average = 0.7099, 
   }, 
   [26452] = { 
     volume = nan, 
@@ -3536,12 +3516,8 @@ return {
     average = nan, 
   }, 
   [26461] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [26462] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 28.0, 
+    average = 0.5, 
   }, 
   [26465] = { 
     volume = nan, 
@@ -3556,16 +3532,16 @@ return {
     average = nan, 
   }, 
   [26470] = { 
-    volume = 200.0, 
-    average = 1.0, 
-  }, 
-  [26471] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [26471] = { 
+    volume = 94.0, 
+    average = 0.5, 
+  }, 
   [26548] = { 
-    volume = 4776.0, 
-    average = 1.5919569892473109, 
+    volume = 5821.0, 
+    average = 1.6586271739130434, 
   }, 
   [26552] = { 
     volume = nan, 
@@ -3588,28 +3564,28 @@ return {
     average = nan, 
   }, 
   [26673] = { 
-    volume = 1.0, 
-    average = 0.3091, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26674] = { 
-    volume = 1567.0, 
-    average = 0.23446666666666668, 
+    volume = 4440.0, 
+    average = 0.23803571428571427, 
   }, 
   [26675] = { 
-    volume = 3.0, 
-    average = 3999.3333, 
+    volume = 1.0, 
+    average = 3900.0, 
   }, 
   [26744] = { 
-    volume = 2985.0, 
-    average = 0.30903225806451606, 
+    volume = 4733.0, 
+    average = 0.320976, 
   }, 
   [26768] = { 
-    volume = 5.0, 
-    average = 24.9893, 
+    volume = 8.0, 
+    average = 23.0, 
   }, 
   [26770] = { 
     volume = 1.0, 
-    average = 149.9999, 
+    average = 145.0, 
   }, 
   [26771] = { 
     volume = nan, 
@@ -3628,8 +3604,8 @@ return {
     average = nan, 
   }, 
   [26821] = { 
-    volume = 20.0, 
-    average = 5.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26836] = { 
     volume = nan, 
@@ -3640,20 +3616,20 @@ return {
     average = nan, 
   }, 
   [26853] = { 
-    volume = 232.0, 
-    average = 34.999662962962965, 
+    volume = 66.0, 
+    average = 52.6817, 
   }, 
   [26855] = { 
-    volume = 1.0, 
-    average = 455.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26856] = { 
     volume = 1.0, 
-    average = 499.8838, 
+    average = 499.5498, 
   }, 
   [26857] = { 
-    volume = 1.0, 
-    average = 396.9995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [26858] = { 
     volume = nan, 
@@ -3664,8 +3640,8 @@ return {
     average = nan, 
   }, 
   [26880] = { 
-    volume = 468.0, 
-    average = 241.9226240000003, 
+    volume = 455.0, 
+    average = 229.74641013824888, 
   }, 
   [26956] = { 
     volume = 2.0, 
@@ -3684,14 +3660,10 @@ return {
     average = nan, 
   }, 
   [26979] = { 
-    volume = 1.0, 
-    average = 33.9991, 
-  }, 
-  [26980] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [26981] = { 
+  [26980] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -3708,8 +3680,8 @@ return {
     average = nan, 
   }, 
   [26985] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 2.0, 
+    average = 19.99995, 
   }, 
   [26986] = { 
     volume = nan, 
@@ -3720,8 +3692,8 @@ return {
     average = nan, 
   }, 
   [26988] = { 
-    volume = 1.0, 
-    average = 50.0, 
+    volume = 2.0, 
+    average = 33.99875, 
   }, 
   [26989] = { 
     volume = nan, 
@@ -3751,10 +3723,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [26996] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [26997] = { 
     volume = nan, 
     average = nan, 
@@ -3772,28 +3740,28 @@ return {
     average = nan, 
   }, 
   [27001] = { 
-    volume = 1.0, 
-    average = 12.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27002] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27003] = { 
-    volume = 1.0, 
-    average = 44.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27004] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27005] = { 
-    volume = 2.0, 
-    average = 44.99995, 
-  }, 
-  [27006] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [27006] = { 
+    volume = 1.0, 
+    average = 50.0, 
   }, 
   [27007] = { 
     volume = nan, 
@@ -3804,32 +3772,32 @@ return {
     average = nan, 
   }, 
   [27009] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 22000.0, 
   }, 
   [27010] = { 
     volume = 1.0, 
-    average = 14.9999, 
+    average = 20.0, 
   }, 
   [27011] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 2.0, 
+    average = 45.9898, 
   }, 
   [27012] = { 
     volume = 1.0, 
-    average = 22.9998, 
+    average = 22.9995, 
   }, 
   [27014] = { 
-    volume = 1.0, 
-    average = 33.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27017] = { 
-    volume = 1.0, 
-    average = 25.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27018] = { 
-    volume = 2.0, 
-    average = 26.495, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27019] = { 
     volume = nan, 
@@ -3872,16 +3840,16 @@ return {
     average = nan, 
   }, 
   [27029] = { 
-    volume = 1.0, 
-    average = 6.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27030] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27031] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 6.0, 
   }, 
   [27032] = { 
     volume = nan, 
@@ -3892,8 +3860,8 @@ return {
     average = nan, 
   }, 
   [27034] = { 
-    volume = 3.0, 
-    average = 38.666666666666664, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27035] = { 
     volume = nan, 
@@ -3908,20 +3876,20 @@ return {
     average = nan, 
   }, 
   [27038] = { 
-    volume = 1.0, 
-    average = 0.4, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27039] = { 
-    volume = 1.0, 
-    average = 50.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27040] = { 
-    volume = 1.0, 
-    average = 9.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27142] = { 
-    volume = 189988.0, 
-    average = 0.04657537688442211, 
+    volume = 199700.0, 
+    average = 0.04844666666666658, 
   }, 
   [27203] = { 
     volume = nan, 
@@ -3940,24 +3908,24 @@ return {
     average = nan, 
   }, 
   [27210] = { 
-    volume = 1.0, 
-    average = 3000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27213] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27217] = { 
-    volume = 1226.0, 
-    average = 0.0030027123893805307, 
+    volume = 1581.0, 
+    average = 0.05700833333333333, 
   }, 
   [27218] = { 
-    volume = 971.0, 
-    average = 0.01305, 
+    volume = 3118.0, 
+    average = 0.027283333333333337, 
   }, 
   [27219] = { 
-    volume = 36.0, 
-    average = 0.0399, 
+    volume = 31.0, 
+    average = 0.003032258064516129, 
   }, 
   [27220] = { 
     volume = nan, 
@@ -3971,25 +3939,21 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [27223] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [27224] = { 
-    volume = 413.0, 
-    average = 0.0272, 
+    volume = 8.0, 
+    average = 0.010125, 
   }, 
   [27225] = { 
-    volume = 528.0, 
-    average = 0.011842857142857143, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27226] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 61.0, 
+    average = 0.0038524590163934425, 
   }, 
   [27227] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 81.0, 
+    average = 0.004888888888888889, 
   }, 
   [27228] = { 
     volume = nan, 
@@ -4000,16 +3964,16 @@ return {
     average = nan, 
   }, 
   [27231] = { 
-    volume = 146.0, 
-    average = 0.2768, 
+    volume = 1172.0, 
+    average = 0.23125000000000004, 
   }, 
   [27232] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27233] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 366.0, 
+    average = 0.24549636363636368, 
   }, 
   [27234] = { 
     volume = nan, 
@@ -4024,20 +3988,20 @@ return {
     average = nan, 
   }, 
   [27237] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 65.0, 
+    average = 0.08523333333333334, 
   }, 
   [27238] = { 
-    volume = 15.0, 
-    average = 0.007788461538461539, 
-  }, 
-  [27239] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [27239] = { 
+    volume = 17.0, 
+    average = 0.09989999999999999, 
+  }, 
   [27241] = { 
-    volume = 20.0, 
-    average = 3.9899999999999998, 
+    volume = 22.0, 
+    average = 2.9999000000000002, 
   }, 
   [27242] = { 
     volume = nan, 
@@ -4052,40 +4016,40 @@ return {
     average = nan, 
   }, 
   [27247] = { 
-    volume = 171.0, 
-    average = 0.3379030303030303, 
+    volume = 21.0, 
+    average = 0.49995, 
   }, 
   [27248] = { 
-    volume = 10.0, 
-    average = 1.2295, 
+    volume = 28.0, 
+    average = 1.0, 
   }, 
   [27249] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 55.0, 
+    average = 0.37745, 
   }, 
   [27250] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27251] = { 
-    volume = 51.0, 
-    average = 0.6094, 
-  }, 
-  [27252] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [27252] = { 
+    volume = 73.0, 
+    average = 0.16687999999999997, 
+  }, 
   [27254] = { 
-    volume = 1.0, 
-    average = 0.1, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27255] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27256] = { 
-    volume = 1.0, 
-    average = 0.1, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27257] = { 
     volume = nan, 
@@ -4100,40 +4064,40 @@ return {
     average = nan, 
   }, 
   [27271] = { 
-    volume = 7.0, 
-    average = 22.6896, 
+    volume = 31.0, 
+    average = 19.8496, 
   }, 
   [27278] = { 
-    volume = 8678.0, 
-    average = 0.06244999999999999, 
+    volume = 22810.0, 
+    average = 0.07440869565217394, 
   }, 
   [27293] = { 
-    volume = 1.0, 
-    average = 699.9998, 
+    volume = 2.0, 
+    average = 624.99955, 
   }, 
   [27294] = { 
-    volume = 2.0, 
-    average = 598.99995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27295] = { 
-    volume = 1.0, 
-    average = 666.6969, 
+    volume = 2.0, 
+    average = 945.0, 
   }, 
   [27296] = { 
-    volume = 5.0, 
-    average = 191.3999, 
+    volume = 3.0, 
+    average = 249.9999, 
   }, 
   [27297] = { 
     volume = 1.0, 
-    average = 220.9989, 
+    average = 222.9894, 
   }, 
   [27298] = { 
-    volume = 2.0, 
-    average = 345.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27299] = { 
     volume = 1.0, 
-    average = 239.9789, 
+    average = 200.0, 
   }, 
   [27313] = { 
     volume = nan, 
@@ -4141,25 +4105,21 @@ return {
   }, 
   [27314] = { 
     volume = 20.0, 
-    average = 1.0, 
+    average = 1.3, 
   }, 
   [27315] = { 
-    volume = 478.0, 
-    average = 3.0, 
+    volume = 3.0, 
+    average = 2.9899, 
   }, 
   [27316] = { 
-    volume = 8.0, 
-    average = 2.1999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27317] = { 
-    volume = 65.0, 
-    average = 5.798637499999999, 
+    volume = 77.0, 
+    average = 4.309688888888889, 
   }, 
   [27318] = { 
-    volume = 7.0, 
-    average = 4.49995, 
-  }, 
-  [27319] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -4189,13 +4149,21 @@ return {
   }, 
   [27328] = { 
     volume = 7.0, 
-    average = 7.8570714285714285, 
+    average = 9.999557142857142, 
   }, 
   [27366] = { 
-    volume = 6.0, 
-    average = 140.24995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27438] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [27439] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [27440] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -4203,21 +4171,21 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [27449] = { 
+  [27450] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27496] = { 
-    volume = 1.0, 
-    average = 169.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27498] = { 
     volume = nan, 
     average = nan, 
   }, 
   [27545] = { 
-    volume = 1715.0, 
-    average = 0.4874555555555555, 
+    volume = 4068.0, 
+    average = 0.526408695652174, 
   }, 
   [27547] = { 
     volume = nan, 
@@ -4244,16 +4212,16 @@ return {
     average = nan, 
   }, 
   [27735] = { 
-    volume = 5.0, 
-    average = 5.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [27746] = { 
-    volume = 359.0, 
-    average = 1.0999076923076923, 
+    volume = 100.0, 
+    average = 1.2497399999999999, 
   }, 
   [27902] = { 
-    volume = 66.0, 
-    average = 0.3, 
+    volume = 1.0, 
+    average = 0.012, 
   }, 
   [27994] = { 
     volume = nan, 
@@ -4295,10 +4263,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [28035] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [28043] = { 
     volume = nan, 
     average = nan, 
@@ -4308,148 +4272,148 @@ return {
     average = nan, 
   }, 
   [28051] = { 
-    volume = 1.0, 
-    average = 9.9894, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28079] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28085] = { 
-    volume = 82.0, 
-    average = 166.14320645161288, 
+    volume = 69.0, 
+    average = 163.33759318181816, 
   }, 
   [28125] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28175] = { 
-    volume = 3418.0, 
-    average = 2.3734422535211266, 
+    volume = 4613.0, 
+    average = 2.4957188118811877, 
   }, 
   [28178] = { 
-    volume = 4.0, 
-    average = 10.0, 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [28179] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [28180] = { 
-    volume = 10.0, 
-    average = 10.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28181] = { 
-    volume = 2.0, 
-    average = 10.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28210] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28218] = { 
-    volume = 60.0, 
-    average = 7.583333333333333, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28296] = { 
-    volume = 29.0, 
-    average = 957.5321, 
+    volume = 42.0, 
+    average = 950.8736585365855, 
   }, 
   [28297] = { 
-    volume = 24.0, 
-    average = 539.0827458333333, 
+    volume = 20.0, 
+    average = 509.4955500000001, 
   }, 
   [28298] = { 
-    volume = 1735.0, 
-    average = 44.491648790322536, 
+    volume = 1618.0, 
+    average = 45.69792034632033, 
   }, 
   [28299] = { 
-    volume = 1928.0, 
-    average = 31.251379770992354, 
+    volume = 1634.0, 
+    average = 26.85996017699109, 
   }, 
   [28300] = { 
-    volume = 81.0, 
-    average = 838.92886875, 
+    volume = 72.0, 
+    average = 863.2555971014499, 
   }, 
   [28301] = { 
-    volume = 973.0, 
-    average = 36.467026249999996, 
+    volume = 1503.0, 
+    average = 36.191165517241366, 
   }, 
   [28302] = { 
-    volume = 2717.0, 
-    average = 21.06549380530973, 
+    volume = 1424.0, 
+    average = 21.088671794871786, 
   }, 
   [28303] = { 
-    volume = 2.0, 
-    average = 3.55, 
+    volume = 1.0, 
+    average = 4.9999, 
   }, 
   [28304] = { 
-    volume = 200.0, 
-    average = 2.05, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28305] = { 
-    volume = 3751.0, 
-    average = 2.8187629629629636, 
+    volume = 2366.0, 
+    average = 3.8121568181818177, 
   }, 
   [28308] = { 
-    volume = 89.0, 
-    average = 472.9925850574714, 
+    volume = 100.0, 
+    average = 495.44201400000026, 
   }, 
   [28318] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28319] = { 
-    volume = 1.0, 
-    average = 0.0483, 
-  }, 
-  [28320] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28324] = { 
-    volume = 5.0, 
-    average = 47.345220000000005, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28325] = { 
-    volume = 2.0, 
-    average = 36.9999, 
+    volume = 1.0, 
+    average = 35.0, 
   }, 
   [28326] = { 
-    volume = 1.0, 
-    average = 90.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28338] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28386] = { 
-    volume = 3.0, 
-    average = 198.99986666666666, 
+    volume = 2.0, 
+    average = 223.4999, 
   }, 
   [28421] = { 
-    volume = 1.0, 
-    average = 5.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28480] = { 
-    volume = 4.0, 
-    average = 16.0, 
+    volume = 27.0, 
+    average = 18.299819999999997, 
   }, 
   [28481] = { 
-    volume = 4527.0, 
-    average = 0.7229499999999999, 
+    volume = 6166.0, 
+    average = 0.962462162162162, 
   }, 
   [28482] = { 
-    volume = 10.0, 
-    average = 47.85675714285714, 
+    volume = 5.0, 
+    average = 44.79964, 
   }, 
   [28483] = { 
-    volume = 5.0, 
-    average = 33.826299999999996, 
+    volume = 45.0, 
+    average = 20.91722962962963, 
   }, 
   [28484] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28485] = { 
-    volume = 205.0, 
-    average = 0.09973333333333334, 
+    volume = 184.0, 
+    average = 0.19995000000000002, 
   }, 
   [28556] = { 
     volume = nan, 
@@ -4460,40 +4424,40 @@ return {
     average = nan, 
   }, 
   [28914] = { 
-    volume = 81.0, 
-    average = 61.821613043478244, 
+    volume = 12.0, 
+    average = 61.99964285714286, 
   }, 
   [28970] = { 
-    volume = 1.0, 
-    average = 8683.8888, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28971] = { 
-    volume = 1.0, 
-    average = 8500.001, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28975] = { 
     volume = nan, 
     average = nan, 
   }, 
   [28976] = { 
-    volume = 6.0, 
-    average = 145.4582, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28978] = { 
-    volume = 1.0, 
-    average = 3498.8888, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28979] = { 
-    volume = 75.0, 
-    average = 10.905818750000002, 
+    volume = 20.0, 
+    average = 5.1339999999999995, 
   }, 
   [28981] = { 
-    volume = 110.0, 
-    average = 0.6805625, 
+    volume = nan, 
+    average = nan, 
   }, 
   [28982] = { 
-    volume = 44.0, 
-    average = 20.633490909090913, 
+    volume = 6.0, 
+    average = 24.99513333333333, 
   }, 
   [28984] = { 
     volume = nan, 
@@ -4504,16 +4468,16 @@ return {
     average = nan, 
   }, 
   [29030] = { 
-    volume = 1.0, 
-    average = 220.0, 
+    volume = 2.0, 
+    average = 120.0, 
   }, 
   [29196] = { 
-    volume = 1.0, 
-    average = 13.9998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [29216] = { 
     volume = 1.0, 
-    average = 64.9997, 
+    average = 54.9898, 
   }, 
   [29245] = { 
     volume = nan, 
@@ -4536,20 +4500,20 @@ return {
     average = nan, 
   }, 
   [29256] = { 
-    volume = 1.0, 
-    average = 400.0, 
-  }, 
-  [29280] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [29280] = { 
+    volume = 3.0, 
+    average = 188.96653333333333, 
+  }, 
   [29300] = { 
-    volume = 225.0, 
-    average = 12.252944444444445, 
+    volume = 82.0, 
+    average = 9.996454545454547, 
   }, 
   [29311] = { 
-    volume = 3034.0, 
-    average = 1.2937357142857138, 
+    volume = 2306.0, 
+    average = 1.4245281249999995, 
   }, 
   [29415] = { 
     volume = nan, 
@@ -4560,8 +4524,8 @@ return {
     average = nan, 
   }, 
   [29613] = { 
-    volume = 893.0, 
-    average = 0.175675, 
+    volume = 1815.0, 
+    average = 0.1567333333333333, 
   }, 
   [29624] = { 
     volume = nan, 
@@ -4580,48 +4544,48 @@ return {
     average = nan, 
   }, 
   [29687] = { 
+    volume = 1.0, 
+    average = 289.0, 
+  }, 
+  [29689] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [29689] = { 
-    volume = 1.0, 
-    average = 678.9999, 
-  }, 
   [29692] = { 
-    volume = 54.0, 
-    average = 180.9913981481482, 
+    volume = 68.0, 
+    average = 191.12525735294133, 
   }, 
   [29734] = { 
     volume = nan, 
     average = nan, 
   }, 
   [29882] = { 
-    volume = 14.0, 
-    average = 10.998800000000001, 
+    volume = 55.0, 
+    average = 6.342324999999999, 
   }, 
   [29883] = { 
-    volume = 822.0, 
-    average = 3.9922521739130428, 
+    volume = 198.0, 
+    average = 6.665716666666667, 
   }, 
   [29884] = { 
-    volume = 313.0, 
-    average = 2.539457142857143, 
+    volume = 293.0, 
+    average = 4.289691666666667, 
   }, 
   [29885] = { 
-    volume = 13.0, 
-    average = 5.5093, 
+    volume = 55.0, 
+    average = 5.0079, 
   }, 
   [29954] = { 
     volume = nan, 
     average = nan, 
   }, 
   [29955] = { 
-    volume = 1.0, 
-    average = 75.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [29956] = { 
-    volume = 1.0, 
-    average = 85.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [29957] = { 
     volume = nan, 
@@ -4644,8 +4608,8 @@ return {
     average = nan, 
   }, 
   [30045] = { 
-    volume = 1.0, 
-    average = 250.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30046] = { 
     volume = nan, 
@@ -4696,8 +4660,8 @@ return {
     average = nan, 
   }, 
   [30060] = { 
-    volume = 1.0, 
-    average = 33.3319, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30261] = { 
     volume = nan, 
@@ -4708,8 +4672,8 @@ return {
     average = nan, 
   }, 
   [30271] = { 
-    volume = 1.0, 
-    average = 240.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30288] = { 
     volume = nan, 
@@ -4731,53 +4695,49 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [30431] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [30432] = { 
     volume = nan, 
     average = nan, 
   }, 
   [30812] = { 
-    volume = 3.0, 
-    average = 673.0033666666667, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30898] = { 
-    volume = 102751.0, 
-    average = 0.06711880341880345, 
+    volume = 87950.0, 
+    average = 0.058074736842105346, 
   }, 
   [30899] = { 
-    volume = 11695.0, 
-    average = 0.08142352941176473, 
+    volume = 9000.0, 
+    average = 0.09494705882352941, 
   }, 
   [30900] = { 
-    volume = 119652.0, 
-    average = 0.07001031746031754, 
+    volume = 143410.0, 
+    average = 0.06650400000000006, 
   }, 
   [30901] = { 
-    volume = 36511.0, 
-    average = 0.040234999999999986, 
+    volume = 17830.0, 
+    average = 0.04407083333333334, 
   }, 
   [30902] = { 
-    volume = 122638.0, 
-    average = 0.04337313432835818, 
+    volume = 107263.0, 
+    average = 0.05275714285714286, 
   }, 
   [30903] = { 
-    volume = 53213.0, 
-    average = 0.07689999999999998, 
+    volume = 53697.0, 
+    average = 0.06886716417910449, 
   }, 
   [30904] = { 
-    volume = 10.0, 
-    average = 1.8800000000000001, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30905] = { 
-    volume = 143596.0, 
-    average = 0.039787421383647825, 
+    volume = 171004.0, 
+    average = 0.026547191011235944, 
   }, 
   [30907] = { 
-    volume = 1.0, 
-    average = 30.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30908] = { 
     volume = nan, 
@@ -4788,8 +4748,8 @@ return {
     average = nan, 
   }, 
   [30915] = { 
-    volume = 10.0, 
-    average = 16.99995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30917] = { 
     volume = nan, 
@@ -4799,21 +4759,17 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [30926] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [30928] = { 
     volume = nan, 
     average = nan, 
   }, 
   [30929] = { 
-    volume = 10.0, 
-    average = 900.6183111111111, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30930] = { 
-    volume = 3.0, 
-    average = 999.9899666666666, 
+    volume = 2.0, 
+    average = 999.9522999999999, 
   }, 
   [30931] = { 
     volume = nan, 
@@ -4824,16 +4780,16 @@ return {
     average = nan, 
   }, 
   [30937] = { 
-    volume = 16.0, 
-    average = 1034.7318533333332, 
+    volume = 7.0, 
+    average = 1149.9919, 
   }, 
   [30938] = { 
-    volume = 19.0, 
-    average = 950.9996777777776, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30939] = { 
     volume = 2.0, 
-    average = 4.8997, 
+    average = 0.99995, 
   }, 
   [30940] = { 
     volume = nan, 
@@ -4856,16 +4812,16 @@ return {
     average = nan, 
   }, 
   [30947] = { 
-    volume = 1.0, 
-    average = 14.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30948] = { 
     volume = nan, 
     average = nan, 
   }, 
   [30949] = { 
-    volume = 1.0, 
-    average = 16.16, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30950] = { 
     volume = nan, 
@@ -4884,12 +4840,12 @@ return {
     average = nan, 
   }, 
   [30963] = { 
-    volume = 2.0, 
-    average = 39.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30964] = { 
-    volume = 2.0, 
-    average = 39.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30965] = { 
     volume = nan, 
@@ -4900,8 +4856,8 @@ return {
     average = nan, 
   }, 
   [30967] = { 
-    volume = 4.0, 
-    average = 6.37795, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30970] = { 
     volume = nan, 
@@ -4916,104 +4872,104 @@ return {
     average = nan, 
   }, 
   [30974] = { 
-    volume = 7.0, 
-    average = 0.3076, 
-  }, 
-  [30986] = { 
-    volume = 2.0, 
-    average = 1149.99915, 
-  }, 
-  [30987] = { 
-    volume = 1.0, 
-    average = 1250.0, 
-  }, 
-  [30988] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [30986] = { 
+    volume = 12.0, 
+    average = 1149.99936, 
+  }, 
+  [30987] = { 
+    volume = 1.0, 
+    average = 1280.9995, 
+  }, 
+  [30988] = { 
+    volume = 6.0, 
+    average = 1323.3333166666666, 
+  }, 
   [30989] = { 
-    volume = 2.0, 
-    average = 1275.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30990] = { 
-    volume = 5.0, 
-    average = 0.24307499999999999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30993] = { 
-    volume = 1.0, 
-    average = 1485.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [30994] = { 
     volume = nan, 
     average = nan, 
   }, 
   [30995] = { 
-    volume = 3.0, 
-    average = 1498.9997000000003, 
-  }, 
-  [30996] = { 
-    volume = 3.0, 
-    average = 699.9999000000001, 
-  }, 
-  [30997] = { 
-    volume = 2.0, 
-    average = 3.4991000000000003, 
-  }, 
-  [31000] = { 
-    volume = 1.0, 
-    average = 997.1194, 
-  }, 
-  [31001] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [30996] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [30997] = { 
+    volume = 10.0, 
+    average = 0.82, 
+  }, 
+  [31000] = { 
+    volume = 2.0, 
+    average = 1289.97995, 
+  }, 
+  [31001] = { 
+    volume = 13.0, 
+    average = 1344.9821615384617, 
+  }, 
   [31002] = { 
-    volume = 7.0, 
-    average = 1049.9998285714287, 
+    volume = 14.0, 
+    average = 1085.561592857143, 
   }, 
   [31005] = { 
-    volume = 2.0, 
-    average = 1199.5585, 
+    volume = 4.0, 
+    average = 1163.2424749999998, 
   }, 
   [31007] = { 
-    volume = 6.0, 
-    average = 1150.5408, 
+    volume = 7.0, 
+    average = 982.1369857142856, 
   }, 
   [31008] = { 
-    volume = 2.0, 
-    average = 1099.9933, 
+    volume = 10.0, 
+    average = 1097.99894, 
   }, 
   [31009] = { 
-    volume = 2154.0, 
-    average = 1.623598275862068, 
+    volume = 1459.0, 
+    average = 2.0969881355932203, 
   }, 
   [31010] = { 
-    volume = 237.0, 
-    average = 47.45489642857143, 
+    volume = 116.0, 
+    average = 50.1809, 
   }, 
   [31011] = { 
-    volume = 96.0, 
-    average = 11.48416, 
+    volume = 243.0, 
+    average = 11.212024999999999, 
   }, 
   [31012] = { 
-    volume = 1079.0, 
-    average = 1.9987807017543857, 
+    volume = 2691.0, 
+    average = 2.2133570093457933, 
   }, 
   [31013] = { 
-    volume = 414.0, 
-    average = 61.38396122448981, 
+    volume = 263.0, 
+    average = 61.560684090909106, 
   }, 
   [31014] = { 
-    volume = 429.0, 
-    average = 17.989475000000002, 
+    volume = 179.0, 
+    average = 17.93584444444444, 
   }, 
   [31015] = { 
-    volume = 10.0, 
-    average = 1.4997250000000002, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31019] = { 
-    volume = 12.0, 
-    average = 4.7559000000000005, 
+    volume = 1.0, 
+    average = 7.9994, 
   }, 
   [31022] = { 
     volume = nan, 
@@ -5032,16 +4988,16 @@ return {
     average = nan, 
   }, 
   [31028] = { 
-    volume = 13.0, 
-    average = 2.25095, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31032] = { 
-    volume = 3.0, 
-    average = 49.99965, 
+    volume = 5.0, 
+    average = 20.999650000000003, 
   }, 
   [31036] = { 
-    volume = 7.0, 
-    average = 279.99982, 
+    volume = 3.0, 
+    average = 259.9998666666667, 
   }, 
   [31039] = { 
     volume = nan, 
@@ -5052,16 +5008,16 @@ return {
     average = nan, 
   }, 
   [31045] = { 
-    volume = 8.0, 
-    average = 44.999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31049] = { 
-    volume = 9.0, 
-    average = 9.7479, 
+    volume = 1.0, 
+    average = 8.0, 
   }, 
   [31053] = { 
-    volume = 2.0, 
-    average = 27.5094, 
+    volume = 6.0, 
+    average = 4.999766666666667, 
   }, 
   [31056] = { 
     volume = nan, 
@@ -5080,72 +5036,72 @@ return {
     average = nan, 
   }, 
   [31062] = { 
-    volume = 10.0, 
-    average = 3.0225666666666666, 
+    volume = 2.0, 
+    average = 3.02205, 
   }, 
   [31066] = { 
-    volume = 3.0, 
-    average = 0.0366, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31067] = { 
-    volume = 90.0, 
-    average = 0.9985499999999999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31069] = { 
-    volume = 5.0, 
-    average = 0.84905, 
+    volume = 25.0, 
+    average = 0.849275, 
   }, 
   [31070] = { 
-    volume = 11.0, 
-    average = 0.5562600000000001, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31071] = { 
-    volume = 49.0, 
-    average = 0.0322, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31072] = { 
-    volume = 2.0, 
-    average = 3.7995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31073] = { 
-    volume = 27.0, 
-    average = 70.19995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31075] = { 
-    volume = 13.0, 
-    average = 8.4092, 
+    volume = 6.0, 
+    average = 6.988600000000001, 
   }, 
   [31076] = { 
-    volume = 3.0, 
-    average = 2.2494, 
+    volume = 2.0, 
+    average = 29.9985, 
   }, 
   [31077] = { 
-    volume = 6.0, 
-    average = 1.0755499999999998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31078] = { 
-    volume = 2.0, 
-    average = 0.3795, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31079] = { 
-    volume = 6.0, 
-    average = 9.9964, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31081] = { 
-    volume = 5.0, 
-    average = 0.6849999999999999, 
+    volume = 18.0, 
+    average = 4.4947, 
   }, 
   [31082] = { 
-    volume = 2.0, 
-    average = 0.2999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31083] = { 
-    volume = 3.0, 
-    average = 0.39820000000000005, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31085] = { 
-    volume = 8.0, 
-    average = 0.015125, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31218] = { 
     volume = nan, 
@@ -5164,8 +5120,8 @@ return {
     average = nan, 
   }, 
   [31321] = { 
-    volume = 1.0, 
-    average = 56999.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31342] = { 
     volume = nan, 
@@ -5195,10 +5151,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [31385] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [31388] = { 
     volume = nan, 
     average = nan, 
@@ -5220,8 +5172,8 @@ return {
     average = nan, 
   }, 
   [31402] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 30000.0, 
   }, 
   [31404] = { 
     volume = nan, 
@@ -5236,12 +5188,12 @@ return {
     average = nan, 
   }, 
   [31409] = { 
-    volume = 1.0, 
-    average = 65000.9882, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31410] = { 
-    volume = 1.0, 
-    average = 26000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31416] = { 
     volume = nan, 
@@ -5272,12 +5224,12 @@ return {
     average = nan, 
   }, 
   [31465] = { 
-    volume = 1.0, 
-    average = 22000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31466] = { 
-    volume = 1.0, 
-    average = 22000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31467] = { 
     volume = nan, 
@@ -5315,10 +5267,6 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [31479] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [31480] = { 
     volume = nan, 
     average = nan, 
@@ -5344,16 +5292,16 @@ return {
     average = nan, 
   }, 
   [31513] = { 
-    volume = 1.0, 
-    average = 21999.9982, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31514] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31515] = { 
-    volume = 1.0, 
-    average = 18500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31516] = { 
     volume = nan, 
@@ -5383,13 +5331,9 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [31537] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [31551] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 23999.0, 
   }, 
   [31552] = { 
     volume = nan, 
@@ -5412,20 +5356,20 @@ return {
     average = nan, 
   }, 
   [31558] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 55000.0, 
   }, 
   [31559] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 30000.0, 
   }, 
   [31560] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31561] = { 
-    volume = 1.0, 
-    average = 73000.0016, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31562] = { 
     volume = nan, 
@@ -5459,17 +5403,21 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [31576] = { 
+    volume = 1.0, 
+    average = 53000.0, 
+  }, 
   [31578] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31579] = { 
-    volume = 5000.0, 
-    average = 0.14830000000000002, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31619] = { 
-    volume = 1.0, 
-    average = 500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31624] = { 
     volume = nan, 
@@ -5504,8 +5452,8 @@ return {
     average = nan, 
   }, 
   [31646] = { 
-    volume = 1.0, 
-    average = 1000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31647] = { 
     volume = nan, 
@@ -5519,25 +5467,29 @@ return {
     volume = nan, 
     average = nan, 
   }, 
+  [31650] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [31652] = { 
-    volume = 1.0, 
-    average = 15555.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31653] = { 
-    volume = 1.0, 
-    average = 13800.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31655] = { 
-    volume = 2.0, 
-    average = 9749.5, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31656] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31657] = { 
-    volume = 2.0, 
-    average = 6099.5, 
+    volume = 1.0, 
+    average = 31333.0, 
   }, 
   [31659] = { 
     volume = nan, 
@@ -5548,12 +5500,12 @@ return {
     average = nan, 
   }, 
   [31661] = { 
-    volume = 2.0, 
-    average = 31800.0, 
+    volume = 1.0, 
+    average = 5399.9999, 
   }, 
   [31662] = { 
-    volume = 1.0, 
-    average = 12000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31663] = { 
     volume = nan, 
@@ -5565,19 +5517,19 @@ return {
   }, 
   [31718] = { 
     volume = 3.0, 
-    average = 34.999433333333336, 
+    average = 29.498649999999998, 
   }, 
   [31719] = { 
-    volume = 89.0, 
-    average = 41.99789999999999, 
+    volume = 67.0, 
+    average = 31.98380666666666, 
   }, 
   [31770] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31771] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 10.0, 
+    average = 0.5791999999999999, 
   }, 
   [31772] = { 
     volume = nan, 
@@ -5592,60 +5544,60 @@ return {
     average = nan, 
   }, 
   [31775] = { 
-    volume = 4770.0, 
-    average = 1.5601661538461546, 
+    volume = 1920.0, 
+    average = 1.3015968749999995, 
   }, 
   [31778] = { 
     volume = nan, 
     average = nan, 
   }, 
   [31780] = { 
-    volume = 950.0, 
-    average = 0.5356214285714286, 
+    volume = 50.0, 
+    average = 0.4999, 
   }, 
   [31781] = { 
-    volume = 920.0, 
-    average = 0.4558866666666667, 
+    volume = 155.0, 
+    average = 0.39557499999999995, 
   }, 
   [31782] = { 
-    volume = 1160.0, 
-    average = 0.32693684210526314, 
+    volume = 294.0, 
+    average = 0.3574428571428571, 
   }, 
   [31783] = { 
     volume = 10.0, 
-    average = 0.05, 
+    average = 0.28664999999999996, 
   }, 
   [31809] = { 
-    volume = 27.0, 
-    average = 42.607107142857146, 
+    volume = 8.0, 
+    average = 40.0, 
   }, 
   [31810] = { 
-    volume = 119.0, 
-    average = 45.01011304347827, 
+    volume = 191.0, 
+    average = 47.234535294117656, 
   }, 
   [31891] = { 
-    volume = 79786.0, 
-    average = 0.8021980422085291, 
+    volume = 86801.0, 
+    average = 0.803297969514218, 
   }, 
   [31927] = { 
     volume = 3.0, 
-    average = 885.9999333333334, 
+    average = 839.6663, 
   }, 
   [31928] = { 
-    volume = 673.0, 
-    average = 50.08159696969692, 
+    volume = 1092.0, 
+    average = 43.34443205128202, 
   }, 
   [31929] = { 
-    volume = 702.0, 
-    average = 33.41032272727273, 
+    volume = 374.0, 
+    average = 34.57576829268292, 
   }, 
   [31930] = { 
-    volume = 17.0, 
-    average = 746.5463411764707, 
+    volume = 55.0, 
+    average = 665.7049796296297, 
   }, 
   [31934] = { 
-    volume = 1.0, 
-    average = 500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [31937] = { 
     volume = nan, 
@@ -5655,69 +5607,61 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [31962] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [31974] = { 
-    volume = 28.0, 
-    average = 237.3814785714285, 
+    volume = 61.0, 
+    average = 251.85106065573774, 
   }, 
   [32025] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [32029] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [32033] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 1.0, 
   }, 
   [32038] = { 
-    volume = 8526.0, 
-    average = 2.674614285714286, 
+    volume = 5213.0, 
+    average = 2.7036945945945945, 
   }, 
   [32039] = { 
-    volume = 34614.0, 
-    average = 0.11747924528301888, 
+    volume = 31981.0, 
+    average = 0.11968225806451611, 
   }, 
   [32095] = { 
-    volume = 253.0, 
-    average = 10.285124999999999, 
+    volume = 462.0, 
+    average = 9.551323809523812, 
   }, 
   [32103] = { 
-    volume = 62493.0, 
-    average = 1.664418163209609, 
+    volume = 88137.0, 
+    average = 1.8786373493975905, 
   }, 
   [32106] = { 
-    volume = 660.0, 
-    average = 21.99419420289855, 
+    volume = 661.0, 
+    average = 23.959227835051564, 
   }, 
   [32212] = { 
-    volume = 28.0, 
-    average = 13.444399999999998, 
+    volume = 7.0, 
+    average = 15.749975, 
   }, 
   [32567] = { 
     volume = nan, 
     average = nan, 
   }, 
   [32574] = { 
+    volume = 3.0, 
+    average = 1249.0902333333333, 
+  }, 
+  [32575] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [32575] = { 
-    volume = 19.0, 
-    average = 1.063175, 
-  }, 
   [32576] = { 
-    volume = 7.0, 
-    average = 18.9875, 
+    volume = nan, 
+    average = nan, 
   }, 
   [32578] = { 
-    volume = 20.0, 
-    average = 2.9871999999999996, 
+    volume = 2.0, 
+    average = 2.96, 
   }, 
   [32582] = { 
     volume = nan, 
@@ -5728,8 +5672,8 @@ return {
     average = nan, 
   }, 
   [32584] = { 
-    volume = 16.0, 
-    average = 0.24650000000000002, 
+    volume = 9.0, 
+    average = 3.0, 
   }, 
   [32917] = { 
     volume = nan, 
@@ -5740,76 +5684,76 @@ return {
     average = nan, 
   }, 
   [32933] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 10.0, 
+    average = 4.9978, 
   }, 
   [32934] = { 
     volume = 10.0, 
-    average = 5.0, 
+    average = 4.9997, 
   }, 
   [32935] = { 
-    volume = 9.0, 
-    average = 35.95973333333333, 
+    volume = 13.0, 
+    average = 35.91313333333333, 
   }, 
   [32936] = { 
-    volume = 5.0, 
-    average = 35.95975, 
+    volume = 2.0, 
+    average = 38.1297, 
   }, 
   [32937] = { 
-    volume = 6.0, 
-    average = 43.97979999999999, 
+    volume = 37.0, 
+    average = 48.714947826086934, 
   }, 
   [32938] = { 
-    volume = 2.0, 
-    average = 78.56985, 
+    volume = nan, 
+    average = nan, 
   }, 
   [32939] = { 
-    volume = 1.0, 
-    average = 78.57, 
+    volume = nan, 
+    average = nan, 
   }, 
   [32946] = { 
-    volume = 3.0, 
-    average = 1199.9999333333333, 
+    volume = 2.0, 
+    average = 1224.49995, 
   }, 
   [33260] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34242] = { 
-    volume = 320.0, 
-    average = 7.872576388888886, 
+    volume = 178.0, 
+    average = 10.9241225, 
   }, 
   [34296] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34310] = { 
-    volume = 26.0, 
-    average = 14.509450000000005, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34323] = { 
-    volume = 45.0, 
-    average = 82.74362325581394, 
+    volume = 44.0, 
+    average = 82.49872619047616, 
   }, 
   [34376] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34563] = { 
-    volume = 59.0, 
-    average = 61.728305405405415, 
+    volume = 55.0, 
+    average = 58.125780434782605, 
   }, 
   [34602] = { 
-    volume = 4.0, 
-    average = 1511.4999, 
+    volume = 3.0, 
+    average = 4579.333333333333, 
   }, 
   [34603] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34604] = { 
-    volume = 1.0, 
-    average = 190.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34605] = { 
     volume = nan, 
@@ -5817,19 +5761,19 @@ return {
   }, 
   [34606] = { 
     volume = 2.0, 
-    average = 1609.5, 
+    average = 860.5, 
   }, 
   [34607] = { 
+    volume = 1.0, 
+    average = 170.0, 
+  }, 
+  [34608] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [34608] = { 
-    volume = 1.0, 
-    average = 135.9996, 
-  }, 
   [34609] = { 
-    volume = 2.0, 
-    average = 154.99984999999998, 
+    volume = 3.0, 
+    average = 2062.9999666666668, 
   }, 
   [34610] = { 
     volume = nan, 
@@ -5837,7 +5781,7 @@ return {
   }, 
   [34611] = { 
     volume = 1.0, 
-    average = 149.9999, 
+    average = 2982.0, 
   }, 
   [34612] = { 
     volume = nan, 
@@ -5845,27 +5789,27 @@ return {
   }, 
   [34613] = { 
     volume = 1.0, 
-    average = 149.0, 
+    average = 120.0, 
   }, 
   [34614] = { 
-    volume = 3.0, 
-    average = 4263.966466666667, 
+    volume = 4.0, 
+    average = 9749.0, 
   }, 
   [34615] = { 
     volume = 9.0, 
-    average = 1997.5553777777775, 
+    average = 1927.4435111111113, 
   }, 
   [34616] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34617] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 2.0, 
+    average = 24400.0, 
   }, 
   [34618] = { 
-    volume = 23.0, 
-    average = 1423.9092782608695, 
+    volume = 1.0, 
+    average = 117.9899, 
   }, 
   [34619] = { 
     volume = nan, 
@@ -5884,8 +5828,8 @@ return {
     average = nan, 
   }, 
   [34632] = { 
-    volume = 1.0, 
-    average = 8500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34635] = { 
     volume = nan, 
@@ -5904,46 +5848,42 @@ return {
     average = nan, 
   }, 
   [34640] = { 
-    volume = 1.0, 
-    average = 31999.6967, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34641] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34643] = { 
-    volume = 2.0, 
-    average = 31000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34645] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34646] = { 
-    volume = 2.0, 
-    average = 14635.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34647] = { 
-    volume = 1.0, 
-    average = 28000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34648] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34649] = { 
-    volume = 1.0, 
-    average = 150.0, 
+    volume = 2.0, 
+    average = 15700.0, 
   }, 
   [34652] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 27000.0032, 
   }, 
   [34662] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [34670] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -5956,172 +5896,172 @@ return {
     average = nan, 
   }, 
   [34724] = { 
-    volume = 10169.0, 
-    average = 0.3329189655172412, 
+    volume = 8147.0, 
+    average = 0.4684100000000001, 
   }, 
   [34725] = { 
-    volume = 52.0, 
-    average = 1.00835, 
+    volume = 282.0, 
+    average = 1.00484, 
   }, 
   [34726] = { 
-    volume = 106.0, 
-    average = 16.17482, 
+    volume = 139.0, 
+    average = 20.369765116279073, 
   }, 
   [34727] = { 
-    volume = 16.0, 
-    average = 2.6857000000000006, 
+    volume = 161.0, 
+    average = 1.0840888888888889, 
   }, 
   [34728] = { 
-    volume = 783.0, 
-    average = 0.4801848484848484, 
+    volume = 474.0, 
+    average = 0.4871142857142857, 
   }, 
   [34729] = { 
-    volume = 234.0, 
-    average = 3.0391769230769228, 
+    volume = 407.0, 
+    average = 2.0868874999999996, 
   }, 
   [34730] = { 
-    volume = 434.0, 
-    average = 1.6217, 
+    volume = 722.0, 
+    average = 0.41770555555555566, 
   }, 
   [34731] = { 
-    volume = 511.0, 
-    average = 4.847155555555555, 
+    volume = 713.0, 
+    average = 1.6251500000000003, 
   }, 
   [34732] = { 
-    volume = 192.0, 
-    average = 19.80670487804878, 
+    volume = 71.0, 
+    average = 11.748349999999999, 
   }, 
   [34733] = { 
-    volume = 11.0, 
-    average = 0.9981333333333332, 
+    volume = 10.0, 
+    average = 0.8647, 
   }, 
   [34734] = { 
-    volume = 8.0, 
-    average = 1.9969999999999999, 
+    volume = 49.0, 
+    average = 0.9995333333333334, 
   }, 
   [34735] = { 
-    volume = 39.0, 
-    average = 8.77635, 
+    volume = 117.0, 
+    average = 10.6055875, 
   }, 
   [34736] = { 
-    volume = 24.0, 
-    average = 9.998661538461537, 
+    volume = 60.0, 
+    average = 4.378238888888889, 
   }, 
   [34737] = { 
-    volume = 23.0, 
-    average = 5.396120000000001, 
+    volume = 112.0, 
+    average = 3.514431578947369, 
   }, 
   [34738] = { 
-    volume = 3.0, 
-    average = 0.4898, 
+    volume = 23.0, 
+    average = 1.0636857142857141, 
   }, 
   [34739] = { 
-    volume = 31.0, 
-    average = 1.9973333333333334, 
+    volume = 42.0, 
+    average = 1.0038571428571428, 
   }, 
   [34740] = { 
-    volume = 2.0, 
-    average = 307.49995, 
+    volume = 1.0, 
+    average = 118.9, 
   }, 
   [34741] = { 
-    volume = 2.0, 
-    average = 54.4995, 
+    volume = 1.0, 
+    average = 49.9986, 
   }, 
   [34742] = { 
-    volume = 1.0, 
-    average = 70.9953, 
+    volume = 2.0, 
+    average = 49.777100000000004, 
   }, 
   [34743] = { 
-    volume = 9.0, 
-    average = 196.9980888888889, 
+    volume = 3.0, 
+    average = 165.32246666666666, 
   }, 
   [34744] = { 
-    volume = 6.0, 
-    average = 165.99211666666665, 
+    volume = 3.0, 
+    average = 350.9935666666667, 
   }, 
   [34745] = { 
     volume = 2.0, 
-    average = 148.5533, 
+    average = 134.77960000000002, 
   }, 
   [34746] = { 
     volume = 3.0, 
-    average = 58.33323333333333, 
+    average = 66.0, 
   }, 
   [34747] = { 
-    volume = 2.0, 
-    average = 29.999650000000003, 
+    volume = 1.0, 
+    average = 25.9991, 
   }, 
   [34748] = { 
     volume = 3.0, 
-    average = 100.99650000000001, 
+    average = 77.99996666666667, 
   }, 
   [34751] = { 
-    volume = 2.0, 
-    average = 700.4998, 
+    volume = 3.0, 
+    average = 785.9997333333334, 
   }, 
   [34752] = { 
-    volume = 1.0, 
-    average = 8499.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34753] = { 
-    volume = 1.0, 
-    average = 330.0, 
+    volume = 3.0, 
+    average = 292.4532, 
   }, 
   [34754] = { 
-    volume = 21.0, 
-    average = 9.915744444444444, 
+    volume = 3.0, 
+    average = 13.9991, 
   }, 
   [34755] = { 
-    volume = 7.0, 
-    average = 319.4305857142857, 
+    volume = 8.0, 
+    average = 323.99982500000004, 
   }, 
   [34756] = { 
     volume = 2.0, 
-    average = 1275.0, 
+    average = 1174.9998, 
   }, 
   [34757] = { 
-    volume = 1.0, 
-    average = 2375.0, 
+    volume = 2.0, 
+    average = 2593.5, 
   }, 
   [34758] = { 
-    volume = 1.0, 
-    average = 1200.8999, 
+    volume = 2.0, 
+    average = 1100.49945, 
   }, 
   [34760] = { 
-    volume = 7.0, 
-    average = 1362.4279, 
+    volume = 4.0, 
+    average = 1074.994675, 
   }, 
   [34761] = { 
-    volume = 1.0, 
-    average = 5200.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34762] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34919] = { 
-    volume = 14.0, 
-    average = 19.97915, 
+    volume = 22.0, 
+    average = 16.99895, 
   }, 
   [34936] = { 
     volume = nan, 
     average = nan, 
   }, 
   [34937] = { 
-    volume = 1.0, 
-    average = 100.9993, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34938] = { 
-    volume = 1.0, 
-    average = 218.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34939] = { 
-    volume = 1.0, 
-    average = 199.9899, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34940] = { 
-    volume = 2.0, 
-    average = 149.99984999999998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [34941] = { 
     volume = nan, 
@@ -6136,8 +6076,8 @@ return {
     average = nan, 
   }, 
   [34983] = { 
-    volume = 8.0, 
-    average = 61.332966666666664, 
+    volume = 15.0, 
+    average = 34.9998, 
   }, 
   [35011] = { 
     volume = nan, 
@@ -6148,12 +6088,12 @@ return {
     average = nan, 
   }, 
   [35036] = { 
-    volume = 2109.0, 
-    average = 7.515609090909095, 
+    volume = 1921.0, 
+    average = 7.912098013245033, 
   }, 
   [35060] = { 
-    volume = 29.0, 
-    average = 8.988885714285713, 
+    volume = 107.0, 
+    average = 12.99974, 
   }, 
   [35065] = { 
     volume = nan, 
@@ -6164,8 +6104,8 @@ return {
     average = nan, 
   }, 
   [35138] = { 
-    volume = 18.0, 
-    average = 428.87815555555557, 
+    volume = 28.0, 
+    average = 154.2701607142857, 
   }, 
   [35139] = { 
     volume = nan, 
@@ -6175,29 +6115,25 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [35259] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [35260] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35263] = { 
-    volume = 15.0, 
-    average = 104.98330666666666, 
+    volume = 3.0, 
+    average = 899.332, 
   }, 
   [35264] = { 
-    volume = 3.0, 
-    average = 465.91996666666665, 
+    volume = 4.0, 
+    average = 98.9921, 
   }, 
   [35301] = { 
-    volume = 955.0, 
-    average = 0.5007789473684211, 
+    volume = 1769.0, 
+    average = 0.5007482758620688, 
   }, 
   [35303] = { 
-    volume = 30.0, 
-    average = 21.674312499999996, 
+    volume = 24.0, 
+    average = 22.9235, 
   }, 
   [35315] = { 
     volume = nan, 
@@ -6256,8 +6192,8 @@ return {
     average = nan, 
   }, 
   [35396] = { 
-    volume = 2.0, 
-    average = 176.0, 
+    volume = 1.0, 
+    average = 174.0, 
   }, 
   [35397] = { 
     volume = nan, 
@@ -6273,27 +6209,27 @@ return {
   }, 
   [35401] = { 
     volume = 1.0, 
-    average = 30000.0, 
+    average = 5399.9999, 
   }, 
   [35403] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35405] = { 
+    volume = 2.0, 
+    average = 1000.0, 
+  }, 
+  [35407] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [35407] = { 
-    volume = 1.0, 
-    average = 10400.0, 
-  }, 
   [35411] = { 
     volume = 1.0, 
-    average = 2099.0, 
+    average = 2221.0, 
   }, 
   [35413] = { 
-    volume = 1.0, 
-    average = 36999.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35417] = { 
     volume = nan, 
@@ -6311,49 +6247,45 @@ return {
     volume = 1.0, 
     average = 10.0, 
   }, 
-  [35552] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [35581] = { 
-    volume = 2.0, 
-    average = 1935.9999, 
+    volume = 4.0, 
+    average = 2513.25, 
   }, 
   [35582] = { 
-    volume = 3.0, 
+    volume = 2.0, 
     average = 333.0, 
   }, 
   [35583] = { 
-    volume = 5.0, 
-    average = 270.99972, 
+    volume = 3.0, 
+    average = 299.8899, 
   }, 
   [35584] = { 
     volume = 2.0, 
-    average = 1106.99995, 
+    average = 2174.5, 
   }, 
   [35585] = { 
-    volume = 1.0, 
-    average = 239.9999, 
+    volume = 2.0, 
+    average = 229.9999, 
   }, 
   [35586] = { 
-    volume = 1.0, 
-    average = 1993.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35587] = { 
-    volume = 3.0, 
-    average = 1993.3333333333333, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35588] = { 
-    volume = 4.0, 
-    average = 449.999925, 
+    volume = 2.0, 
+    average = 299.99875, 
   }, 
   [35589] = { 
-    volume = 4.0, 
-    average = 199.999775, 
+    volume = 8.0, 
+    average = 656.7499625, 
   }, 
   [35590] = { 
-    volume = 1.0, 
-    average = 190.9999, 
+    volume = 3.0, 
+    average = 783.9999333333334, 
   }, 
   [35591] = { 
     volume = nan, 
@@ -6367,11 +6299,11 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [35596] = { 
+  [35599] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [35599] = { 
+  [35600] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -6388,10 +6320,6 @@ return {
     average = nan, 
   }, 
   [35614] = { 
-    volume = 1.0, 
-    average = 25500.0, 
-  }, 
-  [35615] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -6409,7 +6337,7 @@ return {
   }, 
   [35619] = { 
     volume = 1.0, 
-    average = 25200.0, 
+    average = 28500.0, 
   }, 
   [35620] = { 
     volume = nan, 
@@ -6440,44 +6368,44 @@ return {
     average = nan, 
   }, 
   [35756] = { 
-    volume = 4.0, 
-    average = 189.881725, 
+    volume = 9.0, 
+    average = 189.87044444444444, 
   }, 
   [35885] = { 
-    volume = 1627.0, 
-    average = 1.0669125000000002, 
+    volume = 2458.0, 
+    average = 1.4113741935483874, 
   }, 
   [35887] = { 
-    volume = 647.0, 
-    average = 0.09084166666666667, 
+    volume = 511.0, 
+    average = 0.040166666666666656, 
   }, 
   [35888] = { 
-    volume = 5.0, 
-    average = 1.6485, 
+    volume = 190.0, 
+    average = 1.9441149999999996, 
   }, 
   [35889] = { 
-    volume = 10.0, 
-    average = 0.3991, 
+    volume = 36.0, 
+    average = 0.902275, 
   }, 
   [35898] = { 
-    volume = 5104.0, 
-    average = 0.8908736842105264, 
+    volume = 1666.0, 
+    average = 0.8914861111111113, 
   }, 
   [35926] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35927] = { 
-    volume = 2.0, 
-    average = 4.99995, 
+    volume = 1.0, 
+    average = 5.0, 
   }, 
   [35928] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35929] = { 
-    volume = 1.0, 
-    average = 0.1905, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35930] = { 
     volume = nan, 
@@ -6492,100 +6420,100 @@ return {
     average = nan, 
   }, 
   [35933] = { 
+    volume = 1.0, 
+    average = 4.0, 
+  }, 
+  [35934] = { 
+    volume = 17.0, 
+    average = 5.525580000000001, 
+  }, 
+  [35936] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [35934] = { 
-    volume = 33.0, 
-    average = 4.166416666666667, 
-  }, 
-  [35936] = { 
-    volume = 25.0, 
-    average = 3.995566666666667, 
-  }, 
   [35938] = { 
-    volume = 27.0, 
-    average = 3.8736499999999996, 
+    volume = 16.0, 
+    average = 5.310346666666667, 
   }, 
   [35939] = { 
-    volume = 39.0, 
-    average = 4.529538461538461, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35940] = { 
-    volume = 41.0, 
-    average = 20.90379, 
+    volume = 7.0, 
+    average = 12.999257142857143, 
   }, 
   [35941] = { 
-    volume = 37.0, 
-    average = 4.0358285714285715, 
+    volume = 5.0, 
+    average = 3.1098, 
   }, 
   [35942] = { 
-    volume = 41.0, 
-    average = 3.9997285714285717, 
+    volume = 1.0, 
+    average = 4.0, 
   }, 
   [35943] = { 
-    volume = 27.0, 
-    average = 4.48975, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35948] = { 
-    volume = 8.0, 
-    average = 5.546366666666667, 
+    volume = 6.0, 
+    average = 4.499975, 
   }, 
   [35949] = { 
-    volume = 29.0, 
-    average = 3.5895199999999994, 
+    volume = 13.0, 
+    average = 4.833266666666667, 
   }, 
   [35950] = { 
-    volume = 6.0, 
-    average = 4.733033333333333, 
+    volume = 3.0, 
+    average = 12.989650000000001, 
   }, 
   [35951] = { 
-    volume = 15.0, 
-    average = 3.9998500000000003, 
+    volume = 8.0, 
+    average = 4.198333333333333, 
   }, 
   [35952] = { 
-    volume = 13.0, 
-    average = 3.8999, 
+    volume = 6.0, 
+    average = 4.75, 
   }, 
   [35953] = { 
-    volume = 2.0, 
-    average = 4.7688500000000005, 
+    volume = 4.0, 
+    average = 4.9899, 
   }, 
   [35954] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35956] = { 
-    volume = 18.0, 
-    average = 10.76374, 
+    volume = 35.0, 
+    average = 8.360363636363637, 
   }, 
   [35958] = { 
-    volume = 2.0, 
-    average = 163.49975, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35959] = { 
-    volume = 3.0, 
-    average = 142.66663333333335, 
+    volume = 7.0, 
+    average = 176.85708571428572, 
   }, 
   [35960] = { 
-    volume = 1.0, 
-    average = 249.9999, 
+    volume = 4.0, 
+    average = 249.99973333333332, 
   }, 
   [35961] = { 
-    volume = 8.0, 
-    average = 268.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35962] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35963] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 5.0, 
   }, 
   [35964] = { 
-    volume = 2.0, 
-    average = 4.99995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35965] = { 
     volume = nan, 
@@ -6608,16 +6536,16 @@ return {
     average = nan, 
   }, 
   [35970] = { 
-    volume = 1.0, 
-    average = 210.9995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35971] = { 
     volume = 1.0, 
-    average = 5.0, 
+    average = 0.1905, 
   }, 
   [35972] = { 
-    volume = 1.0, 
-    average = 5.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35973] = { 
     volume = nan, 
@@ -6628,12 +6556,12 @@ return {
     average = nan, 
   }, 
   [35975] = { 
-    volume = 3.0, 
-    average = 6.465866666666667, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35976] = { 
-    volume = 1.0, 
-    average = 29.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35977] = { 
     volume = nan, 
@@ -6644,12 +6572,12 @@ return {
     average = nan, 
   }, 
   [35979] = { 
-    volume = 1.0, 
-    average = 5.5571, 
+    volume = 7.0, 
+    average = 3.798325, 
   }, 
   [35980] = { 
-    volume = 1.0, 
-    average = 11.9988, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35981] = { 
     volume = nan, 
@@ -6660,28 +6588,28 @@ return {
     average = nan, 
   }, 
   [35983] = { 
-    volume = 1.0, 
-    average = 5.0, 
-  }, 
-  [35984] = { 
-    volume = 1.0, 
-    average = 50.9971, 
-  }, 
-  [35985] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [35984] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [35985] = { 
+    volume = 1.0, 
+    average = 199.9999, 
   }, 
   [35986] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35987] = { 
-    volume = 1.0, 
-    average = 5.9478, 
+    volume = 11.0, 
+    average = 5.56836, 
   }, 
   [35988] = { 
-    volume = 1.0, 
-    average = 9.9948, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35989] = { 
     volume = nan, 
@@ -6696,24 +6624,24 @@ return {
     average = nan, 
   }, 
   [35992] = { 
-    volume = 1.0, 
-    average = 0.1905, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35993] = { 
-    volume = 1.0, 
-    average = 0.1905, 
+    volume = nan, 
+    average = nan, 
   }, 
   [35994] = { 
     volume = nan, 
     average = nan, 
   }, 
   [35999] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 849.9999, 
   }, 
   [36000] = { 
     volume = 1.0, 
-    average = 125.0, 
+    average = 99.9999, 
   }, 
   [36001] = { 
     volume = nan, 
@@ -6724,16 +6652,16 @@ return {
     average = nan, 
   }, 
   [36141] = { 
-    volume = 100.0, 
-    average = 0.2, 
+    volume = 99.0, 
+    average = 1.0, 
   }, 
   [36142] = { 
-    volume = 10.0, 
-    average = 1.0, 
+    volume = 19.0, 
+    average = 0.98375, 
   }, 
   [36318] = { 
     volume = 1.0, 
-    average = 500.9897, 
+    average = 999.0, 
   }, 
   [36448] = { 
     volume = nan, 
@@ -6748,8 +6676,8 @@ return {
     average = nan, 
   }, 
   [36473] = { 
-    volume = 1.0, 
-    average = 34.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [36474] = { 
     volume = nan, 
@@ -6776,8 +6704,8 @@ return {
     average = nan, 
   }, 
   [37893] = { 
-    volume = 7.0, 
-    average = 48.66636666666667, 
+    volume = nan, 
+    average = nan, 
   }, 
   [37894] = { 
     volume = nan, 
@@ -6788,12 +6716,12 @@ return {
     average = nan, 
   }, 
   [37896] = { 
-    volume = 6.0, 
-    average = 59.504400000000004, 
+    volume = nan, 
+    average = nan, 
   }, 
   [38087] = { 
-    volume = 178.0, 
-    average = 40.649260000000005, 
+    volume = 155.0, 
+    average = 40.38415882352942, 
   }, 
   [38129] = { 
     volume = nan, 
@@ -6824,8 +6752,8 @@ return {
     average = nan, 
   }, 
   [38173] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 3.0, 
+    average = 1399.9499666666668, 
   }, 
   [38175] = { 
     volume = nan, 
@@ -6836,8 +6764,8 @@ return {
     average = nan, 
   }, 
   [38181] = { 
-    volume = 2.0, 
-    average = 1449.9631, 
+    volume = 7.0, 
+    average = 1064.9870285714285, 
   }, 
   [38228] = { 
     volume = nan, 
@@ -6856,12 +6784,16 @@ return {
     average = nan, 
   }, 
   [38429] = { 
-    volume = 1.0, 
-    average = 175.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [38440] = { 
-    volume = 36.0, 
-    average = 103.19161153846152, 
+    volume = 25.0, 
+    average = 92.60333157894738, 
+  }, 
+  [38481] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [38501] = { 
     volume = nan, 
@@ -6874,6 +6806,10 @@ return {
   [38503] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [38506] = { 
+    volume = 1.0, 
+    average = 100.0, 
   }, 
   [38555] = { 
     volume = nan, 
@@ -6892,8 +6828,8 @@ return {
     average = nan, 
   }, 
   [38612] = { 
-    volume = 1.0, 
-    average = 188.437, 
+    volume = 3.0, 
+    average = 169.9901, 
   }, 
   [38707] = { 
     volume = nan, 
@@ -6901,91 +6837,91 @@ return {
   }, 
   [38708] = { 
     volume = 200.0, 
-    average = 9.77342222222222, 
+    average = 10.229459649122811, 
   }, 
   [38755] = { 
-    volume = 235.0, 
-    average = 647.7604925110134, 
+    volume = 193.0, 
+    average = 643.460862765957, 
   }, 
   [38762] = { 
-    volume = 2.0, 
-    average = 15.50925, 
-  }, 
-  [38763] = { 
-    volume = 1.0, 
-    average = 39.0, 
-  }, 
-  [38764] = { 
-    volume = 3.0, 
-    average = 12.666566666666668, 
-  }, 
-  [38765] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [38763] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [38764] = { 
+    volume = 2.0, 
+    average = 14.99985, 
+  }, 
+  [38765] = { 
+    volume = 2.0, 
+    average = 7.1499500000000005, 
   }, 
   [38766] = { 
     volume = nan, 
     average = nan, 
   }, 
   [38767] = { 
-    volume = 5.0, 
-    average = 13.599880000000002, 
+    volume = nan, 
+    average = nan, 
   }, 
   [38803] = { 
-    volume = 16.0, 
-    average = 321.7657125, 
+    volume = 4.0, 
+    average = 180.440775, 
   }, 
   [38835] = { 
-    volume = 166.0, 
-    average = 103.21538695652174, 
+    volume = 129.0, 
+    average = 97.01994054054053, 
   }, 
   [38836] = { 
-    volume = 180.0, 
-    average = 63.252052173913064, 
+    volume = 283.0, 
+    average = 97.2383, 
   }, 
   [38837] = { 
-    volume = 238.0, 
-    average = 76.8289520833333, 
+    volume = 913.0, 
+    average = 76.46178103448275, 
   }, 
   [38839] = { 
-    volume = 11.0, 
-    average = 60.99455, 
+    volume = 117.0, 
+    average = 94.65568095238098, 
   }, 
   [38840] = { 
-    volume = 183.0, 
-    average = 45.939158000000006, 
+    volume = 328.0, 
+    average = 69.23979999999996, 
   }, 
   [38841] = { 
-    volume = 881.0, 
-    average = 30.997958064516133, 
+    volume = 1431.0, 
+    average = 30.972463025210136, 
   }, 
   [38843] = { 
-    volume = 599.0, 
-    average = 27.17791454545456, 
+    volume = 506.0, 
+    average = 27.360183783783775, 
   }, 
   [38844] = { 
-    volume = 1115.0, 
-    average = 26.433458749999982, 
+    volume = 1460.0, 
+    average = 28.9505858695652, 
   }, 
   [38845] = { 
-    volume = 1409.0, 
-    average = 36.5016660869565, 
+    volume = 604.0, 
+    average = 35.82081428571428, 
   }, 
   [38990] = { 
-    volume = 1.0, 
-    average = 300.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [38996] = { 
-    volume = 9.0, 
-    average = 616.7776666666666, 
+    volume = 3.0, 
+    average = 733.3303333333333, 
   }, 
   [39041] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39042] = { 
-    volume = 9.0, 
-    average = 5.013183333333334, 
+    volume = 2.0, 
+    average = 4.5, 
   }, 
   [39043] = { 
     volume = nan, 
@@ -6996,44 +6932,44 @@ return {
     average = nan, 
   }, 
   [39046] = { 
-    volume = 1.0, 
-    average = 5.0505, 
-  }, 
-  [39047] = { 
-    volume = 1.0, 
-    average = 19.9986, 
-  }, 
-  [39059] = { 
-    volume = 3.0, 
-    average = 450.0, 
-  }, 
-  [39060] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [39047] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39059] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39060] = { 
+    volume = 2.0, 
+    average = 375.49985000000004, 
   }, 
   [39061] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39062] = { 
-    volume = 13.0, 
-    average = 460.4898666666667, 
+    volume = 9.0, 
+    average = 494.43387777777775, 
   }, 
   [39063] = { 
-    volume = 5.0, 
-    average = 516.8082, 
+    volume = 6.0, 
+    average = 530.9412, 
   }, 
   [39068] = { 
-    volume = 6.0, 
-    average = 444.9801333333333, 
+    volume = 2.0, 
+    average = 499.995, 
   }, 
   [39069] = { 
-    volume = 2.0, 
-    average = 425.4414, 
+    volume = 6.0, 
+    average = 408.65751666666665, 
   }, 
   [39070] = { 
     volume = 6.0, 
-    average = 428.5787833333334, 
+    average = 390.18401666666665, 
   }, 
   [39071] = { 
     volume = nan, 
@@ -7048,8 +6984,8 @@ return {
     average = nan, 
   }, 
   [39130] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 0.3218, 
   }, 
   [39131] = { 
     volume = nan, 
@@ -7057,67 +6993,67 @@ return {
   }, 
   [39132] = { 
     volume = 1.0, 
-    average = 21.0, 
+    average = 21.99, 
   }, 
   [39133] = { 
-    volume = 1.0, 
-    average = 7.8082, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39134] = { 
-    volume = 1.0, 
-    average = 9.2448, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39135] = { 
     volume = 1.0, 
-    average = 9.0, 
+    average = 54.99, 
   }, 
   [39136] = { 
-    volume = 1.0, 
-    average = 40.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39137] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39138] = { 
-    volume = 1.0, 
-    average = 5.9998, 
-  }, 
-  [39139] = { 
-    volume = 1.0, 
-    average = 9.99, 
-  }, 
-  [39140] = { 
-    volume = 1.0, 
-    average = 15.0, 
-  }, 
-  [39141] = { 
-    volume = 1.0, 
-    average = 9.98, 
-  }, 
-  [39142] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [39143] = { 
+  [39139] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39140] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39141] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39142] = { 
     volume = 1.0, 
-    average = 4.0, 
+    average = 29.9899, 
+  }, 
+  [39143] = { 
+    volume = nan, 
+    average = nan, 
   }, 
   [39181] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39182] = { 
-    volume = 1.0, 
-    average = 4.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39183] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39184] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 39.9, 
   }, 
   [39185] = { 
     volume = nan, 
@@ -7140,18 +7076,14 @@ return {
     average = nan, 
   }, 
   [39197] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 15.0, 
   }, 
   [39198] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39199] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [39200] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -7188,12 +7120,12 @@ return {
     average = nan, 
   }, 
   [39224] = { 
-    volume = 1.0, 
-    average = 4.99, 
-  }, 
-  [39225] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [39225] = { 
+    volume = 1.0, 
+    average = 5.0, 
   }, 
   [39226] = { 
     volume = nan, 
@@ -7204,16 +7136,16 @@ return {
     average = nan, 
   }, 
   [39229] = { 
-    volume = 1.0, 
-    average = 4.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39237] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39238] = { 
-    volume = 1.0, 
-    average = 110.0, 
+    volume = 2.0, 
+    average = 50.995000000000005, 
   }, 
   [39239] = { 
     volume = nan, 
@@ -7221,19 +7153,19 @@ return {
   }, 
   [39240] = { 
     volume = 1.0, 
-    average = 74.6832, 
+    average = 69.0, 
   }, 
   [39241] = { 
-    volume = 4.0, 
-    average = 68.45485, 
-  }, 
-  [39242] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [39242] = { 
+    volume = 1.0, 
+    average = 38.0, 
+  }, 
   [39243] = { 
-    volume = 2.0, 
-    average = 53.50585, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39252] = { 
     volume = nan, 
@@ -7244,8 +7176,8 @@ return {
     average = nan, 
   }, 
   [39254] = { 
-    volume = 1.0, 
-    average = 39.9993, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39255] = { 
     volume = nan, 
@@ -7264,16 +7196,16 @@ return {
     average = nan, 
   }, 
   [39266] = { 
-    volume = 1.0, 
-    average = 50.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39267] = { 
-    volume = 1.0, 
-    average = 7.99, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39268] = { 
-    volume = 1.0, 
-    average = 49.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39269] = { 
     volume = nan, 
@@ -7320,8 +7252,8 @@ return {
     average = nan, 
   }, 
   [39289] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 19.9994, 
   }, 
   [39290] = { 
     volume = nan, 
@@ -7332,8 +7264,8 @@ return {
     average = nan, 
   }, 
   [39292] = { 
-    volume = 1.0, 
-    average = 10.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39293] = { 
     volume = nan, 
@@ -7345,31 +7277,27 @@ return {
   }, 
   [39295] = { 
     volume = 1.0, 
-    average = 39.9999, 
-  }, 
-  [39296] = { 
-    volume = nan, 
-    average = nan, 
+    average = 50.0, 
   }, 
   [39297] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 15.0, 
   }, 
   [39298] = { 
-    volume = 1.0, 
-    average = 9.0, 
-  }, 
-  [39307] = { 
     volume = nan, 
     average = nan, 
+  }, 
+  [39307] = { 
+    volume = 2.0, 
+    average = 35.0, 
   }, 
   [39308] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39309] = { 
-    volume = 1.0, 
-    average = 50.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39310] = { 
     volume = nan, 
@@ -7384,74 +7312,66 @@ return {
     average = nan, 
   }, 
   [39319] = { 
-    volume = 1.0, 
-    average = 80.9995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39320] = { 
-    volume = 2.0, 
-    average = 144.3096, 
+    volume = 4.0, 
+    average = 162.80194999999998, 
   }, 
   [39321] = { 
-    volume = 5.0, 
-    average = 54.99988, 
+    volume = 2.0, 
+    average = 55.99995, 
   }, 
   [8000026] = { 
-    volume = 5699.0, 
-    average = 1.9585259740259737, 
+    volume = 1832.0, 
+    average = 1.8558000000000003, 
   }, 
   [8000056] = { 
-    volume = 15.0, 
-    average = 4.999066666666667, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8000053] = { 
-    volume = 2.0, 
-    average = 483.475, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8000055] = { 
-    volume = 22.0, 
-    average = 306.4326333333334, 
+    volume = 3.0, 
+    average = 308.0833, 
   }, 
   [8000054] = { 
-    volume = 2.0, 
-    average = 189.95995, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8000057] = { 
-    volume = 1.0, 
-    average = 89.97, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8000232] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [8000317] = { 
+  [8000318] = { 
     volume = nan, 
     average = nan, 
-  }, 
-  [8000318] = { 
-    volume = 1.0, 
-    average = 150.0, 
   }, 
   [8000567] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8000568] = { 
-    volume = 5.0, 
-    average = 717.79812, 
-  }, 
-  [8000569] = { 
-    volume = 4.0, 
-    average = 1324.9999, 
-  }, 
-  [39596] = { 
-    volume = 1.0, 
-    average = 40.0, 
-  }, 
-  [39597] = { 
     volume = nan, 
     average = nan, 
   }, 
-  [39598] = { 
+  [8000569] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39596] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [39597] = { 
     volume = nan, 
     average = nan, 
   }, 
@@ -7468,88 +7388,92 @@ return {
     average = nan, 
   }, 
   [39611] = { 
-    volume = 1.0, 
-    average = 0.271, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39614] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [39617] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
   [39620] = { 
-    volume = 1.0, 
-    average = 50.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39657] = { 
-    volume = 11.0, 
-    average = 174.8180181818182, 
+    volume = 7.0, 
+    average = 690.7465285714286, 
   }, 
   [39658] = { 
-    volume = 19.0, 
-    average = 145.0452052631579, 
+    volume = 26.0, 
+    average = 83.86756538461539, 
   }, 
   [39659] = { 
-    volume = 12.0, 
-    average = 63.992275, 
+    volume = 2.0, 
+    average = 20.22925, 
   }, 
   [39660] = { 
-    volume = 1.0, 
-    average = 233.9999, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39661] = { 
-    volume = 5.0, 
-    average = 39.197720000000004, 
+    volume = 8.0, 
+    average = 43.998774999999995, 
   }, 
   [39662] = { 
-    volume = 1.0, 
-    average = 49.9997, 
+    volume = 10.0, 
+    average = 64.19917000000001, 
   }, 
   [39663] = { 
-    volume = 7.0, 
-    average = 716.3058857142856, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39664] = { 
-    volume = 10.0, 
-    average = 49.95404, 
+    volume = 3.0, 
+    average = 61.59243333333333, 
   }, 
   [39665] = { 
-    volume = 11.0, 
-    average = 83.27920909090909, 
+    volume = 6.0, 
+    average = 31.503750000000007, 
   }, 
   [39666] = { 
-    volume = 2.0, 
-    average = 49.9992, 
+    volume = 4.0, 
+    average = 98.98372499999999, 
   }, 
   [39667] = { 
-    volume = 2.0, 
-    average = 24.9881, 
+    volume = 3.0, 
+    average = 19.958033333333333, 
   }, 
   [39668] = { 
-    volume = 8.0, 
-    average = 37.498775, 
+    volume = 4.0, 
+    average = 67.9975, 
   }, 
   [39677] = { 
-    volume = 1.0, 
-    average = 100.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39682] = { 
     volume = nan, 
     average = nan, 
   }, 
   [39691] = { 
-    volume = 1.0, 
-    average = 2000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39692] = { 
-    volume = 1.0, 
-    average = 2200.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39764] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 330.9978, 
   }, 
   [39766] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 1.0, 
+    average = 289.9999, 
   }, 
   [39767] = { 
     volume = nan, 
@@ -7560,28 +7484,28 @@ return {
     average = nan, 
   }, 
   [39801] = { 
-    volume = 680.0, 
-    average = 4.184449999999997, 
+    volume = 360.0, 
+    average = 4.195163333333333, 
   }, 
   [39802] = { 
-    volume = 305.0, 
-    average = 4.167679166666667, 
+    volume = 295.0, 
+    average = 4.132472727272727, 
   }, 
   [39803] = { 
-    volume = 9.0, 
-    average = 74.99873333333333, 
+    volume = 3.0, 
+    average = 65.50789999999999, 
   }, 
   [39814] = { 
-    volume = 1.0, 
-    average = 265.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [39815] = { 
-    volume = 3.0, 
-    average = 189.99996666666667, 
+    volume = 4.0, 
+    average = 185.49984999999998, 
   }, 
   [39816] = { 
-    volume = 4.0, 
-    average = 238.9999, 
+    volume = 3.0, 
+    average = 218.99995, 
   }, 
   [39826] = { 
     volume = nan, 
@@ -7608,20 +7532,20 @@ return {
     average = nan, 
   }, 
   [39999] = { 
-    volume = 6.0, 
-    average = 844.55995, 
+    volume = 8.0, 
+    average = 849.9647875000002, 
   }, 
   [40091] = { 
-    volume = 8.0, 
-    average = 324.37340000000006, 
+    volume = 13.0, 
+    average = 279.8279230769231, 
   }, 
   [40092] = { 
-    volume = 7.0, 
-    average = 2977.705657142857, 
+    volume = 3.0, 
+    average = 2823.666633333333, 
   }, 
   [40093] = { 
-    volume = 12.0, 
-    average = 494.2103583333333, 
+    volume = 24.0, 
+    average = 398.22245000000004, 
   }, 
   [8000800] = { 
     volume = nan, 
@@ -7632,20 +7556,20 @@ return {
     average = nan, 
   }, 
   [8000806] = { 
-    volume = 3.0, 
-    average = 22.9985, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8000929] = { 
-    volume = 31.0, 
-    average = 3.056574193548387, 
+    volume = 74.0, 
+    average = 2.615316216216216, 
   }, 
   [8000930] = { 
-    volume = 22.0, 
-    average = 59.99953181818183, 
+    volume = 21.0, 
+    average = 68.99920476190475, 
   }, 
   [8000931] = { 
-    volume = 1.0, 
-    average = 140.6965, 
+    volume = 5.0, 
+    average = 158.99994, 
   }, 
   [8000932] = { 
     volume = nan, 
@@ -7660,24 +7584,24 @@ return {
     average = nan, 
   }, 
   [8000950] = { 
-    volume = 7183.0, 
-    average = 0.34670185185185187, 
+    volume = 3705.0, 
+    average = 0.2649717948717949, 
   }, 
   [40522] = { 
     volume = nan, 
     average = nan, 
   }, 
   [40538] = { 
-    volume = 1.0, 
-    average = 1599.9998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [40736] = { 
-    volume = 7.0, 
-    average = 940.4652857142856, 
+    volume = 17.0, 
+    average = 994.6652916666668, 
   }, 
   [40841] = { 
-    volume = 10.0, 
-    average = 1924.3, 
+    volume = nan, 
+    average = nan, 
   }, 
   [40870] = { 
     volume = nan, 
@@ -7696,60 +7620,60 @@ return {
     average = nan, 
   }, 
   [40938] = { 
-    volume = 1.0, 
-    average = 80.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [41037] = { 
     volume = nan, 
     average = nan, 
   }, 
   [41038] = { 
-    volume = 2.0, 
-    average = 8.4898, 
+    volume = 3.0, 
+    average = 8.484933333333332, 
   }, 
   [8000966] = { 
-    volume = 560.0, 
-    average = 34.08628775510204, 
+    volume = 1131.0, 
+    average = 32.361115463917514, 
   }, 
   [8001000] = { 
-    volume = 88.0, 
-    average = 839.4660681818183, 
+    volume = 64.0, 
+    average = 836.4175661290323, 
   }, 
   [8001008] = { 
-    volume = 2.0, 
-    average = 999.0, 
+    volume = 1.0, 
+    average = 1000.0, 
   }, 
   [8001081] = { 
-    volume = 66.0, 
-    average = 28.547703333333335, 
+    volume = 32.0, 
+    average = 27.917860000000005, 
   }, 
   [8001094] = { 
-    volume = 12.0, 
-    average = 93.33333333333333, 
+    volume = nan, 
+    average = nan, 
   }, 
   [41419] = { 
     volume = nan, 
     average = nan, 
   }, 
   [41451] = { 
-    volume = 235.0, 
-    average = 1.0999500000000002, 
-  }, 
-  [41455] = { 
-    volume = 4800.0, 
-    average = 0.4499583333333333, 
-  }, 
-  [41457] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [41455] = { 
+    volume = 2500.0, 
+    average = 0.44966666666666666, 
+  }, 
+  [41457] = { 
+    volume = 200.0, 
+    average = 0.5, 
+  }, 
   [41459] = { 
-    volume = 100.0, 
-    average = 0.9994, 
+    volume = 500.0, 
+    average = 0.9999399999999999, 
   }, 
   [41461] = { 
-    volume = 41.0, 
-    average = 1.55956, 
+    volume = nan, 
+    average = nan, 
   }, 
   [41474] = { 
     volume = nan, 
@@ -7760,12 +7684,12 @@ return {
     average = nan, 
   }, 
   [41565] = { 
-    volume = 2.0, 
-    average = 100.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [41976] = { 
-    volume = 300.0, 
-    average = 1.15, 
+    volume = nan, 
+    average = nan, 
   }, 
   [42027] = { 
     volume = nan, 
@@ -7776,44 +7700,48 @@ return {
     average = nan, 
   }, 
   [42043] = { 
-    volume = 650.0, 
-    average = 1.9993799999999997, 
+    volume = 50.0, 
+    average = 1.9894, 
   }, 
   [42044] = { 
-    volume = 755.0, 
-    average = 4.21586, 
+    volume = 250.0, 
+    average = 3.4554666666666667, 
   }, 
   [42045] = { 
-    volume = 400.0, 
-    average = 8.866361904761902, 
+    volume = 190.0, 
+    average = 7.7853, 
   }, 
   [42046] = { 
-    volume = 70.0, 
-    average = 8.449566666666668, 
+    volume = 105.0, 
+    average = 7.84802, 
   }, 
   [42049] = { 
-    volume = 300.0, 
-    average = 6.852603571428568, 
+    volume = 140.0, 
+    average = 5.998400000000001, 
   }, 
   [42054] = { 
     volume = nan, 
     average = nan, 
   }, 
   [42078] = { 
-    volume = 472.0, 
-    average = 33.385865517241356, 
+    volume = 814.0, 
+    average = 34.96960210526314, 
   }, 
   [42162] = { 
-    volume = 1423.0, 
-    average = 3.6676560975609767, 
+    volume = 816.0, 
+    average = 3.644165384615384, 
+  }, 
+  [42164] = { 
+    volume = 30.0, 
+    average = 1.0, 
   }, 
   [42166] = { 
-    volume = 672.0, 
-    average = 6.253299999999997, 
+    volume = 602.0, 
+    average = 5.625226829268292, 
   }, 
   [42168] = { 
-    volume = 515.0, 
-    average = 3.5322357142857137, 
+    volume = 134.0, 
+    average = 3.9955789473684207, 
   }, 
   [42170] = { 
     volume = nan, 
@@ -7825,71 +7753,71 @@ return {
   }, 
   [42177] = { 
     volume = 170.0, 
-    average = 5.966449999999999, 
+    average = 5.27692777777778, 
   }, 
   [42236] = { 
     volume = nan, 
     average = nan, 
   }, 
   [42260] = { 
-    volume = 130.0, 
-    average = 0.77745, 
+    volume = 75.0, 
+    average = 0.87205, 
   }, 
   [42314] = { 
-    volume = 787.0, 
-    average = 3.22534, 
+    volume = 746.0, 
+    average = 3.621923529411766, 
   }, 
   [42333] = { 
-    volume = 276.0, 
-    average = 3.77212, 
+    volume = 257.0, 
+    average = 3.582005263157895, 
   }, 
   [42335] = { 
-    volume = 5.0, 
-    average = 37.05, 
+    volume = nan, 
+    average = nan, 
   }, 
   [42336] = { 
-    volume = 21.0, 
-    average = 45.984825, 
+    volume = 2.0, 
+    average = 47.9997, 
   }, 
   [42342] = { 
-    volume = 962.0, 
-    average = 1.5145217391304342, 
+    volume = 545.0, 
+    average = 1.6497694444444448, 
   }, 
   [42343] = { 
-    volume = 1737.0, 
-    average = 3.8261745098039217, 
+    volume = 1764.0, 
+    average = 3.8060395061728394, 
   }, 
   [42344] = { 
-    volume = 1547.0, 
-    average = 2.33863829787234, 
+    volume = 895.0, 
+    average = 2.2849083333333335, 
   }, 
   [42394] = { 
-    volume = 1478.0, 
-    average = 1.1386979591836737, 
+    volume = 1608.0, 
+    average = 1.394221739130435, 
   }, 
   [42432] = { 
     volume = nan, 
     average = nan, 
   }, 
   [42582] = { 
-    volume = 2920.0, 
-    average = 0.12323333333333332, 
+    volume = 5970.0, 
+    average = 0.08407142857142857, 
   }, 
   [42585] = { 
     volume = nan, 
     average = nan, 
   }, 
   [42586] = { 
-    volume = 16.0, 
-    average = 4.9993, 
+    volume = nan, 
+    average = nan, 
   }, 
   [42587] = { 
     volume = nan, 
     average = nan, 
   }, 
   [42588] = { 
-    volume = 1.0, 
-    average = 2.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [42612] = { 
     volume = nan, 
@@ -7900,44 +7828,44 @@ return {
     average = nan, 
   }, 
   [42614] = { 
-    volume = 1.0, 
-    average = 300.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [42645] = { 
-    volume = 600.0, 
-    average = 0.9894833333333334, 
+    volume = 327.0, 
+    average = 1.039925, 
   }, 
   [8001399] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8001400] = { 
-    volume = nan, 
-    average = nan, 
+    volume = 403.0, 
+    average = 30.059839999999998, 
   }, 
   [8001401] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8001402] = { 
-    volume = 20.0, 
-    average = 50.9998, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001403] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8001540] = { 
-    volume = 3.0, 
-    average = 4565.333333333333, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001543] = { 
-    volume = 1.0, 
-    average = 2699.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001674] = { 
-    volume = 21.0, 
-    average = 537.9988, 
+    volume = 36.0, 
+    average = 524.1660833333332, 
   }, 
   [8001711] = { 
     volume = nan, 
@@ -7956,12 +7884,12 @@ return {
     average = nan, 
   }, 
   [8001755] = { 
-    volume = 1.0, 
-    average = 400.003, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001756] = { 
-    volume = 1.0, 
-    average = 500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001775] = { 
     volume = nan, 
@@ -7985,43 +7913,43 @@ return {
   }, 
   [8001844] = { 
     volume = 1.0, 
-    average = 16500.0, 
+    average = 350.9998, 
   }, 
   [8001845] = { 
-    volume = 2.0, 
-    average = 400.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [8001846] = { 
     volume = nan, 
     average = nan, 
   }, 
   [8001855] = { 
-    volume = 3.0, 
-    average = 181.22216666666668, 
-  }, 
-  [8001856] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [8001856] = { 
+    volume = 2.0, 
+    average = 382.0, 
+  }, 
   [8001857] = { 
     volume = 1.0, 
-    average = 300.0, 
+    average = 381.0, 
   }, 
   [8001858] = { 
     volume = nan, 
     average = nan, 
   }, 
   [9000027] = { 
-    volume = 3.0, 
-    average = 39.99995, 
+    volume = 1.0, 
+    average = 38.0, 
   }, 
   [9000028] = { 
-    volume = 191.0, 
-    average = 80.55125367231648, 
+    volume = 175.0, 
+    average = 77.76138198757758, 
   }, 
   [9000029] = { 
     volume = 1.0, 
-    average = 900.0, 
+    average = 850.0, 
   }, 
   [9000072] = { 
     volume = nan, 
@@ -8047,33 +7975,25 @@ return {
     volume = nan, 
     average = nan, 
   }, 
-  [9000088] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
-  [9000089] = { 
-    volume = nan, 
-    average = nan, 
-  }, 
   [9000092] = { 
-    volume = 2.0, 
-    average = 1100.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [9000095] = { 
     volume = nan, 
     average = nan, 
   }, 
   [9000100] = { 
-    volume = 1.0, 
-    average = 500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [9000101] = { 
     volume = nan, 
     average = nan, 
   }, 
   [9000108] = { 
-    volume = 1.0, 
-    average = 2500.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [9000111] = { 
     volume = nan, 
@@ -8084,156 +8004,404 @@ return {
     average = nan, 
   }, 
   [9000147] = { 
-    volume = 1.0, 
-    average = 240.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [9000163] = { 
-    volume = 360.0, 
-    average = 5.876572222222222, 
+    volume = 208.0, 
+    average = 5.196653846153846, 
   }, 
   [9000333] = { 
     volume = nan, 
     average = nan, 
   }, 
   [9000360] = { 
-    volume = 1.0, 
-    average = 18000.0, 
+    volume = nan, 
+    average = nan, 
   }, 
   [9000366] = { 
     volume = nan, 
     average = nan, 
   }, 
   [9000368] = { 
-    volume = 1.0, 
-    average = 700.0, 
-  }, 
-  [38815] = { 
-    volume = 232.0, 
-    average = 14.940351612903225, 
-  }, 
-  [39780] = { 
-    volume = 162.0, 
-    average = 25.16616666666667, 
-  }, 
-  [35885] = { 
-    volume = 1627.0, 
-    average = 1.0669125000000002, 
-  }, 
-  [34724] = { 
-    volume = 10169.0, 
-    average = 0.3329189655172412, 
-  }, 
-  [34725] = { 
-    volume = 52.0, 
-    average = 1.00835, 
-  }, 
-  [34727] = { 
-    volume = 16.0, 
-    average = 2.6857000000000006, 
-  }, 
-  [34726] = { 
-    volume = 106.0, 
-    average = 16.17482, 
-  }, 
-  [35889] = { 
-    volume = 256.0, 
-    average = 0.5297666666666667, 
-  }, 
-  [35888] = { 
-    volume = 5.0, 
-    average = 1.6485, 
-  }, 
-  [35887] = { 
-    volume = 647.0, 
-    average = 0.09084166666666667, 
-  }, 
-  [28188] = { 
-    volume = 1224.0, 
-    average = 1.9400413793103448, 
-  }, 
-  [45609] = { 
-    volume = 8.0, 
-    average = 16.75, 
-  }, 
-  [45610] = { 
-    volume = 2.0, 
-    average = 88.99965, 
-  }, 
-  [45612] = { 
-    volume = 2.0, 
-    average = 34.99, 
-  }, 
-  [45613] = { 
-    volume = 3.0, 
-    average = 259.2133, 
-  }, 
-  [45614] = { 
-    volume = 4.0, 
-    average = 312.691775, 
-  }, 
-  [46501] = { 
-    volume = 5.0, 
-    average = 434.39492, 
-  }, 
-  [45611] = { 
     volume = nan, 
     average = nan, 
   }, 
+  [38815] = { 
+    volume = 455.0, 
+    average = 21.695746268656723, 
+  }, 
+  [39780] = { 
+    volume = 188.0, 
+    average = 23.77715882352941, 
+  }, 
+  [35885] = { 
+    volume = 2458.0, 
+    average = 1.4113741935483874, 
+  }, 
+  [34724] = { 
+    volume = 8147.0, 
+    average = 0.4684100000000001, 
+  }, 
+  [34725] = { 
+    volume = 282.0, 
+    average = 1.00484, 
+  }, 
+  [34727] = { 
+    volume = 161.0, 
+    average = 1.0840888888888889, 
+  }, 
+  [34726] = { 
+    volume = 139.0, 
+    average = 20.369765116279073, 
+  }, 
+  [35889] = { 
+    volume = 36.0, 
+    average = 0.902275, 
+  }, 
+  [35888] = { 
+    volume = 190.0, 
+    average = 1.9441149999999996, 
+  }, 
+  [35887] = { 
+    volume = 511.0, 
+    average = 0.040166666666666656, 
+  }, 
+  [28188] = { 
+    volume = 1131.0, 
+    average = 2.411146153846154, 
+  }, 
+  [45609] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [45610] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [45612] = { 
+    volume = 3.0, 
+    average = 59.99, 
+  }, 
+  [45613] = { 
+    volume = 2.0, 
+    average = 288.44835, 
+  }, 
+  [45614] = { 
+    volume = 4.0, 
+    average = 399.88412500000004, 
+  }, 
+  [46501] = { 
+    volume = 3.0, 
+    average = 419.9963666666667, 
+  }, 
+  [45611] = { 
+    volume = 1.0, 
+    average = 199.0, 
+  }, 
   [45501] = { 
     volume = 1.0, 
-    average = 397.9985, 
+    average = 400.9996, 
   }, 
   [46464] = { 
-    volume = 3.0, 
-    average = 381.32153333333326, 
+    volume = 4.0, 
+    average = 415.249375, 
   }, 
   [43128] = { 
-    volume = 2582.0, 
-    average = 24.38407849462366, 
+    volume = 2530.0, 
+    average = 29.428774712643648, 
   }, 
   [43131] = { 
     volume = 3.0, 
-    average = 6592.333333333333, 
+    average = 6366.666633333333, 
   }, 
   [43129] = { 
-    volume = 5425.0, 
-    average = 6.039379166666671, 
+    volume = 1574.0, 
+    average = 2.4719411764705894, 
   }, 
   [43130] = { 
-    volume = 7.0, 
-    average = 723.0015666666667, 
+    volume = 6.0, 
+    average = 743.8332166666668, 
   }, 
   [9000323] = { 
-    volume = 93.0, 
-    average = 37.03959599999999, 
+    volume = 8.0, 
+    average = 37.399620000000006, 
   }, 
   [9000324] = { 
-    volume = 160.0, 
-    average = 39.32413125, 
+    volume = 97.0, 
+    average = 35.46273600000002, 
   }, 
   [9000459] = { 
-    volume = 475.0, 
-    average = 15.84894, 
+    volume = 320.0, 
+    average = 14.381108571428568, 
   }, 
   [9001011] = { 
-    volume = 428.0, 
-    average = 12.230987878787882, 
+    volume = 386.0, 
+    average = 11.862541379310345, 
   }, 
   [9001476] = { 
-    volume = 48.0, 
-    average = 192.53751111111112, 
+    volume = 21.0, 
+    average = 180.49907857142853, 
   }, 
   [42927] = { 
-    volume = 279.0, 
-    average = 21.8972393939394, 
+    volume = 89.0, 
+    average = 27.86442608695653, 
   }, 
   [8000344] = { 
-    volume = 90.0, 
-    average = 19.24092926829269, 
+    volume = 79.0, 
+    average = 19.1115, 
   }, 
   [8000336] = { 
-    volume = 74.0, 
-    average = 22.214422222222222, 
+    volume = 14.0, 
+    average = 22.212666666666664, 
+  }, 
+  [9001838] = { 
+    volume = 12.0, 
+    average = 386.69099, 
+  }, 
+  [9001934] = { 
+    volume = 2.0, 
+    average = 24.693399999999997, 
+  }, 
+  [9001944] = { 
+    volume = 5.0, 
+    average = 58.994060000000005, 
+  }, 
+  [9001945] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9001955] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9001965] = { 
+    volume = 7811.0, 
+    average = 5.368681666666665, 
+  }, 
+  [9002074] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002089] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002090] = { 
+    volume = 8.0, 
+    average = 3090.25, 
+  }, 
+  [9002111] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002112] = { 
+    volume = 1.0, 
+    average = 83.9998, 
+  }, 
+  [9002113] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002126] = { 
+    volume = 9.0, 
+    average = 22.997022222222217, 
+  }, 
+  [9002127] = { 
+    volume = 1.0, 
+    average = 55.9999, 
+  }, 
+  [9002128] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002141] = { 
+    volume = 2.0, 
+    average = 56.50805, 
+  }, 
+  [9002142] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002143] = { 
+    volume = 1.0, 
+    average = 1500.0, 
+  }, 
+  [9002156] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002157] = { 
+    volume = 2.0, 
+    average = 69.99969999999999, 
+  }, 
+  [9002158] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002171] = { 
+    volume = 19.0, 
+    average = 27.99931764705882, 
+  }, 
+  [9002172] = { 
+    volume = 17.0, 
+    average = 111.82200000000002, 
+  }, 
+  [9002173] = { 
+    volume = 4.0, 
+    average = 980.251925, 
+  }, 
+  [9002186] = { 
+    volume = 3.0, 
+    average = 24.3326, 
+  }, 
+  [9002187] = { 
+    volume = 12.0, 
+    average = 136.08281666666667, 
+  }, 
+  [9002188] = { 
+    volume = 1.0, 
+    average = 250.9998, 
+  }, 
+  [9002201] = { 
+    volume = 1.0, 
+    average = 98.9953, 
+  }, 
+  [9002202] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002216] = { 
+    volume = 3.0, 
+    average = 37.99306666666667, 
+  }, 
+  [9002217] = { 
+    volume = 7.0, 
+    average = 456.56660000000005, 
+  }, 
+  [9002218] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002231] = { 
+    volume = 9.0, 
+    average = 32.18976, 
+  }, 
+  [9002232] = { 
+    volume = 17.0, 
+    average = 106.90276, 
+  }, 
+  [9002233] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002246] = { 
+    volume = 3.0, 
+    average = 45.999766666666666, 
+  }, 
+  [9002247] = { 
+    volume = 6.0, 
+    average = 74.98979999999999, 
+  }, 
+  [9002248] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002261] = { 
+    volume = 1.0, 
+    average = 24.999, 
+  }, 
+  [9002262] = { 
+    volume = 6.0, 
+    average = 38.49828333333333, 
+  }, 
+  [9002263] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002276] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002277] = { 
+    volume = 2.0, 
+    average = 165.49984999999998, 
+  }, 
+  [9002278] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002291] = { 
+    volume = 1.0, 
+    average = 29.9999, 
+  }, 
+  [9002292] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002293] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002306] = { 
+    volume = 13.0, 
+    average = 18.999775, 
+  }, 
+  [9002307] = { 
+    volume = 3.0, 
+    average = 118.66303333333333, 
+  }, 
+  [9002308] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002321] = { 
+    volume = 28.0, 
+    average = 24.362511999999995, 
+  }, 
+  [9002322] = { 
+    volume = 28.0, 
+    average = 322.3971296296296, 
+  }, 
+  [9002323] = { 
+    volume = 7.0, 
+    average = 3306.8571428571427, 
+  }, 
+  [9002336] = { 
+    volume = 14.0, 
+    average = 17.000372727272726, 
+  }, 
+  [9002337] = { 
+    volume = 2.0, 
+    average = 151.7181, 
+  }, 
+  [9002338] = { 
+    volume = 3.0, 
+    average = 1499.3332666666665, 
+  }, 
+  [9002351] = { 
+    volume = 11.0, 
+    average = 23.343989999999998, 
+  }, 
+  [9002352] = { 
+    volume = 9.0, 
+    average = 192.33256666666668, 
+  }, 
+  [9002353] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002366] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002367] = { 
+    volume = nan, 
+    average = nan, 
+  }, 
+  [9002435] = { 
+    volume = nan, 
+    average = nan, 
   }, 
 
 }
