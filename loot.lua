@@ -1087,7 +1087,9 @@ local function OnUnload()
     api.Interface:Free(yourPaystubWindow)
     api.On("UPDATE", function() return end)
     yourPaystubWindow = nil
-    lootWindow.lootTrackerOverlay:Show(false)
+    if lootWindow ~= nil and lootWindow.lootTrackerOverlay ~= nil then
+        lootWindow.lootTrackerOverlay:Show(false)
+    end
     lootWindow = nil
     api.SaveSettings()
 end

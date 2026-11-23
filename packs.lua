@@ -50,7 +50,9 @@ local displayRefreshCounter = 0
 local DISPLAY_REFRESH_MS = 60000
 
 local packSlotCheckCounter = 0
-local PACK_SLOT_CHECK_MS = 100
+-- GetEquippedItemTooltipInfo can't run on the UI thread and stalls the frame,
+-- so check the backpack slot ~3x a second instead of 10x.
+local PACK_SLOT_CHECK_MS = 300
 
 local PACK_TIMER_8HRS_IN_SECS = 28800
 
